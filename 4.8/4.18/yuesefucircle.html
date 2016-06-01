@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<button onclick="myFunction()">约瑟夫环</button>
+		<script type="text/javascript">
+			function myFunction(){
+				var deadpeople ="";
+//				人数5个
+				var n = 5;
+//				初始化每个人的状态都是活的
+//				0 代表活的
+//				1 代表死的
+				var a = [0 , 0 , 0 , 0 , 0];
+//				已经死去的人数
+				var count = 0;
+//				当前所报的数
+				var currentNumber = 1;
+//				下标
+				var i = 0;
+				while(count < 5){
+					if(a[i] == 0){
+						if(currentNumber != 3){
+							currentNumber++;
+							i++;
+							if(i >=5){
+								i = 0;
+							}
+						}else{
+							a[i] = 1;
+							deadpeople = deadpeople + i.toString()+"";
+							currentNumber = 1;
+							count++;
+							i++;
+							if(i >= 5){
+								i = 0;	
+									}	
+							}
+					}else{
+						i++;
+						if(i >= 5){
+							i = 0;
+						}
+						
+					}
+					
+				}
+				alert(deadpeople);
+			}
+		</script>
+	</body>
+</html>

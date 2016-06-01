@@ -1,0 +1,1597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>utils/LGlobal.js - The lufylegend.js API</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><a href="../index.html"><img src="../assets/css/logo.png" title="The lufylegend.js API"></a></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: 1.10.1</em>
+            <em>最后更新日期：2016年03月28日</em>
+			<form method="get" action="http://www.google.com.hk/search" target="google_window">
+        		<input type="hidden" name="ie" value="UTF-8">
+        		<input type="hidden" name="oe" value="UTF-8">
+        		<input type="hidden" name="as_sitesearch" id="as_sitesearch" value="lufylegend.com/api/zh_CN/out/">
+        		Google搜索&nbsp;
+        		<input type="text" class="input" style="width:150px;" name="q" id="q" size="31" maxlength="255" value="">
+        		&nbsp;
+        		<input type="submit" class="submit" name="sa" value="Go">
+      		</form>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="../classes/FPS.html">FPS</a></li>
+            
+                <li><a href="../classes/InteractivePNG.html">InteractivePNG</a></li>
+            
+                <li><a href="../classes/LAjax.html">LAjax</a></li>
+            
+                <li><a href="../classes/LAnimation.html">LAnimation</a></li>
+            
+                <li><a href="../classes/LAnimationTimeline.html">LAnimationTimeline</a></li>
+            
+                <li><a href="../classes/LBitmap.html">LBitmap</a></li>
+            
+                <li><a href="../classes/LBitmapData.html">LBitmapData</a></li>
+            
+                <li><a href="../classes/LBitmapFilter.html">LBitmapFilter</a></li>
+            
+                <li><a href="../classes/LBlendMode.html">LBlendMode</a></li>
+            
+                <li><a href="../classes/LBox2d.html">LBox2d</a></li>
+            
+                <li><a href="../classes/LButton.html">LButton</a></li>
+            
+                <li><a href="../classes/LColorMatrixFilter.html">LColorMatrixFilter</a></li>
+            
+                <li><a href="../classes/LColorTransform.html">LColorTransform</a></li>
+            
+                <li><a href="../classes/LConvolutionFilter.html">LConvolutionFilter</a></li>
+            
+                <li><a href="../classes/LDisplayObject.html">LDisplayObject</a></li>
+            
+                <li><a href="../classes/LDisplayObjectContainer.html">LDisplayObjectContainer</a></li>
+            
+                <li><a href="../classes/LDropShadowFilter.html">LDropShadowFilter</a></li>
+            
+                <li><a href="../classes/LEasing.html">LEasing</a></li>
+            
+                <li><a href="../classes/LEvent.html">LEvent</a></li>
+            
+                <li><a href="../classes/LEventDispatcher.html">LEventDispatcher</a></li>
+            
+                <li><a href="../classes/LFlash.html">LFlash</a></li>
+            
+                <li><a href="../classes/LFocusEvent.html">LFocusEvent</a></li>
+            
+                <li><a href="../classes/LFontLoader.html">LFontLoader</a></li>
+            
+                <li><a href="../classes/LGlobal.html">LGlobal</a></li>
+            
+                <li><a href="../classes/LGraphics.html">LGraphics</a></li>
+            
+                <li><a href="../classes/LInteractiveObject.html">LInteractiveObject</a></li>
+            
+                <li><a href="../classes/LKeyboardEvent.html">LKeyboardEvent</a></li>
+            
+                <li><a href="../classes/LLoader.html">LLoader</a></li>
+            
+                <li><a href="../classes/LLoadManage.html">LLoadManage</a></li>
+            
+                <li><a href="../classes/LMatrix.html">LMatrix</a></li>
+            
+                <li><a href="../classes/LMedia.html">LMedia</a></li>
+            
+                <li><a href="../classes/LMouseEvent.html">LMouseEvent</a></li>
+            
+                <li><a href="../classes/LMouseEventContainer.html">LMouseEventContainer</a></li>
+            
+                <li><a href="../classes/LMultitouch.html">LMultitouch</a></li>
+            
+                <li><a href="../classes/LMultitouchInputMode.html">LMultitouchInputMode</a></li>
+            
+                <li><a href="../classes/LoadingSample.html">LoadingSample</a></li>
+            
+                <li><a href="../classes/LObject.html">LObject</a></li>
+            
+                <li><a href="../classes/LPoint.html">LPoint</a></li>
+            
+                <li><a href="../classes/LQuadTree.html">LQuadTree</a></li>
+            
+                <li><a href="../classes/LRange.html">LRange</a></li>
+            
+                <li><a href="../classes/LRectangle.html">LRectangle</a></li>
+            
+                <li><a href="../classes/LShape.html">LShape</a></li>
+            
+                <li><a href="../classes/LSound(LMedia).html">LSound(LMedia)</a></li>
+            
+                <li><a href="../classes/LSound(LWebAudio).html">LSound(LWebAudio)</a></li>
+            
+                <li><a href="../classes/LSprite.html">LSprite</a></li>
+            
+                <li><a href="../classes/LStageAlign.html">LStageAlign</a></li>
+            
+                <li><a href="../classes/LStageScaleMode.html">LStageScaleMode</a></li>
+            
+                <li><a href="../classes/LStageWebView.html">LStageWebView</a></li>
+            
+                <li><a href="../classes/LStyleSheet.html">LStyleSheet</a></li>
+            
+                <li><a href="../classes/LTextEvent.html">LTextEvent</a></li>
+            
+                <li><a href="../classes/LTextField.html">LTextField</a></li>
+            
+                <li><a href="../classes/LTimer.html">LTimer</a></li>
+            
+                <li><a href="../classes/LTimerEvent.html">LTimerEvent</a></li>
+            
+                <li><a href="../classes/LTransform.html">LTransform</a></li>
+            
+                <li><a href="../classes/LTransition.html">LTransition</a></li>
+            
+                <li><a href="../classes/LTransitionManager.html">LTransitionManager</a></li>
+            
+                <li><a href="../classes/LTweenLite.html">LTweenLite</a></li>
+            
+                <li><a href="../classes/LTweenLiteChild.html">LTweenLiteChild</a></li>
+            
+                <li><a href="../classes/lufylegend.mvc.html">lufylegend.mvc</a></li>
+            
+                <li><a href="../classes/LURLLoader.html">LURLLoader</a></li>
+            
+                <li><a href="../classes/LVec2.html">LVec2</a></li>
+            
+                <li><a href="../classes/LVideo.html">LVideo</a></li>
+            
+                <li><a href="../classes/LWebAudio.html">LWebAudio</a></li>
+            
+                <li><a href="../classes/Q &amp; A (常见问题).html">Q &amp; A (常见问题)</a></li>
+            
+                <li><a href="../classes/UI:LButtonSample1.html">UI:LButtonSample1</a></li>
+            
+                <li><a href="../classes/UI:LButtonSample2.html">UI:LButtonSample2</a></li>
+            
+                <li><a href="../classes/UI:LCheckBox.html">UI:LCheckBox</a></li>
+            
+                <li><a href="../classes/UI:LComboBox.html">UI:LComboBox</a></li>
+            
+                <li><a href="../classes/UI:LListChildView.html">UI:LListChildView</a></li>
+            
+                <li><a href="../classes/UI:LListScrollBar.html">UI:LListScrollBar</a></li>
+            
+                <li><a href="../classes/UI:LListView.html">UI:LListView</a></li>
+            
+                <li><a href="../classes/UI:LMenubar.html">UI:LMenubar</a></li>
+            
+                <li><a href="../classes/UI:LMessageBox.html">UI:LMessageBox</a></li>
+            
+                <li><a href="../classes/UI:LPanel.html">UI:LPanel</a></li>
+            
+                <li><a href="../classes/UI:LRadio.html">UI:LRadio</a></li>
+            
+                <li><a href="../classes/UI:LRadioChild.html">UI:LRadioChild</a></li>
+            
+                <li><a href="../classes/UI:LRange.html">UI:LRange</a></li>
+            
+                <li><a href="../classes/UI:LScrollbar.html">UI:LScrollbar</a></li>
+            
+                <li><a href="../classes/UI:LTable.html">UI:LTable</a></li>
+            
+                <li><a href="../classes/UI:LTreeWidget.html">UI:LTreeWidget</a></li>
+            
+                <li><a href="../classes/UI:LWindow.html">UI:LWindow</a></li>
+            
+                <li><a href="../classes/全局函数.html">全局函数</a></li>
+            
+                <li><a href="../classes/全局变量.html">全局变量</a></li>
+            
+                <li><a href="../classes/全屏设置.html">全屏设置</a></li>
+            
+                <li><a href="../classes/旧版API.html">旧版API</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: utils/LGlobal.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+/** @language chinese
+ * &lt;p&gt;全局类。&lt;/p&gt;
+ * @class LGlobal
+ * @since 1.0.0
+ * @public
+ */
+var LGlobal = ( function () {
+	function LGlobal () {
+		throw &quot;LGlobal cannot be instantiated&quot;;
+	}
+	/** @language chinese
+	 * &lt;p&gt;[静态] 定义全屏的属性值。&lt;/p&gt;
+	 * &lt;p&gt;用法请参照LGlobal.screen函数&lt;/p&gt;
+	 * @property FULL_SCREEN
+	 * @type String
+	 * @static
+	 * @since 1.6.0
+	 * @public
+	 */
+	LGlobal.FULL_SCREEN = &quot;full_screen&quot;;
+	LGlobal.traceDebug = false;
+	LGlobal.displayState = NONE;
+	/** @language chinese
+	 * &lt;p&gt;将舞台设置成使用指定长宽比的方向。可以设置为下列值&lt;/p&gt;
+	 * &lt;p&gt;LANDSCAPE、PORTRAIT。&lt;/p&gt;
+	 * @property LGlobal.aspectRatio
+	 * @type String
+	 * @static
+	 * @since 1.8.1
+	 * @public
+	 */
+	LGlobal.aspectRatio = NONE;
+	/** @language chinese
+	 * &lt;p&gt;canvas 标签。&lt;/p&gt;
+	 * @property LGlobal.canvasObj
+	 * @type HTML elements
+	 * @static
+	 * @since 1.8.1
+	 * @public
+	 */
+	LGlobal.canvasObj = null;
+	/** @language chinese
+	 * &lt;p&gt;context 对象。&lt;/p&gt;
+	 * @property LGlobal.canvas
+	 * @type CanvasRenderingContext2D
+	 * @static
+	 * @since 1.0.0
+	 * @public
+	 */
+	LGlobal.canvas = null;
+	/** @language chinese
+	 * &lt;p&gt;当设备支持Web Audio Api的时候，是否使用Web Audio Api来播放音频。&lt;/p&gt;
+	 * @property LGlobal.webAudio
+	 * @type Boolean
+	 * @static
+	 * @default true
+	 * @since 1.0.0
+	 * @public
+	 */
+	LGlobal.webAudio = true;
+	LGlobal.objectIndex = 1;
+	/** @language chinese
+	 * &lt;p&gt;一个LSprite对象，所有的DisplayObject对象的最底层。&lt;/p&gt;
+	 * &lt;p&gt;除非做功能扩展，否则不推荐直接将对象加载到LGlobal.stage上。&lt;/p&gt;
+	 * @property LGlobal.stage
+	 * @type LSprite
+	 * @static
+	 * @since 1.3.1
+	 * @public
+	 */
+	LGlobal.stage = null;
+	/** @language chinese
+	 * &lt;p&gt;游戏初始化时设定的画面的宽，即canvas的宽。&lt;/p&gt;
+	 * @property LGlobal.width
+	 * @type int
+	 * @static
+	 * @since 1.0.0
+	 * @public
+	 */
+	LGlobal.width = 0;
+	/** @language chinese
+	 * &lt;p&gt;游戏初始化时设定的画面的高，即canvas的高。&lt;/p&gt;
+	 * @property LGlobal.height
+	 * @type int
+	 * @static
+	 * @since 1.0.0
+	 * @public
+	 */
+	LGlobal.height = 0;
+	LGlobal.box2d = null;
+	LGlobal.speed = 50;
+	LGlobal.IS_MOUSE_DOWN = false;
+	/** @language chinese
+	 * &lt;p&gt;该方法将停止事件的传播，阻止它被分派到其他 Document 节点。&lt;/p&gt;
+	 * @property LGlobal.stopPropagation
+	 * @type Boolean
+	 * @static
+	 * @since 1.9.8
+	 * @public
+	 * @default false
+	 */
+	LGlobal.stopPropagation = false;
+	/** @language chinese
+	 * &lt;p&gt;如果事件对象的cancelable属性为true,则该方法可以取消事件的默认动作.但并不取消事件的冒泡行为。移动网页中用来禁止滚屏，默认为true(禁止)，如果需要使用滚屏功能，则需要将其设置为fasle。&lt;/p&gt;
+	 * @property LGlobal.preventDefault
+	 * @type Boolean
+	 * @static
+	 * @since 1.3.1
+	 * @public
+	 * @default true
+	 */
+	LGlobal.preventDefault = true;
+	LGlobal.childList = new Array();
+	LGlobal.dragList = new Array();
+	LGlobal.excludingContainer = new Array();
+	LGlobal.fpsStatus = null;
+	/** @language chinese
+	 * &lt;p&gt;一个 LStageScaleMode 类中指定要使用哪种缩放模式的值。&lt;/p&gt;
+	 * @property LGlobal.stageScale
+	 * @type String
+	 * @static
+	 * @example
+	 * 	LInit(50, &quot;legend&quot;, 240, 240, main);
+	 * 	function main () {
+	 * 		LGlobal.align = LStageAlign.BOTTOM_MIDDLE;
+	 * 		LGlobal.stageScale = LStageScaleMode.SHOW_ALL;
+	 * 		LSystem.screen(LStage.FULL_SCREEN);
+	 * 		var loader = new LLoader();
+	 * 		loader.addEventListener(LEvent.COMPLETE, loadBitmapdata); 
+	 * 		loader.load(&quot;face.jpg&quot;, &quot;bitmapData&quot;);
+	 * 	}
+	 * 	function loadBitmapdata (event) {
+	 * 		var bitmapdata = new LBitmapData(event.target);  
+	 * 		var bitmap = new LBitmap(bitmapdata);
+	 * 		addChild(bitmap);
+	 * 	}
+	 * @examplelink &lt;p&gt;&lt;a href=&quot;../../../api/LGlobal/stageScale_align.html&quot; target=&quot;_blank&quot;&gt;测试链接&lt;/a&gt;&lt;/p&gt;
+	 * @since 1.4.0
+	 * @public
+	 */
+	LGlobal.stageScale = &quot;noScale&quot;;
+	/** @language chinese
+	 * &lt;p&gt;一个 LStageAlign 类中指定舞台在浏览器中的对齐方式的值。&lt;/p&gt;
+	 * @property LGlobal.align
+	 * @type String
+	 * @static
+	 * @example
+	 * 	LInit(50, &quot;legend&quot;, 240, 240, main);
+	 * 	function main () {
+	 * 		LGlobal.align = LStageAlign.BOTTOM_MIDDLE;
+	 * 		LGlobal.stageScale = LStageScaleMode.SHOW_ALL;
+	 * 		LSystem.screen(LStage.FULL_SCREEN);
+	 * 		var loader = new LLoader();
+	 * 		loader.addEventListener(LEvent.COMPLETE, loadBitmapdata); 
+	 * 		loader.load(&quot;face.jpg&quot;, &quot;bitmapData&quot;);
+	 * 	}
+	 * 	function loadBitmapdata (event) {
+	 * 		var bitmapdata = new LBitmapData(event.target);  
+	 * 		var bitmap = new LBitmap(bitmapdata);
+	 * 		addChild(bitmap);
+	 * 	}
+	 * @examplelink &lt;p&gt;&lt;a href=&quot;../../../api/LGlobal/stageScale_align.html&quot; target=&quot;_blank&quot;&gt;测试链接&lt;/a&gt;&lt;/p&gt;
+	 * @since 1.8.6
+	 * @public
+	 */
+	LGlobal.align = &quot;M&quot;;
+	/** @language chinese
+	 * &lt;p&gt;当前浏览器是否是移动浏览器。等同于 LGlobal.canTouch。&lt;/p&gt;
+	 * @property LGlobal.mobile
+	 * @type Boolean
+	 * @static
+	 * @since 1.9.0
+	 * @public
+	 */
+	LGlobal.mobile = false;
+	/** @language chinese
+	 * &lt;p&gt;等同于 LGlobal.mobile。&lt;/p&gt;
+	 * @property LGlobal.canTouch
+	 * @type Boolean
+	 * @static
+	 * @since 1.0.0
+	 * @public
+	 */
+	LGlobal.canTouch = false;
+	/** @language chinese
+	 * &lt;p&gt;当前浏览器环境。可以是下面中的一个&lt;/p&gt;
+	 * &lt;p&gt;OS_IPHONE，OS_IPOD，OS_IPAD，OS_ANDROID，OS_PC。&lt;/p&gt;
+	 * @property LGlobal.os
+	 * @type String
+	 * @static
+	 * @since 1.0.0
+	 * @public
+	 */
+	LGlobal.os = OS_PC;
+	/** @language chinese
+	 * &lt;p&gt;当前浏览器是否为IOS。&lt;/p&gt;
+	 * @property LGlobal.ios
+	 * @type Boolean
+	 * @static
+	 * @since 1.0.0
+	 * @public
+	 */
+	LGlobal.ios = false;
+	/** @language chinese
+	 * &lt;p&gt;当前浏览器是否为Android。&lt;/p&gt;
+	 * @property LGlobal.android
+	 * @type Boolean
+	 * @static
+	 * @since 1.0.0
+	 * @public
+	 */
+	LGlobal.android = false;
+	LGlobal.android_new = false;
+	/** @language chinese
+	 * &lt;p&gt;游戏画面的背景颜色。&lt;/p&gt;
+	 * @property LGlobal.backgroundColor
+	 * @type String
+	 * @static
+	 * @since 1.7.7
+	 * @public
+	 */
+	LGlobal.backgroundColor = null;
+	/** @language chinese
+	 * &lt;p&gt;LDisplayObject对象从舞台上被移除的时候，是否将这个对象整个清空。&lt;/p&gt;
+	 * @property LGlobal.destroy
+	 * @type Boolean
+	 * @default true
+	 * @static
+	 * @since 1.7.7
+	 * @public
+	 */
+	LGlobal.destroy = true;
+	/** @language chinese
+	 * &lt;p&gt;强制将画面彻底刷新，如果游戏中没有背景，有些手机上清空画面时偶尔会留下残影，如果遇到情况，可以在清空画面时将此属性设置为true来强制刷新画面一次。&lt;/p&gt;
+	 * @property LGlobal.forceRefresh
+	 * @type Boolean
+	 * @default false
+	 * @static
+	 * @since 1.9.1
+	 * @public
+	 */
+	LGlobal.forceRefresh = false;
+	LGlobal.devicePixelRatio = window.devicePixelRatio || 1;
+	LGlobal.startTimer = 0;
+	/** @language chinese
+	 * &lt;p&gt;LDisplayObject对象从舞台上被移除的时候，是否将这个对象整个清空。&lt;/p&gt;
+	 * &lt;p&gt;如果游戏不是透明背景的话，可以将LGlobal.keepClear的值设置为false来提高游戏效率。&lt;/p&gt;
+	 * @property LGlobal.keepClear
+	 * @type Boolean
+	 * @default true
+	 * @static
+	 * @since 1.8.7
+	 * @public
+	 */
+	LGlobal.keepClear = true;
+	LGlobal.top = 0;
+	LGlobal.left = 0;
+	LGlobal.window = window;
+	(function (n) {
+		LGlobal.isOldFirefox = (function(un){
+			var i = un.toLowerCase().indexOf(&#x27;firefox&#x27;);
+			if (i &lt; 0) {
+				return false;
+			}
+			var v = un.substring(i + 8, un.length);
+			return parseFloat(v) &lt; 39.0;
+		})(n);
+		if (n.indexOf(OS_IPHONE) &gt; 0) {
+			LGlobal.os = OS_IPHONE;
+			LGlobal.canTouch = true;
+			LGlobal.ios = true;
+		} else if (n.indexOf(OS_IPOD) &gt; 0) {
+			LGlobal.os = OS_IPOD;
+			LGlobal.canTouch = true;
+			LGlobal.ios = true;
+		} else if (n.indexOf(OS_IPAD) &gt; 0) {
+			LGlobal.os = OS_IPAD;
+			LGlobal.ios = true;
+			LGlobal.canTouch = true;
+		} else if (n.indexOf(OS_ANDROID) &gt; 0) {
+			LGlobal.os = OS_ANDROID;
+			LGlobal.canTouch = true;
+			LGlobal.android = true;
+			var i = n.indexOf(OS_ANDROID);
+			if(parseInt(n.substr(i + 8, 1)) &gt; 3){
+				LGlobal.android_new = true;
+			}
+		} else if (n.indexOf(OS_WINDOWS_PHONE) &gt; 0) {
+			LGlobal.os = OS_WINDOWS_PHONE;
+			LGlobal.canTouch = true;
+		} else if (n.indexOf(OS_BLACK_BERRY) &gt; 0) {
+			LGlobal.os = OS_BLACK_BERRY;
+			LGlobal.canTouch = true;
+		}
+		LGlobal.mobile = LGlobal.canTouch;
+	})(navigator.userAgent);
+	/** @language chinese
+	 * &lt;p&gt;设定是否开启测试模式。&lt;/p&gt;
+	 * &lt;p&gt;＊当游戏发布的时候，必须关闭测试模式。&lt;/p&gt;
+	 * @method setDebug
+	 * @static
+	 * @param {Boolean} value 是否开启测试模式
+	 * @example
+	 * 	LInit(50, &quot;legend&quot;, 800, 480, main);
+	 * 	function main () {
+	 * 		LGlobal.setDebug(true);
+	 * 		trace(&quot;test01&quot;, &quot;test02&quot;, &quot;test03&quot;);
+	 * 	}	
+	 * @examplelink &lt;p&gt;&lt;a href=&quot;../../../api/LGlobal/setDebug.html&quot; target=&quot;_blank&quot;&gt;测试链接&lt;/a&gt;&lt;/p&gt;
+	 * @public
+	 * @since 1.4.0
+	 */
+	LGlobal.setDebug = function (v) {
+		LGlobal.traceDebug = v; 
+	};
+	LGlobal.setCanvas = function (id, w, h) {
+		LGlobal.ll_createCanvas(id, w, h);
+		LGlobal.ll_createStage();
+		if(LGlobal.displayState == LStage.FULL_SCREEN){
+			LGlobal.resize();
+		}else if(typeof LGlobal.displayState == &quot;number&quot;){
+			LGlobal.resize(LGlobal.width * LGlobal.displayState, LGlobal.height * LGlobal.displayState);
+		}
+		if (LGlobal.canTouch) {
+			LGlobal.ll_clicks = 0;
+			LGlobal.ll_prev_clickTime = 0;
+			LEvent.addEventListener(LGlobal.canvasObj,LMouseEvent.TOUCH_START, LGlobal.ll_touchStart);
+			LEvent.addEventListener(document, LMouseEvent.TOUCH_END, LGlobal.ll_touchEnd);
+			LEvent.addEventListener(LGlobal.canvasObj,LMouseEvent.TOUCH_MOVE, LGlobal.ll_touchMove);
+		} else {
+			LEvent.addEventListener(LGlobal.canvasObj,LMouseEvent.DOUBLE_CLICK, LGlobal.ll_mouseDbclick);
+			LEvent.addEventListener(LGlobal.canvasObj,LMouseEvent.MOUSE_DOWN, LGlobal.ll_mouseDown);
+			LEvent.addEventListener(LGlobal.canvasObj,LMouseEvent.MOUSE_MOVE, LGlobal.ll_mouseMove);
+			LEvent.addEventListener(LGlobal.canvasObj,LMouseEvent.MOUSE_UP, LGlobal.ll_mouseUp);
+			LEvent.addEventListener(LGlobal.canvasObj,LMouseEvent.MOUSE_OUT, LGlobal.ll_mouseOut);
+		}
+	};
+	LGlobal.ll_createCanvas = function (id, w, h) {
+		LGlobal.id = id;
+		LGlobal.object = document.getElementById(id);
+		LGlobal.object.innerHTML = &#x27;&lt;div style=&quot;position:absolute;margin:0;padding:0;overflow:visible;-webkit-transform: translateZ(0);z-index:0;&quot;&gt;&#x27; +
+		&#x27;&lt;canvas id=&quot;&#x27; + LGlobal.id + &#x27;_canvas&quot; style=&quot;margin:0;padding:0;width:&#x27; + w + &#x27;px;height:&#x27; + h + &#x27;px;&quot;&gt;&#x27; +
+		&#x27;&lt;div id=&quot;noCanvas&quot;&gt;&#x27; +
+		&quot;&lt;p&gt;Hey there, it looks like you&#x27;re using Microsoft&#x27;s Internet Explorer. Microsoft hates the Web and doesn&#x27;t support HTML5 :(&lt;/p&gt;&quot; + 
+		&#x27;&lt;/div&gt;&#x27; +  
+		&#x27;&lt;/canvas&gt;&lt;/div&gt;&#x27; +
+		&#x27;&lt;div id=&quot;&#x27; + LGlobal.id + &#x27;_InputText&quot; style=&quot;position:absolute;margin:0;padding:0;z-index:10;display:none;&quot;&gt;&#x27; +
+		&#x27;&lt;textarea rows=&quot;1&quot; id=&quot;&#x27; + LGlobal.id + &#x27;_InputTextareaBox&quot; style=&quot;resize:none;background:transparent;border:0px;&quot;&gt;&lt;/textarea&gt;&#x27; +
+		&#x27;&lt;input type=&quot;text&quot; id=&quot;&#x27; + LGlobal.id + &#x27;_InputTextBox&quot;  style=&quot;background:transparent;border:0px;&quot; /&gt;&#x27; +
+		&#x27;&lt;input type=&quot;password&quot; id=&quot;&#x27; + LGlobal.id + &#x27;_passwordBox&quot;  style=&quot;background:transparent;border:0px;&quot; /&gt;&lt;/div&gt;&#x27;;
+		LGlobal.canvasObj = document.getElementById(LGlobal.id + &quot;_canvas&quot;);
+		LGlobal._canvas = document.createElement(&quot;canvas&quot;);
+		LGlobal._context = LGlobal._canvas.getContext(&quot;2d&quot;);
+		if (LGlobal._context) {
+			LGlobal.canvasObj.innerHTML=&quot;&quot;;
+		}
+		LGlobal.inputBox = document.getElementById(LGlobal.id + &#x27;_InputText&#x27;);
+		LGlobal.inputTextareaBoxObj = document.getElementById(LGlobal.id + &#x27;_InputTextareaBox&#x27;);
+		LGlobal.inputTextBoxObj = document.getElementById(LGlobal.id + &#x27;_InputTextBox&#x27;);
+		LGlobal.passwordBoxObj = document.getElementById(LGlobal.id + &#x27;_passwordBox&#x27;);
+		LGlobal.inputTextField = null;
+		if (w) {
+			LGlobal.canvasObj.width = w;
+		}
+		if (h) {
+			LGlobal.canvasObj.height = h;
+		}
+		LGlobal.width = LGlobal.canvasObj.width;
+		LGlobal.height = LGlobal.canvasObj.height;
+		LGlobal.canvasStyleWidth = LGlobal.width;
+		LGlobal.canvasStyleHeight = LGlobal.height;
+		LGlobal.canvas = LGlobal.canvasObj.getContext(&quot;2d&quot;);
+		LGlobal.offsetX = mouseX = 0;
+		LGlobal.offsetY = mouseY = 0;
+	};
+	LGlobal.ll_createStage = function () {
+		LGlobal.stage = new LSprite();
+		LGlobal.stage.parent = &quot;root&quot;;
+		LGlobal.childList.push(LGlobal.stage);
+		LGlobal.stage.baseAddEvent = LGlobal.stage.addEventListener;
+		LGlobal.stage.baseRemoveEvent = LGlobal.stage.removeEventListener;
+		LGlobal.stage.addEventListener = function (type, listener) {
+			if (type == LEvent.WINDOW_RESIZE || type == LEvent.WINDOW_ORIENTATIONCHANGE) {
+				if(type == LEvent.WINDOW_RESIZE){
+					LGlobal.stage.onresizeListener = listener;
+				}else{
+					LGlobal.stage.onorientationchangeListener = listener;
+				}
+				if(!LGlobal.stage.onresize){
+					LGlobal.stage.onresize = function (e) {
+						LGlobal.stage.onresizeEvent = e;
+					};
+					LEvent.addEventListener(LGlobal.window, type,LGlobal.stage.onresize);
+				}
+			} else if (type == LKeyboardEvent.KEY_DOWN || type == LKeyboardEvent.KEY_UP || type == LKeyboardEvent.KEY_PRESS) {
+				LEvent.addEventListener(LGlobal.window, type, listener);
+			} else {
+				LGlobal.stage.baseAddEvent(type, listener);
+			}
+		};
+		LGlobal.stage.removeEventListener = function (type, listener) {
+			if (type == LEvent.WINDOW_RESIZE || type == LEvent.WINDOW_ORIENTATIONCHANGE) {
+				if(type == LEvent.WINDOW_RESIZE){
+					delete LGlobal.stage.onresizeListener;
+					if(LGlobal.stage.onorientationchangeListener){
+						return;
+					}
+				}else{
+					delete LGlobal.stage.onorientationchangeListener;
+					if(LGlobal.stage.onresizeListener){
+						return;
+					}
+				}
+				LEvent.removeEventListener(LGlobal.window, LEvent.WINDOW_RESIZE, LGlobal.stage.onresize);
+				delete LGlobal.stage.onresize;
+			} else if (type == LKeyboardEvent.KEY_DOWN || type == LKeyboardEvent.KEY_UP || type == LKeyboardEvent.KEY_PRESS) {
+				LEvent.removeEventListener(LGlobal.window, type, listener);
+			} else {
+				LGlobal.stage.baseRemoveEvent(type, listener);
+			}
+		};
+		LGlobal.innerWidth = window.innerWidth;
+		LGlobal.innerHeight = window.innerHeight;
+		LEvent.addEventListener(LGlobal.window, &quot;blur&quot;, function(){
+			LGlobal.stage.dispatchEvent(new LEvent(LFocusEvent.FOCUS_OUT));
+		});
+	};
+	LGlobal.ll_touchStart = function (event) {
+		LGlobal._outStageCheckCount = 1;
+		LGlobal.IS_MOUSE_DOWN = true;
+		LGlobal.stage.dispatchEvent(new LEvent(LFocusEvent.FOCUS_IN));
+		if (LGlobal.inputBox.style.display != NONE) {
+			LGlobal.inputTextField._ll_getValue();
+		}
+		var canvasX, canvasY, eve, k, i;
+		canvasX = parseInt(0 + LGlobal.object.style.left) + parseInt(LGlobal.canvasObj.style.marginLeft);
+		canvasY = parseInt(0 + LGlobal.object.style.top) + parseInt(LGlobal.canvasObj.style.marginTop);
+		if (LMultitouch.inputMode == LMultitouchInputMode.NONE) {
+			eve = LGlobal.ll_touchStartEvent(event, 0, canvasX, canvasY);
+		} else if (LMultitouch.inputMode == LMultitouchInputMode.TOUCH_POINT) {
+			for (var i = 0,l = event.touches.length; i &lt; l; i++) {
+				if(!LMultitouch.touchs[&quot;touch&quot; + event.touches[i].identifier]){
+					eve = LGlobal.ll_touchStartEvent(event, i, canvasX, canvasY);
+				}
+			}
+		}
+		var date = new Date();
+		var clickTime = date.getTime();
+		LGlobal.ll_clicks = (clickTime &lt;= (LGlobal.ll_prev_clickTime + 500)) ? (LGlobal.ll_clicks + 1) : 1;
+		LGlobal.ll_prev_clickTime = clickTime;
+		if (LGlobal.ll_clicks === 2) {
+			LGlobal.mouseEvent(eve, LMouseEvent.DOUBLE_CLICK);
+			LGlobal.ll_clicks = 0;
+		}
+		if (LGlobal.mouseJoint_start) {
+			LGlobal.mouseJoint_start(eve);
+		}
+		LGlobal.touchHandler(event);
+	};
+	LGlobal.ll_touchStartEvent = function (event,eveIndex,canvasX,canvasY) {
+		var eve = {offsetX : (event.touches[eveIndex].pageX - canvasX),
+		offsetY : (event.touches[eveIndex].pageY - canvasY),
+		touchPointID : event.touches[eveIndex].identifier,
+		force : event.touches[eveIndex].force,
+		rotationAngle : event.touches[eveIndex].rotationAngle,
+		radiusX : event.touches[eveIndex].radiusX,
+		radiusY : event.touches[eveIndex].radiusY};
+		eve.offsetX = LGlobal.ll_scaleX(eve.offsetX);
+		eve.offsetY = LGlobal.ll_scaleY(eve.offsetY);
+		mouseX = LGlobal.offsetX = eve.offsetX;
+		mouseY = LGlobal.offsetY = eve.offsetY;
+		LMultitouch.touchs[&quot;touch&quot; + eve.touchPointID] = eve;
+		LGlobal.mouseEvent(eve, LMouseEvent.MOUSE_DOWN);
+		LGlobal.buttonStatusEvent = eve;
+		return eve;
+	};
+	LGlobal.ll_touchEnd = function (event) {
+		var e, eve, k, i, l, h;
+		LGlobal.IS_MOUSE_DOWN = false;
+		if (LMultitouch.inputMode == LMultitouchInputMode.TOUCH_POINT) {
+			for (k in LMultitouch.touchs) {
+				e = LMultitouch.touchs[k];
+				h = false;
+				for (i = 0,l = event.touches.length; i &lt; l; i++) {
+					if (event.touches[i].identifier == e.touchPointID) {
+						h = true;
+						break;
+					}
+				}
+				if (!h) {
+					eve = e;
+					delete LMultitouch.touchs[k];
+					LGlobal.mouseEvent(eve, LMouseEvent.MOUSE_UP);
+				}
+			}
+		}
+		if (!eve) {
+			eve = {offsetX : LGlobal.offsetX, offsetY : LGlobal.offsetY};
+		}
+		LGlobal.mouseEvent(eve, LMouseEvent.MOUSE_UP);
+		LGlobal.touchHandler(event);
+		LGlobal.buttonStatusEvent = null;
+		if (LGlobal.mouseJoint_end) {
+			LGlobal.mouseJoint_end();
+		}
+		LGlobal.stage.dispatchEvent(new LEvent(LFocusEvent.FOCUS_OUT));
+	};
+	LGlobal.ll_touchMove = function (e) {
+		var cX, cY, eve, l, ll = e.touches.length;
+		cX = parseInt(0 + LGlobal.object.style.left) + parseInt(LGlobal.canvasObj.style.marginLeft);
+		cY = parseInt(0 + LGlobal.object.style.top) + parseInt(LGlobal.canvasObj.style.marginTop);
+		if (LMultitouch.inputMode == LMultitouchInputMode.NONE) {
+			ll = 1;
+		}
+		for (i = 0, l = e.touches.length; i &lt; l &amp;&amp; i &lt; ll; i++) {
+			eve = {offsetX : (e.touches[i].pageX - cX), offsetY : (e.touches[i].pageY - cY), touchPointID : e.touches[i].identifier};
+			eve.offsetX = LGlobal.ll_scaleX(eve.offsetX);
+			eve.offsetY = LGlobal.ll_scaleY(eve.offsetY);
+			mouseX = LGlobal.offsetX = eve.offsetX;
+			mouseY = LGlobal.offsetY = eve.offsetY;
+			if (LMultitouch.touchs[&quot;touch&quot; + eve.touchPointID] &amp;&amp; 
+				LMultitouch.touchs[&quot;touch&quot; + eve.touchPointID].offsetX == eve.offsetX &amp;&amp; 
+				LMultitouch.touchs[&quot;touch&quot; + eve.touchPointID].offsetY == eve.offsetY){
+				continue;	
+			}
+			LGlobal.buttonStatusEvent = eve;
+			LMultitouch.touchs[&quot;touch&quot; + eve.touchPointID] = eve;
+			if(eve.offsetX &lt;= 0 || eve.offsetX &gt;= LGlobal.innerWidth || eve.offsetX &gt;= LGlobal.width || eve.offsetY &lt;= 0 || eve.offsetY &gt;= LGlobal.innerHeight || eve.offsetY &gt;= LGlobal.height){
+				LGlobal._outStageCheckCount = 0;
+			}else{
+				LGlobal._outStageCheckCount = 1;
+			}
+			LGlobal.mouseEvent(eve, LMouseEvent.MOUSE_MOVE);
+		}
+		LGlobal.touchHandler(e);
+		if (LGlobal.mouseJoint_move) {
+			LGlobal.mouseJoint_move(eve);
+		}
+	};
+	LGlobal.ll_mouseDbclick = function (e) {
+		if (e.offsetX == null &amp;&amp; e.layerX != null) {
+			e.offsetX = e.layerX;
+			e.offsetY = e.layerY;
+		}
+		var event = {button : e.button};
+		event.offsetX = LGlobal.ll_scaleX(e.offsetX);
+		event.offsetY = LGlobal.ll_scaleY(e.offsetY);
+		LGlobal.mouseEvent(event, LMouseEvent.DOUBLE_CLICK);
+	};
+	LGlobal.ll_mouseDown = function (e) {
+		if (e.offsetX == null &amp;&amp; e.layerX != null) {
+			e.offsetX = e.layerX;
+			e.offsetY = e.layerY;
+		}
+		if (LGlobal.inputBox.style.display != NONE) {
+			LGlobal.inputTextField._ll_getValue();
+		}
+		var event = {button : e.button};
+		event.offsetX = LGlobal.ll_scaleX(e.offsetX);
+		event.offsetY = LGlobal.ll_scaleY(e.offsetY);
+		LGlobal.mouseEvent(event, LMouseEvent.MOUSE_DOWN);
+		LGlobal.IS_MOUSE_DOWN = true;
+		if (LGlobal.mouseJoint_start) {
+			LGlobal.mouseJoint_start(event);
+		}
+	};
+	LGlobal.ll_mouseMove = function (e) {
+		if (e.offsetX == null &amp;&amp; e.layerX != null) {
+			e.offsetX = e.layerX;
+			e.offsetY = e.layerY;
+		}
+		var event = {};
+		event.offsetX = LGlobal.ll_scaleX(e.offsetX);
+		event.offsetY = LGlobal.ll_scaleY(e.offsetY);
+		LGlobal.buttonStatusEvent = event;
+		mouseX = LGlobal.offsetX = event.offsetX;
+		mouseY = LGlobal.offsetY = event.offsetY;
+		LGlobal.cursor = &quot;default&quot;;
+		if(mouseX &lt;= 0 || mouseX &gt;= LGlobal.innerWidth || mouseX &gt;= LGlobal.width || mouseY &lt;= 0 || mouseY &gt;= LGlobal.innerHeight || mouseY &gt;= LGlobal.height){
+			if(LGlobal._outStageCheckCount){
+				LGlobal._outStageCheckCount = 0;
+				LGlobal.stage.dispatchEvent(new LEvent(LFocusEvent.FOCUS_OUT));
+			}
+		}else{
+			if(!LGlobal._outStageCheckCount){
+				LGlobal._outStageCheckCount = 1;
+				LGlobal.stage.dispatchEvent(new LEvent(LFocusEvent.FOCUS_IN));
+			}
+		}
+		LGlobal.mouseEvent(event, LMouseEvent.MOUSE_MOVE);
+		document.body.style.cursor = LGlobal.cursor;
+		if (LGlobal.mouseJoint_move) {
+			LGlobal.mouseJoint_move(event);
+		}
+	};
+	LGlobal.ll_mouseUp = function (e) {
+		if (e.offsetX == null &amp;&amp; e.layerX != null) {
+			e.offsetX = e.layerX;
+			e.offsetY = e.layerY;
+		}
+		var event = {button : e.button};
+		event.offsetX = LGlobal.ll_scaleX(e.offsetX);
+		event.offsetY = LGlobal.ll_scaleY(e.offsetY);
+		LGlobal.mouseEvent(event, LMouseEvent.MOUSE_UP);
+		LGlobal.IS_MOUSE_DOWN = false;
+		if (LGlobal.mouseJoint_end) {
+			LGlobal.mouseJoint_end();
+		}
+	};
+	LGlobal.ll_mouseOut = function (e) {
+		if (e.offsetX == null &amp;&amp; e.layerX != null) {
+			e.offsetX = e.layerX;
+			e.offsetY = e.layerY;
+		}
+		var event = {};
+		event.offsetX = LGlobal.ll_scaleX(e.offsetX);
+		event.offsetY = LGlobal.ll_scaleY(e.offsetY);
+		LGlobal.mouseEvent(event, LMouseEvent.MOUSE_OUT);
+		LGlobal.IS_MOUSE_DOWN = false;
+	};
+	LGlobal.touchHandler = function (e) {
+		if (LGlobal.stopPropagation) {
+			e.stopPropagation();
+			if (e.stopImmediatePropagation) {
+				e.stopImmediatePropagation();
+			}
+		}
+		if (LGlobal.preventDefault) {
+			e.preventDefault();
+		}
+		return e;
+	};
+	LGlobal.mouseEvent = function (e, t) {
+		if (t == LMouseEvent.MOUSE_MOVE) {
+			LGlobal.dragHandler(e);
+		}
+		if (LMouseEventContainer.container[t]) {
+			LMouseEventContainer.dispatchMouseEvent(e, t);
+			return;
+		}
+		for (var k = LGlobal.childList.length - 1; k &gt;= 0; k--) {
+			if (LGlobal.childList[k].mouseEvent &amp;&amp; LGlobal.childList[k].mouseEvent(e, t)) {
+				break;
+			}
+		}
+	};
+	LGlobal.dragHandler = function (e) {
+		var i, s, c, d = LGlobal.dragList;
+		for(i = d.length - 1; i &gt;= 0; i--) {
+			s = d[i];
+			if (LGlobal.canTouch &amp;&amp; s.ll_touchPointID != e.touchPointID) {
+				continue;
+			}
+			c = s.parent.globalToLocal(new LPoint(e.offsetX - s.ll_dragMX + s.ll_dragGlobalPoint.x, e.offsetY - s.ll_dragMY + s.ll_dragGlobalPoint.y));
+			s.x = c.x;
+			s.y = c.y;
+			if (s.dragRange) {
+				if (s.x &lt; s.dragRange.left) {
+					s.x = s.dragRange.left;
+				} else if(s.x &gt; s.dragRange.right){
+					s.x = s.dragRange.right;
+				}
+				if (s.y &lt; s.dragRange.top) {
+					s.y = s.dragRange.top;
+				} else if(s.y &gt; s.dragRange.bottom){
+					s.y = s.dragRange.bottom;
+				}
+			}
+			break;
+		}
+	};
+	LGlobal._ll_mobile = function () {
+		var w1 = LGlobal.width * 0.3, h1 = w1 * 1.5, s = LGlobal.width * 0.05, ss = w1 * 0.05, sm = w1 * 0.15, 
+		sx = w1 * 0.3, sh = h1 * 0.20, c = &#x27;#cccccc&#x27;, d = &#x27;#000000&#x27;, f = &#x27;#ffffff&#x27;, h = &#x27;#ff0000&#x27;, b, w1, h1, m, m1, n, v;
+		b = new LSprite();
+		addChild(b);
+		w1 = LGlobal.width * 0.3, h1 = w1 * 1.5;
+		b.graphics.drawRoundRect(1, d, [s, s, w1, h1, s],true,c);
+		b.graphics.drawRoundRect(1, d, [s + ss, s + ss, w1 - ss * 2, h1 - ss * 2, s], true, d);
+		b.graphics.drawRect(1, f, [s + sm, s + sh, w1 - sm * 2, h1 - sh * 2], true, f);
+		b.graphics.drawArc(1, f, [s + w1 * 0.5, s + h1 - ss * 3.5, ss * 1.5, 0, 2 * Math.PI]);
+		b.graphics.drawRoundRect(1, f, [s + sx, s + sm, w1 - sx * 2, ss, ss * 0.5]);
+		m = new LSprite();
+		m.x = -(w1 - sm * 2) * 0.5;
+		m.y = -ss * 0.5;
+		m.graphics.drawRect(1, h, [0, 0, w1 - sm * 2, ss], true, h);
+		m1 = new LSprite();
+		m1.y = -(w1 - sm * 2) * 0.5;
+		m1.x = -ss * 0.5;
+		m1.graphics.drawRect(1, h, [0, 0, ss, w1 - sm * 2], true, h);
+		n = new LSprite();
+		n.x = s + sx + (w1 - sx * 2) * 0.5;
+		n.y = s + sh + (h1 - sh * 2) * 0.5;
+		n.rotate = 45;
+		n.addChild(m);
+		n.addChild(m1);
+		b.addChild(n);
+		v = new LSprite();
+		v.graphics.drawVertices(2, d, [[0, 0], [sm, sm ], [0, sm * 2]], true, c);
+		v.x = s * 1.5 + h1;
+		v.y = s * 1.5 + h1 * 0.5;
+		addChild(v);
+		b.arrow = v;
+		var fn = function () {
+			setTimeout(function () {
+				location.href = location.href;
+			}, 100);
+		};
+		window.onorientationchange = fn;
+		return b;
+	};
+	LGlobal.verticalError = function () {
+		var w1 = LGlobal.width * 0.3, s = LGlobal.width * 0.05;
+		var b = LGlobal._ll_mobile();
+		var d = b.clone();
+		d.getChildAt(0).visible = false;
+		d.x = LGlobal.width * 0.5 + s;
+		addChild(d);
+		b.rotate = 90;
+		b.x = LGlobal.width * 0.5 + s;
+		b.y = w1 * 0.5;
+	};
+	LGlobal.horizontalError = function () {
+		var w1 = LGlobal.width * 0.3, s = LGlobal.width * 0.05;
+		var b = LGlobal._ll_mobile();
+		var d = b.clone();
+		d.getChildAt(0).visible = false;
+		d.rotate = 90;
+		d.x = LGlobal.width - s;
+		d.y = w1 * 0.5;
+		addChild(d);
+		b.arrow.x = s * 1.5 + w1;
+	};
+	LGlobal.onShow = function () {
+		if (LGlobal.canvas == null) {
+			return;
+		}
+		if(LGlobal._outStageCheckCount &lt;= 0){
+			LGlobal._outStageCheckCount--;
+			if(LGlobal._outStageCheckCount &lt; -2){
+				LGlobal.stage.dispatchEvent(new LEvent(LFocusEvent.FOCUS_OUT));
+				LGlobal._outStageCheckCount = 1;
+			}
+		}
+		if (LGlobal.fpsStatus) {
+			LGlobal.fpsStatus.reset();
+		}
+		if (LGlobal.stage.onresizeEvent) {
+			if(LGlobal.stage.onresizeListener){
+				LGlobal.stage.onresizeListener(LGlobal.stage.onresizeEvent);
+			}
+			if(LGlobal.stage.onorientationchangeListener){
+				LGlobal.stage.onorientationchangeListener({orientation:(window.innerWidth &gt; window.innerHeight ? LANDSCAPE : PORTRAIT)});
+			}
+			delete LGlobal.stage.onresizeEvent;
+		}
+		if (LGlobal.forceRefresh) {
+			LGlobal.canvasObj.width = LGlobal.canvasObj.width;
+			LGlobal.forceRefresh = false;
+		}
+		LGlobal.canvas.beginPath();
+		if (LGlobal.box2d != null) {
+			LGlobal.box2d.ll_show();
+			if (!LGlobal.traceDebug &amp;&amp; LGlobal.keepClear) {
+				LGlobal.canvas.clearRect(0, 0, LGlobal.width + 1, LGlobal.height + 1);
+			}
+		} else {
+			if (LGlobal.keepClear) {
+				LGlobal.canvas.clearRect(0, 0, LGlobal.width + 1, LGlobal.height + 1);
+			}
+			if (LGlobal.backgroundColor !== null) {
+				LGlobal.canvas.fillStyle = LGlobal.backgroundColor;
+				LGlobal.canvas.fillRect(0, 0, LGlobal.width, LGlobal.height);
+			}
+		}
+		LGlobal.show(LGlobal.childList, LGlobal.canvas);
+	};
+	/** @language chinese
+	 * &lt;p&gt;将传入的一组对象绘制到指定的CanvasRenderingContext2D对象上。&lt;/p&gt;
+	 * &lt;p&gt;※该方法每调用一次，只绘制一次。&lt;/p&gt;
+	 * @method show
+	 * @static
+	 * @param {Array} list 要绘制的对象数组，数组中的对象必须是LDisplayObject对象
+	 * @param {CanvasRenderingContext2D} context2D 通过canvas.getContext(&quot;2d&quot;)得到的对象
+	 * @example
+	 * 	LInit(1000/60, &quot;legend&quot;, 240, 240, main);
+	 * 	var myCanvas=document.getElementById(&quot;myCanvas&quot;);
+	 * 	var ctx=myCanvas.getContext(&quot;2d&quot;);
+	 * 	function main () {
+	 * 		var loader = new LLoader();
+	 * 		loader.addEventListener(LEvent.COMPLETE, loadBitmapdata); 
+	 * 		loader.load(&quot;face.jpg&quot;, &quot;bitmapData&quot;);
+	 * 	}
+	 * 	function loadBitmapdata(event){
+	 * 		var bitmapdata = new LBitmapData(event.target); 
+	 * 		var bitmap = new LBitmap(bitmapdata);
+	 * 		addChild(bitmap);
+	 * 		LGlobal.show([bitmap], ctx);
+	 * 	}
+	 * @examplelink &lt;p&gt;&lt;a href=&quot;../../../api/LGlobal/show.html&quot; target=&quot;_blank&quot;&gt;测试链接&lt;/a&gt;&lt;/p&gt;
+	 * @public
+	 * @since 1.10.0
+	 */
+	LGlobal.show = function (s, ctx) {
+		ctx = ctx || LGlobal.canvas;
+		for (var i = 0, l = s.length, c; i &lt; l; i++) {
+			c = s[i];
+			if (c &amp;&amp; c.ll_show) {
+				c.ll_show(ctx);
+				if(c._ll_removeFromSelf){
+					i--;
+					l--;
+				}
+			}
+		}
+	};
+	/** @language chinese
+	 * &lt;p&gt;将传入的宽和高，按照行数和列数进行拆分计算，会得到一个2维数组。&lt;/p&gt;
+	 * @method divideCoordinate
+	 * @static
+	 * @param {float} width 宽
+	 * @param {float} height 高
+	 * @param {int} row 行数
+	 * @param {int} col 列数
+	 * @return {Array} 2维数组
+	 * @example
+	 * 	LInit(50, &quot;legend&quot;, 800, 480, main);
+	 * 	function main () {
+	 * 		var loader = new LLoader();
+	 * 		loader.addEventListener(LEvent.COMPLETE, loadBitmapdata); 
+	 * 		loader.load(&quot;player.png&quot;, &quot;bitmapData&quot;);
+	 * 	}
+	 * 	function loadBitmapdata(event){
+	 * 		var backLayer = new LSprite();
+	 * 		addChild(backLayer);
+	 * 		var list = LGlobal.divideCoordinate(480,630,3,4);
+	 * 		var data = new LBitmapData(event.target,0,0,120,210);
+	 * 		player = new LAnimation(backLayer,data,list);
+	 * 		backLayer.addEventListener(LEvent.ENTER_FRAME,onframe);
+	 * 	}
+	 * 	function onframe(){
+	 * 		player.onframe();
+	 * 	}
+	 * @examplelink &lt;p&gt;&lt;a href=&quot;../../../api/LGlobal/divideCoordinate.html&quot; target=&quot;_blank&quot;&gt;测试链接&lt;/a&gt;&lt;/p&gt;
+	 * @public
+	 * @since 1.3.1
+	 */
+	LGlobal.divideCoordinate = function (w, h, row, col) {
+		var i, j, cw = w / col, ch = h / row, r = [], c;
+		for (i = 0; i &lt; row; i++) {
+			c = [];
+			for (j = 0; j &lt; col; j++) {
+				c.push({x : cw * j, y : ch * i, width : cw, height : ch});
+			}
+			r.push(c);
+		}
+		return r;
+	};
+	LGlobal._create_loading_color = function () {
+		var co = LGlobal.canvas.createRadialGradient(LGlobal.width / 2, LGlobal.height, 0, LGlobal.width / 2, 0, LGlobal.height);  
+		co.addColorStop(0, &quot;red&quot;);  
+		co.addColorStop(0.3, &quot;orange&quot;);  
+		co.addColorStop(0.4, &quot;yellow&quot;);  
+		co.addColorStop(0.5, &quot;green&quot;);  
+		co.addColorStop(0.8, &quot;blue&quot;);  
+		co.addColorStop(1, &quot;violet&quot;);  
+		return co;
+	};
+	/** @language chinese
+	 * &lt;p&gt;检测点是否在多边形内部&lt;/p&gt;
+	 * @method hitPolygon
+	 * @static
+	 * @param {Array} vertices 多边形的顶点数组[[x1,y1],[x2,y2],[x3,y3],......]
+	 * @param {float} x coordinate-x of point
+	 * @param {float} y coordinate-y of point
+	 * @return {Boolean} 当たったらtrueを返す
+	 * @example
+	 * 	LGlobal.setDebug(true);
+	 * 	var layer = new LSprite();
+	 * 	addChild(layer);
+	 * 	var vertices = [[50,100],[150,50],[100,150]];
+	 * 	layer.graphics.drawVertices(1,&quot;#000000&quot;,vertices);
+	 * 	var point1 = [100,100];
+	 * 	layer.graphics.drawArc(1,&quot;#000000&quot;,[point1[0],point1[1],2,0,2*Math.PI]);
+	 * 	var point2 = [50,200];
+	 * 	layer.graphics.drawArc(1,&quot;#000000&quot;,[point2[0],point2[1],2,0,2*Math.PI]);
+	 * 	trace(LGlobal.hitPolygon(vertices,point1[0],point1[1]));//out:true
+	 * 	trace(LGlobal.hitPolygon(vertices,point2[0],point2[1]));//out:false
+	 * @examplelink &lt;p&gt;&lt;a href=&quot;../../../api/LGlobal/hitPolygon.html&quot; target=&quot;_blank&quot;&gt;测试链接&lt;/a&gt;&lt;/p&gt;
+	 * @public
+	 * @since 1.8.9
+	 */
+	LGlobal.hitPolygon = function (list, x, y) {
+		var c = 0, p0 = list[0], b0x = (x &lt;= p0[0]), b0y = (y &lt;= p0[1]), i, l, p1, b1x, b1y;
+		for (i = 1, l = list.length; i &lt; l + 1; i++) {
+			p1 = list[i % l];
+			b1x = (x &lt;= p1[0]);
+			b1y = (y &lt;= p1[1]);
+			if (b0y != b1y) {
+				if (b0x == b1x) {
+					if (b0x) {
+						c += (b0y ? -1 : 1);
+					}
+				} else {
+					if (x &lt;= (p0[0] + (p1[0] - p0[0]) * (y - p0[1] ) / (p1[1] - p0[1]))) {
+						c += (b0y ? -1 : 1);
+					}
+				}
+			}
+			p0 = p1;
+			b0x = b1x;
+			b0y = b1y;
+		}
+		return 0 != c;
+	};
+	/** @language chinese
+	 * &lt;p&gt;检测多边形与多边形的碰撞&lt;/p&gt;
+	 * @method hitTestPolygon
+	 * @static
+	 * @param {Array} verticesA 多边形A的顶点数组[[x1,y1],[x2,y2],[x3,y3],......]
+	 * @param {Array} verticesB 多边形B的顶点数组[[x1,y1],[x2,y2],[x3,y3],......]
+	 * @return {Boolean} 当たったらtrueを返す
+	 * @example
+	 * 	LGlobal.setDebug(true);
+	 * 	var layer = new LSprite();
+	 * 	addChild(layer);
+	 * 	var vertices = [[50,100],[150,50],[100,150]];
+	 * 	layer.graphics.drawVertices(1,&quot;#000000&quot;,vertices);
+	 * 	var vertices1 = [[120,60],[250,150],[100,100]];
+	 * 	layer.graphics.drawVertices(1,&quot;#000000&quot;,vertices1);
+	 * 	var vertices2 = [[70,200],[100,160],[200,300]];
+	 * 	layer.graphics.drawVertices(1,&quot;#000000&quot;,vertices2);
+	 * 	trace(LGlobal.hitTestPolygon(vertices,vertices1));//out:true
+	 * 	trace(LGlobal.hitTestPolygon(vertices,vertices2));//out:false
+	 * @examplelink &lt;p&gt;&lt;a href=&quot;../../../api/LGlobal/hitTestPolygon.html&quot; target=&quot;_blank&quot;&gt;测试链接&lt;/a&gt;&lt;/p&gt;
+	 * @public
+	 * @since 1.9.0
+	 */
+	LGlobal.hitTestPolygon = function (p1, p2) {
+		var i, j, l, listA, normals, vecs, list = [[p1, [], []], [p2, [], []]];
+		for (j = 0; j &lt; list.length; j++) {
+			listA = list[j][0], normals = list[j][1];
+			for (i = 0, l = listA.length; i &lt; l; i++) {
+				list[j][2].push(new LVec2(listA[i][0], listA[i][1]));
+				if (i &lt; l - 1) {
+					normals.push((new LVec2(listA[i + 1][0] - listA[i][0], listA[i + 1][1] - listA[i][1])).normL());
+				}
+			}
+			normals.push((new LVec2(listA[0][0] - listA[l - 1][0], listA[0][1] - listA[l - 1][1])).normL());
+		}
+		for (j = 0; j &lt; list.length; j++) {
+			normals = list[j][1];
+			for (i = 0, l = normals.length; i &lt; l; i++) {
+				var r1 = LVec2.getMinMax(list[0][2], normals[i]);
+				var r2 = LVec2.getMinMax(list[1][2], normals[i]);
+				if (r1.max_o &lt; r2.min_o || r1.min_o &gt; r2.max_o) {
+					return false;
+				}
+			}
+		}
+		return true;
+	};
+	/** @language chinese
+	 * &lt;p&gt;检测一个多边形和一个圆的碰撞&lt;/p&gt;
+	 * @method hitTestPolygonArc
+	 * @static
+	 * @param {Array} vertices 多边形的顶点数组[[x1,y1],[x2,y2],[x3,y3],......]
+	 * @param {Array} circle 圆[中心坐标x,中心坐标y,半径,半径*半径]
+	 * @return {Boolean} 当たったらtrueを返す
+	 * @example
+	 * 	LGlobal.setDebug(true);
+	 * 	var layer = new LSprite();
+	 * 	addChild(layer);
+	 * 	var vertices = [[50,100],[150,50],[100,150]];
+	 * 	layer.graphics.drawVertices(1,&quot;#000000&quot;,vertices);
+	 * 	var circle1 = [170,100,50,2500];
+	 * 	layer.graphics.drawArc(1,&quot;#000000&quot;,[circle1[0],circle1[1],circle1[2],0,2*Math.PI]);
+	 * 	var circle2 = [50,200,50,2500];
+	 * 	layer.graphics.drawArc(1,&quot;#000000&quot;,[circle2[0],circle2[1],circle2[2],0,2*Math.PI]);
+	 * 	trace(LGlobal.hitTestPolygonArc(vertices,circle1));//out:true
+	 * 	trace(LGlobal.hitTestPolygonArc(vertices,circle2));//out:false
+	 * @examplelink &lt;p&gt;&lt;a href=&quot;../../../api/LGlobal/hitTestPolygonArc.html&quot; target=&quot;_blank&quot;&gt;测试链接&lt;/a&gt;&lt;/p&gt;
+	 * @public
+	 * @since 1.9.0
+	 */
+	LGlobal.hitTestPolygonArc = function (vs, arc) {
+		if (LGlobal.hitPolygon(vs, arc[0], arc[1])) {
+			return true;
+		}
+		var i, j, l, p1, p2, v1, v2, ext, inn, l2;
+		for (i = 0, l = vs.length; i &lt; l; i++) {
+			j = i &lt; l - 1 ? i + 1 : 0;
+			p1 = vs[i], p2 = vs[j];
+			v1 = new LVec2(arc[0] - p1[0], arc[1] - p1[1]), v2 = new LVec2(p2[0] - p1[0], p2[1] - p1[1]);
+			l2 = v2.normalize();
+			inn = LVec2.dot(v1, l2);
+			if (inn &lt;= 0) {
+				if (v1.x * v1.x + v1.y * v1.y &lt; arc[3]) {
+					return true;
+				}
+			} else if (inn * inn &lt; v2.x * v2.x + v2.y * v2.y) {
+				ext = LVec2.cross(v1, l2);
+				if (ext * ext &lt; arc[3]) {
+					return true;
+				}
+			}
+		}
+		return false;
+	};
+	/** @language chinese
+	 * &lt;p&gt;将两个对象看作圆来检测碰撞&lt;/p&gt;
+	 * &lt;p&gt;如果对象发生旋转，则不能使用此方法进行碰撞检测，请使用LSprite类的hitTestObject&lt;/p&gt;
+	 * @method hitTestArc
+	 * @static
+	 * @param {LDisplayObject} objA 对象A
+	 * @param {LDisplayObject} objB 对象B
+	 * @param {float} objAR 新的半径
+	 * @param {float} objBR 新的半径
+	 * @return {Boolean} 当たったらtrueを返す
+	 * @example
+	 * 	LGlobal.setDebug(true);
+	 * 	var arcLayer1 = new LSprite();
+	 * 	arcLayer1.graphics.drawArc(1,&quot;#000000&quot;,[100,100,100,0,2*Math.PI]);
+	 * 	addChild(arcLayer1);
+	 * 	var arcLayer2 = new LSprite();
+	 * 	arcLayer2.alpha = 0.5;
+	 * 	arcLayer2.x = 150;
+	 * 	arcLayer2.graphics.drawArc(1,&quot;#000000&quot;,[100,100,100,0,2*Math.PI]);
+	 * 	addChild(arcLayer2);
+	 * 	var arcLayer3 = new LSprite();
+	 * 	arcLayer3.alpha = 0.5;
+	 * 	arcLayer3.x = 300;
+	 * 	arcLayer3.graphics.drawArc(1,&quot;#000000&quot;,[100,100,100,0,2*Math.PI]);
+	 * 	addChild(arcLayer3);
+	 * 	//[100,100,100,0,2*Math.PI] vs [100,100,100,0,2*Math.PI]
+	 * 	trace(LGlobal.hitTestArc(arcLayer1,arcLayer2));//out:true
+	 * 	//[115,115,70,0,2*Math.PI] vs [115,115,70,0,2*Math.PI]
+	 * 	trace(LGlobal.hitTestArc(arcLayer2,arcLayer3,70,70));//out:false
+	 * @examplelink &lt;p&gt;&lt;a href=&quot;../../../api/LGlobal/hitTestArc.html&quot; target=&quot;_blank&quot;&gt;测试链接&lt;/a&gt;&lt;/p&gt;
+	 * @public
+	 * @since 1.4.1
+	 */
+	LGlobal.hitTestArc = function (objA, objB, objAR, objBR) {
+		var rA = objA.getWidth() * 0.5
+		,rB = objB.getWidth() * 0.5
+		,xA = objA._startX ? objA._startX() : objA.startX()
+		,xB = objB._startX ? objB._startX() : objB.startX()
+		,yA = objA._startY ? objA._startY() : objA.startY()
+		,yB = objB._startY ? objB._startY() : objB.startY();
+		if (typeof objAR != UNDEFINED) {
+			xA += (rA - objAR);
+			yA += (rA - objAR);
+			rA = objAR;
+		}
+		if (typeof objBR != UNDEFINED) {
+			xB += (rB - objBR);
+			yB += (rB - objBR);
+			rB = objBR;
+		}
+		var disx = xA + rA - xB - rB
+		,disy = yA + rA - yB - rB;
+		return disx * disx + disy * disy &lt; (rA + rB) * (rA + rB);
+	};
+	/** @language chinese
+	 * &lt;p&gt;将两个对象看作矩形来检测碰撞，等同于 hitTest。&lt;/p&gt;
+	 * &lt;p&gt;如果对象发生旋转，则不能使用此方法进行碰撞检测，请使用LSprite类的hitTestObject&lt;/p&gt;
+	 * @method hitTestRect
+	 * @static
+	 * @param {LDisplayObject} objA 对象A
+	 * @param {LDisplayObject} objB 对象B
+	 * @param {Array} vecA 重新设置对象A的矩形范围 [width,height]
+	 * @param {Array} vecB 重新设置对象B的矩形范围 [width,height]
+	 * @return {Boolean} 如果碰撞则返回true。
+	 * @example
+	 * 	LGlobal.setDebug(true);
+	 * 	var rectLayer1 = new LSprite();
+	 * 	rectLayer1.graphics.drawRect(1,&quot;#000000&quot;,[0,0,200,200],true,&quot;#FF0000&quot;);
+	 * 	addChild(rectLayer1);
+	 * 	var rectLayer2 = new LSprite();
+	 * 	rectLayer2.alpha = 0.5;
+	 * 	rectLayer2.x = 150;
+	 * 	rectLayer2.graphics.drawRect(1,&quot;#000000&quot;,[0,0,200,200],true,&quot;#00FF00&quot;);
+	 * 	addChild(rectLayer2);
+	 * 	var rectLayer3 = new LSprite();
+	 * 	rectLayer3.alpha = 0.5;
+	 * 	rectLayer3.x = 300;
+	 * 	rectLayer3.graphics.drawRect(1,&quot;#000000&quot;,[0,0,200,200],true,&quot;#0000FF&quot;);
+	 * 	addChild(rectLayer3);
+	 * 	//[0,0,200,200] vs [0,0,200,200]
+	 * 	trace(LGlobal.hitTestRect(rectLayer1,rectLayer2));//out:true
+	 * 	//[30,0,140,200] vs [30,0,140,200]
+	 * 	trace(LGlobal.hitTestRect(rectLayer2,rectLayer3,[140,200],[140,200]));//out:false
+	 * @examplelink &lt;p&gt;&lt;a href=&quot;../../../api/LGlobal/hitTestRect.html&quot; target=&quot;_blank&quot;&gt;测试链接&lt;/a&gt;&lt;/p&gt;
+	 * @public
+	 * @since 1.4.1
+	 */
+	LGlobal.hitTestRect = function (objA, objB, vecA, vecB) {
+		var wA = objA.getWidth()
+		,wB = objB.getWidth()
+		,hA = objA.getHeight()
+		,hB = objB.getHeight()
+		,xA = objA._startX ? objA._startX() : objA.startX()
+		,xB = objB._startX ? objB._startX() : objB.startX()
+		,yA = objA._startY ? objA._startY() : objA.startY()
+		,yB = objB._startY ? objB._startY() : objB.startY();
+		if (typeof vecA != UNDEFINED) {
+			xA += (wA - vecA[0]) * 0.5;
+			yA += (hA - vecA[1]) * 0.5;
+			wA = vecA[0];
+			hA = vecA[1];
+		}
+		if (typeof vecB != UNDEFINED) {
+			xB += (wB - vecB[0]) * 0.5;
+			yB += (hB - vecB[1]) * 0.5;
+			wB = vecB[0];
+			hB = vecB[1];
+		}
+		var minx = xA &gt; xB ? xA : xB
+		,miny = yA &gt; yB ? yA : yB
+		,maxx = (xA + wA) &gt; (xB + wB) ? (xB + wB) : (xA + wA)
+		,maxy = (yA + hA) &gt; (yB + hB) ? (yB + hB) : (yA + hA);
+		return minx &lt;= maxx &amp;&amp; miny &lt;= maxy;
+	};
+	LGlobal.hitTest = LGlobal.hitTestRect;
+	/** @language chinese
+	 * 重新设定游戏速度
+	 * @method setFrameRate
+	 * @static
+	 * @param {int} speed 游戏速度,每次页面刷新间隔（单位毫秒）, FPS = 1000 / speed。
+	 * @example
+	 * 	LGlobal.setFrameRate(1000/60);
+	 * @examplelink &lt;p&gt;&lt;a href=&quot;../../../api/LGlobal/setFrameRate.html&quot; target=&quot;_blank&quot;&gt;测试链接&lt;/a&gt;&lt;/p&gt;
+	 * @public
+	 * @since 1.5.0
+	 */
+	LGlobal.setFrameRate = function (s) {
+		if (LGlobal.frameRate) {
+			clearInterval(LGlobal.frameRate);
+		}
+		LGlobal.speed = s;
+		LGlobal.frameRate = setInterval(function () {
+			LGlobal.onShow();
+		}, s);
+	};
+	LGlobal.ll_scaleX = function (v) {
+		return (v - LGlobal.left) * LGlobal.width/LGlobal.canvasStyleWidth;
+	};
+	LGlobal.ll_scaleY = function (v) {
+		return (v - LGlobal.top) * LGlobal.height / LGlobal.canvasStyleHeight;
+	};
+	LGlobal.ll_setStageSize = function (w, h) {
+		w =  Math.ceil(w);
+		h =  Math.ceil(h);
+		LGlobal.canvasObj.style.width = w + &quot;px&quot;;
+		LGlobal.canvasObj.style.height = h + &quot;px&quot;;
+		LGlobal.canvasStyleWidth = w;
+		LGlobal.canvasStyleHeight = h;
+	};
+	/** @language chinese
+	 * 将画面设置为指定大小
+	 * @method resize
+	 * @static
+	 * @param {float} width 指定宽度
+	 * @param {float} height 指定高度
+	 * @example
+	 * 	LInit(1000/60, &quot;legend&quot;, 240, 240, main);
+	 * 	function main () {
+	 * 		LGlobal.resize(400,100);
+	 * 		var loader = new LLoader();
+	 * 		loader.addEventListener(LEvent.COMPLETE, loadBitmapdata); 
+	 * 		loader.load(&quot;face.jpg&quot;, &quot;bitmapData&quot;);
+	 * 	}
+	 * 	function loadBitmapdata (event) {
+	 * 		var bitmapdata = new LBitmapData(event.target);  
+	 * 		var bitmap = new LBitmap(bitmapdata);
+	 * 		addChild(bitmap);
+	 * 	}
+	 * @examplelink &lt;p&gt;&lt;a href=&quot;../../../api/LGlobal/resize.html&quot; target=&quot;_blank&quot;&gt;测试链接&lt;/a&gt;&lt;/p&gt;
+	 * @public
+	 * @since 1.9.0
+	 */
+	LGlobal.resize = function (canvasW, canvasH) {
+		var w, h, t = 0, l = 0, ww = window.innerWidth, wh = window.innerHeight;
+		LGlobal.innerWidth = ww;
+		LGlobal.innerHeight = wh;
+		if (canvasW) {
+			w = canvasW;
+		}
+		if (canvasH) {
+			h = canvasH;
+		}
+		if (LGlobal.stageScale == &quot;noScale&quot;) {
+			w = canvasW || LGlobal.width;
+			h = canvasH || LGlobal.height;
+		}
+		switch (LGlobal.stageScale) {
+		case &quot;exactFit&quot;:
+			w = canvasW || ww;
+			h = canvasH || wh;
+			break;
+		case &quot;noBorder&quot;:
+			w = canvasW || ww;
+			h = canvasH || LGlobal.height*ww/LGlobal.width;
+			switch (LGlobal.align) {
+			case LStageAlign.BOTTOM:
+			case LStageAlign.BOTTOM_LEFT:
+			case LStageAlign.BOTTOM_RIGHT:
+			case LStageAlign.BOTTOM_MIDDLE:
+				t = wh - h;
+				break;
+			}
+		break;
+		case &quot;showAll&quot;:
+			if (ww / wh &gt; LGlobal.width / LGlobal.height) {
+				h = canvasH || wh;
+				w = canvasW || LGlobal.width * wh / LGlobal.height;
+			} else {
+				w = canvasW || ww;
+				h = canvasH || LGlobal.height * ww / LGlobal.width;
+			}
+		case &quot;noScale&quot;:
+		default:
+			switch (LGlobal.align) {
+			case LStageAlign.BOTTOM:
+			case LStageAlign.BOTTOM_LEFT:
+				t = wh - h;
+				break;
+			case LStageAlign.RIGHT:
+			case LStageAlign.TOP_RIGHT:
+				l = ww - w;
+				break;
+			case LStageAlign.TOP_MIDDLE:
+				l = (ww - w) * 0.5;
+				break;
+			case LStageAlign.BOTTOM_RIGHT:
+				t = wh - h;
+				l = ww - w;
+				break;
+			case LStageAlign.BOTTOM_MIDDLE:
+				t = wh - h;
+				l = (ww - w) * 0.5;
+				break;
+			case LStageAlign.MIDDLE:
+				t = (wh - h) * 0.5;
+				l = (ww - w) * 0.5;
+				break;
+			case LStageAlign.TOP:
+			case LStageAlign.LEFT:
+			case LStageAlign.TOP_LEFT:
+			default:
+			}
+		}
+		LGlobal.canvasObj.style.marginTop = t + &quot;px&quot;;
+		LGlobal.canvasObj.style.marginLeft = l + &quot;px&quot;;
+		if (LGlobal.isOldFirefox) {
+			LGlobal.left = parseInt(LGlobal.canvasObj.style.marginLeft);
+			LGlobal.top = parseInt(LGlobal.canvasObj.style.marginTop);
+		}
+		LGlobal.ll_setStageSize(w, h);
+	};
+	LGlobal.sleep = function (s) {
+		var d = new Date();   
+		while ((new Date().getTime() - d.getTime()) &lt; s) {}
+	};
+	/** @language chinese
+	 * 全画面显示或者设定画面大小的缩放比例值
+	 * @method screen
+	 * @static
+	 * @param {String | float} value 全画面的静态值LGlobal.FULL_SCREEN 或者 画面大小的缩放比例值
+	 * @example
+	 * 	LInit(1000/60, &quot;legend&quot;, 240, 240, main);
+	 * 	function main () {
+	 * 		LGlobal.stageScale = LStageScaleMode.SHOW_ALL;
+	 * 		LGlobal.screen(LStage.FULL_SCREEN);
+	 * 		//you can also use it like : LGlobal.screen(1.5);
+	 * 		var loader = new LLoader();
+	 * 		loader.addEventListener(LEvent.COMPLETE, loadBitmapdata); 
+	 * 		loader.load(&quot;face.jpg&quot;, &quot;bitmapData&quot;);
+	 * 	}
+	 * 	function loadBitmapdata (event) {
+	 * 		var bitmapdata = new LBitmapData(event.target);  
+	 * 		var bitmap = new LBitmap(bitmapdata);
+	 * 		addChild(bitmap);
+	 * 	}
+	 * @examplelink &lt;p&gt;&lt;a href=&quot;../../../api/LGlobal/screen.html&quot; target=&quot;_blank&quot;&gt;测试链接&lt;/a&gt;&lt;/p&gt;
+	 * @public
+	 * @since 1.6.0
+	 */
+	LGlobal.screen = function (a) {
+		LGlobal.displayState = a;
+		if (LGlobal.stage) {
+			if (typeof LGlobal.displayState == &quot;number&quot;) {
+				LGlobal.resize(LGlobal.width * LGlobal.displayState, LGlobal.height * LGlobal.displayState);
+			} else {
+				LGlobal.resize();
+			}
+		}
+	};
+	return LGlobal;
+})();
+var LSystem = LGlobal;
+var LStage = LGlobal;
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32497708-2']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>

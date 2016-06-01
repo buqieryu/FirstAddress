@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	
+	<body>
+		
+		<div id="wrap">
+			我是孩子1
+			<p class="class1" id="p1">我是段落1</p>
+			我只两个p中间的
+			<p class="class2" id="p2">我是段落2</p>
+			我是孩子2
+		</div>
+		
+		<button id="btn">点我</button>
+		<p id="myP">我是来显示内容的</p>
+		
+		
+		<input zzz="yyy" type="text" name="input1" id="input1" value="我是第一个输入框" />
+		
+		
+		<img id="myImg" src="../4.14/3.jpg" style="width:200px;"/>
+	
+	</body>
+	
+	<script type="text/javascript">
+		var btn = document.getElementById("btn");
+		var p = document.getElementById("myP");
+		var wrapDiv = document.getElementById("wrap");
+		
+		var wrapDivNodeList = wrapDiv.childNodes;
+		
+////		p.innerHTML = wrapDivNodeList[0].nodeValue;
+//
+////		alert(wrapDiv.innerHTML);
+//		
+//		for (var i = 0; i < wrapDiv.childNodes.length; i++) {
+//			if (wrapDiv.childNodes[i].nodeType == 1) {
+//				alert(wrapDiv.childNodes[i].innerHTML);	
+//			} else if(wrapDiv.childNodes[i].nodeType == 3) {
+//				alert(wrapDiv.childNodes[i].nodeValue);
+//			}
+//		}
+
+
+//		文档🌲
+//		获取第一个元素节点
+//		非文本子元素节点
+//		childNodes 会获取文本+元素
+//		elementChild 只会获取元素,不会获取文本
+//		var element2 = wrapDiv.lastElementChild;
+//		var element1 = wrapDiv.firstElementChild;
+//		alert(element1.innerHTML);
+
+
+//		previousElementSibling
+//		获取当前元素的上一个非文本的兄弟
+
+//		nextSibling
+//		获取当前元素的下一个兄弟元素,包括文本
+//		alert(element1.nextSibling.nodeValue);
+		
+//		有一些css样式中是属性
+//		在js里面是有保留字的
+//		比如说 css 中的 class
+//		在js 中 就叫className  ,而不叫class
+		
+		
+		
+//		获取和操作DOM文档中的标签的属性
+		
+		var input1 = document.getElementById("input1");
+//		alert(input1.zzz);
+
+
+//		在标签的属性中 
+//		有一些属性是可读可写的
+//		但是  也有一些属性是只读的
+		var myImg = document.getElementById("myImg");
+		myImg.onclick = function () {
+//			alert("jaskdlf");
+//			alert(myImg.src);
+//			myImg.src = "222.jpg";
+			this.setAttribute("src" , "222.jpg");
+		}
+		
+//		能够获取到标签里面所有的属性
+//		myImg.getAttribute();
+//		
+//		只能获取到js认识的属性
+//		myImg.scr;
+
+		var input1 = document.getElementById("input1");
+		alert(input1.getAttribute("id"));
+
+//		input1.setatt
+		
+//		节点的插入和创建
+//		wrapDiv>我是孩子1p我是中间内容p我是孩子2
+//		创建节点(节点是被整个文档创建)
+
+		
+//		createTextNode
+//		创建文本节点
+		var myNewNode = document.createTextNode("<p>我是一个新的段落节点</p>");
+		wrapDiv.appendChild(myNewNode);
+		
+//		创建一个新的元素节点
+//		var newP = document.createElement("p");
+//		newP.textContent = "我是新节点";
+//		wrapDiv.appendChild(newP);
+		
+//		向父亲元素内部插入新的节点
+//		要求父亲元素调用appenChild方法
+		
+//		将一个节点插入到后面
+//		appendChild()
+
+//		在某一个位置插入一个新的节点
+//		该方法需要两个参数
+//		第一个参数:准备插入的节点
+//		第二个参数:要在哪个节点之前插入
+//		insertBefore()
+
+//		1.创建节点
+//		var newP = document.createElement("p");
+//		newP.textContent = "我是新来的节点,我要插到xxx的前面";
+//		var p2 = document.getElementById("p2");
+//		wrapDiv.insertBefore(newP , p2);
+		
+		
+//		删除节点
+//		removeChild()
+//		本方法有父亲调用,
+//		用来删除某一个孩子节点
+//		
+//		如果有一个东西想删除孙子
+//		而直接用了 removeChild() 
+//		是不管用的
+
+//		remove()
+//		把当前元素的所有孩子都删除完
+//		
+		var p2 = document.getElementById("p2");
+		wrapDiv.removeChild(p2);
+
+//		替换孩子
+//		方法需要两个参数
+//		第一个 新来的节点
+//		第二个 要被替换的节点
+//		replaceChild()
+
+//		var p2 = document.getElementById("p2");
+//		var newElement = document.createElement("p");
+//		newElement.textContent = "我是来替换的";
+//		wrapDiv.replaceChild(newElement , p2);
+
+		
+		
+	</script>
+	
+</html>
+
+

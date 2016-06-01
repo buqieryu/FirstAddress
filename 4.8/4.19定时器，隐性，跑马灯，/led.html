@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		div{
+			width: 10px;
+				height: 100px;
+				border-radius: 5px;
+		}
+		
+		</style>
+	</head>
+	<body onload="runHorseLight()">
+		<div id="first" style="background-color: yellow;"></div>
+		<div id="second" style="background-color: red;"></div>
+		<div id="third" style="background-color: green;"></div>
+		<div id="fourth" style="background-color: orange;"></div>
+		
+		<script type="text/javascript">
+		setTimeout(function(){runHorseLight();},100);
+				var first = document.getElementById("first");
+				var second = document.getElementById("second");
+				var third = document.getElementById("third");
+				var fourth = document.getElementById("fourth");
+				var divs = document.getElementsByTagName("div");
+				
+				function runHorseLight () {
+					
+					
+//				var tempColor = fourth.style.backgroundColor;
+//		      	fourth.style.backgroundColor = third.style.backgroundColor;
+//				third.style.backgroundColor = second.style.backgroundColor;
+//				second.style.backgroundColor = first.style.backgroundColor;
+//				first.style.backgroundColor = tempColor;
+//				var tempColor;
+				for (var i = 0; i < divs.length; i++){
+					if (i == 0){
+						tempColor = divs[i].style.backgroundColor;
+					}
+				
+					
+					if (i < divs.length - 1){
+						divs[i].style.backgroundColor = divs[i+1].style.backgroundColor;
+					}
+					if (i == divs.length - 1){
+						divs[i].style.backgroundColor = tempColor;
+					}
+			}
+				
+				
+				
+				
+			}
+		</script>
+	</body>
+</html>

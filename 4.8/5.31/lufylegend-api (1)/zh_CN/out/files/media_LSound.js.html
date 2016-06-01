@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>media/LSound.js - The lufylegend.js API</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><a href="../index.html"><img src="../assets/css/logo.png" title="The lufylegend.js API"></a></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: 1.10.1</em>
+            <em>最后更新日期：2016年03月28日</em>
+			<form method="get" action="http://www.google.com.hk/search" target="google_window">
+        		<input type="hidden" name="ie" value="UTF-8">
+        		<input type="hidden" name="oe" value="UTF-8">
+        		<input type="hidden" name="as_sitesearch" id="as_sitesearch" value="lufylegend.com/api/zh_CN/out/">
+        		Google搜索&nbsp;
+        		<input type="text" class="input" style="width:150px;" name="q" id="q" size="31" maxlength="255" value="">
+        		&nbsp;
+        		<input type="submit" class="submit" name="sa" value="Go">
+      		</form>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="../classes/FPS.html">FPS</a></li>
+            
+                <li><a href="../classes/InteractivePNG.html">InteractivePNG</a></li>
+            
+                <li><a href="../classes/LAjax.html">LAjax</a></li>
+            
+                <li><a href="../classes/LAnimation.html">LAnimation</a></li>
+            
+                <li><a href="../classes/LAnimationTimeline.html">LAnimationTimeline</a></li>
+            
+                <li><a href="../classes/LBitmap.html">LBitmap</a></li>
+            
+                <li><a href="../classes/LBitmapData.html">LBitmapData</a></li>
+            
+                <li><a href="../classes/LBitmapFilter.html">LBitmapFilter</a></li>
+            
+                <li><a href="../classes/LBlendMode.html">LBlendMode</a></li>
+            
+                <li><a href="../classes/LBox2d.html">LBox2d</a></li>
+            
+                <li><a href="../classes/LButton.html">LButton</a></li>
+            
+                <li><a href="../classes/LColorMatrixFilter.html">LColorMatrixFilter</a></li>
+            
+                <li><a href="../classes/LColorTransform.html">LColorTransform</a></li>
+            
+                <li><a href="../classes/LConvolutionFilter.html">LConvolutionFilter</a></li>
+            
+                <li><a href="../classes/LDisplayObject.html">LDisplayObject</a></li>
+            
+                <li><a href="../classes/LDisplayObjectContainer.html">LDisplayObjectContainer</a></li>
+            
+                <li><a href="../classes/LDropShadowFilter.html">LDropShadowFilter</a></li>
+            
+                <li><a href="../classes/LEasing.html">LEasing</a></li>
+            
+                <li><a href="../classes/LEvent.html">LEvent</a></li>
+            
+                <li><a href="../classes/LEventDispatcher.html">LEventDispatcher</a></li>
+            
+                <li><a href="../classes/LFlash.html">LFlash</a></li>
+            
+                <li><a href="../classes/LFocusEvent.html">LFocusEvent</a></li>
+            
+                <li><a href="../classes/LFontLoader.html">LFontLoader</a></li>
+            
+                <li><a href="../classes/LGlobal.html">LGlobal</a></li>
+            
+                <li><a href="../classes/LGraphics.html">LGraphics</a></li>
+            
+                <li><a href="../classes/LInteractiveObject.html">LInteractiveObject</a></li>
+            
+                <li><a href="../classes/LKeyboardEvent.html">LKeyboardEvent</a></li>
+            
+                <li><a href="../classes/LLoader.html">LLoader</a></li>
+            
+                <li><a href="../classes/LLoadManage.html">LLoadManage</a></li>
+            
+                <li><a href="../classes/LMatrix.html">LMatrix</a></li>
+            
+                <li><a href="../classes/LMedia.html">LMedia</a></li>
+            
+                <li><a href="../classes/LMouseEvent.html">LMouseEvent</a></li>
+            
+                <li><a href="../classes/LMouseEventContainer.html">LMouseEventContainer</a></li>
+            
+                <li><a href="../classes/LMultitouch.html">LMultitouch</a></li>
+            
+                <li><a href="../classes/LMultitouchInputMode.html">LMultitouchInputMode</a></li>
+            
+                <li><a href="../classes/LoadingSample.html">LoadingSample</a></li>
+            
+                <li><a href="../classes/LObject.html">LObject</a></li>
+            
+                <li><a href="../classes/LPoint.html">LPoint</a></li>
+            
+                <li><a href="../classes/LQuadTree.html">LQuadTree</a></li>
+            
+                <li><a href="../classes/LRange.html">LRange</a></li>
+            
+                <li><a href="../classes/LRectangle.html">LRectangle</a></li>
+            
+                <li><a href="../classes/LShape.html">LShape</a></li>
+            
+                <li><a href="../classes/LSound(LMedia).html">LSound(LMedia)</a></li>
+            
+                <li><a href="../classes/LSound(LWebAudio).html">LSound(LWebAudio)</a></li>
+            
+                <li><a href="../classes/LSprite.html">LSprite</a></li>
+            
+                <li><a href="../classes/LStageAlign.html">LStageAlign</a></li>
+            
+                <li><a href="../classes/LStageScaleMode.html">LStageScaleMode</a></li>
+            
+                <li><a href="../classes/LStageWebView.html">LStageWebView</a></li>
+            
+                <li><a href="../classes/LStyleSheet.html">LStyleSheet</a></li>
+            
+                <li><a href="../classes/LTextEvent.html">LTextEvent</a></li>
+            
+                <li><a href="../classes/LTextField.html">LTextField</a></li>
+            
+                <li><a href="../classes/LTimer.html">LTimer</a></li>
+            
+                <li><a href="../classes/LTimerEvent.html">LTimerEvent</a></li>
+            
+                <li><a href="../classes/LTransform.html">LTransform</a></li>
+            
+                <li><a href="../classes/LTransition.html">LTransition</a></li>
+            
+                <li><a href="../classes/LTransitionManager.html">LTransitionManager</a></li>
+            
+                <li><a href="../classes/LTweenLite.html">LTweenLite</a></li>
+            
+                <li><a href="../classes/LTweenLiteChild.html">LTweenLiteChild</a></li>
+            
+                <li><a href="../classes/lufylegend.mvc.html">lufylegend.mvc</a></li>
+            
+                <li><a href="../classes/LURLLoader.html">LURLLoader</a></li>
+            
+                <li><a href="../classes/LVec2.html">LVec2</a></li>
+            
+                <li><a href="../classes/LVideo.html">LVideo</a></li>
+            
+                <li><a href="../classes/LWebAudio.html">LWebAudio</a></li>
+            
+                <li><a href="../classes/Q &amp; A (常见问题).html">Q &amp; A (常见问题)</a></li>
+            
+                <li><a href="../classes/UI:LButtonSample1.html">UI:LButtonSample1</a></li>
+            
+                <li><a href="../classes/UI:LButtonSample2.html">UI:LButtonSample2</a></li>
+            
+                <li><a href="../classes/UI:LCheckBox.html">UI:LCheckBox</a></li>
+            
+                <li><a href="../classes/UI:LComboBox.html">UI:LComboBox</a></li>
+            
+                <li><a href="../classes/UI:LListChildView.html">UI:LListChildView</a></li>
+            
+                <li><a href="../classes/UI:LListScrollBar.html">UI:LListScrollBar</a></li>
+            
+                <li><a href="../classes/UI:LListView.html">UI:LListView</a></li>
+            
+                <li><a href="../classes/UI:LMenubar.html">UI:LMenubar</a></li>
+            
+                <li><a href="../classes/UI:LMessageBox.html">UI:LMessageBox</a></li>
+            
+                <li><a href="../classes/UI:LPanel.html">UI:LPanel</a></li>
+            
+                <li><a href="../classes/UI:LRadio.html">UI:LRadio</a></li>
+            
+                <li><a href="../classes/UI:LRadioChild.html">UI:LRadioChild</a></li>
+            
+                <li><a href="../classes/UI:LRange.html">UI:LRange</a></li>
+            
+                <li><a href="../classes/UI:LScrollbar.html">UI:LScrollbar</a></li>
+            
+                <li><a href="../classes/UI:LTable.html">UI:LTable</a></li>
+            
+                <li><a href="../classes/UI:LTreeWidget.html">UI:LTreeWidget</a></li>
+            
+                <li><a href="../classes/UI:LWindow.html">UI:LWindow</a></li>
+            
+                <li><a href="../classes/全局函数.html">全局函数</a></li>
+            
+                <li><a href="../classes/全局变量.html">全局变量</a></li>
+            
+                <li><a href="../classes/全屏设置.html">全屏设置</a></li>
+            
+                <li><a href="../classes/旧版API.html">旧版API</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: media/LSound.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+/** @language chinese
+ * &lt;p&gt;此类创建和播放音频的 LSound 对象。&lt;/p&gt;
+ * &lt;p&gt;当浏览器不支持Web Audio Api或者设置LGlobal.webAudio = false的时候，LSound会自动继承LMedia对象。&lt;/p&gt;
+ * &lt;p&gt;当LSound继承LMedia的时候，IOS浏览器下加载音频需要在点击事件中进行，并且同一时间只能播放一个音频文件。&lt;/p&gt;
+ * @class LSound(LMedia)
+ * @extends LMedia
+ * @constructor
+ * @example
+ * 	var backLayer;
+ * 	var sound;
+ * 	function main () {
+ * 		backLayer = new LSprite();
+ * 		addChild(backLayer);
+ * 		sound = new LSound();
+ * 		......
+ * 		backLayer.addEventListener(LMouseEvent.MOUSE_UP,onup);
+ * 	}
+ * 	function onup (e) {
+ * 		......
+ * 		var url = &quot;./sample.&quot;;
+ * 		sound.load(url+&quot;mp3,&quot;+url+&quot;ogg,&quot;+url+&quot;wav&quot;);
+ * 		sound.addEventListener(LEvent.COMPLETE,loadOver);
+ * 	}
+ * 	function loadOver (e) {
+ * 		sound.play();
+ * 	}
+ * @examplelink &lt;p&gt;&lt;a href=&quot;../../../api/LSound/LMedia.html&quot; target=&quot;_blank&quot;&gt;测试链接&lt;/a&gt;&lt;/p&gt;
+ * @since 1.7.0
+ * @public
+ */
+/** @language chinese
+ * &lt;p&gt;当前浏览器是否支持Web Audio。&lt;/p&gt;
+ * @property LSound.webAudioEnabled
+ * @type Boolean
+ * @static
+ * @since 1.9.0
+ * @public
+ */
+/*LSound.webAudioEnabled = false;*/
+/** @language chinese
+ * &lt;p&gt;此类创建和播放音频的 LSound 对象。&lt;/p&gt;
+ * &lt;p&gt;当浏览器支持Web Audio Api并且设置LGlobal.webAudio = true(默认值是true)的时候，LSound会自动继承LWebAudio对象。&lt;/p&gt;
+ * &lt;p&gt;当LSound继承LWebAudio的时候，IOS浏览器下可以预先加载音频文件，但是播放音频必须在点击事件中进行。&lt;/p&gt;
+ * &lt;p&gt;当LSound继承LWebAudio的时候，IOS浏览器下可以同时播放多个音频文件，但是有上线，IOS浏览器的播放上限大约为4个。&lt;/p&gt;
+ * @class LSound(LWebAudio)
+ * @extends LWebAudio
+ * @constructor
+ * @example
+ * 	var backLayer;
+ * 	var sound;
+ * 	function main () {
+ * 		backLayer = new LSprite();
+ * 		addChild(backLayer);
+ * 		sound = new LSound();
+ * 		......
+ * 		var url = &quot;./sample.&quot;;
+ * 		sound.load(url+&quot;mp3,&quot;+url+&quot;ogg,&quot;+url+&quot;wav&quot;);
+ * 		sound.addEventListener(LEvent.COMPLETE,loadOver);
+ * 	}
+ * 	function onup (e) {
+ * 		......
+ * 		sound.play();
+ * 	}
+ * 	function loadOver (e) {
+ * 		backLayer.addEventListener(LMouseEvent.MOUSE_UP,onup);
+ * 	}
+ * @examplelink &lt;p&gt;&lt;a href=&quot;../../../api/LSound/LWebAudio.html&quot; target=&quot;_blank&quot;&gt;测试链接&lt;/a&gt;&lt;/p&gt;
+ * @since 1.9.0
+ * @public
+ */
+var LSound = (function () {
+	function LSound (u) {
+		var s = this;
+		s.type = &quot;LSound&quot;;
+		s._type = &quot;audio&quot;;
+		if (LSound.webAudioEnabled &amp;&amp; LGlobal.webAudio) {
+			LExtends(s, LWebAudio, []);
+		} else {
+			LExtends(s, LMedia, []);
+			try {
+				s.data = new Audio();
+			} catch (e) {
+				console.warn( &quot;ReferenceError: Can&#x27;t find variable: Audio&quot;);
+				s.data = {};
+			}
+			s.data.loop = false;
+			s.data.autoplay = false;
+		}
+		if (u) {
+			s.load(u);
+		}
+	}
+	LSound.TYPE_SOUND = &quot;sound&quot;;
+	/** @language chinese
+	 * &lt;p&gt;当前浏览器是否支持Web Audio。&lt;/p&gt;
+	 * @property LSound.webAudioEnabled
+	 * @type Boolean
+	 * @static
+	 * @since 1.9.0
+	 * @public
+	 */
+	LSound.webAudioEnabled = false;
+	var protocol = location.protocol;
+	if (protocol == &quot;http:&quot; || protocol == &quot;https:&quot;) {
+		if (typeof AudioContext !== UNDEFINED) {
+			try {
+				LWebAudio._context = new AudioContext();
+			} catch (e) {
+			}
+		} else if (typeof webkitAudioContext !== UNDEFINED) {
+			try {
+				LWebAudio._context = new webkitAudioContext();
+			} catch (e) {
+			}
+		}
+		if (LWebAudio._context) {
+			LWebAudio.container.push(LWebAudio._context);
+			LSound.webAudioEnabled = true;
+		}
+	}
+	LSound.Container = {
+		ll_save : 0,
+		time : 0,
+		list : [],
+		ll_show : function () {
+			var c = LSound.Container;
+			var t = (new Date()).getTime();
+			c.time = t - (c.ll_save ? c.ll_save : t);
+			c.ll_save = t;
+			var l = c.list;
+			for (var i = l.length - 1; i &gt;= 0; i--) {
+				if (l[i]) {
+					l[i].ll_check();
+				}
+			}
+		},
+		add : function (obj) {
+			if (LSound.Container.list.indexOf(obj) &gt;= 0) {
+				return;
+			} 
+			LSound.Container.list.push(obj);
+		},
+		remove : function (obj) {
+			var l = LSound.Container.list;
+			for (var i = l.length -1; i &gt;= 0; i--) {
+				if (l[i].objectIndex == obj.objectIndex) {
+					l.splice(i,1);
+					break;
+				}
+			}
+		},
+		stopOther : function (obj) {
+			var l = LSound.Container.list;
+			for (var i = l.length - 1; i &gt;= 0; i--) {
+				if (l[i].objectIndex != obj.objectIndex) {
+					l[i].stop();
+				}
+			}
+		}
+	};
+	LGlobal.childList.push(LSound.Container);
+	return LSound;
+})();
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32497708-2']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>

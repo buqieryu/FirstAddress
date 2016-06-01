@@ -1,0 +1,127 @@
+<!DOCTYPE html >
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>照片墙</title>
+    <style>
+        body{background: #eee;}
+        h1{text-align: center;}
+        .container{width: 960px;height: 450px;margin:60px auto; position: relative;}
+        img{
+            padding: 10px 10px 15px; 
+            background: #fff; 
+            border:1px solid #ddd; 
+            position:absolute; 
+             
+            -webkit-transition: 2s ;
+            -moz-transition: 2s ;
+            transition: 2s ;
+        }
+        img:hover{
+            -webkit-transform:rotate(0deg); 
+            -moz-transform:rotate(0deg);
+            transform:rotate(0deg);
+            -webkit-transform:scale(1.2);
+            -moz-transform:scale(1.2);
+            transform:scale(1.2);
+            box-shadow: 10px 10px 15px #ccc;
+        }
+        .pic1{
+            left:400px;
+            top:0px;
+            -webkit-transform:rotate(-5deg); 
+            -moz-transform:rotate(-5deg);
+            transform:rotate(-5deg);
+            z-index: 1;
+        }
+        .pic2{
+            left:600px;
+            top:0px;
+            -webkit-transform:rotate(-5deg); 
+            -moz-transform:rotate(-5deg);
+            transform:rotate(-5deg);
+            z-index: 2;
+        }
+        .pic3{
+            left:0px;
+            top:0px;
+            -webkit-transform:rotate(-5deg); 
+            -moz-transform:rotate(-5deg);
+            transform:rotate(-5deg);
+            z-index: 3;
+        }
+        .pic4{
+            left:300px;
+            bottom:0px;
+            -webkit-transform:rotate(-5deg); 
+            -moz-transform:rotate(-5deg);
+            transform:rotate(-5deg);
+            z-index: 4;
+        }
+        .pic5{
+            left:0px;
+            bottom:0px;
+            -webkit-transform:rotate(-5deg); 
+            -moz-transform:rotate(-5deg);
+            transform:rotate(-5deg);
+            z-index: 5;
+        }
+        .pic6{
+            left:0px;
+            top:0px;
+            -webkit-transform:rotate(-5deg); 
+            -moz-transform:rotate(-5deg);
+            transform:rotate(-5deg);
+            z-index: 6;
+        }
+        .pic7{
+            left:850px;
+            top:0px;
+            -webkit-transform:rotate(-5deg); 
+            -moz-transform:rotate(-5deg);
+            transform:rotate(-5deg);
+            z-index: 7;
+        }
+        .pic8{
+            left:630px;
+            bottom:-20px;
+            -webkit-transform:rotate(-5deg); 
+            -moz-transform:rotate(-5deg);
+            transform:rotate(-5deg);
+            z-index: 8;
+        }
+        .pic9{
+            left:550px;
+            top:90px;
+            -webkit-transform:rotate(-5deg); 
+            -moz-transform:rotate(-5deg);
+            transform:rotate(-5deg);
+            z-index: 9;
+        }
+        .pic10{
+            left:180px;
+            top:20px;
+            -webkit-transform:rotate(-5deg); 
+            -moz-transform:rotate(-5deg);
+            transform:rotate(-5deg);
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <h1>照片墙制作</h1>
+    <div class="container">
+        <img class="pic1" src="../4.14/index_files/1-1409161629400-L.jpg" alt="">
+        <img class="pic2" src="../4.14/index_files/1-140S12233350-L.jpg" alt="">
+        <img class="pic3" src="../4.14/index_files/1-141213202J80-L.jpg" alt="">
+        <img class="pic4" src="../4.14/index_files/1-1502022142240-L.jpg" alt="">
+        <img class="pic5" src="images/mm5.jpg" alt="">
+        <img class="pic6" src="images/mm6.jpg" alt="">
+        <img class="pic7" src="images/mm7.jpg" alt="">
+        <img class="pic8" src="images/mm8.jpg" alt="">
+        <img class="pic9" src="images/mm9.jpg" alt="">
+        <img class="pic10" src="images/mm10.jpg" alt="">
+    </div>
+</body>
+</html>

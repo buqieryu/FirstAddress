@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		第一个数
+		<input type="text"  id="first">
+		<br>
+		第二个数
+		<input type="text"  id="second">
+			<br>
+			<button id="buttonw" onclick="myfunction()">最大公约数</button>
+		
+			<br>
+				<!--结果
+				<input type="text"  id="result">
+				<script type="text/javascript">
+					function myfunctio(){
+						var first=document.getElementById("first")
+						var second=document.getElementById("second")
+						var result=document.getElementById("result")
+						var a = Number(first.value);
+						var b = Number(second.value);
+						result.value = a * b;	
+						
+					}
+				
+					-->
+					<input type="text" id="result" />
+					<script type="text/javascript">
+					
+					function myfunction(){
+						var a = Number(first.value);
+						var b = Number(second.value);
+						min = a<b ? a:b;
+					var range = 1;
+					while(range<=min){
+					if(a * range == 100 && b * range ==100){
+					result.value = range;
+				}
+					range++;
+			 }
+				}
+					
+						
+						
+			
+					
+				</script>
+	</body>
+</html>

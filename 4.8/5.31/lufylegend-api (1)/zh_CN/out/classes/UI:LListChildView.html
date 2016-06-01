@@ -1,0 +1,8004 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>UI:LListChildView - The lufylegend.js API</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><a href="../index.html"><img src="../assets/css/logo.png" title="The lufylegend.js API"></a></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: 1.10.1</em>
+            <em>最后更新日期：2016年03月28日</em>
+			<form method="get" action="http://www.google.com.hk/search" target="google_window">
+        		<input type="hidden" name="ie" value="UTF-8">
+        		<input type="hidden" name="oe" value="UTF-8">
+        		<input type="hidden" name="as_sitesearch" id="as_sitesearch" value="lufylegend.com/api/zh_CN/out/">
+        		Google搜索&nbsp;
+        		<input type="text" class="input" style="width:150px;" name="q" id="q" size="31" maxlength="255" value="">
+        		&nbsp;
+        		<input type="submit" class="submit" name="sa" value="Go">
+      		</form>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="../classes/FPS.html">FPS</a></li>
+            
+                <li><a href="../classes/InteractivePNG.html">InteractivePNG</a></li>
+            
+                <li><a href="../classes/LAjax.html">LAjax</a></li>
+            
+                <li><a href="../classes/LAnimation.html">LAnimation</a></li>
+            
+                <li><a href="../classes/LAnimationTimeline.html">LAnimationTimeline</a></li>
+            
+                <li><a href="../classes/LBitmap.html">LBitmap</a></li>
+            
+                <li><a href="../classes/LBitmapData.html">LBitmapData</a></li>
+            
+                <li><a href="../classes/LBitmapFilter.html">LBitmapFilter</a></li>
+            
+                <li><a href="../classes/LBlendMode.html">LBlendMode</a></li>
+            
+                <li><a href="../classes/LBox2d.html">LBox2d</a></li>
+            
+                <li><a href="../classes/LButton.html">LButton</a></li>
+            
+                <li><a href="../classes/LColorMatrixFilter.html">LColorMatrixFilter</a></li>
+            
+                <li><a href="../classes/LColorTransform.html">LColorTransform</a></li>
+            
+                <li><a href="../classes/LConvolutionFilter.html">LConvolutionFilter</a></li>
+            
+                <li><a href="../classes/LDisplayObject.html">LDisplayObject</a></li>
+            
+                <li><a href="../classes/LDisplayObjectContainer.html">LDisplayObjectContainer</a></li>
+            
+                <li><a href="../classes/LDropShadowFilter.html">LDropShadowFilter</a></li>
+            
+                <li><a href="../classes/LEasing.html">LEasing</a></li>
+            
+                <li><a href="../classes/LEvent.html">LEvent</a></li>
+            
+                <li><a href="../classes/LEventDispatcher.html">LEventDispatcher</a></li>
+            
+                <li><a href="../classes/LFlash.html">LFlash</a></li>
+            
+                <li><a href="../classes/LFocusEvent.html">LFocusEvent</a></li>
+            
+                <li><a href="../classes/LFontLoader.html">LFontLoader</a></li>
+            
+                <li><a href="../classes/LGlobal.html">LGlobal</a></li>
+            
+                <li><a href="../classes/LGraphics.html">LGraphics</a></li>
+            
+                <li><a href="../classes/LInteractiveObject.html">LInteractiveObject</a></li>
+            
+                <li><a href="../classes/LKeyboardEvent.html">LKeyboardEvent</a></li>
+            
+                <li><a href="../classes/LLoader.html">LLoader</a></li>
+            
+                <li><a href="../classes/LLoadManage.html">LLoadManage</a></li>
+            
+                <li><a href="../classes/LMatrix.html">LMatrix</a></li>
+            
+                <li><a href="../classes/LMedia.html">LMedia</a></li>
+            
+                <li><a href="../classes/LMouseEvent.html">LMouseEvent</a></li>
+            
+                <li><a href="../classes/LMouseEventContainer.html">LMouseEventContainer</a></li>
+            
+                <li><a href="../classes/LMultitouch.html">LMultitouch</a></li>
+            
+                <li><a href="../classes/LMultitouchInputMode.html">LMultitouchInputMode</a></li>
+            
+                <li><a href="../classes/LoadingSample.html">LoadingSample</a></li>
+            
+                <li><a href="../classes/LObject.html">LObject</a></li>
+            
+                <li><a href="../classes/LPoint.html">LPoint</a></li>
+            
+                <li><a href="../classes/LQuadTree.html">LQuadTree</a></li>
+            
+                <li><a href="../classes/LRange.html">LRange</a></li>
+            
+                <li><a href="../classes/LRectangle.html">LRectangle</a></li>
+            
+                <li><a href="../classes/LShape.html">LShape</a></li>
+            
+                <li><a href="../classes/LSound(LMedia).html">LSound(LMedia)</a></li>
+            
+                <li><a href="../classes/LSound(LWebAudio).html">LSound(LWebAudio)</a></li>
+            
+                <li><a href="../classes/LSprite.html">LSprite</a></li>
+            
+                <li><a href="../classes/LStageAlign.html">LStageAlign</a></li>
+            
+                <li><a href="../classes/LStageScaleMode.html">LStageScaleMode</a></li>
+            
+                <li><a href="../classes/LStageWebView.html">LStageWebView</a></li>
+            
+                <li><a href="../classes/LStyleSheet.html">LStyleSheet</a></li>
+            
+                <li><a href="../classes/LTextEvent.html">LTextEvent</a></li>
+            
+                <li><a href="../classes/LTextField.html">LTextField</a></li>
+            
+                <li><a href="../classes/LTimer.html">LTimer</a></li>
+            
+                <li><a href="../classes/LTimerEvent.html">LTimerEvent</a></li>
+            
+                <li><a href="../classes/LTransform.html">LTransform</a></li>
+            
+                <li><a href="../classes/LTransition.html">LTransition</a></li>
+            
+                <li><a href="../classes/LTransitionManager.html">LTransitionManager</a></li>
+            
+                <li><a href="../classes/LTweenLite.html">LTweenLite</a></li>
+            
+                <li><a href="../classes/LTweenLiteChild.html">LTweenLiteChild</a></li>
+            
+                <li><a href="../classes/lufylegend.mvc.html">lufylegend.mvc</a></li>
+            
+                <li><a href="../classes/LURLLoader.html">LURLLoader</a></li>
+            
+                <li><a href="../classes/LVec2.html">LVec2</a></li>
+            
+                <li><a href="../classes/LVideo.html">LVideo</a></li>
+            
+                <li><a href="../classes/LWebAudio.html">LWebAudio</a></li>
+            
+                <li><a href="../classes/Q &amp; A (常见问题).html">Q &amp; A (常见问题)</a></li>
+            
+                <li><a href="../classes/UI:LButtonSample1.html">UI:LButtonSample1</a></li>
+            
+                <li><a href="../classes/UI:LButtonSample2.html">UI:LButtonSample2</a></li>
+            
+                <li><a href="../classes/UI:LCheckBox.html">UI:LCheckBox</a></li>
+            
+                <li><a href="../classes/UI:LComboBox.html">UI:LComboBox</a></li>
+            
+                <li><a href="../classes/UI:LListChildView.html">UI:LListChildView</a></li>
+            
+                <li><a href="../classes/UI:LListScrollBar.html">UI:LListScrollBar</a></li>
+            
+                <li><a href="../classes/UI:LListView.html">UI:LListView</a></li>
+            
+                <li><a href="../classes/UI:LMenubar.html">UI:LMenubar</a></li>
+            
+                <li><a href="../classes/UI:LMessageBox.html">UI:LMessageBox</a></li>
+            
+                <li><a href="../classes/UI:LPanel.html">UI:LPanel</a></li>
+            
+                <li><a href="../classes/UI:LRadio.html">UI:LRadio</a></li>
+            
+                <li><a href="../classes/UI:LRadioChild.html">UI:LRadioChild</a></li>
+            
+                <li><a href="../classes/UI:LRange.html">UI:LRange</a></li>
+            
+                <li><a href="../classes/UI:LScrollbar.html">UI:LScrollbar</a></li>
+            
+                <li><a href="../classes/UI:LTable.html">UI:LTable</a></li>
+            
+                <li><a href="../classes/UI:LTreeWidget.html">UI:LTreeWidget</a></li>
+            
+                <li><a href="../classes/UI:LWindow.html">UI:LWindow</a></li>
+            
+                <li><a href="../classes/全局函数.html">全局函数</a></li>
+            
+                <li><a href="../classes/全局变量.html">全局变量</a></li>
+            
+                <li><a href="../classes/全屏设置.html">全屏设置</a></li>
+            
+                <li><a href="../classes/旧版API.html">旧版API</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1>UI:LListChildView Class</h1>
+<div class="box meta">
+    
+
+    
+        <div class="extends">
+            Extends <a href="../classes/LSprite.html" class="crosslink">LSprite</a>
+        </div>
+    
+
+    
+        <div class="foundat">
+            Defined in: <a href="../files/lib_ui_LListView-0.1.1.js.html#l473"><code>lib&#x2F;ui&#x2F;LListView-0.1.1.js:473</code></a>
+        </div>
+    
+
+    
+
+    
+        <p>Available since 1.10.0</p>
+    
+</div>
+
+
+
+<div class="box intro">
+    <p>lufylegend.js专用UI，LListView 列表的一个单元子项。</p>
+<p>在使用LListView的子项的时候，需要先从LListChildView继承。</p>
+<p>使用时需要引进lufylegend.ui-x.x.x.js文件。</p>
+</div>
+
+
+    <div class="constructor">
+        <h2>Constructor</h2>
+        <div id="method_UI:LListChildView" class="method item public">
+    <h3 class="name"><code>UI:LListChildView</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/lib_ui_LListView-0.1.1.js.html#l473"><code>lib&#x2F;ui&#x2F;LListView-0.1.1.js:473</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.10.0</p>
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+
+    
+
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/ui/LListView.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+    </div>
+
+
+<div id="classdocs" class="tabview">
+    <ul class="api-class-tabs">
+        <li class="api-class-tab index"><a href="#index">Index</a></li>
+
+        
+            <li class="api-class-tab methods"><a href="#methods">Methods</a></li>
+        
+        
+            <li class="api-class-tab properties"><a href="#properties">Properties</a></li>
+        
+        
+        
+            <li class="api-class-tab events"><a href="#events">Events</a></li>
+        
+    </ul>
+
+    <div>
+        <div id="index" class="api-class-tabpanel index">
+            <h2 class="off-left">Item Index</h2>
+
+            
+                <div class="index-section methods">
+                    <h3>Methods</h3>
+
+                    <ul class="index-list methods extends">
+                        
+                            <li class="index-item method public inherited">
+                                <a href="#method_addBodyCircle">addBodyCircle</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public inherited">
+                                <a href="#method_addBodyPolygon">addBodyPolygon</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public inherited">
+                                <a href="#method_addBodyVertices">addBodyVertices</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public inherited">
+                                <a href="#method_addChild">addChild</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public inherited">
+                                <a href="#method_addChildAt">addChildAt</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public inherited">
+                                <a href="#method_addEventListener">addEventListener</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public inherited">
+                                <a href="#method_addShape">addShape</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public inherited">
+                                <a href="#method_addShapes">addShapes</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public inherited">
+                                <a href="#method_cacheAsBitmap">cacheAsBitmap</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public inherited">
+                                <a href="#method_callParent">callParent</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public inherited">
+                                <a href="#method_clearBody">clearBody</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public inherited">
+                                <a href="#method_clearShape">clearShape</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public inherited">
+                                <a href="#method_clone">clone</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public inherited">
+                                <a href="#method_die">die</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public inherited">
+                                <a href="#method_dispatchEvent">dispatchEvent</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public inherited">
+                                <a href="#method_getBounds">getBounds</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public inherited">
+                                <a href="#method_getChildAt">getChildAt</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public inherited">
+                                <a href="#method_getChildByName">getChildByName</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public inherited">
+                                <a href="#method_getChildIndex">getChildIndex</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public inherited">
+                                <a href="#method_getDataURL">getDataURL</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public inherited">
+                                <a href="#method_getHeight">getHeight</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public inherited">
+                                <a href="#method_getParentByConstructor">getParentByConstructor</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public inherited">
+                                <a href="#method_getRootCoordinate">getRootCoordinate</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public inherited">
+                                <a href="#method_getWidth">getWidth</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public inherited">
+                                <a href="#method_globalToLocal">globalToLocal</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public inherited">
+                                <a href="#method_hasEventListener">hasEventListener</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public inherited">
+                                <a href="#method_hitTestObject">hitTestObject</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public inherited">
+                                <a href="#method_hitTestPoint">hitTestPoint</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public inherited">
+                                <a href="#method_localToGlobal">localToGlobal</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_onClick">onClick</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_onClick">onClick</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public inherited">
+                                <a href="#method_remove">remove</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method inherited">
+                                <a href="#method_removeAllChild">removeAllChild</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public inherited">
+                                <a href="#method_removeAllEventListener">removeAllEventListener</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public inherited">
+                                <a href="#method_removeChild">removeChild</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public inherited">
+                                <a href="#method_removeChildAt">removeChildAt</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public inherited">
+                                <a href="#method_removeEventListener">removeEventListener</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public inherited">
+                                <a href="#method_setBodyMouseJoint">setBodyMouseJoint</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public inherited">
+                                <a href="#method_setChildIndex">setChildIndex</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public inherited">
+                                <a href="#method_setRotate">setRotate</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public inherited">
+                                <a href="#method_startDrag">startDrag</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public inherited">
+                                <a href="#method_stopDrag">stopDrag</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_updateView">updateView</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_updateView">updateView</a>
+
+                                
+                                
+                            </li>
+                        
+                    </ul>
+                </div>
+            
+
+            
+                <div class="index-section properties">
+                    <h3>Properties</h3>
+
+                    <ul class="index-list properties extends">
+                        
+                            <li class="index-item property public inherited">
+                                <a href="#property_alpha">alpha</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public inherited">
+                                <a href="#property_blendMode">blendMode</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public inherited">
+                                <a href="#property_childList">childList</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public inherited">
+                                <a href="#property_dragRange">dragRange</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public inherited">
+                                <a href="#property_filters">filters</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public inherited">
+                                <a href="#property_graphics">graphics</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public inherited">
+                                <a href="#property_mask">mask</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public inherited">
+                                <a href="#property_mouseChildren">mouseChildren</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public inherited">
+                                <a href="#property_mouseEnabled">mouseEnabled</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public inherited">
+                                <a href="#property_numChildren">numChildren</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public inherited">
+                                <a href="#property_objectIndex">objectIndex</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public inherited">
+                                <a href="#property_parent">parent</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public inherited">
+                                <a href="#property_rotate">rotate</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public inherited">
+                                <a href="#property_scaleX">scaleX</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public inherited">
+                                <a href="#property_scaleY">scaleY</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public inherited">
+                                <a href="#property_shapes">shapes</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public inherited">
+                                <a href="#property_transform">transform</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public inherited">
+                                <a href="#property_type">type</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public inherited">
+                                <a href="#property_useCursor">useCursor</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public inherited">
+                                <a href="#property_visible">visible</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public inherited">
+                                <a href="#property_x">x</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public inherited">
+                                <a href="#property_y">y</a>
+
+                                
+                                
+                            </li>
+                        
+                    </ul>
+                </div>
+            
+
+            
+
+            
+                <div class="index-section events">
+                    <h3>Events</h3>
+
+                    <ul class="index-list events extends">
+                        
+                            <li class="index-item event inherited">
+                                <a href="#event_LEvent.ADDED">LEvent.ADDED</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item event inherited">
+                                <a href="#event_LEvent.ADDED_TO_STAGE">LEvent.ADDED_TO_STAGE</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item event inherited">
+                                <a href="#event_LEvent.ENTER_FRAME">LEvent.ENTER_FRAME</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item event inherited">
+                                <a href="#event_LEvent.REMOVED">LEvent.REMOVED</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item event inherited">
+                                <a href="#event_LEvent.REMOVED_FROM_STAGE">LEvent.REMOVED_FROM_STAGE</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item event inherited">
+                                <a href="#event_LMouseEvent.DOUBLE_CLICK">LMouseEvent.DOUBLE_CLICK</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item event inherited">
+                                <a href="#event_LMouseEvent.MOUSE_DOWN">LMouseEvent.MOUSE_DOWN</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item event inherited">
+                                <a href="#event_LMouseEvent.MOUSE_MOVE">LMouseEvent.MOUSE_MOVE</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item event inherited">
+                                <a href="#event_LMouseEvent.MOUSE_OUT">LMouseEvent.MOUSE_OUT</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item event inherited">
+                                <a href="#event_LMouseEvent.MOUSE_OVER">LMouseEvent.MOUSE_OVER</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item event inherited">
+                                <a href="#event_LMouseEvent.MOUSE_UP">LMouseEvent.MOUSE_UP</a>
+
+                                
+                                
+                            </li>
+                        
+                    </ul>
+                </div>
+            
+        </div>
+
+        
+            <div id="methods" class="api-class-tabpanel">
+                <h2 class="off-left">Methods</h2>
+
+                
+                    <div id="method_addBodyCircle" class="method item public inherited">
+    <h3 class="name"><code>addBodyCircle</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>radius</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>cx</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>cy</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>type</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>density</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>friction</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>restitution</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">B2Body</span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LSprite.html#method_addBodyCircle">LSprite</a>:
+            
+        
+        
+        <a href="../files/display_LSprite.js.html#l791"><code>display&#x2F;LSprite.js:791</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.4.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>LBox2d相关。</p>
+<p>设定圆形body。</p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">radius</code>
+                        <span class="type">Float</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>半径</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">cx</code>
+                        <span class="type">Float</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>圆心坐标x</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">cy</code>
+                        <span class="type">Float</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>圆心坐标y</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">type</code>
+                        <span class="type">Int</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>是否动态(1或0)</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">density</code>
+                        <span class="type">Float</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>密度</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">friction</code>
+                        <span class="type">Float</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>摩擦</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">restitution</code>
+                        <span class="type">Float</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>弹性</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">B2Body</span>:
+                    
+                    <p>返回一个被创建的box2d的body</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+    
+</div>
+
+                
+                    <div id="method_addBodyPolygon" class="method item public inherited">
+    <h3 class="name"><code>addBodyPolygon</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>width</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>height</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>type</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>density</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>friction</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>restitution</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">B2Body</span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LSprite.html#method_addBodyPolygon">LSprite</a>:
+            
+        
+        
+        <a href="../files/display_LSprite.js.html#l806"><code>display&#x2F;LSprite.js:806</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.4.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>LBox2d相关。</p>
+<p>设定矩形body。</p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">width</code>
+                        <span class="type">Float</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>矩形宽</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">height</code>
+                        <span class="type">Float</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>矩形高</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">type</code>
+                        <span class="type">Int</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>是否动态(1或0)</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">density</code>
+                        <span class="type">Float</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>密度</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">friction</code>
+                        <span class="type">Float</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>摩擦</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">restitution</code>
+                        <span class="type">Float</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>弹性</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">B2Body</span>:
+                    
+                    <p>返回一个被创建的box2d的body</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+    
+</div>
+
+                
+                    <div id="method_addBodyVertices" class="method item public inherited">
+    <h3 class="name"><code>addBodyVertices</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>vertices</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>cx</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>cy</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>type</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>density</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>friction</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>restitution</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">B2Body</span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LSprite.html#method_addBodyVertices">LSprite</a>:
+            
+        
+        
+        <a href="../files/display_LSprite.js.html#l820"><code>display&#x2F;LSprite.js:820</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.4.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>LBox2d相关。</p>
+<p>以定点数组形式设定任意形状的body。</p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">vertices</code>
+                        <span class="type">Float</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>顶点数组</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">cx</code>
+                        <span class="type">Float</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>中心坐标x</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">cy</code>
+                        <span class="type">Float</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>中心坐标y</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">type</code>
+                        <span class="type">Int</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>是否动态(1或0)</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">density</code>
+                        <span class="type">Float</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>密度</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">friction</code>
+                        <span class="type">Float</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>摩擦</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">restitution</code>
+                        <span class="type">Float</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>弹性</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">B2Body</span>:
+                    
+                    <p>返回一个被创建的box2d的body</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+    
+</div>
+
+                
+                    <div id="method_addChild" class="method item public inherited">
+    <h3 class="name"><code>addChild</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>child</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="../classes/LDisplayObject.html" class="crosslink">LDisplayObject</a></span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LDisplayObjectContainer.html#method_addChild">LDisplayObjectContainer</a>:
+            
+        
+        
+        <a href="../files/display_LDisplayObjectContainer.js.html#l77"><code>display&#x2F;LDisplayObjectContainer.js:77</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.0.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>将一个 DisplayObject 子实例添加到该 LDisplayObjectContainer 实例中。子项将被添加到该 LDisplayObjectContainer 实例中其他所有子项的前（上）面。（要将某子项添加到特定索引位置，请使用 addChildAt() 方法。）</p>
+<p>如果添加一个已将其它显示对象容器作为父项的子对象，则会从其它显示对象容器的子列表中删除该对象。</p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">child</code>
+                        <span class="type"><a href="../classes/LDisplayObject.html" class="crosslink">LDisplayObject</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>要作为该 LDisplayObjectContainer 实例的子项添加的 LDisplayObject 实例。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type"><a href="../classes/LDisplayObject.html" class="crosslink">LDisplayObject</a></span>:
+                    
+                    <p>在 child 参数中传递的 LDisplayObject 实例。</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var bitmapdata = new LBitmapData(&quot;#FF0000&quot;,0,0,100,100);  
+var bitmap = new LBitmap(bitmapdata);
+var layer = new LSprite();
+addChild(layer);
+layer.addChild(bitmap);</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LDisplayObjectContainer/addChild.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_addChildAt" class="method item public inherited">
+    <h3 class="name"><code>addChildAt</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>child</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>index</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="../classes/LDisplayObject.html" class="crosslink">LDisplayObject</a></span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LDisplayObjectContainer.html#method_addChildAt">LDisplayObjectContainer</a>:
+            
+        
+        
+        <a href="../files/display_LDisplayObjectContainer.js.html#l107"><code>display&#x2F;LDisplayObjectContainer.js:107</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.8.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>将一个 LDisplayObject 子实例添加到该 LDisplayObjectContainer 实例中。该子项将被添加到指定的索引位置。索引为 0 表示该 LDisplayObjectContainer 对象的显示列表的后（底）部。</p>
+<p>例如，下例在索引位置 0、2、1 处分别显示 a、b、c 三个显示对象：</p>
+<p><img src="../../../api/LDisplayObjectContainer/LDisplayObjectContainer_layers.jpg" /></p>
+<p>如果添加一个已将其它显示对象容器作为父项的子对象，则会从其它显示对象容器的子列表中删除该对象。</p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">child</code>
+                        <span class="type"><a href="../classes/LDisplayObject.html" class="crosslink">LDisplayObject</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>要作为该 LDisplayObjectContainer 实例的子项添加的 LDisplayObject 实例。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">index</code>
+                        <span class="type">Int</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>添加该子项的索引位置。 如果指定当前占用的索引位置，则该位置以及所有更高位置上的子对象会在子级列表中上移一个位置。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type"><a href="../classes/LDisplayObject.html" class="crosslink">LDisplayObject</a></span>:
+                    
+                    <p>在 child 参数中传递的 LDisplayObject 实例。</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var container = new LSprite();
+var circle1 = new LSprite();
+var circle2 = new LSprite();
+container.addChild(circle1);
+container.addChildAt(circle2, 0);
+trace(container.getChildAt(0) == circle2); // true
+trace(container.getChildAt(1) == circle1); // true</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LDisplayObjectContainer/addChildAt.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_addEventListener" class="method item public inherited">
+    <h3 class="name"><code>addEventListener</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>type</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>listener</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LEventDispatcher.html#method_addEventListener">LEventDispatcher</a>:
+            
+        
+        
+        <a href="../files/events_LEventDispatcher.js.html#l16"><code>events&#x2F;LEventDispatcher.js:16</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.8.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>使用 LEventDispatcher 对象注册事件侦听器对象，以使侦听器能够接收事件通知。可以为特定类型的事件、阶段和优先级在显示列表中的所有节点上注册事件侦听器。</p>
+<p>成功注册一个事件侦听器后，无法通过额外调用 addEventListener() 来更改其优先级。要更改侦听器的优先级，必须首先调用 removeListener()。然后，可以使用新的优先级再次注册该侦听器。</p>
+<p>如果不再需要某个事件侦听器，可调用 removeEventListener() 删除它，否则会产生内存问题。</p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">type</code>
+                        <span class="type">String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>事件的类型。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">listener</code>
+                        <span class="type">Function</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>处理事件的侦听器函数。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+    
+</div>
+
+                
+                    <div id="method_addShape" class="method item public inherited">
+    <h3 class="name"><code>addShape</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>type</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>arg</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Array</span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LSprite.html#method_addShape">LSprite</a>:
+            
+        
+        
+        <a href="../files/display_LSprite.js.html#l604"><code>display&#x2F;LSprite.js:604</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.9.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>添加碰撞形状，指定碰撞的范围。如果没有添加碰撞形状，则会默认使用最大矩形范围来碰撞检测。</p>
+<p>添加矩形 : addShape(LShape.RECT,[20,140,200,100])</p>
+<p>添加圆形 : addShape(LShape.ARC,[110,80,60])</p>
+<p>添加多边形 : addShape(LShape.VERTICES,[[10,10],[50,100],[100,70]])</p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">type</code>
+                        <span class="type">String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>形状的类型.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">arg</code>
+                        <span class="type">Array</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>形状参数.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Array</span>:
+                    
+                    <p>被添加的形状组.</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>LInit(20,&quot;legend&quot;,800,450,main);
+function main () {
+    LGlobal.setDebug(true);
+    var loader = new LLoader();
+    loader.addEventListener(LEvent.COMPLETE, loadBitmapdata); 
+    loader.load(&quot;face.jpg&quot;, &quot;bitmapData&quot;);
+}
+function loadBitmapdata (event) {
+    var bitmapData = new LBitmapData(event.currentTarget);//width:240,height:240
+    var bitmap01 = new LBitmap(bitmapData);
+    var layer01 = new LSprite();
+    addChild(layer01);
+    layer01.addChild(bitmap01);
+    var rect1 = new LSprite();
+    rect1.x = 180;
+    rect1.graphics.drawRect(2,&quot;#FF0000&quot;,[0,0,100,100]);
+    addChild(rect1);
+    var bitmap02 = new LBitmap(bitmapData);
+    var layer02 = new LSprite();
+    layer02.x = 300;
+    addChild(layer02);
+    layer02.addChild(bitmap02);
+    layer02.addShape(LShape.ARC,[110,80,60]);
+    layer02.addShape(LShape.RECT,[20,140,200,100]);
+    var rect2 = new LSprite();
+    rect2.x = 480;
+    rect2.graphics.drawRect(2,&quot;#FF0000&quot;,[0,0,100,100]);
+    addChild(rect2);
+    var rect3 = new LSprite();
+    rect3.x = 480;
+    rect3.y = 120;
+    rect3.graphics.drawRect(2,&quot;#FF0000&quot;,[0,0,100,100]);
+    addChild(rect3);
+    trace(layer01.hitTestObject(rect1));//true
+    trace(layer02.hitTestObject(rect2));//false
+    trace(layer02.hitTestObject(rect3));//true
+}</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LSprite/addShape.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_addShapes" class="method item public inherited">
+    <h3 class="name"><code>addShapes</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>shapes</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LSprite.html#method_addShapes">LSprite</a>:
+            
+        
+        
+        <a href="../files/display_LSprite.js.html#l663"><code>display&#x2F;LSprite.js:663</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.9.8</p>
+        
+    </div>
+
+    <div class="description">
+        <p>添加碰撞形状组，指定碰撞的范围。</p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">shapes</code>
+                        <span class="type">Array</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>形状组.</p>
+<p>例如 : [{&quot;type&quot; : LShape.RECT, &quot;arg&quot; : [20,140,200,100]},{&quot;type&quot; : LShape.ARC, &quot;arg&quot; : [110,80,60]},{&quot;type&quot; : LShape.VERTICES, &quot;arg&quot; : [[10,10],[50,100],[100,70]]}]</p>
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+    
+</div>
+
+                
+                    <div id="method_cacheAsBitmap" class="method item public inherited">
+    <h3 class="name"><code>cacheAsBitmap</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>value</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LDisplayObject.html#method_cacheAsBitmap">LDisplayObject</a>:
+            
+        
+        
+        <a href="../files/display_LDisplayObject.js.html#l407"><code>display&#x2F;LDisplayObject.js:407</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.9.11</p>
+        
+    </div>
+
+    <div class="description">
+        <p>如果设置为 true，则运行时将缓存显示对象的内部位图表示形式。此缓存可以提高包含复杂矢量内容的显示对象的性能。速度可能会大大加快，具体取决于矢量内容的复杂性。</p>
+<p>*动态改变的对象无法使用cacheAsBitmap</p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">value</code>
+                        <span class="type">Bool</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>分配给触摸点的整数(触摸设备)。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var layer = new LSprite();
+layer.x = layer.y = 100;
+addChild(layer);
+var bitmapdata = new LBitmapData(event.target);
+var bitmap = new LBitmap(bitmapdata);
+layer.addChild(bitmap);
+bitmap = new LBitmap(bitmapdata);
+bitmap.x = bitmap.y = 50;
+layer.addChild(bitmap);
+var sprite = new LSprite();
+sprite.graphics.drawRect(3, &quot;#000000&quot;, [0, 0, 190, 100],true,&quot;#00FF00&quot;);
+sprite.x = -100;
+layer.addChild(sprite);
+layer.cacheAsBitmap(true);</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LDisplayObject/cacheAsBitmap.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_callParent" class="method item public inherited">
+    <h3 class="name"><code>callParent</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>functionName</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>arguments</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LObject.html#method_callParent">LObject</a>:
+            
+        
+        
+        <a href="../files/utils_LObject.js.html#l22"><code>utils&#x2F;LObject.js:22</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.6.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>调用父类的函数。</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">functionName</code>
+                        <span class="type">String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>函数名</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">arguments</code>
+                        <span class="type">Array</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>固定值arguments</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>function funA(){
+    LExtends(this,LObject,[]);
+}
+funA.prototype.myName = function(){
+    return &quot;AAA&quot;;
+}
+function funB(){
+    LExtends(this,funA,[]);
+}
+funB.prototype.myName = function(){
+    return &quot;BBB&quot;;
+}
+function funC(){
+    LExtends(this,funA,[]);
+}
+funC.prototype.myName = function(){
+    return this.callParent(&quot;myName&quot;,arguments);
+}
+LInit(1000/50,&quot;legend&quot;,800,150,main);
+function main(){
+    LGlobal.setDebug(true);
+    var objB = new funB();
+    trace(objB.myName());//BBB
+    var objC = new funC();
+    trace(objC.myName());//AAA
+}</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LObject/callParent.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_clearBody" class="method item public inherited">
+    <h3 class="name"><code>clearBody</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LSprite.html#method_clearBody">LSprite</a>:
+            
+        
+        
+        <a href="../files/display_LSprite.js.html#l835"><code>display&#x2F;LSprite.js:835</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.4.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>LBox2d相关。</p>
+<p>移除已设定的body。</p>
+<p>一个LSprite对象通过addBodyCircle，addBodyPolygon等方法，会将其变为一个Box2d物理世界里的一个物体，它的运动开始遵循牛顿运动定律，当调用它的clearBody()函数后，会将其变回到普通的LSprite对象，并且被加入到该对象上的body也一起被移除。</p>
+    </div>
+
+    
+
+    
+
+    
+    
+</div>
+
+                
+                    <div id="method_clearShape" class="method item public inherited">
+    <h3 class="name"><code>clearShape</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LSprite.html#method_clearShape">LSprite</a>:
+            
+        
+        
+        <a href="../files/display_LSprite.js.html#l679"><code>display&#x2F;LSprite.js:679</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.9.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>清空所有碰撞形状。</p>
+    </div>
+
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var bitmapData = new LBitmapData(event.currentTarget);//width:240,height:240
+var bitmap01 = new LBitmap(bitmapData);
+var layer01 = new LSprite();
+addChild(layer01);
+layer01.addChild(bitmap01);
+layer01.addShape(LShape.ARC,[110,80,60]);
+layer01.addShape(LShape.RECT,[20,140,200,100]);
+var rect1 = new LSprite();
+rect1.x = 180;
+rect1.graphics.drawRect(2,&quot;#FF0000&quot;,[0,0,100,100]);
+addChild(rect1);
+trace(layer01.hitTestObject(rect1));//false
+layer01.clearShape()
+trace(layer01.hitTestObject(rect1));//true</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LSprite/clearShape.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_clone" class="method item public inherited">
+    <h3 class="name"><code>clone</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="../classes/LSprite.html" class="crosslink">LSprite</a></span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LSprite.html#method_clone">LSprite</a>:
+            
+        
+        
+        <a href="../files/display_LSprite.js.html#l350"><code>display&#x2F;LSprite.js:350</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.8.2</p>
+        
+    </div>
+
+    <div class="description">
+        <p>返回一个LSprite的克隆对象。</p>
+
+    </div>
+
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type"><a href="../classes/LSprite.html" class="crosslink">LSprite</a></span>:
+                    
+                    <p>一个新的 LSprite 对象，它与原始对象相同.</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var circle1 = new LSprite();
+circle1.graphics.drawRect(1,&quot;#000000&quot;,[0,0,100,100],true,&quot;#000000&quot;);
+var circle2 = circle1.clone();
+circle2.y = 120;
+addChild(circle1);
+addChild(circle2);</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LSprite/clone.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_die" class="method item public inherited">
+    <h3 class="name"><code>die</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LSprite.html#method_die">LSprite</a>:
+            
+        
+        
+        <a href="../files/display_LSprite.js.html#l761"><code>display&#x2F;LSprite.js:761</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.0.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>清空所有图形以及事件。</p>
+    </div>
+
+    
+
+    
+
+    
+    
+</div>
+
+                
+                    <div id="method_dispatchEvent" class="method item public inherited">
+    <h3 class="name"><code>dispatchEvent</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>event</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Boolean</span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LEventDispatcher.html#method_dispatchEvent">LEventDispatcher</a>:
+            
+        
+        
+        <a href="../files/events_LEventDispatcher.js.html#l59"><code>events&#x2F;LEventDispatcher.js:59</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.8.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>将事件调度到事件流中。事件目标是对其调用 dispatchEvent() 方法的 LEventDispatcher 对象。</p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">event</code>
+                        <span class="type"><a href="../classes/LEvent.html" class="crosslink">LEvent</a> | String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>调度到事件流中的 Event 对象。如果正在重新调度事件，则会自动创建此事件的一个克隆。在调度了事件后，其 target 属性将无法更改，因此您必须创建此事件的一个新副本以能够重新调度。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Boolean</span>:
+                    
+                    <p>如果成功调度了事件，则值为 true。</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>function MyEventObject(){
+    var self = this;
+    LExtends(self,LSprite,[]);
+    self.graphics.drawRect(1,&quot;#000000&quot;,[0,0,100,100],true,&quot;#000000&quot;);
+    self.graphics.drawRect(1,&quot;#FF0000&quot;,[100,0,100,100],true,&quot;#FF0000&quot;);
+    self.addEventListener(LMouseEvent.MOUSE_UP,self.onclick);
+    self.addEventListener(MyEventObject.CLICK_LEFT,function(event){
+        trace(&quot;dispatchEvent&quot;);
+    });
+    self.addEventListener(MyEventObject.CLICK_RIGHT,function(event){
+        trace(&quot;dispatchEvent event.name = &quot; + event.name);
+    });
+}
+MyEventObject.CLICK_LEFT = &quot;click_left&quot;;
+MyEventObject.CLICK_RIGHT = &quot;click_right&quot;;
+MyEventObject.prototype.onclick = function(event){
+    var self = event.clickTarget;
+    if(event.selfX &lt; 100){
+        self.dispatchEvent(MyEventObject.CLICK_LEFT);
+    }else{
+        var event = new LEvent(MyEventObject.CLICK_RIGHT);
+        event.name = &quot;LEvent Test&quot;;
+        self.dispatchEvent(event);
+    }
+}</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LEventDispatcher/dispatchEvent.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_getBounds" class="method item public inherited">
+    <h3 class="name"><code>getBounds</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>targetCoordinateSpace</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="../classes/LRectangle.html" class="crosslink">LRectangle</a></span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LDisplayObject.html#method_getBounds">LDisplayObject</a>:
+            
+        
+        
+        <a href="../files/display_LDisplayObject.js.html#l383"><code>display&#x2F;LDisplayObject.js:383</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.7.7</p>
+        
+    </div>
+
+    <div class="description">
+        <p>返回一个矩形，该矩形定义相对于 targetCoordinateSpace 对象坐标系的显示对象区域。</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">targetCoordinateSpace</code>
+                        <span class="type"><a href="../classes/LDisplayObject.html" class="crosslink">LDisplayObject</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>定义要使用的坐标系的显示对象。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type"><a href="../classes/LRectangle.html" class="crosslink">LRectangle</a></span>:
+                    
+                    <p>定义与 targetCoordinateSpace 对象坐标系统相关的显示对象面积的矩形。</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LDisplayObject/getBounds.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_getChildAt" class="method item public inherited">
+    <h3 class="name"><code>getChildAt</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>index</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="../classes/LDisplayObject.html" class="crosslink">LDisplayObject</a></span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LDisplayObjectContainer.html#method_getChildAt">LDisplayObjectContainer</a>:
+            
+        
+        
+        <a href="../files/display_LDisplayObjectContainer.js.html#l183"><code>display&#x2F;LDisplayObjectContainer.js:183</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.8.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>返回位于指定索引处的子显示对象实例。</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">index</code>
+                        <span class="type">Int</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>子对象的索引位置。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type"><a href="../classes/LDisplayObject.html" class="crosslink">LDisplayObject</a></span>:
+                    
+                    <p>位于指定索引位置处的子显示对象。</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var container = new LSprite();
+addChild(container);
+var sprite1 = new LSprite();
+var sprite2 = new LSprite();
+var sprite3 = new LSprite();
+container.addChild(sprite1);
+container.addChild(sprite2);
+container.addChildAt(sprite3, 0);
+trace(container.getChildAt(0) == sprite3); // true
+trace(container.getChildAt(1) == sprite1); // true
+trace(container.getChildAt(2) == sprite2); // true</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LDisplayObjectContainer/getChildAt.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_getChildByName" class="method item public inherited">
+    <h3 class="name"><code>getChildByName</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>name</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="../classes/LDisplayObject.html" class="crosslink">LDisplayObject</a></span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LDisplayObjectContainer.html#method_getChildByName">LDisplayObjectContainer</a>:
+            
+        
+        
+        <a href="../files/display_LDisplayObjectContainer.js.html#l211"><code>display&#x2F;LDisplayObjectContainer.js:211</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.9.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>返回具有指定名称的子显示对象。如果多个子显示对象具有指定名称，则该方法会返回子级列表中的第一个对象。</p>
+<p>getChildAt() 方法比 getChildByName() 方法快。getChildAt() 方法从缓存数组中访问子项，而 getChildByName() 方法则必须遍历链接的列表来访问子项。</p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">name</code>
+                        <span class="type">String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>要返回的子项的名称。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type"><a href="../classes/LDisplayObject.html" class="crosslink">LDisplayObject</a></span>:
+                    
+                    <p>具有指定名称的子显示对象。</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var container = new LSprite();
+var sprite1 = new LSprite();
+sprite1.name = &quot;sprite1&quot;;
+var sprite2 = new LSprite();
+sprite2.name = &quot;sprite2&quot;;
+container.addChild(sprite1);
+container.addChild(sprite2);
+var target = container.getChildByName(&quot;sprite1&quot;);
+trace(container.getChildIndex(target)); // 0</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LDisplayObjectContainer/getChildByName.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_getChildIndex" class="method item public inherited">
+    <h3 class="name"><code>getChildIndex</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>child</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Int</span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LDisplayObjectContainer.html#method_getChildIndex">LDisplayObjectContainer</a>:
+            
+        
+        
+        <a href="../files/display_LDisplayObjectContainer.js.html#l279"><code>display&#x2F;LDisplayObjectContainer.js:279</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.8.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>返回 LDisplayObject 的 child 实例的索引位置。</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">child</code>
+                        <span class="type"><a href="../classes/LDisplayObject.html" class="crosslink">LDisplayObject</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>要标识的 LDisplayObject 实例。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Int</span>:
+                    
+                    <p>要标识的子显示对象的索引位置。</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var container = new LSprite();
+addChild(container);
+var sprite1 = new LSprite();
+sprite1.name = &quot;sprite1&quot;;
+var sprite2 = new LSprite();
+sprite2.name = &quot;sprite2&quot;;
+container.addChild(sprite1);
+container.addChild(sprite2);
+trace(container.getChildIndex(sprite1)); // 0</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LDisplayObjectContainer/getChildIndex.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_getDataURL" class="method item public inherited">
+    <h3 class="name"><code>getDataURL</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>type</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>ratio</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Base64 Image</span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LDisplayObject.html#method_getDataURL">LDisplayObject</a>:
+            
+        
+        
+        <a href="../files/display_LDisplayObject.js.html#l472"><code>display&#x2F;LDisplayObject.js:472</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.7.7</p>
+        
+    </div>
+
+    <div class="description">
+        <p>将该对象转换成base64编码的image字符串。</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">type</code>
+                        <span class="type">String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>参数type在image/png，image/jpeg,image/svg+xml等 MIME类型中选择（可以不填，默认是image/png）。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">ratio</code>
+                        <span class="type">Float</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>如果是type = “image/jpeg”，可以有第二个参数，如果第二个参数ratio的值在0-1之间，则表示JPEG的质量等级，否则使用浏览器内置默认质量等级。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Base64 Image</span>:
+                    
+                    <p>base64编码的image字符串。</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+    
+</div>
+
+                
+                    <div id="method_getHeight" class="method item public inherited">
+    <h3 class="name"><code>getHeight</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Float</span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LSprite.html#method_getHeight">LSprite</a>:
+            
+        
+        
+        <a href="../files/display_LSprite.js.html#l277"><code>display&#x2F;LSprite.js:277</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.0.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>获取显示对象的高度，以像素为单位。</p>
+
+    </div>
+
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Float</span>:
+                    
+                    <p>显示对象的高度。</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var bitmapdata = new LBitmapData(event.currentTarget);  
+var bitmap = new LBitmap(bitmapdata);
+var layer = new LSprite();
+addChild(layer);
+layer.addChild(bitmap);
+trace(&quot;height : &quot; + layer.getHeight());</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LSprite/getHeight.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_getParentByConstructor" class="method item public inherited">
+    <h3 class="name"><code>getParentByConstructor</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>constructor</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Object</span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LDisplayObject.html#method_getParentByConstructor">LDisplayObject</a>:
+            
+        
+        
+        <a href="../files/display_LDisplayObject.js.html#l487"><code>display&#x2F;LDisplayObject.js:487</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.10.1</p>
+        
+    </div>
+
+    <div class="description">
+        <p>通过构造函数向上查找对象。</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">constructor</code>
+                        <span class="type">Constructor</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>某个构造函数</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Object</span>:
+                    
+                    <p>查找到的对象。</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>function MyClass1(){
+    base(self,LSprite,[]);
+}
+function MyClass2(){
+    base(self,LSprite,[]);
+}
+var obj1 = new MyClass1();
+var obj2 = new MyClass2();
+var obj3 = new LSprite();
+addChild(obj1);
+obj1.addChild(obj2);
+obj2.addChild(obj3);
+trace(obj1.objectIndex == obj3.getParentByConstructor(MyClass1).objectIndex);//out: true
+trace(obj2.objectIndex == obj3.getParentByConstructor(MyClass2).objectIndex);//out: true</code></pre>
+
+            </div>
+        </div>
+    
+    
+</div>
+
+                
+                    <div id="method_getRootCoordinate" class="method item public inherited">
+    <h3 class="name"><code>getRootCoordinate</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="../classes/LPoint.html" class="crosslink">LPoint</a></span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LDisplayObject.html#method_getRootCoordinate">LDisplayObject</a>:
+            
+        
+        
+        <a href="../files/display_LDisplayObject.js.html#l308"><code>display&#x2F;LDisplayObject.js:308</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.7.7</p>
+        
+    </div>
+
+    <div class="description">
+        <p>得到一个可显示对象相对于canvas标签左上点的坐标。</p>
+
+    </div>
+
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type"><a href="../classes/LPoint.html" class="crosslink">LPoint</a></span>:
+                    
+                    <p>一个LPoint对象。</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+    
+</div>
+
+                
+                    <div id="method_getWidth" class="method item public inherited">
+    <h3 class="name"><code>getWidth</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Float</span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LSprite.html#method_getWidth">LSprite</a>:
+            
+        
+        
+        <a href="../files/display_LSprite.js.html#l225"><code>display&#x2F;LSprite.js:225</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.0.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>获取显示对象的宽度，以像素为单位。</p>
+
+    </div>
+
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Float</span>:
+                    
+                    <p>显示对象的宽度。</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var bitmapdata = new LBitmapData(event.currentTarget);  
+var bitmap = new LBitmap(bitmapdata);
+var layer = new LSprite();
+addChild(layer);
+layer.addChild(bitmap);
+trace(&quot;width : &quot; + layer.getWidth());</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LSprite/getWidth.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_globalToLocal" class="method item public inherited">
+    <h3 class="name"><code>globalToLocal</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>point</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="../classes/LPoint.html" class="crosslink">LPoint</a></span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LDisplayObject.html#method_globalToLocal">LDisplayObject</a>:
+            
+        
+        
+        <a href="../files/display_LDisplayObject.js.html#l353"><code>display&#x2F;LDisplayObject.js:353</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.9.11</p>
+        
+    </div>
+
+    <div class="description">
+        <p>将 point 对象从舞台（全局）坐标转换为显示对象的（本地）坐标。</p>
+<p>要使用此方法，请先创建 LPoint 类的一个实例。您分配的 x 和 y 值表示全局坐标，因为它们是相对于主显示区域的原点 (0,0) 的。然后将 LPoint 实例作为参数传递给 globalToLocal() 方法。该方法会返回一个新的 LPoint 对象，该对象具有相对于显示对象原点（而不是舞台原点）的 x 和 y 值。</p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">point</code>
+                        <span class="type"><a href="../classes/LPoint.html" class="crosslink">LPoint</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>用 LPoint 类创建的对象。 该 LPoint 对象指定 x 和 y 坐标作为属性。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type"><a href="../classes/LPoint.html" class="crosslink">LPoint</a></span>:
+                    
+                    <p>具有相对于显示对象的坐标的 LPoint 对象。</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>LInit(50, &quot;legend&quot;, 800, 480, main);
+function main () {
+    LGlobal.setDebug(true);
+    var circle = new LSprite();
+    circle.x = 10;
+    addChild(circle);
+    var point1 = new LPoint(0, 0);
+    trace(circle.globalToLocal(point1)); // [x=-10, y=0]
+    var point2 = new LPoint(10, 1);
+    trace(circle.globalToLocal(point2)); // [x=0, y=1]
+    var point3 = new LPoint(30, 20);
+    trace(circle.globalToLocal(point3)); // [x=20, y=20]
+}</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LDisplayObject/globalToLocal.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_hasEventListener" class="method item public inherited">
+    <h3 class="name"><code>hasEventListener</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>type</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Boolean</span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LEventDispatcher.html#method_hasEventListener">LEventDispatcher</a>:
+            
+        
+        
+        <a href="../files/events_LEventDispatcher.js.html#l126"><code>events&#x2F;LEventDispatcher.js:126</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.8.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>检查 LEventDispatcher 对象是否为特定事件类型注册了任何侦听器。这样，您就可以确定 LEventDispatcher 对象在事件流层次结构中的哪个位置改变了对事件类型的处理。</p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">type</code>
+                        <span class="type">String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>事件的类型。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Boolean</span>:
+                    
+                    <p>如果指定类型的侦听器已注册，则值为 true；否则，值为 false。</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+    
+</div>
+
+                
+                    <div id="method_hitTestObject" class="method item public inherited">
+    <h3 class="name"><code>hitTestObject</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>obj</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Boolean</span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LSprite.html#method_hitTestObject">LSprite</a>:
+            
+        
+        
+        <a href="../files/display_LSprite.js.html#l531"><code>display&#x2F;LSprite.js:531</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.9.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>计算显示对象的边框，以确定它是否与 obj 显示对象的边框重叠或相交。</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">obj</code>
+                        <span class="type"><a href="../classes/LDisplayObject.html" class="crosslink">LDisplayObject</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>要测试的显示对象。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Boolean</span>:
+                    
+                    <p>如果显示对象的边框相交，则为 true；否则为 false。</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>LGlobal.setDebug(true);
+var container = new LSprite();
+addChild(container);
+var circle1 = new LSprite();
+circle1.graphics.drawRect(1,&quot;#000000&quot;,[0,0,100,100],true,&quot;#000000&quot;);
+var circle2 = new LSprite();
+circle2.x = 120;
+circle2.graphics.drawRect(1,&quot;#FF0000&quot;,[0,0,100,100],true,&quot;#FF0000&quot;);
+var circle3 = new LSprite();
+circle3.x = 60;
+circle3.y = 60;
+circle3.graphics.drawRect(1,&quot;#008800&quot;,[0,0,100,100],true,&quot;#008800&quot;);
+container.addChild(circle1);
+container.addChild(circle2);
+container.addChild(circle3);
+trace(circle1.hitTestObject(circle2));//false
+trace(circle1.hitTestObject(circle3));//true
+trace(circle2.hitTestObject(circle3));//true</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LSprite/hitTestObject.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_hitTestPoint" class="method item public inherited">
+    <h3 class="name"><code>hitTestPoint</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>x</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>y</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Boolean</span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LSprite.html#method_hitTestPoint">LSprite</a>:
+            
+        
+        
+        <a href="../files/display_LSprite.js.html#l470"><code>display&#x2F;LSprite.js:470</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.9.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>计算显示对象，以确定它是否与 x 和 y 参数指定的点重叠或相交。x 和 y 参数指定舞台的坐标空间中的点，而不是包含显示对象的显示对象容器中的点（除非显示对象容器是舞台）。</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">x</code>
+                        <span class="type">Float</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>要测试的此对象的 x 坐标。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">y</code>
+                        <span class="type">Float</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>要测试的此对象的 y 坐标。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Boolean</span>:
+                    
+                    <p>如果显示对象与指定的点重叠或相交，则为 true；否则为 false。</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>LInit(20,&quot;legend&quot;,800,450,main);
+var backLayer;
+var title;
+function main(){
+    backLayer = new LSprite();
+    addChild(backLayer);
+    backLayer.addEventListener(LEvent.ENTER_FRAME,onframe);
+    title = new LTextField();
+    title.size = 18;
+    title.x = 10;
+    title.y = 5;
+    title.text = &quot;hitTestPoint:false&quot;;
+    addChild(title);
+    var layer = new LSprite();
+    layer.x = 20;
+    layer.y = 50;
+    layer.graphics.drawRect(0,&quot;#880088&quot;,[0,0,100,40],true,&quot;#880088&quot;);
+    layer.addShape(LShape.RECT,[0,0,100,40]);
+    backLayer.addChild(layer);
+    layer = new LSprite();
+    layer.x = 200;
+    layer.y = 100;
+    layer.graphics.drawArc(0,&quot;#880088&quot;,[0,0,30,0,2*Math.PI],true,&quot;#880088&quot;);
+    layer.addShape(LShape.ARC,[0,0,30]);
+    backLayer.addChild(layer);
+    layer = new LSprite();
+    layer.x = 120;
+    layer.y = 150;
+    layer.graphics.drawVertices(0,&quot;#880088&quot;,[[10,10],[50,100],[100,70]],true,&quot;#880088&quot;);
+    layer.addShape(LShape.VERTICES,[[10,10],[50,100],[100,70]]);
+    backLayer.addChild(layer);
+}
+function onframe(e){
+    for(var i=0;i&lt;backLayer.childList.length;i++){
+        if(backLayer.childList[i].hitTestPoint(mouseX,mouseY)){
+            title.text = &quot;hitTestPoint:true&quot;;
+            return;
+        }
+    }
+    title.text = &quot;hitTestPoint:false&quot;;
+}</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LSprite/hitTestPoint.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_localToGlobal" class="method item public inherited">
+    <h3 class="name"><code>localToGlobal</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>point</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="../classes/LPoint.html" class="crosslink">LPoint</a></span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LDisplayObject.html#method_localToGlobal">LDisplayObject</a>:
+            
+        
+        
+        <a href="../files/display_LDisplayObject.js.html#l318"><code>display&#x2F;LDisplayObject.js:318</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.9.11</p>
+        
+    </div>
+
+    <div class="description">
+        <p>将 point 对象从显示对象的（本地）坐标转换为舞台（全局）坐标。</p>
+<p>此方法允许您将任何给定的 x 和 y 坐标从相对于特定显示对象原点 (0,0) 的值（本地坐标）转换为相对于舞台原点的值（全局坐标）。</p>
+<p>要使用此方法，请先创建 Point 类的一个实例。您分配的 x 和 y 的值表示本地坐标，因为它们是相对于显示对象原点的值。</p>
+<p>然后，您可以将创建的 Point 实例作为参数传递给 localToGlobal() 方法。该方法会返回一个新的 Point 对象，该对象具有相对于舞台原点（而不是显示对象原点）的 x 和 y 值。</p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">point</code>
+                        <span class="type"><a href="../classes/LPoint.html" class="crosslink">LPoint</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>使用 Point 类创建的点的名称或标识符，指定 x 和 y 坐标作为属性。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type"><a href="../classes/LPoint.html" class="crosslink">LPoint</a></span>:
+                    
+                    <p>具有相对于舞台的坐标的 Point 对象。</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>LInit(50, &quot;legend&quot;, 800, 480, main);
+var square;
+function main () {
+    LGlobal.setDebug(true);
+    square = new LSprite();
+    square.graphics.drawRect(1,&quot;#000000&quot;,[0, 0, 100, 100]);
+    square.x = 100;
+    square.y = 200;
+    addChild(square);
+    square.addEventListener(LMouseEvent.MOUSE_DOWN, traceCoordinates);
+}
+function traceCoordinates(event) {
+    var clickPoint = new LPoint(mouseX, mouseY);
+    trace(&quot;display object coordinates:&quot;, clickPoint);
+    trace(&quot;stage coordinates:&quot;, square.localToGlobal(clickPoint));
+}</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LDisplayObject/localToGlobal.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_onClick" class="method item public">
+    <h3 class="name"><code>onClick</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>event</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/lib_ui_LListView-0.1.0.js.html#l467"><code>lib&#x2F;ui&#x2F;LListView-0.1.0.js:467</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.10.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>LListView 列表不可以添加LMouseEvent事件，如果需要使用点击事件，需要重写子项的onClick函数。</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">event</code>
+                        <span class="type">Object</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>{currentTarget:LListView对象,target:LListChildView自身,offsetX:同LMouseEvent,offsetY:同LMouseEvent,selfX:同LMouseEvent,selfY:同LMouseEvent}</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>function MyListChildView(){
+    var self = this;
+    base(self,LListChildView,[]);
+    //处理
+}
+MyListChildView.prototype.onClick = function(event){
+    var self = event.target;
+    //处理
+}</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/ui/LListView_onClick.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_onClick" class="method item public">
+    <h3 class="name"><code>onClick</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>event</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/lib_ui_LListView-0.1.1.js.html#l549"><code>lib&#x2F;ui&#x2F;LListView-0.1.1.js:549</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.10.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>LListView 列表不可以添加LMouseEvent事件，如果需要使用点击事件，需要重写子项的onClick函数。</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">event</code>
+                        <span class="type">Object</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>{currentTarget:LListView对象,target:LListChildView自身,offsetX:同LMouseEvent,offsetY:同LMouseEvent,selfX:同LMouseEvent,selfY:同LMouseEvent}</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>function MyListChildView(){
+    var self = this;
+    base(self,LListChildView,[]);
+    //处理
+}
+MyListChildView.prototype.onClick = function(event){
+    var self = event.target;
+    //处理
+}</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/ui/LListView_onClick.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_remove" class="method item public inherited">
+    <h3 class="name"><code>remove</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LDisplayObject.html#method_remove">LDisplayObject</a>:
+            
+        
+        
+        <a href="../files/display_LDisplayObject.js.html#l602"><code>display&#x2F;LDisplayObject.js:602</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.7.7</p>
+        
+    </div>
+
+    <div class="description">
+        <p>将对象自己从父容器中移除。</p>
+
+    </div>
+
+    
+
+    
+
+    
+    
+</div>
+
+                
+                    <div id="method_removeAllChild" class="method item inherited">
+    <h3 class="name"><code>removeAllChild</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LDisplayObjectContainer.html#method_removeAllChild">LDisplayObjectContainer</a>:
+            
+        
+        
+        <a href="../files/display_LDisplayObjectContainer.js.html#l368"><code>display&#x2F;LDisplayObjectContainer.js:368</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>从 LDisplayObjectContainer 实例的子列表中删除所有的 child LDisplayObject 实例。</p>
+    </div>
+
+    
+
+    
+
+    
+    
+</div>
+
+                
+                    <div id="method_removeAllEventListener" class="method item public inherited">
+    <h3 class="name"><code>removeAllEventListener</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LEventDispatcher.html#method_removeAllEventListener">LEventDispatcher</a>:
+            
+        
+        
+        <a href="../files/events_LEventDispatcher.js.html#l50"><code>events&#x2F;LEventDispatcher.js:50</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.8.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>从 LEventDispatcher 对象中删除所有侦听器。</p>
+    </div>
+
+    
+
+    
+
+    
+    
+</div>
+
+                
+                    <div id="method_removeChild" class="method item public inherited">
+    <h3 class="name"><code>removeChild</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>child</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="../classes/LDisplayObject.html" class="crosslink">LDisplayObject</a></span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LDisplayObjectContainer.html#method_removeChild">LDisplayObjectContainer</a>:
+            
+        
+        
+        <a href="../files/display_LDisplayObjectContainer.js.html#l145"><code>display&#x2F;LDisplayObjectContainer.js:145</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.0.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>从 LDisplayObjectContainer 实例的子列表中删除指定的 child LDisplayObject 实例。将已删除子项的 parent 属性设置为 null；如果不存在对该子项的任何其它引用，则将该对象作为垃圾回收。LDisplayObjectContainer 中该子项之上的任何显示对象的索引位置都减去 1。</p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">child</code>
+                        <span class="type"><a href="../classes/LDisplayObject.html" class="crosslink">LDisplayObject</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>要删除的 LDisplayObject 实例。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type"><a href="../classes/LDisplayObject.html" class="crosslink">LDisplayObject</a></span>:
+                    
+                    <p>在 child 参数中传递的 LDisplayObject 实例。</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>function main () {
+    var container = new LSprite();
+    addChild(container);
+    var circle1 = new LSprite();
+    circle1.graphics.drawRect(1,&quot;#000000&quot;,[0,0,50,50]);
+    var circle2 = new LSprite();
+    circle2.graphics.drawRect(1,&quot;#000000&quot;,[100,100,50,50]);
+    container.addChild(circle1);
+    container.addChild(circle2);
+    container.addEventListener(LMouseEvent.MOUSE_DOWN, clicked);
+}
+function clicked (event) {
+    event.currentTarget.removeChild(event.target);
+}</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LDisplayObjectContainer/removeChild.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_removeChildAt" class="method item public inherited">
+    <h3 class="name"><code>removeChildAt</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>index</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="../classes/LDisplayObject.html" class="crosslink">LDisplayObject</a></span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LDisplayObjectContainer.html#method_removeChildAt">LDisplayObjectContainer</a>:
+            
+        
+        
+        <a href="../files/display_LDisplayObjectContainer.js.html#l243"><code>display&#x2F;LDisplayObjectContainer.js:243</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.8.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>从 LDisplayObjectContainer 的子列表中指定的 index 位置删除子 LDisplayObject。将已删除子项的 parent 属性设置为 null；如果没有对该子项的任何其他引用，则将该对象作为垃圾回收。LDisplayObjectContainer 中该子项之上的任何显示对象的索引位置都减去 1。</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">index</code>
+                        <span class="type">Int</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>要删除的 DisplayObject 的子索引。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type"><a href="../classes/LDisplayObject.html" class="crosslink">LDisplayObject</a></span>:
+                    
+                    <p>已删除的 DisplayObject 实例。</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var container = new LSprite();
+addChild(container);
+var sprite1 = new LSprite();
+sprite1.name = &quot;sprite1&quot;;
+var sprite2 = new LSprite();
+sprite2.name = &quot;sprite2&quot;;
+container.addChild(sprite1);
+container.addChild(sprite2);
+trace(container.numChildren) // 2
+container.removeChildAt(0); 
+trace(container.numChildren) // 1
+trace(container.getChildAt(0).name); // sprite2</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LDisplayObjectContainer/removeChildAt.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_removeEventListener" class="method item public inherited">
+    <h3 class="name"><code>removeEventListener</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>type</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>listener</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LEventDispatcher.html#method_removeEventListener">LEventDispatcher</a>:
+            
+        
+        
+        <a href="../files/events_LEventDispatcher.js.html#l29"><code>events&#x2F;LEventDispatcher.js:29</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.8.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>从 LEventDispatcher 对象中删除侦听器。如果没有向 LEventDispatcher 对象注册任何匹配的侦听器，则对此方法的调用没有任何效果。</p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">type</code>
+                        <span class="type">String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>事件的类型。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">listener</code>
+                        <span class="type">Function</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>要删除的侦听器对象。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+    
+</div>
+
+                
+                    <div id="method_setBodyMouseJoint" class="method item public inherited">
+    <h3 class="name"><code>setBodyMouseJoint</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>value</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LSprite.html#method_setBodyMouseJoint">LSprite</a>:
+            
+        
+        
+        <a href="../files/display_LSprite.js.html#l781"><code>display&#x2F;LSprite.js:781</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.4.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>LBox2d相关。</p>
+<p>给物体添加鼠标关节,响应鼠标拖拽物体。</p>
+<p>使用lufylegend.js引擎后，鼠标拖拽变得非常简便了，只需要调用LSprite对象的setBodyMouseJoint方法即可。</p>
+<p>一个LSprite对象通过addBodyCircle，addBodyPolygon等方法，会将其变为一个Box2d物理世界里的一个物体，如果调用它的setBodyMouseJoint(true)函数，可以让其支持鼠标拖拽。</p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">value</code>
+                        <span class="type">Boolean</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>是否支持鼠标拖拽</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+    
+</div>
+
+                
+                    <div id="method_setChildIndex" class="method item public inherited">
+    <h3 class="name"><code>setChildIndex</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>child</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>index</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Int</span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LDisplayObjectContainer.html#method_setChildIndex">LDisplayObjectContainer</a>:
+            
+        
+        
+        <a href="../files/display_LDisplayObjectContainer.js.html#l310"><code>display&#x2F;LDisplayObjectContainer.js:310</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.8.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>更改现有子项在显示对象容器中的位置。这会影响子对象的分层。例如，下例在索引位置 0、1、2 处分别显示 a、b、c 三个显示对象：</p>
+<p><img src="../../../api/LDisplayObjectContainer/DisplayObjectContainerSetChildIndex1.jpg" /></p>
+<p>在使用 setChildIndex() 方法并指定一个已经占用的索引位置时，唯一发生更改的位置是显示对象先前的位置和新位置之间的位置。所有其他位置将保持不变。如果将一个子项移动到比它当前的索引更低的索引处，则这两个索引之间的所有子项的索引引用都将增加 1。如果将一个子项移动到比它当前的索引更高的索引处，则这两个索引之间的所有子项的索引引用都将减小 1。例如，如果上例中的显示对象容器名为 container，则可以通过调用以下代码来交换带有 a 和 b 标记的显示对象的位置：</p>
+<p>container.setChildIndex(container.getChildAt(1), 0);</p>
+<p>该代码产生以下对象排列：</p>
+<p><img src="../../../api/LDisplayObjectContainer/DisplayObjectContainerSetChildIndex2.jpg" /></p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">child</code>
+                        <span class="type"><a href="../classes/LDisplayObject.html" class="crosslink">LDisplayObject</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>要为其更改索引编号的 LDisplayObject 子实例。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">index</code>
+                        <span class="type">Int</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>生成的 child 显示对象的索引编号。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Int</span>:
+                    
+                    <p>生成的 child 显示对象的索引编号。</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>LInit(50, &quot;legend&quot;, 800, 480, main);
+var container;
+function main () {
+    container = new LSprite();
+    addChild(container);
+    var circle1 = new LSprite();
+    circle1.graphics.drawRect(1,&quot;#000000&quot;,[0,0,100,100],true,&quot;#000000&quot;);
+    circle1.addEventListener(LMouseEvent.MOUSE_DOWN, clicked);
+    var circle2 = new LSprite();
+    circle2.graphics.drawRect(1,&quot;#FF0000&quot;,[40,80,100,100],true,&quot;#FF0000&quot;);
+    circle2.addEventListener(LMouseEvent.MOUSE_DOWN, clicked);
+    var circle3 = new LSprite();
+    circle3.graphics.drawRect(1,&quot;#008800&quot;,[80,0,100,100],true,&quot;#008800&quot;);
+    circle3.addEventListener(LMouseEvent.MOUSE_DOWN, clicked);
+    container.addChild(circle1);
+    container.addChild(circle2);
+    container.addChild(circle3);
+}
+function clicked (event) {
+    var circle = event.target;
+    var topPosition = container.numChildren - 1;
+    container.setChildIndex(circle, topPosition);
+}</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LDisplayObjectContainer/setChildIndex.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_setRotate" class="method item public inherited">
+    <h3 class="name"><code>setRotate</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>angle</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LSprite.html#method_setRotate">LSprite</a>:
+            
+        
+        
+        <a href="../files/display_LSprite.js.html#l109"><code>display&#x2F;LSprite.js:109</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.4.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>使用Box2dWeb的时候，需要用setRotate来设定角度</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">angle</code>
+                        <span class="type">Float</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>角度。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+    
+</div>
+
+                
+                    <div id="method_startDrag" class="method item public inherited">
+    <h3 class="name"><code>startDrag</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>touchPointID</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LSprite.html#method_startDrag">LSprite</a>:
+            
+        
+        
+        <a href="../files/display_LSprite.js.html#l141"><code>display&#x2F;LSprite.js:141</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.8.9</p>
+        
+    </div>
+
+    <div class="description">
+        <p>允许用户拖动指定的 LSprite。LSprite 将一直保持可拖动，直到通过调用 LSprite.stopDrag() 方法来明确停止。</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">touchPointID</code>
+                        <span class="type">Int</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>分配给触摸点的整数(触摸设备)。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>LInit(1000/50,&quot;legend&quot;,800,450,main);
+function main(){
+    LMultitouch.inputMode = LMultitouchInputMode.TOUCH_POINT;
+    for(var i=0;i&lt;3;i++){
+        var child = new LSprite();
+        child.x = 250*i;
+        child.graphics.drawRect(2,&quot;#ff0000&quot;,[0,0,100,100],true,&quot;#ff0000&quot;);
+        child.addEventListener(LMouseEvent.MOUSE_DOWN,ondown);
+        child.addEventListener(LMouseEvent.MOUSE_UP,onup);
+        addChild(child);
+    }
+}
+function ondown(e){
+    e.clickTarget.startDrag(e.touchPointID);
+}
+function onup(e){
+    e.clickTarget.stopDrag();
+}</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LSprite/startDrag.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_stopDrag" class="method item public inherited">
+    <h3 class="name"><code>stopDrag</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LSprite.html#method_stopDrag">LSprite</a>:
+            
+        
+        
+        <a href="../files/display_LSprite.js.html#l180"><code>display&#x2F;LSprite.js:180</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.8.9</p>
+        
+    </div>
+
+    <div class="description">
+        <p>结束 startDrag() 方法。</p>
+
+    </div>
+
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>LInit(1000/50,&quot;legend&quot;,800,450,main);
+function main(){
+    LMultitouch.inputMode = LMultitouchInputMode.TOUCH_POINT;
+    for(var i=0;i&lt;3;i++){
+        var child = new LSprite();
+        child.x = 250*i;
+        child.graphics.drawRect(2,&quot;#ff0000&quot;,[0,0,100,100],true,&quot;#ff0000&quot;);
+        child.addEventListener(LMouseEvent.MOUSE_DOWN,ondown);
+        child.addEventListener(LMouseEvent.MOUSE_UP,onup);
+        addChild(child);
+    }
+}
+function ondown(e){
+    e.clickTarget.startDrag(e.touchPointID);
+}
+function onup(e){
+    e.clickTarget.stopDrag();
+}</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LSprite/stopDrag.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_updateView" class="method item public">
+    <h3 class="name"><code>updateView</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/lib_ui_LListView-0.1.1.js.html#l489"><code>lib&#x2F;ui&#x2F;LListView-0.1.1.js:489</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.10.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>当LListView 列表的子项LListChildView内容有改变的时候，需要使用调用updateView来刷新，如果被改变的对象在LListView的可视范围以外的话，则无需刷新。</p>
+
+    </div>
+
+    
+
+    
+
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/ui/LListView_onClick.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_updateView" class="method item public">
+    <h3 class="name"><code>updateView</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/lib_ui_LListView-0.1.0.js.html#l439"><code>lib&#x2F;ui&#x2F;LListView-0.1.0.js:439</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.10.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>当LListView 列表的子项LListChildView内容有改变的时候，需要使用调用updateView来刷新，如果被改变的对象在LListView的可视范围以外的话，则无需刷新。</p>
+
+    </div>
+
+    
+
+    
+
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/ui/LListView_onClick.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+            </div>
+        
+
+        
+            <div id="properties" class="api-class-tabpanel">
+                <h2 class="off-left">Properties</h2>
+
+                
+                    <div id="property_alpha" class="property item public inherited">
+    <h3 class="name"><code>alpha</code></h3>
+    <span class="type">Float</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LDisplayObject.html#property_alpha">LDisplayObject</a>:
+            
+        
+        
+        <a href="../files/display_LDisplayObject.js.html#l55"><code>display&#x2F;LDisplayObject.js:55</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.6.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>表示指定对象的 Alpha 透明度值。有效值为 0（完全透明）到 1（完全不透明）。默认值为 1。alpha 设置为 0 的显示对象是活动的，即使它们不可见。</p>
+
+    </div>
+
+    
+        <p><strong>Default:</strong> 1</p>
+    
+
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LDisplayObject/alpha.html" target="_blank">测试链接</a></p>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="property_blendMode" class="property item public inherited">
+    <h3 class="name"><code>blendMode</code></h3>
+    <span class="type">String</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LDisplayObject.html#property_blendMode">LDisplayObject</a>:
+            
+        
+        
+        <a href="../files/display_LDisplayObject.js.html#l107"><code>display&#x2F;LDisplayObject.js:107</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.8.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>LBlendMode 类中的一个值，用于指定要使用的混合模式。 内部绘制位图的方法有两种。 如果启用了混合模式或外部剪辑遮罩，则将通过向矢量渲染器添加有位图填充的正方形来绘制位图。 如果尝试将此属性设置为无效值，运行时会将此值设置为 LBlendMode.NORMAL。</p>
+
+    </div>
+
+    
+        <p><strong>Default:</strong> null</p>
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_childList" class="property item public inherited">
+    <h3 class="name"><code>childList</code></h3>
+    <span class="type">Array</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LDisplayObjectContainer.html#property_childList">LDisplayObjectContainer</a>:
+            
+        
+        
+        <a href="../files/display_LDisplayObjectContainer.js.html#l15"><code>display&#x2F;LDisplayObjectContainer.js:15</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.0.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>子对象列表</p>
+
+    </div>
+
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_dragRange" class="property item public inherited">
+    <h3 class="name"><code>dragRange</code></h3>
+    <span class="type"><a href="../classes/LRectangle.html" class="crosslink">LRectangle</a></span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LSprite.html#property_dragRange">LSprite</a>:
+            
+        
+        
+        <a href="../files/display_LSprite.js.html#l82"><code>display&#x2F;LSprite.js:82</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.9.8</p>
+        
+    </div>
+
+    <div class="description">
+        <p>用户拖动该对象时的拖动范围。</p>
+<p>LRectangle对象的x，y分别是对象可以拖动的起始坐标，width，height分别表示从起始坐标开始可以拖动的范围。</p>
+    </div>
+
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_filters" class="property item public inherited">
+    <h3 class="name"><code>filters</code></h3>
+    <span class="type">Array</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LDisplayObject.html#property_filters">LDisplayObject</a>:
+            
+        
+        
+        <a href="../files/display_LDisplayObject.js.html#l116"><code>display&#x2F;LDisplayObject.js:116</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.6.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>包含当前与显示对象关联的每个滤镜对象的索引数组。</p>
+
+    </div>
+
+    
+        <p><strong>Default:</strong> null</p>
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_graphics" class="property item public inherited">
+    <h3 class="name"><code>graphics</code></h3>
+    <span class="type"><a href="../classes/LGraphics.html" class="crosslink">LGraphics</a></span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LSprite.html#property_graphics">LSprite</a>:
+            
+        
+        
+        <a href="../files/display_LSprite.js.html#l36"><code>display&#x2F;LSprite.js:36</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.0.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>[只读] 指定属于此 sprite 的 LGraphics 对象，在此 sprite 中可执行矢量绘图命令。</p>
+
+    </div>
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var layer = new LSprite();
+addChild(layer);
+layer.graphics.drawRect(2, &quot;#ff0000&quot;, [10, 10, 50, 100], true, &quot;#880088&quot;);</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LSprite/graphics.html" target="_blank">测试链接</a></p>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="property_mask" class="property item public inherited">
+    <h3 class="name"><code>mask</code></h3>
+    <span class="type"><a href="../classes/LDisplayObject.html" class="crosslink">LDisplayObject</a></span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LDisplayObject.html#property_mask">LDisplayObject</a>:
+            
+        
+        
+        <a href="../files/display_LDisplayObject.js.html#l83"><code>display&#x2F;LDisplayObject.js:83</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.6.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>调用显示对象被指定的 mask 对象遮罩。要确保当舞台缩放时蒙版仍然有效，mask 显示对象必须处于显示列表的活动部分。但不绘制 mask 对象本身。将 mask 设置为 null 可删除蒙版。</p>
+
+    </div>
+
+    
+        <p><strong>Default:</strong> null</p>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>function main () {
+    var loader = new LLoader();
+    loader.addEventListener(LEvent.COMPLETE, loadBitmapdata); 
+    loader.load(&quot;face.png&quot;, &quot;bitmapData&quot;);
+}
+function loadBitmapdata (event) {
+    var bitmapdata = new LBitmapData(event.target);  
+    var bitmap = new LBitmap(bitmapdata);
+    addChild(bitmap);
+    var maskObj = new LSprite();
+    maskObj.graphics.drawRect(0, &quot;#ff0000&quot;, [10, 10, 150, 100]);
+    bitmap.mask = maskObj;
+}</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LDisplayObject/mask.html" target="_blank">测试链接</a></p>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="property_mouseChildren" class="property item public inherited">
+    <h3 class="name"><code>mouseChildren</code></h3>
+    <span class="type">Boolean</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LDisplayObjectContainer.html#property_mouseChildren">LDisplayObjectContainer</a>:
+            
+        
+        
+        <a href="../files/display_LDisplayObjectContainer.js.html#l46"><code>display&#x2F;LDisplayObjectContainer.js:46</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.9.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>确定对象的子级是否支持鼠标输入设备。</p>
+
+    </div>
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>LGlobal.setDebug(true);
+var container1 = new LSprite();
+container1.x = container1.y = 20;
+var container2 = new LSprite();
+container2.x = 20;
+container2.y = 100;
+container2.mouseChildren = false;
+addChild(container1);
+addChild(container2);
+var button01 = new LButtonSample1(&quot;mouseChildren=true&quot;);
+container1.addChild(button01);
+button01.addEventListener(LMouseEvent.MOUSE_DOWN,function(e){
+    trace(&quot;button01 click&quot;);
+});
+var button02 = new LButtonSample1(&quot;mouseChildren=false&quot;);
+container2.addChild(button02);
+button02.addEventListener(LMouseEvent.MOUSE_DOWN,function(e){
+    trace(&quot;button02 click&quot;);
+});</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LDisplayObjectContainer/mouseChildren.html" target="_blank">测试链接</a></p>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="property_mouseEnabled" class="property item public inherited">
+    <h3 class="name"><code>mouseEnabled</code></h3>
+    <span class="type">Boolean</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LInteractiveObject.html#property_mouseEnabled">LInteractiveObject</a>:
+            
+        
+        
+        <a href="../files/display_LInteractiveObject.js.html#l14"><code>display&#x2F;LInteractiveObject.js:14</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.8.10</p>
+        
+    </div>
+
+    <div class="description">
+        <p>指定此对象是否接收鼠标或其他用户输入、消息。默认值为 true，这表示默认情况下，显示列表上的任何 LInteractiveObject 实例都会接收鼠标事件或其他用户输入事件。如果将 mouseEnabled 设置为 false，则实例将不接收任何鼠标事件（或其他用户输入事件，例如键盘事件）。显示列表上的该实例的任何子级都不会受到影响。要更改显示列表上对象的所有子级的 mouseEnabled 行为，请使用 LDisplayObjectContainer.mouseChildren。</p>
+
+    </div>
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>LGlobal.setDebug(true);
+var button01 = new LButtonSample1(&quot;mouseEnabled=true&quot;);
+button01.x = button01.y = 20;
+addChild(button01);
+button01.addEventListener(LMouseEvent.MOUSE_DOWN,function(e){
+    trace(&quot;button01 click&quot;);
+});
+var button02 = new LButtonSample1(&quot;mouseEnabled=false&quot;);
+button02.x = 20;
+button02.y = 150;
+button02.mouseEnabled = false;
+addChild(button02);
+button02.addEventListener(LMouseEvent.MOUSE_DOWN,function(e){
+    trace(&quot;button02 click&quot;);
+});</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LInteractiveObject/mouseEnabled.html" target="_blank">测试链接</a></p>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="property_numChildren" class="property item public inherited">
+    <h3 class="name"><code>numChildren</code></h3>
+    <span class="type">Int</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LDisplayObjectContainer.html#property_numChildren">LDisplayObjectContainer</a>:
+            
+        
+        
+        <a href="../files/display_LDisplayObjectContainer.js.html#l23"><code>display&#x2F;LDisplayObjectContainer.js:23</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.9.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>返回此对象的子项数目。</p>
+
+    </div>
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var container1 = new LSprite();
+var container2 = new LSprite();
+var circle1 = new LSprite();
+circle1.graphics.drawRect(1,&quot;#000000&quot;,[0,0,50,50]);
+var circle2 = new LSprite();
+circle2.graphics.drawRect(1,&quot;#000000&quot;,[100,100,50,50]);
+container2.addChild(container1);
+container1.addChild(circle1);
+container1.addChild(circle2);
+trace(container1.numChildren); // 2
+trace(container2.numChildren); // 1
+trace(circle1.numChildren); // 0
+trace(circle2.numChildren); // 0</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LDisplayObjectContainer/numChildren.html" target="_blank">测试链接</a></p>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="property_objectIndex" class="property item public inherited">
+    <h3 class="name"><code>objectIndex</code></h3>
+    <span class="type">Int</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LObject.html#property_objectIndex">LObject</a>:
+            
+        
+        
+        <a href="../files/utils_LObject.js.html#l11"><code>utils&#x2F;LObject.js:11</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.6.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>对象的ID</p>
+
+    </div>
+
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_parent" class="property item public inherited">
+    <h3 class="name"><code>parent</code></h3>
+    <span class="type"><a href="../classes/LDisplayObjectContainer.html" class="crosslink">LDisplayObjectContainer</a></span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LDisplayObject.html#property_parent">LDisplayObject</a>:
+            
+        
+        
+        <a href="../files/display_LDisplayObject.js.html#l148"><code>display&#x2F;LDisplayObject.js:148</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.0.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>[只读] 表示包含此显示对象的 DisplayObjectContainer 对象。</p>
+<p>使用 parent 属性可以指定高于显示列表层次结构中当前显示对象的显示对象的相对路径。</p>
+<p>可以使用 parent 在显示列表中上移多个级别，如下所示：</p>
+<p>this.parent.parent.x = 20;</p>
+    </div>
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var sprite1 = new LSprite();
+sprite1.name = &quot;sprite1&quot;;
+var sprite2 = new LSprite();
+sprite2.name = &quot;sprite2&quot;;
+var sprite3 = new LSprite();
+sprite3.name = &quot;sprite3&quot;;
+sprite1.addChild(sprite2);
+sprite2.addChild(sprite3);
+trace(sprite2.parent.name); // sprite1
+trace(sprite3.parent.name); // sprite2
+trace(sprite3.parent.parent.name); // sprite1</code></pre>
+
+            </div>
+        </div>
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_rotate" class="property item public inherited">
+    <h3 class="name"><code>rotate</code></h3>
+    <span class="type">Float</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LDisplayObject.html#property_rotate">LDisplayObject</a>:
+            
+        
+        
+        <a href="../files/display_LDisplayObject.js.html#l74"><code>display&#x2F;LDisplayObject.js:74</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.6.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>表示 LDisplayObject 实例距其原始方向的旋转程度，以度为单位。从 0 到 180 的值表示顺时针方向旋转；从 0 到 -180 的值表示逆时针方向旋转。对于此范围之外的值，可以通过加上或减去 360 获得该范围内的值。例如，my_video.rotate = 450语句与 my_video.rotate = 90 是相同的。</p>
+
+    </div>
+
+    
+        <p><strong>Default:</strong> 0</p>
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_scaleX" class="property item public inherited">
+    <h3 class="name"><code>scaleX</code></h3>
+    <span class="type">Float</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LDisplayObject.html#property_scaleX">LDisplayObject</a>:
+            
+        
+        
+        <a href="../files/display_LDisplayObject.js.html#l37"><code>display&#x2F;LDisplayObject.js:37</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.6.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>表示从注册点开始应用的对象的水平缩放比例（百分比）。默认注册点为 (0,0)。1.0 等于 100% 缩放。</p>
+
+    </div>
+
+    
+        <p><strong>Default:</strong> 1</p>
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_scaleY" class="property item public inherited">
+    <h3 class="name"><code>scaleY</code></h3>
+    <span class="type">Float</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LDisplayObject.html#property_scaleY">LDisplayObject</a>:
+            
+        
+        
+        <a href="../files/display_LDisplayObject.js.html#l46"><code>display&#x2F;LDisplayObject.js:46</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.6.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>表示从对象注册点开始应用的对象的垂直缩放比例（百分比）。默认注册点为 (0,0)。1.0 是 100% 缩放。</p>
+
+    </div>
+
+    
+        <p><strong>Default:</strong> 1</p>
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_shapes" class="property item public inherited">
+    <h3 class="name"><code>shapes</code></h3>
+    <span class="type">Array</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LSprite.html#property_shapes">LSprite</a>:
+            
+        
+        
+        <a href="../files/display_LSprite.js.html#l51"><code>display&#x2F;LSprite.js:51</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.9.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>用于碰撞的形状列表</p>
+
+    </div>
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>function loadBitmapdata (event) {
+    var bitmapdata = new LBitmapData(event.currentTarget); 
+    var bitmap = new LBitmap(bitmapdata);
+
+    layer = new LSprite();
+    layer.addChild(bitmap);
+    layer.x = 20;
+    layer.y = 50;
+    layer.addShape(LShape.VERTICES, [[180, 20], [210, 40], [210, 60], [120, 110], [35, 100]]);
+    layer.addShape(LShape.VERTICES, [[120, 110], [140, 120], [140, 150], [110, 160], [35, 120], [35, 100]]);
+    addChild(layer);
+
+    layer.addEventListener(LEvent.ENTER_FRAME, onframe);
+}
+function onframe (e) {
+    if (layer.hitTestPoint(mouseX, mouseY)) {
+        layer.alpha = 0.5;
+    } else {
+        layer.alpha = 1;
+    }
+}</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LSprite/shapes.html" target="_blank">测试链接</a></p>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="property_transform" class="property item public inherited">
+    <h3 class="name"><code>transform</code></h3>
+    <span class="type"><a href="../classes/LTransform.html" class="crosslink">LTransform</a></span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LDisplayObject.html#property_transform">LDisplayObject</a>:
+            
+        
+        
+        <a href="../files/display_LDisplayObject.js.html#l125"><code>display&#x2F;LDisplayObject.js:125</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.9.8</p>
+        
+    </div>
+
+    <div class="description">
+        <p>一个对象，具有与显示对象的矩阵有关的属性。在 LTransform 类的条目中对特定属性 matrix 进行了说明。</p>
+<p>transform 对象的每个属性本身都是一个对象。此概念很重要，因为设置 matrix 对象的新值的唯一方法是，创建新对象并将该对象复制到 transform.matrix 属性。</p>
+    </div>
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>function main () {
+    var square = new LSprite();
+    square.graphics.drawRect(1, &quot;#ff0000&quot;, [0, 0, 150, 100],true);
+    addChild(square);
+    square.addEventListener(LMouseEvent.MOUSE_UP, transformer);
+}
+function transformer(event) {
+    var square = event.currentTarget;
+    var tempMatrix = new LMatrix();
+    tempMatrix.skew(0.3, 0).translate(30,50);
+    square.transform.matrix = tempMatrix;
+}</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LDisplayObject/transform_matrix.html" target="_blank">测试链接</a></p>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="property_type" class="property item public inherited">
+    <h3 class="name"><code>type</code></h3>
+    <span class="type">String</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LSprite.html#property_type">LSprite</a>:
+            
+        
+        
+        <a href="../files/display_LSprite.js.html#l25"><code>display&#x2F;LSprite.js:25</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.0.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>对象的类型</p>
+
+    </div>
+
+    
+        <p><strong>Default:</strong> LSprite</p>
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_useCursor" class="property item public inherited">
+    <h3 class="name"><code>useCursor</code></h3>
+    <span class="type">String</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LSprite.html#property_useCursor">LSprite</a>:
+            
+        
+        
+        <a href="../files/display_LSprite.js.html#l91"><code>display&#x2F;LSprite.js:91</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.9.10</p>
+        
+    </div>
+
+    <div class="description">
+        <p>表示当指针滑过sprite时是否显示的指针光标。</p>
+    </div>
+
+    
+        <p><strong>Default:</strong> null</p>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var layer01 = new LSprite();
+layer01.useCursor = &quot;pointer&quot;;
+addChild(layer01);
+var bm01 = new LBitmap(new LBitmapData(&quot;#FF0000&quot;, 0, 0, 100, 100));
+layer01.addChild(bm01);</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LSprite/useCursor.html" target="_blank">测试链接</a></p>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="property_visible" class="property item public inherited">
+    <h3 class="name"><code>visible</code></h3>
+    <span class="type">Boolean</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LDisplayObject.html#property_visible">LDisplayObject</a>:
+            
+        
+        
+        <a href="../files/display_LDisplayObject.js.html#l65"><code>display&#x2F;LDisplayObject.js:65</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.6.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>显示对象是否可见。不可见的显示对象已被禁用。例如，如果 LInteractiveObject 实例的 visible=false，则无法单击该对象。</p>
+
+    </div>
+
+    
+        <p><strong>Default:</strong> true</p>
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_x" class="property item public inherited">
+    <h3 class="name"><code>x</code></h3>
+    <span class="type">Float</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LDisplayObject.html#property_x">LDisplayObject</a>:
+            
+        
+        
+        <a href="../files/display_LDisplayObject.js.html#l17"><code>display&#x2F;LDisplayObject.js:17</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.6.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>表示 LDisplayObject 实例相对于父级 LDisplayObjectContainer 本地坐标的 x 坐标。如果该对象位于具有变形的 LDisplayObjectContainer 内，则它也位于包含 LDisplayObjectContainer 的本地坐标系中。因此，对于逆时针旋转 90 度的 LDisplayObjectContainer，该 LDisplayObjectContainer 的子级将继承逆时针旋转 90 度的坐标系。对象的坐标指的是注册点的位置。</p>
+
+    </div>
+
+    
+        <p><strong>Default:</strong> 0</p>
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_y" class="property item public inherited">
+    <h3 class="name"><code>y</code></h3>
+    <span class="type">Float</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LDisplayObject.html#property_y">LDisplayObject</a>:
+            
+        
+        
+        <a href="../files/display_LDisplayObject.js.html#l26"><code>display&#x2F;LDisplayObject.js:26</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.6.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>表示 LDisplayObject 实例相对于父级 LDisplayObjectContainer 本地坐标的 y 坐标。如果该对象位于具有变形的 LDisplayObjectContainer 内，则它也位于包含 LDisplayObjectContainer 的本地坐标系中。因此，对于逆时针旋转 90 度的 LDisplayObjectContainer，该 LDisplayObjectContainer 的子级将继承逆时针旋转 90 度的坐标系。对象的坐标指的是注册点的位置。</p>
+
+    </div>
+
+    
+        <p><strong>Default:</strong> 0</p>
+    
+
+    
+    
+
+    
+</div>
+
+                
+            </div>
+        
+
+        
+
+        
+            <div id="events" class="api-class-tabpanel">
+                <h2 class="off-left">Events</h2>
+
+                
+                    <div id="event_LEvent.ADDED" class="events item inherited">
+    <h3 class="name"><code>LEvent.ADDED</code></h3>
+    <span class="type"></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LDisplayObjectContainer.html#event_LEvent.ADDED">LDisplayObjectContainer</a>:
+            
+        
+        
+        <a href="../files/display_LDisplayObjectContainer.js.html#l390"><code>display&#x2F;LDisplayObjectContainer.js:390</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>将显示对象添加到显示列表中时调度。以下方法会触发此事件：LDisplayObjectContainer.addChild()、LDisplayObjectContainer.addChildAt()。</p>
+<p>使用时需要引入lufylegend.LEvent.added-x.x.x.min.js文件。</p>
+<p><a href="LEvent.html#property_ADDED">LEvent.ADDED</a></p>
+    </div>
+
+    
+
+
+    
+</div>
+
+                
+                    <div id="event_LEvent.ADDED_TO_STAGE" class="events item inherited">
+    <h3 class="name"><code>LEvent.ADDED_TO_STAGE</code></h3>
+    <span class="type"></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LDisplayObjectContainer.html#event_LEvent.ADDED_TO_STAGE">LDisplayObjectContainer</a>:
+            
+        
+        
+        <a href="../files/display_LDisplayObjectContainer.js.html#l396"><code>display&#x2F;LDisplayObjectContainer.js:396</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>在将显示对象直接添加到舞台显示列表或将包含显示对象的子树添加至舞台显示列表中时调度。以下方法会触发此事件：LDisplayObjectContainer.addChild()、LDisplayObjectContainer.addChildAt()。</p>
+<p>使用时需要引入lufylegend.LEvent.added-x.x.x.min.js文件。</p>
+<p><a href="LEvent.html#property_ADDED_TO_STAGE">LEvent.ADDED_TO_STAGE</a></p>
+    </div>
+
+    
+
+
+    
+</div>
+
+                
+                    <div id="event_LEvent.ENTER_FRAME" class="events item inherited">
+    <h3 class="name"><code>LEvent.ENTER_FRAME</code></h3>
+    <span class="type"></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LDisplayObject.html#event_LEvent.ENTER_FRAME">LDisplayObject</a>:
+            
+        
+        
+        <a href="../files/display_LDisplayObject.js.html#l622"><code>display&#x2F;LDisplayObject.js:622</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>[播放事件] 播放头进入新帧时调度。</p>
+<p><a href="LEvent.html#property_ENTER_FRAME">LEvent.ENTER_FRAME</a></p>
+    </div>
+
+    
+
+
+    
+</div>
+
+                
+                    <div id="event_LEvent.REMOVED" class="events item inherited">
+    <h3 class="name"><code>LEvent.REMOVED</code></h3>
+    <span class="type"></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LDisplayObjectContainer.html#event_LEvent.REMOVED">LDisplayObjectContainer</a>:
+            
+        
+        
+        <a href="../files/display_LDisplayObjectContainer.js.html#l402"><code>display&#x2F;LDisplayObjectContainer.js:402</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>将要从显示列表中删除显示对象时调度。LDisplayObjectContainer 类的以下两个方法会生成此事件：removeChild() 和 removeChildAt()。</p>
+<p>使用时需要引入lufylegend.LEvent.added-x.x.x.min.js文件。</p>
+<p><a href="LEvent.html#property_REMOVED">LEvent.REMOVED</a></p>
+    </div>
+
+    
+
+
+    
+</div>
+
+                
+                    <div id="event_LEvent.REMOVED_FROM_STAGE" class="events item inherited">
+    <h3 class="name"><code>LEvent.REMOVED_FROM_STAGE</code></h3>
+    <span class="type"></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LDisplayObjectContainer.html#event_LEvent.REMOVED_FROM_STAGE">LDisplayObjectContainer</a>:
+            
+        
+        
+        <a href="../files/display_LDisplayObjectContainer.js.html#l408"><code>display&#x2F;LDisplayObjectContainer.js:408</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>在从显示列表中直接删除显示对象或删除包含显示对象的子树时调度。LDisplayObjectContainer 类的以下两个方法会生成此事件：removeChild() 和 removeChildAt()。</p>
+<p>使用时需要引入lufylegend.LEvent.added-x.x.x.min.js文件。</p>
+<p><a href="LEvent.html#property_REMOVED_FROM_STAGE">LEvent.REMOVED_FROM_STAGE</a></p>
+    </div>
+
+    
+
+
+    
+</div>
+
+                
+                    <div id="event_LMouseEvent.DOUBLE_CLICK" class="events item inherited">
+    <h3 class="name"><code>LMouseEvent.DOUBLE_CLICK</code></h3>
+    <span class="type"></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LInteractiveObject.html#event_LMouseEvent.DOUBLE_CLICK">LInteractiveObject</a>:
+            
+        
+        
+        <a href="../files/display_LInteractiveObject.js.html#l148"><code>display&#x2F;LInteractiveObject.js:148</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>当用户在LInteractiveObject 实例上快速连续按下两次并释放指针设备的主按钮时调度。</p>
+<p><a href="LMouseEvent.html#property_DOUBLE_CLICK">LMouseEvent.DOUBLE_CLICK</a></p>
+    </div>
+
+    
+
+
+    
+</div>
+
+                
+                    <div id="event_LMouseEvent.MOUSE_DOWN" class="events item inherited">
+    <h3 class="name"><code>LMouseEvent.MOUSE_DOWN</code></h3>
+    <span class="type"></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LInteractiveObject.html#event_LMouseEvent.MOUSE_DOWN">LInteractiveObject</a>:
+            
+        
+        
+        <a href="../files/display_LInteractiveObject.js.html#l123"><code>display&#x2F;LInteractiveObject.js:123</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>当用户在 LInteractiveObject 实例上按下指针设备按钮时调度。</p>
+<p><a href="LMouseEvent.html#property_MOUSE_DOWN">LMouseEvent.MOUSE_DOWN</a></p>
+    </div>
+
+    
+
+
+    
+</div>
+
+                
+                    <div id="event_LMouseEvent.MOUSE_MOVE" class="events item inherited">
+    <h3 class="name"><code>LMouseEvent.MOUSE_MOVE</code></h3>
+    <span class="type"></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LInteractiveObject.html#event_LMouseEvent.MOUSE_MOVE">LInteractiveObject</a>:
+            
+        
+        
+        <a href="../files/display_LInteractiveObject.js.html#l133"><code>display&#x2F;LInteractiveObject.js:133</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>用户移动 LInteractiveObject 上的指针设备时调度。</p>
+<p><a href="LMouseEvent.html#property_MOUSE_MOVE">LMouseEvent.MOUSE_MOVE</a></p>
+    </div>
+
+    
+
+
+    
+</div>
+
+                
+                    <div id="event_LMouseEvent.MOUSE_OUT" class="events item inherited">
+    <h3 class="name"><code>LMouseEvent.MOUSE_OUT</code></h3>
+    <span class="type"></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LInteractiveObject.html#event_LMouseEvent.MOUSE_OUT">LInteractiveObject</a>:
+            
+        
+        
+        <a href="../files/display_LInteractiveObject.js.html#l138"><code>display&#x2F;LInteractiveObject.js:138</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>用户将指针设备从 LInteractiveObject 实例上移开时调度。</p>
+<p><a href="LMouseEvent.html#property_MOUSE_OUT">LMouseEvent.MOUSE_OUT</a></p>
+    </div>
+
+    
+
+
+    
+</div>
+
+                
+                    <div id="event_LMouseEvent.MOUSE_OVER" class="events item inherited">
+    <h3 class="name"><code>LMouseEvent.MOUSE_OVER</code></h3>
+    <span class="type"></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LInteractiveObject.html#event_LMouseEvent.MOUSE_OVER">LInteractiveObject</a>:
+            
+        
+        
+        <a href="../files/display_LInteractiveObject.js.html#l143"><code>display&#x2F;LInteractiveObject.js:143</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>用户将指针设备移动到 LInteractiveObject 实例上时调度。</p>
+<p><a href="LMouseEvent.html#property_MOUSE_OVER">LMouseEvent.MOUSE_OVER</a></p>
+    </div>
+
+    
+
+
+    
+</div>
+
+                
+                    <div id="event_LMouseEvent.MOUSE_UP" class="events item inherited">
+    <h3 class="name"><code>LMouseEvent.MOUSE_UP</code></h3>
+    <span class="type"></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LInteractiveObject.html#event_LMouseEvent.MOUSE_UP">LInteractiveObject</a>:
+            
+        
+        
+        <a href="../files/display_LInteractiveObject.js.html#l128"><code>display&#x2F;LInteractiveObject.js:128</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>当用户在 LInteractiveObject 实例上释放指针设备按钮时调度。</p>
+<p><a href="LMouseEvent.html#property_MOUSE_UP">LMouseEvent.MOUSE_UP</a></p>
+    </div>
+
+    
+
+
+    
+</div>
+
+                
+            </div>
+        
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32497708-2']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>

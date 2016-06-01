@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>lib/ui/LComboBox-0.1.2.js - The lufylegend.js API</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><a href="../index.html"><img src="../assets/css/logo.png" title="The lufylegend.js API"></a></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: 1.10.1</em>
+            <em>最后更新日期：2016年03月28日</em>
+			<form method="get" action="http://www.google.com.hk/search" target="google_window">
+        		<input type="hidden" name="ie" value="UTF-8">
+        		<input type="hidden" name="oe" value="UTF-8">
+        		<input type="hidden" name="as_sitesearch" id="as_sitesearch" value="lufylegend.com/api/zh_CN/out/">
+        		Google搜索&nbsp;
+        		<input type="text" class="input" style="width:150px;" name="q" id="q" size="31" maxlength="255" value="">
+        		&nbsp;
+        		<input type="submit" class="submit" name="sa" value="Go">
+      		</form>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="../classes/FPS.html">FPS</a></li>
+            
+                <li><a href="../classes/InteractivePNG.html">InteractivePNG</a></li>
+            
+                <li><a href="../classes/LAjax.html">LAjax</a></li>
+            
+                <li><a href="../classes/LAnimation.html">LAnimation</a></li>
+            
+                <li><a href="../classes/LAnimationTimeline.html">LAnimationTimeline</a></li>
+            
+                <li><a href="../classes/LBitmap.html">LBitmap</a></li>
+            
+                <li><a href="../classes/LBitmapData.html">LBitmapData</a></li>
+            
+                <li><a href="../classes/LBitmapFilter.html">LBitmapFilter</a></li>
+            
+                <li><a href="../classes/LBlendMode.html">LBlendMode</a></li>
+            
+                <li><a href="../classes/LBox2d.html">LBox2d</a></li>
+            
+                <li><a href="../classes/LButton.html">LButton</a></li>
+            
+                <li><a href="../classes/LColorMatrixFilter.html">LColorMatrixFilter</a></li>
+            
+                <li><a href="../classes/LColorTransform.html">LColorTransform</a></li>
+            
+                <li><a href="../classes/LConvolutionFilter.html">LConvolutionFilter</a></li>
+            
+                <li><a href="../classes/LDisplayObject.html">LDisplayObject</a></li>
+            
+                <li><a href="../classes/LDisplayObjectContainer.html">LDisplayObjectContainer</a></li>
+            
+                <li><a href="../classes/LDropShadowFilter.html">LDropShadowFilter</a></li>
+            
+                <li><a href="../classes/LEasing.html">LEasing</a></li>
+            
+                <li><a href="../classes/LEvent.html">LEvent</a></li>
+            
+                <li><a href="../classes/LEventDispatcher.html">LEventDispatcher</a></li>
+            
+                <li><a href="../classes/LFlash.html">LFlash</a></li>
+            
+                <li><a href="../classes/LFocusEvent.html">LFocusEvent</a></li>
+            
+                <li><a href="../classes/LFontLoader.html">LFontLoader</a></li>
+            
+                <li><a href="../classes/LGlobal.html">LGlobal</a></li>
+            
+                <li><a href="../classes/LGraphics.html">LGraphics</a></li>
+            
+                <li><a href="../classes/LInteractiveObject.html">LInteractiveObject</a></li>
+            
+                <li><a href="../classes/LKeyboardEvent.html">LKeyboardEvent</a></li>
+            
+                <li><a href="../classes/LLoader.html">LLoader</a></li>
+            
+                <li><a href="../classes/LLoadManage.html">LLoadManage</a></li>
+            
+                <li><a href="../classes/LMatrix.html">LMatrix</a></li>
+            
+                <li><a href="../classes/LMedia.html">LMedia</a></li>
+            
+                <li><a href="../classes/LMouseEvent.html">LMouseEvent</a></li>
+            
+                <li><a href="../classes/LMouseEventContainer.html">LMouseEventContainer</a></li>
+            
+                <li><a href="../classes/LMultitouch.html">LMultitouch</a></li>
+            
+                <li><a href="../classes/LMultitouchInputMode.html">LMultitouchInputMode</a></li>
+            
+                <li><a href="../classes/LoadingSample.html">LoadingSample</a></li>
+            
+                <li><a href="../classes/LObject.html">LObject</a></li>
+            
+                <li><a href="../classes/LPoint.html">LPoint</a></li>
+            
+                <li><a href="../classes/LQuadTree.html">LQuadTree</a></li>
+            
+                <li><a href="../classes/LRange.html">LRange</a></li>
+            
+                <li><a href="../classes/LRectangle.html">LRectangle</a></li>
+            
+                <li><a href="../classes/LShape.html">LShape</a></li>
+            
+                <li><a href="../classes/LSound(LMedia).html">LSound(LMedia)</a></li>
+            
+                <li><a href="../classes/LSound(LWebAudio).html">LSound(LWebAudio)</a></li>
+            
+                <li><a href="../classes/LSprite.html">LSprite</a></li>
+            
+                <li><a href="../classes/LStageAlign.html">LStageAlign</a></li>
+            
+                <li><a href="../classes/LStageScaleMode.html">LStageScaleMode</a></li>
+            
+                <li><a href="../classes/LStageWebView.html">LStageWebView</a></li>
+            
+                <li><a href="../classes/LStyleSheet.html">LStyleSheet</a></li>
+            
+                <li><a href="../classes/LTextEvent.html">LTextEvent</a></li>
+            
+                <li><a href="../classes/LTextField.html">LTextField</a></li>
+            
+                <li><a href="../classes/LTimer.html">LTimer</a></li>
+            
+                <li><a href="../classes/LTimerEvent.html">LTimerEvent</a></li>
+            
+                <li><a href="../classes/LTransform.html">LTransform</a></li>
+            
+                <li><a href="../classes/LTransition.html">LTransition</a></li>
+            
+                <li><a href="../classes/LTransitionManager.html">LTransitionManager</a></li>
+            
+                <li><a href="../classes/LTweenLite.html">LTweenLite</a></li>
+            
+                <li><a href="../classes/LTweenLiteChild.html">LTweenLiteChild</a></li>
+            
+                <li><a href="../classes/lufylegend.mvc.html">lufylegend.mvc</a></li>
+            
+                <li><a href="../classes/LURLLoader.html">LURLLoader</a></li>
+            
+                <li><a href="../classes/LVec2.html">LVec2</a></li>
+            
+                <li><a href="../classes/LVideo.html">LVideo</a></li>
+            
+                <li><a href="../classes/LWebAudio.html">LWebAudio</a></li>
+            
+                <li><a href="../classes/Q &amp; A (常见问题).html">Q &amp; A (常见问题)</a></li>
+            
+                <li><a href="../classes/UI:LButtonSample1.html">UI:LButtonSample1</a></li>
+            
+                <li><a href="../classes/UI:LButtonSample2.html">UI:LButtonSample2</a></li>
+            
+                <li><a href="../classes/UI:LCheckBox.html">UI:LCheckBox</a></li>
+            
+                <li><a href="../classes/UI:LComboBox.html">UI:LComboBox</a></li>
+            
+                <li><a href="../classes/UI:LListChildView.html">UI:LListChildView</a></li>
+            
+                <li><a href="../classes/UI:LListScrollBar.html">UI:LListScrollBar</a></li>
+            
+                <li><a href="../classes/UI:LListView.html">UI:LListView</a></li>
+            
+                <li><a href="../classes/UI:LMenubar.html">UI:LMenubar</a></li>
+            
+                <li><a href="../classes/UI:LMessageBox.html">UI:LMessageBox</a></li>
+            
+                <li><a href="../classes/UI:LPanel.html">UI:LPanel</a></li>
+            
+                <li><a href="../classes/UI:LRadio.html">UI:LRadio</a></li>
+            
+                <li><a href="../classes/UI:LRadioChild.html">UI:LRadioChild</a></li>
+            
+                <li><a href="../classes/UI:LRange.html">UI:LRange</a></li>
+            
+                <li><a href="../classes/UI:LScrollbar.html">UI:LScrollbar</a></li>
+            
+                <li><a href="../classes/UI:LTable.html">UI:LTable</a></li>
+            
+                <li><a href="../classes/UI:LTreeWidget.html">UI:LTreeWidget</a></li>
+            
+                <li><a href="../classes/UI:LWindow.html">UI:LWindow</a></li>
+            
+                <li><a href="../classes/全局函数.html">全局函数</a></li>
+            
+                <li><a href="../classes/全局变量.html">全局变量</a></li>
+            
+                <li><a href="../classes/全屏设置.html">全屏设置</a></li>
+            
+                <li><a href="../classes/旧版API.html">旧版API</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: lib/ui/LComboBox-0.1.2.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+/** @language chinese
+ * &lt;p&gt;lufylegend.js专用UI，组合框。&lt;/p&gt;
+ * &lt;p&gt;使用时需要引进lufylegend.ui-x.x.x.js文件。&lt;/p&gt;
+ * @class UI:LComboBox
+ * @constructor
+ * @extends LSprite
+ * @param {int} size [可选]组合框文字的大小。
+ * @param {String} color [可选]组合框文字的颜色。
+ * @param {String} font [可选]组合框文字的格式。
+ * @param {LPanel} layer [可选]组合框的背景样式。
+ * @param {LDisplayObject} layerUp [可选]组合框的按钮抬起状态样式。
+ * @param {LDisplayObject} layerOver [可选]组合框的按钮抬起状态样式。
+ * @since 0.1.0
+ * @examplelink &lt;p&gt;&lt;a href=&quot;../../../api/ui/LComboBox.html&quot; target=&quot;_blank&quot;&gt;测试链接&lt;/a&gt;&lt;/p&gt;
+ * @public
+ */
+var LComboBox = (function () {
+	function LComboBox (size, color, font, layerBack, layerUp, layerOver) {
+		var s = this;
+		LExtends(s, LSprite, []);
+		s.type = &quot;LComboBox&quot;;
+		s.list = [];
+		/** @language chinese
+		 * [只读]组合框的值的索引
+		 * @property selectIndex
+		 * @type String
+		 * @since 0.1.0
+		 * @public
+		 */
+		s.selectIndex = -1;
+		/** @language chinese
+		 * [只读]组合框的值
+		 * @property value
+		 * @type String
+		 * @since 0.1.0
+		 * @public
+		 */
+		s.value = null;
+		s.selectWidth = 100;
+		var params;
+		if(typeof size != &quot;object&quot;){
+			params = {size:size,color:color,font:font,layerBack:layerBack,layerUp:layerUp,layerOver:layerOver};
+		}
+		s.size = params.size ? params.size : 16;
+		s.font = params.font ? params.font : &quot;Arial&quot;;
+		s.color = params.color ? params.color : &quot;#000000&quot;; 
+		layerBack = params.layerBack;
+		layerUp = params.layerUp;
+		layerOver = params.layerOver;
+		s.params = params;
+		s.maxIndex = 5;
+		if (!layerBack) {
+			layerBack = new LSprite();
+			layerBack.graphics.drawRoundRect(1, &quot;#999999&quot;, [0, 0, 200, 30, 4], true, &quot;#f5f5f9&quot;);
+		}
+		s.listView = new LListView();
+		s.listView.dragEffect = LListView.DragEffects.Momentum;
+		s.listView.cellWidth = s.minWidth = layerBack.getWidth();
+		s.listView.cellHeight = s.minHeight = layerBack.getHeight();
+		var layer;
+		if (!layerUp || !layerOver) {
+			var up, down, data;
+			grd = LGlobal.canvas.createLinearGradient(0, -20, 0, 40);
+			grd.addColorStop(0, &quot;#FFFFFF&quot;);
+			grd.addColorStop(1, &quot;#CCCCCC&quot;);
+			up = new LSprite();
+			up.graphics.drawRoundRect(1, &quot;#CCCCCC&quot;, [0, 0, 22, 22, 2], true, grd);
+			up.graphics.drawVertices(1, &quot;#CCCCCC&quot;, [[6, 6], [16, 6], [11, 18]], true, &quot;#008000&quot;);
+			data = new LBitmapData(null, 0, 0, 22, 22, LBitmapData.DATA_CANVAS);
+			data.draw(up);
+			layerUp = new LBitmap(data);
+			down = new LSprite();
+			down.graphics.drawRoundRect(1, &quot;#CCCCCC&quot;, [0, 0, 22, 22, 2], true, grd);
+			down.graphics.drawVertices(1, &quot;#CCCCCC&quot;, [[6, 6], [16, 6], [11, 18]], true, &quot;#32CD32&quot;);
+			data = new LBitmapData(null, 0, 0, 22, 22, LBitmapData.DATA_CANVAS);
+			data.draw(down);
+			layerOver = new LBitmap(data);
+		}
+		var layer1 = layerBack.clone();
+		layerUp.x = layer1.getWidth() - layerUp.getWidth() -4;
+		layerUp.y = 4;
+		layer1.arraw = layerUp;
+		layer1.addChild(layerUp);
+		layer1.cacheAsBitmap(true);
+		var layer2 = layerBack.clone();
+		layerOver.x = layer2.getWidth() - layerOver.getWidth() -4;
+		layerOver.y = 4;
+		layer2.arraw = layerOver;
+		layer2.addChild(layerOver);
+		layer2.cacheAsBitmap(true);
+		layer = new LButton(layer1, layer2);
+		layer.setCursorEnabled(false);
+		layer.staticMode = true;
+		s.addChild(layer);
+		var label = new LTextField();
+		label.x = 4;
+		label.y = 4;
+		label.text = &quot;&quot;;
+		label.size = s.size;
+		label.color = s.color;
+		label.font = s.font;
+		layer.addChild(label);
+		s.label = label;
+		s.layer = layer;
+		s.listChildView = LComboBoxChild;
+		s.addEventListener(LMouseEvent.MOUSE_UP, s._showChildList);
+	}
+	/** @language chinese
+	 * 组合框的值改变时调用此事件。
+	 * @event LComboBox.ON_CHANGE
+	 * @since 0.1.0
+	*/
+	LComboBox.ON_CHANGE = &quot;onchange&quot;;
+	/** @language chinese
+	 * 删除元素。
+	 * @method deleteChild
+	 * @param {String} value 删除元素的值。
+	 * @since 0.1.0
+	 * @public
+	 */
+	LComboBox.prototype.deleteChild = function (value) {
+		var s = this, i, l, delIndex = -1;
+		for (i = 0, l = s.list.length; i &lt; l; i++) {
+			if (s.list[i].value === value) {
+				delIndex = i;
+				break;
+			}
+		}
+		if (delIndex == -1) {
+			return;
+		}
+		s.list.splice(delIndex, 1);
+		if (s.value !== value) {
+			return;
+		}
+		if (s.list.length &gt; 0) {
+			s.setValue(s.list[delIndex &gt; 0 ? delIndex - 1 : 0].value);
+		} else {
+			s.selectIndex = -1;
+			s.label.text = &quot;&quot;;
+			s.value = null;
+		}
+	};
+	/** @language chinese
+	 * 增加元素。
+	 * @method setChild
+	 * @param {String} value 增加元素的值。
+	 * @since 0.1.0
+	 * @public
+	 */
+	LComboBox.prototype.setChild = function (child) {
+		var s = this, i, l;
+		if (!child || typeof child.value == UNDEFINED || typeof child.label == UNDEFINED) {
+			throw &quot;the child must be an object like:{label:a,value:b}&quot;;
+		}
+		for (i = 0, l = s.list.length; i &lt; l; i++) {
+			if (s.list[i].value === child.value) {
+				return;
+			}
+		}
+		s.list.push(child);
+		if (s.list.length == 1) {
+			s.setValue(child.value);
+		}
+	};
+	LComboBox.prototype.die = function () {
+		var self = this;
+		self.listView.die();
+		self.listView.removeAllChild();
+		self.callParent(&quot;die&quot;,arguments);
+	};
+	LComboBox.prototype._showChildList = function (event) {
+		var s = event.currentTarget;
+		s.showChildList();
+	};
+	LComboBox.prototype.setListChildView = function (childClass) {
+		this.listChildView = childClass;
+	};
+	LComboBox.prototype.showChildList = function () {
+		var s = this, i, l, child, w;
+		var translucent = new LSprite();
+		translucent.graphics.drawRect(0, &quot;#000000&quot;, [0, 0, LGlobal.width, LGlobal.height], true, &quot;#000000&quot;);
+		translucent.alpha = 0;
+		LGlobal.stage.addChild(translucent);
+		translucent.addEventListener(LMouseEvent.MOUSE_UP, function (e) {
+			var cnt = LGlobal.stage.numChildren;
+			if(e.target.constructor.name == &quot;LListView&quot;){
+				return;
+			}
+			var destroy = LGlobal.destroy;
+			LGlobal.destroy = false;
+			LGlobal.stage.removeChildAt(cnt - 1);
+			LGlobal.destroy = destroy;
+			LGlobal.stage.removeChildAt(cnt - 2);
+		});
+		translucent.addEventListener(LMouseEvent.MOUSE_DOWN, function (e) {});
+		translucent.addEventListener(LMouseEvent.MOUSE_MOVE, function (e) {});
+		translucent.addEventListener(LMouseEvent.MOUSE_OVER, function (e) {});
+		translucent.addEventListener(LMouseEvent.MOUSE_OUT, function (e) {});
+		var coordinate = s.getRootCoordinate();
+		s.listView.x = coordinate.x;
+		s.listView.y = coordinate.y + s.layer.getHeight();
+		LGlobal.stage.addChild(s.listView);
+		if(typeof s.listView._ll_saveY != UNDEFINED){
+			s.listView.clipping.y = s.listView._ll_saveY;
+		}
+		var list = [];
+		for (i = 0, l = s.list.length; i &lt; l; i++) {
+			var selected = s.value === s.list[i].value;
+			child = new s.listChildView(s.list[i], s, selected);
+			if(selected){
+				s.listView._ll_selectedChild = child;
+			}
+			list.push(child);
+		}
+		s.listView.resize(s.listView.cellWidth, s.listView.cellHeight * (s.list.length &gt; s.maxIndex ? s.maxIndex : s.list.length));
+		s.listView.updateList(list);
+	};
+	/** @language chinese
+	 * 设置组合框的值。
+	 * @method setValue
+	 * @param {String} value 组合框的值。
+	 * @since 0.1.0
+	 * @public
+	 */
+	LComboBox.prototype.setValue = function (value, noEvent) {
+		var s = this, c, i, l;
+		if(s.value == value){
+			return;
+		}
+		c = s.list;
+		for (i = 0, l = c.length; i &lt; l; i++) {
+			if (c[i].value == value) {
+				s.selectIndex = i;
+				s.value = s.list[s.selectIndex].value;
+				s.label.text = s.list[s.selectIndex].label;
+				if (!noEvent) {
+					s.dispatchEvent(LComboBox.ON_CHANGE);
+				}
+				break;
+			}
+		}
+	};
+	LComboBox.prototype.clone = function () {
+		var s = this, a = new LComboBox(), k, c;
+		for (k in s.list) {
+			c = s.list[k];
+			a.setChild({label : c.label, value : c.value});
+		}	
+		a.setValue(s.value);
+		return a;
+	};
+	return LComboBox;
+})();
+var LComboBoxChild = (function () {
+	function LComboBoxChild(content, comboBox, selected){
+		var self = this;
+		base(self,LListChildView,[]);
+		self.content = content;
+		self.comboBox = comboBox;
+		if(selected){
+			self.setSelectStatus(content, comboBox);
+		}else{
+			self.setStatus(content, comboBox);
+		}
+	}
+	LComboBoxChild.prototype.setStatus = function(content, comboBox){
+		var self = this;
+		var listView = comboBox.listView;
+		self.graphics.drawRect(0,&quot;#f5f5f9&quot;, [0, 0, listView.cellWidth, listView.cellHeight], true, &quot;#f5f5f9&quot;);
+		var text = new LTextField();
+		text.size = comboBox.size;
+		text.color = comboBox.color;
+		text.font = comboBox.font;
+		text.text = content.label;
+		text.x = text.y = 5;
+		self.addChild(text);
+		self.updateView();
+	};
+	LComboBoxChild.prototype.setSelectStatus = function(content, comboBox){
+		var self = this;
+		var listView = comboBox.listView;
+		self.graphics.clear();
+		self.graphics.drawRect(0,&quot;#CCCCCC&quot;, [0, 0, listView.cellWidth, listView.cellHeight], true, &quot;#CCCCCC&quot;);
+		var text = new LTextField();
+		text.size = comboBox.size;
+		text.color = comboBox.color;
+		text.font = comboBox.font;
+		text.text = content.label;
+		text.x = text.y = 5;
+		self.addChild(text);
+		self.updateView();
+	};
+	LComboBoxChild.prototype.onTouch = function(event){
+		var self = event.target;
+		var listView = event.currentTarget;
+		if(listView._ll_selectedChild){
+			listView._ll_selectedChild.removeAllChild();
+			listView._ll_selectedChild.cacheAsBitmap(false);
+			listView._ll_selectedChild.setStatus(listView._ll_selectedChild.content, listView._ll_selectedChild.comboBox);
+		}
+		self.removeAllChild();
+		self.cacheAsBitmap(false);
+		self.setSelectStatus(self.content, self.comboBox);
+		listView._ll_selectedChild = self;
+	};
+	LComboBoxChild.prototype.onClick = function(event){
+		var self = event.target;
+		var listView = event.currentTarget, i, v;
+		var comboBox = self.comboBox;
+		var listViewIndex;
+		comboBox.setValue(self.content.value);
+		for(var i=LGlobal.stage.numChildren-1;i&gt;=0;i--){
+			if(LGlobal.stage.childList[i].constructor.name == &quot;LListViewDragObject&quot;){
+				LGlobal.stage.removeChildAt(i);
+				LGlobal.listViewDragObject = null;
+				continue;
+			}
+			if(LGlobal.stage.childList[i].objectIndex != listView.objectIndex){
+				continue;
+			}
+			var destroy = LGlobal.destroy;
+			LGlobal.destroy = false;
+			LGlobal.stage.removeChildAt(i);
+			LGlobal.destroy = destroy;
+			LGlobal.stage.removeChildAt(i - 1);
+			listView._ll_saveY = listView.clipping.y;
+			break;
+		}
+	};
+	return LComboBoxChild;
+})();
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32497708-2']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>

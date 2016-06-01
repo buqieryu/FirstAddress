@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.wrap {
+				width: 800px;
+				/*	height: 1000px;*/
+				border: 1px solid red;
+				margin: 0 auto;
+				overflow: hidden;
+			}
+			
+			.wrap ul {
+				float: left;
+				width: 200px;
+				list-style: none;
+				padding: 10px;
+				box-sizing: border-box;
+			}
+			
+			.wrap ul li {
+				background-color: #ccc;
+				margin-bottom: 20px;
+				font-size: 2em;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="wrap" class="wrap">
+			<ul>
+				<li>第一列</li>
+				<li>第二个</li>
+			</ul>
+			<ul>
+				<li>第二列</li>
+			</ul>
+			<ul>
+				<li>第三列</li>
+			</ul>
+			<ul>
+				<li>第四列</li>
+			</ul>
+		</div>
+	</body>
+	<script type="text/javascript">
+		//		获取一定范围内的随机数
+		function randomFunction(min, max) {
+			return parseInt(Math.random() * (max - min)) + min;
+		}
+		var wrap = document.getElementById("wrap");
+		var uls = wrap.getElementsByTagName("ul");
+
+		function createLi() {
+			for (var i = 0; i < 20; i++) {
+				var li = document.createElement("li");
+				li.innerHTML = i;
+				//			产生一个随机高度
+				var h = randomFunction(100, 300);
+				li.style.height = h + "px";
+				var arrH = [];
+				for (var j = 0; j < uls.length; j++) {
+					arrH.push(uls[j].offsetHeight);;
+				}
+				//			arrH已经把每一列的高度装进去
+				//			从arrH里面找一个最小值
+				//			并且把这个最小值的下标和值都记录下来
+				var min = arrH[0];
+				var minIndex = 0;
+				for (var j = 0; j < uls.length; j++) {
+					if (arrH[j] < min) {
+						min = arrH[j];
+						minIndex = j;
+					}
+				}
+				uls[minIndex].appendChild(li);
+				//			第一步：创建一个新的li
+				//			第二个：给这个新的li找位置
+				//		for(){
+				//			查看每一个ul
+				//			要找到最小一个ul
+				//		}
+			}
+		}
+		createLi();
+//		整个窗口只要滚动
+//		就会触发下面的事件
+		window.onscroll = function(){
+//			获取整个可视区域的高度
+		var WindowHeight = document.documentElement.clientHeight;
+//		获取整个文档内容的高度
+		var bodyContentHeight = document.documentElement.offsetHeight;
+//		能够允许滑动最大的高度
+		var scrollMaxHeight = bodyContentHeight - WindowHeight;
+		var scroTop = document.body.scrollTop;
+		if(scroTop == scrollMaxHeight){
+			createLi();
+		}
+		}
+		
+	</script>
+
+</html>

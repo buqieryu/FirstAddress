@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			
+			#wrap {
+				width: 400px;
+				height: 500px;
+				border: 1px solid red;
+				margin: 0 auto;
+				background-color: #CCCCCC;
+				position: relative;
+			}
+			
+			#timeDiv {
+				position: absolute;
+				font-size: 1.5em;
+				left: 20px;
+			}
+			
+			#scoring {
+				position: absolute;
+				font-size: 1.5em;
+				right: 20px;
+			}
+			
+			#btn {
+				position: absolute;
+				top: 50px;
+				height: 40px;
+				width: 50px;
+			}
+			
+			#wrap {
+				text-align: center;
+			}
+			
+			#chengLong {
+				width: 70%;
+				position: absolute;
+				top: 200px;
+				left: 15%;
+			}
+			
+			#chengLong img {
+				width: 100%;
+				margin-left: 10px;
+				margin-top: 10px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="wrap">
+			<div id="timeDiv">
+				剩余时间：60:00秒
+			</div>
+			<div id="scoring">
+				分数:0
+			</div>
+			<button id="btn">开始</button>
+			<div id="chengLong">
+				<img src="img/1.png" />
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		//思路
+		/* var number = 1;
+		var geshu = number;
+		btn.onclick = function () {
+			number++;
+			geshu = number + number;
+			width = wrap.width / number;
+		} */
+		var chengLong = document.getElementById("chengLong");
+		var btn = document.getElementById("btn");
+		var scoring = document.getElementById("scoring");
+		var timeDiv = document.getElementById("timeDiv");
+		
+		function rand(min, max) {
+			return parseInt(Math.random() * (max - min)) + min;
+		}
+		//移除当前界面中的所有图片的方法
+		function removeAllImgs() {
+			var chengLongSons = chengLong.children;
+			var sonNumber = chengLongSons.length;
+			for (var i = 0; i < sonNumber; i++) {
+				chengLong.removeChild(chengLongSons[0]);
+			}
+		}
+		//行数默认是1行
+		//按钮点击一下变成2行
+		var a = 1;
+		//展示新出来的图片的方法
+		function createNewImgs() {
+			//分数应该增加
+			//a 代表行数和列数
+			a++;
+			//分数 = 行数 - 2；
+			scoring.innerHTML = "分数:" + (a - 2);
+			if (a >= 9) {
+				a = 9;
+			}
+			//图片个数 = 行数 * 行数
+			var imgNumber = Math.pow(a, 2);
+			//var imgNumber = a * a;
+			//图片的宽度 + 间距 = div.width / a;
+			//图片的宽度 = (div.width - a * 间距) / a;
+			var imgWidth = (chengLong.offsetWidth - a * 10) / a + "px";
+			//开始创建图片
+			//根据图片的个数
+			for (var i = 0; i < imgNumber; i++) {
+				var imgObj = document.createElement("img");
+				imgObj.src = "img/1.png";
+				imgObj.index = i;
+				imgObj.style.width = imgWidth;
+				chengLong.appendChild(imgObj);
+			}
+			var r = rand(0, imgNumber);
+			var nowImgs = chengLong.children;
+			nowImgs[r].src = "img/2.png"
+			nowImgs[r].onclick = function() {
+				removeAllImgs();
+				createNewImgs();
+			}
+		}
+		btn.onclick = function() {
+			btn.style.display = "none";
+			//移除当前界面中的所有图片
+			removeAllImgs();
+			//展示新出来的图片
+			createNewImgs();
+				var countDown = 60.00;
+			//准备一个是否开始游戏的变量
+
+			var time = setInterval(function () {
+				countDown -= 0.01;
+				timeDiv.innerHTML = '剩余时间:' +  Math.round(countDown * 100) / 100;
+				if (countDown <= 0.01) {
+					clearInterval(time);
+					gameOver.style.display = "block";
+					gameOver.style.top= "200px";
+					removeAllImgs();					
+				}
+			} ,10);
+		}
+			
+	</script>
+
+</html>

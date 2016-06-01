@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		#div1{
+			width: 100px;
+			height: 100px;
+			background-color: lightcoral;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+		</style>
+	</head>
+	<div id="div1">
+		
+	</div>
+	<body>
+	</body>
+	<script type="text/javascript">
+	var div1 = document.querySelector("#div1");
+	document.onkeydown = function(){
+//		console.log(event.keyCode);
+//		左37
+//		上38
+//		右39
+//		下40
+		switch (event.keyCode){
+			case 37:
+//			console.log("左");
+			div1.style.left = div1.offsetLeft - 20 +"px";
+			break;
+			case 38:
+//			console.log("上");
+			div1.style.top = div1.offsetTop - 20 +"px";
+				break;	
+			case 39:
+//			console.log("右");
+			div1.style.left = div1.offsetLeft + 20 +"px";
+				break;	
+			case 40:
+//			console.log("下");
+			div1.style.top = div1.offsetTop + 20 +"px";
+				break;	
+		
+			default:
+			console.log("按错了");
+				break;
+}
+	}
+	</script>
+</html>

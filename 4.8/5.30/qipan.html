@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>棋盘</title>
+		<style type="text/css">
+			#wrap {
+				width: 400px;
+				height: 400px;
+				background-color: #CCCCCC;
+				margin: 0 auto;
+			}
+			
+			.mindiv {
+				width: 20px;
+				height: 20px;
+				background-color: yellowgreen;
+				float: left;
+				border: 1px solid blue;
+				box-sizing: border-box;
+			}
+			
+			.red {
+				background-color: red;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<div id="wrap">
+
+		</div>
+	</body>
+	<script type="text/javascript">
+		var allDiv = [];
+		var wrap = document.getElementById("wrap");
+		for (var i = 0; i < 20; i++){
+			var row = [];
+			for (var j = 0; j < 20; j++){
+				var minDiv = document.createElement("div");
+				minDiv.className = "mindiv";
+				//			if(i == 7 && j == 14){
+				//				minDiv.className = "mindiv red";
+				//			}  //7行14列红色
+				row.push(minDiv);
+				wrap.appendChild(minDiv);
+			}
+			allDiv.push(row);
+		}
+		allDiv[9][9].className = "mindiv red";
+		allDiv[10][9].className = "mindiv red";
+		allDiv[11][9].className = "mindiv red";
+	</script>
+
+</html>

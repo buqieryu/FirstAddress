@@ -1,0 +1,3562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>LGlobal - The lufylegend.js API</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><a href="../index.html"><img src="../assets/css/logo.png" title="The lufylegend.js API"></a></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: 1.10.1</em>
+            <em>最后更新日期：2016年03月28日</em>
+			<form method="get" action="http://www.google.com.hk/search" target="google_window">
+        		<input type="hidden" name="ie" value="UTF-8">
+        		<input type="hidden" name="oe" value="UTF-8">
+        		<input type="hidden" name="as_sitesearch" id="as_sitesearch" value="lufylegend.com/api/zh_CN/out/">
+        		Google搜索&nbsp;
+        		<input type="text" class="input" style="width:150px;" name="q" id="q" size="31" maxlength="255" value="">
+        		&nbsp;
+        		<input type="submit" class="submit" name="sa" value="Go">
+      		</form>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="../classes/FPS.html">FPS</a></li>
+            
+                <li><a href="../classes/InteractivePNG.html">InteractivePNG</a></li>
+            
+                <li><a href="../classes/LAjax.html">LAjax</a></li>
+            
+                <li><a href="../classes/LAnimation.html">LAnimation</a></li>
+            
+                <li><a href="../classes/LAnimationTimeline.html">LAnimationTimeline</a></li>
+            
+                <li><a href="../classes/LBitmap.html">LBitmap</a></li>
+            
+                <li><a href="../classes/LBitmapData.html">LBitmapData</a></li>
+            
+                <li><a href="../classes/LBitmapFilter.html">LBitmapFilter</a></li>
+            
+                <li><a href="../classes/LBlendMode.html">LBlendMode</a></li>
+            
+                <li><a href="../classes/LBox2d.html">LBox2d</a></li>
+            
+                <li><a href="../classes/LButton.html">LButton</a></li>
+            
+                <li><a href="../classes/LColorMatrixFilter.html">LColorMatrixFilter</a></li>
+            
+                <li><a href="../classes/LColorTransform.html">LColorTransform</a></li>
+            
+                <li><a href="../classes/LConvolutionFilter.html">LConvolutionFilter</a></li>
+            
+                <li><a href="../classes/LDisplayObject.html">LDisplayObject</a></li>
+            
+                <li><a href="../classes/LDisplayObjectContainer.html">LDisplayObjectContainer</a></li>
+            
+                <li><a href="../classes/LDropShadowFilter.html">LDropShadowFilter</a></li>
+            
+                <li><a href="../classes/LEasing.html">LEasing</a></li>
+            
+                <li><a href="../classes/LEvent.html">LEvent</a></li>
+            
+                <li><a href="../classes/LEventDispatcher.html">LEventDispatcher</a></li>
+            
+                <li><a href="../classes/LFlash.html">LFlash</a></li>
+            
+                <li><a href="../classes/LFocusEvent.html">LFocusEvent</a></li>
+            
+                <li><a href="../classes/LFontLoader.html">LFontLoader</a></li>
+            
+                <li><a href="../classes/LGlobal.html">LGlobal</a></li>
+            
+                <li><a href="../classes/LGraphics.html">LGraphics</a></li>
+            
+                <li><a href="../classes/LInteractiveObject.html">LInteractiveObject</a></li>
+            
+                <li><a href="../classes/LKeyboardEvent.html">LKeyboardEvent</a></li>
+            
+                <li><a href="../classes/LLoader.html">LLoader</a></li>
+            
+                <li><a href="../classes/LLoadManage.html">LLoadManage</a></li>
+            
+                <li><a href="../classes/LMatrix.html">LMatrix</a></li>
+            
+                <li><a href="../classes/LMedia.html">LMedia</a></li>
+            
+                <li><a href="../classes/LMouseEvent.html">LMouseEvent</a></li>
+            
+                <li><a href="../classes/LMouseEventContainer.html">LMouseEventContainer</a></li>
+            
+                <li><a href="../classes/LMultitouch.html">LMultitouch</a></li>
+            
+                <li><a href="../classes/LMultitouchInputMode.html">LMultitouchInputMode</a></li>
+            
+                <li><a href="../classes/LoadingSample.html">LoadingSample</a></li>
+            
+                <li><a href="../classes/LObject.html">LObject</a></li>
+            
+                <li><a href="../classes/LPoint.html">LPoint</a></li>
+            
+                <li><a href="../classes/LQuadTree.html">LQuadTree</a></li>
+            
+                <li><a href="../classes/LRange.html">LRange</a></li>
+            
+                <li><a href="../classes/LRectangle.html">LRectangle</a></li>
+            
+                <li><a href="../classes/LShape.html">LShape</a></li>
+            
+                <li><a href="../classes/LSound(LMedia).html">LSound(LMedia)</a></li>
+            
+                <li><a href="../classes/LSound(LWebAudio).html">LSound(LWebAudio)</a></li>
+            
+                <li><a href="../classes/LSprite.html">LSprite</a></li>
+            
+                <li><a href="../classes/LStageAlign.html">LStageAlign</a></li>
+            
+                <li><a href="../classes/LStageScaleMode.html">LStageScaleMode</a></li>
+            
+                <li><a href="../classes/LStageWebView.html">LStageWebView</a></li>
+            
+                <li><a href="../classes/LStyleSheet.html">LStyleSheet</a></li>
+            
+                <li><a href="../classes/LTextEvent.html">LTextEvent</a></li>
+            
+                <li><a href="../classes/LTextField.html">LTextField</a></li>
+            
+                <li><a href="../classes/LTimer.html">LTimer</a></li>
+            
+                <li><a href="../classes/LTimerEvent.html">LTimerEvent</a></li>
+            
+                <li><a href="../classes/LTransform.html">LTransform</a></li>
+            
+                <li><a href="../classes/LTransition.html">LTransition</a></li>
+            
+                <li><a href="../classes/LTransitionManager.html">LTransitionManager</a></li>
+            
+                <li><a href="../classes/LTweenLite.html">LTweenLite</a></li>
+            
+                <li><a href="../classes/LTweenLiteChild.html">LTweenLiteChild</a></li>
+            
+                <li><a href="../classes/lufylegend.mvc.html">lufylegend.mvc</a></li>
+            
+                <li><a href="../classes/LURLLoader.html">LURLLoader</a></li>
+            
+                <li><a href="../classes/LVec2.html">LVec2</a></li>
+            
+                <li><a href="../classes/LVideo.html">LVideo</a></li>
+            
+                <li><a href="../classes/LWebAudio.html">LWebAudio</a></li>
+            
+                <li><a href="../classes/Q &amp; A (常见问题).html">Q &amp; A (常见问题)</a></li>
+            
+                <li><a href="../classes/UI:LButtonSample1.html">UI:LButtonSample1</a></li>
+            
+                <li><a href="../classes/UI:LButtonSample2.html">UI:LButtonSample2</a></li>
+            
+                <li><a href="../classes/UI:LCheckBox.html">UI:LCheckBox</a></li>
+            
+                <li><a href="../classes/UI:LComboBox.html">UI:LComboBox</a></li>
+            
+                <li><a href="../classes/UI:LListChildView.html">UI:LListChildView</a></li>
+            
+                <li><a href="../classes/UI:LListScrollBar.html">UI:LListScrollBar</a></li>
+            
+                <li><a href="../classes/UI:LListView.html">UI:LListView</a></li>
+            
+                <li><a href="../classes/UI:LMenubar.html">UI:LMenubar</a></li>
+            
+                <li><a href="../classes/UI:LMessageBox.html">UI:LMessageBox</a></li>
+            
+                <li><a href="../classes/UI:LPanel.html">UI:LPanel</a></li>
+            
+                <li><a href="../classes/UI:LRadio.html">UI:LRadio</a></li>
+            
+                <li><a href="../classes/UI:LRadioChild.html">UI:LRadioChild</a></li>
+            
+                <li><a href="../classes/UI:LRange.html">UI:LRange</a></li>
+            
+                <li><a href="../classes/UI:LScrollbar.html">UI:LScrollbar</a></li>
+            
+                <li><a href="../classes/UI:LTable.html">UI:LTable</a></li>
+            
+                <li><a href="../classes/UI:LTreeWidget.html">UI:LTreeWidget</a></li>
+            
+                <li><a href="../classes/UI:LWindow.html">UI:LWindow</a></li>
+            
+                <li><a href="../classes/全局函数.html">全局函数</a></li>
+            
+                <li><a href="../classes/全局变量.html">全局变量</a></li>
+            
+                <li><a href="../classes/全屏设置.html">全屏设置</a></li>
+            
+                <li><a href="../classes/旧版API.html">旧版API</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1>LGlobal Class</h1>
+<div class="box meta">
+    
+
+    
+
+    
+        <div class="foundat">
+            Defined in: <a href="../files/utils_LGlobal.js.html#l1"><code>utils&#x2F;LGlobal.js:1</code></a>
+        </div>
+    
+
+    
+
+    
+        <p>Available since 1.0.0</p>
+    
+</div>
+
+
+
+<div class="box intro">
+    <p>全局类。</p>
+</div>
+
+
+
+<div id="classdocs" class="tabview">
+    <ul class="api-class-tabs">
+        <li class="api-class-tab index"><a href="#index">Index</a></li>
+
+        
+            <li class="api-class-tab methods"><a href="#methods">Methods</a></li>
+        
+        
+            <li class="api-class-tab properties"><a href="#properties">Properties</a></li>
+        
+        
+        
+    </ul>
+
+    <div>
+        <div id="index" class="api-class-tabpanel index">
+            <h2 class="off-left">Item Index</h2>
+
+            
+                <div class="index-section methods">
+                    <h3>Methods</h3>
+
+                    <ul class="index-list methods">
+                        
+                            <li class="index-item method public">
+                                <a href="#method_divideCoordinate">divideCoordinate</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_hitPolygon">hitPolygon</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_hitTestArc">hitTestArc</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_hitTestPolygon">hitTestPolygon</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_hitTestPolygonArc">hitTestPolygonArc</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_hitTestRect">hitTestRect</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_resize">resize</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_screen">screen</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_setDebug">setDebug</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_setFrameRate">setFrameRate</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_show">show</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                    </ul>
+                </div>
+            
+
+            
+                <div class="index-section properties">
+                    <h3>Properties</h3>
+
+                    <ul class="index-list properties">
+                        
+                            <li class="index-item property public">
+                                <a href="#property_FULL_SCREEN">FULL_SCREEN</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_LGlobal.align">LGlobal.align</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_LGlobal.android">LGlobal.android</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_LGlobal.aspectRatio">LGlobal.aspectRatio</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_LGlobal.backgroundColor">LGlobal.backgroundColor</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_LGlobal.canTouch">LGlobal.canTouch</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_LGlobal.canvas">LGlobal.canvas</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_LGlobal.canvasObj">LGlobal.canvasObj</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_LGlobal.destroy">LGlobal.destroy</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_LGlobal.forceRefresh">LGlobal.forceRefresh</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_LGlobal.height">LGlobal.height</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_LGlobal.ios">LGlobal.ios</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_LGlobal.keepClear">LGlobal.keepClear</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_LGlobal.mobile">LGlobal.mobile</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_LGlobal.os">LGlobal.os</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_LGlobal.preventDefault">LGlobal.preventDefault</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_LGlobal.stage">LGlobal.stage</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_LGlobal.stageScale">LGlobal.stageScale</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_LGlobal.stopPropagation">LGlobal.stopPropagation</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_LGlobal.webAudio">LGlobal.webAudio</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_LGlobal.width">LGlobal.width</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                    </ul>
+                </div>
+            
+
+            
+
+            
+        </div>
+
+        
+            <div id="methods" class="api-class-tabpanel">
+                <h2 class="off-left">Methods</h2>
+
+                
+                    <div id="method_divideCoordinate" class="method item public">
+    <h3 class="name"><code>divideCoordinate</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>width</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>height</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>row</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>col</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Array</span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/utils_LGlobal.js.html#l817"><code>utils&#x2F;LGlobal.js:817</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.3.1</p>
+        
+    </div>
+
+    <div class="description">
+        <p>将传入的宽和高，按照行数和列数进行拆分计算，会得到一个2维数组。</p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">width</code>
+                        <span class="type">Float</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>宽</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">height</code>
+                        <span class="type">Float</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>高</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">row</code>
+                        <span class="type">Int</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>行数</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">col</code>
+                        <span class="type">Int</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>列数</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Array</span>:
+                    
+                    <p>2维数组</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>LInit(50, &quot;legend&quot;, 800, 480, main);
+function main () {
+    var loader = new LLoader();
+    loader.addEventListener(LEvent.COMPLETE, loadBitmapdata); 
+    loader.load(&quot;player.png&quot;, &quot;bitmapData&quot;);
+}
+function loadBitmapdata(event){
+    var backLayer = new LSprite();
+    addChild(backLayer);
+    var list = LGlobal.divideCoordinate(480,630,3,4);
+    var data = new LBitmapData(event.target,0,0,120,210);
+    player = new LAnimation(backLayer,data,list);
+    backLayer.addEventListener(LEvent.ENTER_FRAME,onframe);
+}
+function onframe(){
+    player.onframe();
+}</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LGlobal/divideCoordinate.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_hitPolygon" class="method item public">
+    <h3 class="name"><code>hitPolygon</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>vertices</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>x</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>y</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Boolean</span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/utils_LGlobal.js.html#l869"><code>utils&#x2F;LGlobal.js:869</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.8.9</p>
+        
+    </div>
+
+    <div class="description">
+        <p>检测点是否在多边形内部</p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">vertices</code>
+                        <span class="type">Array</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>多边形的顶点数组[[x1,y1],[x2,y2],[x3,y3],......]</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">x</code>
+                        <span class="type">Float</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>coordinate-x of point</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">y</code>
+                        <span class="type">Float</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>coordinate-y of point</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Boolean</span>:
+                    
+                    <p>当たったらtrueを返す</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>LGlobal.setDebug(true);
+var layer = new LSprite();
+addChild(layer);
+var vertices = [[50,100],[150,50],[100,150]];
+layer.graphics.drawVertices(1,&quot;#000000&quot;,vertices);
+var point1 = [100,100];
+layer.graphics.drawArc(1,&quot;#000000&quot;,[point1[0],point1[1],2,0,2*Math.PI]);
+var point2 = [50,200];
+layer.graphics.drawArc(1,&quot;#000000&quot;,[point2[0],point2[1],2,0,2*Math.PI]);
+trace(LGlobal.hitPolygon(vertices,point1[0],point1[1]));//out:true
+trace(LGlobal.hitPolygon(vertices,point2[0],point2[1]));//out:false</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LGlobal/hitPolygon.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_hitTestArc" class="method item public">
+    <h3 class="name"><code>hitTestArc</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>objA</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>objB</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>objAR</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>objBR</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Boolean</span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/utils_LGlobal.js.html#l1010"><code>utils&#x2F;LGlobal.js:1010</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.4.1</p>
+        
+    </div>
+
+    <div class="description">
+        <p>将两个对象看作圆来检测碰撞</p>
+<p>如果对象发生旋转，则不能使用此方法进行碰撞检测，请使用LSprite类的hitTestObject</p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">objA</code>
+                        <span class="type"><a href="../classes/LDisplayObject.html" class="crosslink">LDisplayObject</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>对象A</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">objB</code>
+                        <span class="type"><a href="../classes/LDisplayObject.html" class="crosslink">LDisplayObject</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>对象B</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">objAR</code>
+                        <span class="type">Float</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>新的半径</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">objBR</code>
+                        <span class="type">Float</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>新的半径</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Boolean</span>:
+                    
+                    <p>当たったらtrueを返す</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>LGlobal.setDebug(true);
+var arcLayer1 = new LSprite();
+arcLayer1.graphics.drawArc(1,&quot;#000000&quot;,[100,100,100,0,2*Math.PI]);
+addChild(arcLayer1);
+var arcLayer2 = new LSprite();
+arcLayer2.alpha = 0.5;
+arcLayer2.x = 150;
+arcLayer2.graphics.drawArc(1,&quot;#000000&quot;,[100,100,100,0,2*Math.PI]);
+addChild(arcLayer2);
+var arcLayer3 = new LSprite();
+arcLayer3.alpha = 0.5;
+arcLayer3.x = 300;
+arcLayer3.graphics.drawArc(1,&quot;#000000&quot;,[100,100,100,0,2*Math.PI]);
+addChild(arcLayer3);
+//[100,100,100,0,2*Math.PI] vs [100,100,100,0,2*Math.PI]
+trace(LGlobal.hitTestArc(arcLayer1,arcLayer2));//out:true
+//[115,115,70,0,2*Math.PI] vs [115,115,70,0,2*Math.PI]
+trace(LGlobal.hitTestArc(arcLayer2,arcLayer3,70,70));//out:false</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LGlobal/hitTestArc.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_hitTestPolygon" class="method item public">
+    <h3 class="name"><code>hitTestPolygon</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>verticesA</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>verticesB</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Boolean</span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/utils_LGlobal.js.html#l916"><code>utils&#x2F;LGlobal.js:916</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.9.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>检测多边形与多边形的碰撞</p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">verticesA</code>
+                        <span class="type">Array</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>多边形A的顶点数组[[x1,y1],[x2,y2],[x3,y3],......]</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">verticesB</code>
+                        <span class="type">Array</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>多边形B的顶点数组[[x1,y1],[x2,y2],[x3,y3],......]</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Boolean</span>:
+                    
+                    <p>当たったらtrueを返す</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>LGlobal.setDebug(true);
+var layer = new LSprite();
+addChild(layer);
+var vertices = [[50,100],[150,50],[100,150]];
+layer.graphics.drawVertices(1,&quot;#000000&quot;,vertices);
+var vertices1 = [[120,60],[250,150],[100,100]];
+layer.graphics.drawVertices(1,&quot;#000000&quot;,vertices1);
+var vertices2 = [[70,200],[100,160],[200,300]];
+layer.graphics.drawVertices(1,&quot;#000000&quot;,vertices2);
+trace(LGlobal.hitTestPolygon(vertices,vertices1));//out:true
+trace(LGlobal.hitTestPolygon(vertices,vertices2));//out:false</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LGlobal/hitTestPolygon.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_hitTestPolygonArc" class="method item public">
+    <h3 class="name"><code>hitTestPolygonArc</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>vertices</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>circle</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Boolean</span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/utils_LGlobal.js.html#l963"><code>utils&#x2F;LGlobal.js:963</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.9.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>检测一个多边形和一个圆的碰撞</p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">vertices</code>
+                        <span class="type">Array</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>多边形的顶点数组[[x1,y1],[x2,y2],[x3,y3],......]</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">circle</code>
+                        <span class="type">Array</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>圆[中心坐标x,中心坐标y,半径,半径*半径]</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Boolean</span>:
+                    
+                    <p>当たったらtrueを返す</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>LGlobal.setDebug(true);
+var layer = new LSprite();
+addChild(layer);
+var vertices = [[50,100],[150,50],[100,150]];
+layer.graphics.drawVertices(1,&quot;#000000&quot;,vertices);
+var circle1 = [170,100,50,2500];
+layer.graphics.drawArc(1,&quot;#000000&quot;,[circle1[0],circle1[1],circle1[2],0,2*Math.PI]);
+var circle2 = [50,200,50,2500];
+layer.graphics.drawArc(1,&quot;#000000&quot;,[circle2[0],circle2[1],circle2[2],0,2*Math.PI]);
+trace(LGlobal.hitTestPolygonArc(vertices,circle1));//out:true
+trace(LGlobal.hitTestPolygonArc(vertices,circle2));//out:false</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LGlobal/hitTestPolygonArc.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_hitTestRect" class="method item public">
+    <h3 class="name"><code>hitTestRect</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>objA</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>objB</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>vecA</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>vecB</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Boolean</span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/utils_LGlobal.js.html#l1064"><code>utils&#x2F;LGlobal.js:1064</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.4.1</p>
+        
+    </div>
+
+    <div class="description">
+        <p>将两个对象看作矩形来检测碰撞，等同于 hitTest。</p>
+<p>如果对象发生旋转，则不能使用此方法进行碰撞检测，请使用LSprite类的hitTestObject</p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">objA</code>
+                        <span class="type"><a href="../classes/LDisplayObject.html" class="crosslink">LDisplayObject</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>对象A</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">objB</code>
+                        <span class="type"><a href="../classes/LDisplayObject.html" class="crosslink">LDisplayObject</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>对象B</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">vecA</code>
+                        <span class="type">Array</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>重新设置对象A的矩形范围 [width,height]</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">vecB</code>
+                        <span class="type">Array</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>重新设置对象B的矩形范围 [width,height]</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Boolean</span>:
+                    
+                    <p>如果碰撞则返回true。</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>LGlobal.setDebug(true);
+var rectLayer1 = new LSprite();
+rectLayer1.graphics.drawRect(1,&quot;#000000&quot;,[0,0,200,200],true,&quot;#FF0000&quot;);
+addChild(rectLayer1);
+var rectLayer2 = new LSprite();
+rectLayer2.alpha = 0.5;
+rectLayer2.x = 150;
+rectLayer2.graphics.drawRect(1,&quot;#000000&quot;,[0,0,200,200],true,&quot;#00FF00&quot;);
+addChild(rectLayer2);
+var rectLayer3 = new LSprite();
+rectLayer3.alpha = 0.5;
+rectLayer3.x = 300;
+rectLayer3.graphics.drawRect(1,&quot;#000000&quot;,[0,0,200,200],true,&quot;#0000FF&quot;);
+addChild(rectLayer3);
+//[0,0,200,200] vs [0,0,200,200]
+trace(LGlobal.hitTestRect(rectLayer1,rectLayer2));//out:true
+//[30,0,140,200] vs [30,0,140,200]
+trace(LGlobal.hitTestRect(rectLayer2,rectLayer3,[140,200],[140,200]));//out:false</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LGlobal/hitTestRect.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_resize" class="method item public">
+    <h3 class="name"><code>resize</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>width</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>height</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/utils_LGlobal.js.html#l1159"><code>utils&#x2F;LGlobal.js:1159</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.9.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>将画面设置为指定大小</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">width</code>
+                        <span class="type">Float</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>指定宽度</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">height</code>
+                        <span class="type">Float</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>指定高度</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>LInit(1000/60, &quot;legend&quot;, 240, 240, main);
+function main () {
+    LGlobal.resize(400,100);
+    var loader = new LLoader();
+    loader.addEventListener(LEvent.COMPLETE, loadBitmapdata); 
+    loader.load(&quot;face.jpg&quot;, &quot;bitmapData&quot;);
+}
+function loadBitmapdata (event) {
+    var bitmapdata = new LBitmapData(event.target);  
+    var bitmap = new LBitmap(bitmapdata);
+    addChild(bitmap);
+}</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LGlobal/resize.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_screen" class="method item public">
+    <h3 class="name"><code>screen</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>value</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/utils_LGlobal.js.html#l1265"><code>utils&#x2F;LGlobal.js:1265</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.6.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>全画面显示或者设定画面大小的缩放比例值</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">value</code>
+                        <span class="type">String | float</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>全画面的静态值LGlobal.FULL_SCREEN 或者 画面大小的缩放比例值</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>LInit(1000/60, &quot;legend&quot;, 240, 240, main);
+function main () {
+    LGlobal.stageScale = LStageScaleMode.SHOW_ALL;
+    LGlobal.screen(LStage.FULL_SCREEN);
+    //you can also use it like : LGlobal.screen(1.5);
+    var loader = new LLoader();
+    loader.addEventListener(LEvent.COMPLETE, loadBitmapdata); 
+    loader.load(&quot;face.jpg&quot;, &quot;bitmapData&quot;);
+}
+function loadBitmapdata (event) {
+    var bitmapdata = new LBitmapData(event.target);  
+    var bitmap = new LBitmap(bitmapdata);
+    addChild(bitmap);
+}</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LGlobal/screen.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_setDebug" class="method item public">
+    <h3 class="name"><code>setDebug</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>value</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/utils_LGlobal.js.html#l297"><code>utils&#x2F;LGlobal.js:297</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.4.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>设定是否开启测试模式。</p>
+<p>＊当游戏发布的时候，必须关闭测试模式。</p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">value</code>
+                        <span class="type">Boolean</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>是否开启测试模式</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>LInit(50, &quot;legend&quot;, 800, 480, main);
+function main () {
+    LGlobal.setDebug(true);
+    trace(&quot;test01&quot;, &quot;test02&quot;, &quot;test03&quot;);
+}    </code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LGlobal/setDebug.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_setFrameRate" class="method item public">
+    <h3 class="name"><code>setFrameRate</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>speed</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/utils_LGlobal.js.html#l1125"><code>utils&#x2F;LGlobal.js:1125</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.5.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>重新设定游戏速度</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">speed</code>
+                        <span class="type">Int</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>游戏速度,每次页面刷新间隔（单位毫秒）, FPS = 1000 / speed。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>LGlobal.setFrameRate(1000/60);</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LGlobal/setFrameRate.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_show" class="method item public">
+    <h3 class="name"><code>show</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>list</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>context2D</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/utils_LGlobal.js.html#l778"><code>utils&#x2F;LGlobal.js:778</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.10.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>将传入的一组对象绘制到指定的CanvasRenderingContext2D对象上。</p>
+<p>※该方法每调用一次，只绘制一次。</p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">list</code>
+                        <span class="type">Array</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>要绘制的对象数组，数组中的对象必须是LDisplayObject对象</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">context2D</code>
+                        <span class="type">CanvasRenderingContext2D</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>通过canvas.getContext(&quot;2d&quot;)得到的对象</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>LInit(1000/60, &quot;legend&quot;, 240, 240, main);
+var myCanvas=document.getElementById(&quot;myCanvas&quot;);
+var ctx=myCanvas.getContext(&quot;2d&quot;);
+function main () {
+    var loader = new LLoader();
+    loader.addEventListener(LEvent.COMPLETE, loadBitmapdata); 
+    loader.load(&quot;face.jpg&quot;, &quot;bitmapData&quot;);
+}
+function loadBitmapdata(event){
+    var bitmapdata = new LBitmapData(event.target); 
+    var bitmap = new LBitmap(bitmapdata);
+    addChild(bitmap);
+    LGlobal.show([bitmap], ctx);
+}</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LGlobal/show.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+            </div>
+        
+
+        
+            <div id="properties" class="api-class-tabpanel">
+                <h2 class="off-left">Properties</h2>
+
+                
+                    <div id="property_FULL_SCREEN" class="property item public">
+    <h3 class="name"><code>FULL_SCREEN</code></h3>
+    <span class="type">String</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/utils_LGlobal.js.html#l11"><code>utils&#x2F;LGlobal.js:11</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.6.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>[静态] 定义全屏的属性值。</p>
+<p>用法请参照LGlobal.screen函数</p>
+    </div>
+
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_LGlobal.align" class="property item public">
+    <h3 class="name"><code>LGlobal.align</code></h3>
+    <span class="type">String</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/utils_LGlobal.js.html#l142"><code>utils&#x2F;LGlobal.js:142</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.8.6</p>
+        
+    </div>
+
+    <div class="description">
+        <p>一个 LStageAlign 类中指定舞台在浏览器中的对齐方式的值。</p>
+    </div>
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>LInit(50, &quot;legend&quot;, 240, 240, main);
+function main () {
+    LGlobal.align = LStageAlign.BOTTOM_MIDDLE;
+    LGlobal.stageScale = LStageScaleMode.SHOW_ALL;
+    LSystem.screen(LStage.FULL_SCREEN);
+    var loader = new LLoader();
+    loader.addEventListener(LEvent.COMPLETE, loadBitmapdata); 
+    loader.load(&quot;face.jpg&quot;, &quot;bitmapData&quot;);
+}
+function loadBitmapdata (event) {
+    var bitmapdata = new LBitmapData(event.target);  
+    var bitmap = new LBitmap(bitmapdata);
+    addChild(bitmap);
+}</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LGlobal/stageScale_align.html" target="_blank">测试链接</a></p>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="property_LGlobal.android" class="property item public">
+    <h3 class="name"><code>LGlobal.android</code></h3>
+    <span class="type">Boolean</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/utils_LGlobal.js.html#l204"><code>utils&#x2F;LGlobal.js:204</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.0.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>当前浏览器是否为Android。</p>
+    </div>
+
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_LGlobal.aspectRatio" class="property item public">
+    <h3 class="name"><code>LGlobal.aspectRatio</code></h3>
+    <span class="type">String</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/utils_LGlobal.js.html#l23"><code>utils&#x2F;LGlobal.js:23</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.8.1</p>
+        
+    </div>
+
+    <div class="description">
+        <p>将舞台设置成使用指定长宽比的方向。可以设置为下列值</p>
+<p>LANDSCAPE、PORTRAIT。</p>
+    </div>
+
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_LGlobal.backgroundColor" class="property item public">
+    <h3 class="name"><code>LGlobal.backgroundColor</code></h3>
+    <span class="type">String</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/utils_LGlobal.js.html#l214"><code>utils&#x2F;LGlobal.js:214</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.7.7</p>
+        
+    </div>
+
+    <div class="description">
+        <p>游戏画面的背景颜色。</p>
+    </div>
+
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_LGlobal.canTouch" class="property item public">
+    <h3 class="name"><code>LGlobal.canTouch</code></h3>
+    <span class="type">Boolean</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/utils_LGlobal.js.html#l176"><code>utils&#x2F;LGlobal.js:176</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.0.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>等同于 LGlobal.mobile。</p>
+    </div>
+
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_LGlobal.canvas" class="property item public">
+    <h3 class="name"><code>LGlobal.canvas</code></h3>
+    <span class="type">CanvasRenderingContext2D</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/utils_LGlobal.js.html#l42"><code>utils&#x2F;LGlobal.js:42</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.0.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>context 对象。</p>
+    </div>
+
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_LGlobal.canvasObj" class="property item public">
+    <h3 class="name"><code>LGlobal.canvasObj</code></h3>
+    <span class="type">HTML elements</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/utils_LGlobal.js.html#l33"><code>utils&#x2F;LGlobal.js:33</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.8.1</p>
+        
+    </div>
+
+    <div class="description">
+        <p>canvas 标签。</p>
+    </div>
+
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_LGlobal.destroy" class="property item public">
+    <h3 class="name"><code>LGlobal.destroy</code></h3>
+    <span class="type">Boolean</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/utils_LGlobal.js.html#l223"><code>utils&#x2F;LGlobal.js:223</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.7.7</p>
+        
+    </div>
+
+    <div class="description">
+        <p>LDisplayObject对象从舞台上被移除的时候，是否将这个对象整个清空。</p>
+    </div>
+
+    
+        <p><strong>Default:</strong> true</p>
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_LGlobal.forceRefresh" class="property item public">
+    <h3 class="name"><code>LGlobal.forceRefresh</code></h3>
+    <span class="type">Boolean</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/utils_LGlobal.js.html#l233"><code>utils&#x2F;LGlobal.js:233</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.9.1</p>
+        
+    </div>
+
+    <div class="description">
+        <p>强制将画面彻底刷新，如果游戏中没有背景，有些手机上清空画面时偶尔会留下残影，如果遇到情况，可以在清空画面时将此属性设置为true来强制刷新画面一次。</p>
+    </div>
+
+    
+        <p><strong>Default:</strong> false</p>
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_LGlobal.height" class="property item public">
+    <h3 class="name"><code>LGlobal.height</code></h3>
+    <span class="type">Int</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/utils_LGlobal.js.html#l81"><code>utils&#x2F;LGlobal.js:81</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.0.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>游戏初始化时设定的画面的高，即canvas的高。</p>
+    </div>
+
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_LGlobal.ios" class="property item public">
+    <h3 class="name"><code>LGlobal.ios</code></h3>
+    <span class="type">Boolean</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/utils_LGlobal.js.html#l195"><code>utils&#x2F;LGlobal.js:195</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.0.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>当前浏览器是否为IOS。</p>
+    </div>
+
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_LGlobal.keepClear" class="property item public">
+    <h3 class="name"><code>LGlobal.keepClear</code></h3>
+    <span class="type">Boolean</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/utils_LGlobal.js.html#l245"><code>utils&#x2F;LGlobal.js:245</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.8.7</p>
+        
+    </div>
+
+    <div class="description">
+        <p>LDisplayObject对象从舞台上被移除的时候，是否将这个对象整个清空。</p>
+<p>如果游戏不是透明背景的话，可以将LGlobal.keepClear的值设置为false来提高游戏效率。</p>
+    </div>
+
+    
+        <p><strong>Default:</strong> true</p>
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_LGlobal.mobile" class="property item public">
+    <h3 class="name"><code>LGlobal.mobile</code></h3>
+    <span class="type">Boolean</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/utils_LGlobal.js.html#l167"><code>utils&#x2F;LGlobal.js:167</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.9.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>当前浏览器是否是移动浏览器。等同于 LGlobal.canTouch。</p>
+    </div>
+
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_LGlobal.os" class="property item public">
+    <h3 class="name"><code>LGlobal.os</code></h3>
+    <span class="type">String</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/utils_LGlobal.js.html#l185"><code>utils&#x2F;LGlobal.js:185</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.0.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>当前浏览器环境。可以是下面中的一个</p>
+<p>OS_IPHONE，OS_IPOD，OS_IPAD，OS_ANDROID，OS_PC。</p>
+    </div>
+
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_LGlobal.preventDefault" class="property item public">
+    <h3 class="name"><code>LGlobal.preventDefault</code></h3>
+    <span class="type">Boolean</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/utils_LGlobal.js.html#l103"><code>utils&#x2F;LGlobal.js:103</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.3.1</p>
+        
+    </div>
+
+    <div class="description">
+        <p>如果事件对象的cancelable属性为true,则该方法可以取消事件的默认动作.但并不取消事件的冒泡行为。移动网页中用来禁止滚屏，默认为true(禁止)，如果需要使用滚屏功能，则需要将其设置为fasle。</p>
+    </div>
+
+    
+        <p><strong>Default:</strong> true</p>
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_LGlobal.stage" class="property item public">
+    <h3 class="name"><code>LGlobal.stage</code></h3>
+    <span class="type"><a href="../classes/LSprite.html" class="crosslink">LSprite</a></span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/utils_LGlobal.js.html#l62"><code>utils&#x2F;LGlobal.js:62</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.3.1</p>
+        
+    </div>
+
+    <div class="description">
+        <p>一个LSprite对象，所有的DisplayObject对象的最底层。</p>
+<p>除非做功能扩展，否则不推荐直接将对象加载到LGlobal.stage上。</p>
+    </div>
+
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_LGlobal.stageScale" class="property item public">
+    <h3 class="name"><code>LGlobal.stageScale</code></h3>
+    <span class="type">String</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/utils_LGlobal.js.html#l117"><code>utils&#x2F;LGlobal.js:117</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.4.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>一个 LStageScaleMode 类中指定要使用哪种缩放模式的值。</p>
+    </div>
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>LInit(50, &quot;legend&quot;, 240, 240, main);
+function main () {
+    LGlobal.align = LStageAlign.BOTTOM_MIDDLE;
+    LGlobal.stageScale = LStageScaleMode.SHOW_ALL;
+    LSystem.screen(LStage.FULL_SCREEN);
+    var loader = new LLoader();
+    loader.addEventListener(LEvent.COMPLETE, loadBitmapdata); 
+    loader.load(&quot;face.jpg&quot;, &quot;bitmapData&quot;);
+}
+function loadBitmapdata (event) {
+    var bitmapdata = new LBitmapData(event.target);  
+    var bitmap = new LBitmap(bitmapdata);
+    addChild(bitmap);
+}</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LGlobal/stageScale_align.html" target="_blank">测试链接</a></p>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="property_LGlobal.stopPropagation" class="property item public">
+    <h3 class="name"><code>LGlobal.stopPropagation</code></h3>
+    <span class="type">Boolean</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/utils_LGlobal.js.html#l93"><code>utils&#x2F;LGlobal.js:93</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.9.8</p>
+        
+    </div>
+
+    <div class="description">
+        <p>该方法将停止事件的传播，阻止它被分派到其他 Document 节点。</p>
+    </div>
+
+    
+        <p><strong>Default:</strong> false</p>
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_LGlobal.webAudio" class="property item public">
+    <h3 class="name"><code>LGlobal.webAudio</code></h3>
+    <span class="type">Boolean</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/utils_LGlobal.js.html#l51"><code>utils&#x2F;LGlobal.js:51</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.0.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>当设备支持Web Audio Api的时候，是否使用Web Audio Api来播放音频。</p>
+    </div>
+
+    
+        <p><strong>Default:</strong> true</p>
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_LGlobal.width" class="property item public">
+    <h3 class="name"><code>LGlobal.width</code></h3>
+    <span class="type">Int</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/utils_LGlobal.js.html#l72"><code>utils&#x2F;LGlobal.js:72</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.0.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>游戏初始化时设定的画面的宽，即canvas的宽。</p>
+    </div>
+
+    
+
+    
+    
+
+    
+</div>
+
+                
+            </div>
+        
+
+        
+
+        
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32497708-2']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>

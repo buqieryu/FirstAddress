@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>tween.js强大的可生成平滑动画效果的js库|DEMO7_jQuery之家-自由分享jQuery、html5、css3的插件库</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/default.css"> -->
+	<style>
+		#target {
+			font-size: 13px;
+			padding: 0px 32px;
+		}
+	</style>
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+
+	<!--[if IE]>
+		<script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div class="container">
+		<header class="htmleaf-header">
+			<h1>tween.js强大的可生成平滑动画效果的js库 <span>A Javascript tweening engine</span></h1>
+			<div class="htmleaf-links">
+				<a class="htmleaf-icon icon-home" href="http://www.htmleaf.com/" title="jQuery之家" target="_blank"><span> jQuery之家</span></a>
+				<a class="htmleaf-icon icon-arrow-right3" href="http://www.htmleaf.com/jQuery/Layout-Interface/201501271284.html" title="返回下载页" target="_blank"><span> 返回下载页</span></a>
+			</div>
+			<div class="htmleaf-demo center">
+			  <a href="index.html">hello wrold</a>
+			  <a href="index2.html">bars</a>
+			  <a href="index3.html">colors</a>
+			  <a href="index4.html">graphs</a>
+			  <a href="index5.html">simplest</a>
+			  <a href="index6.html">video</a>
+			  <a href="index7.html" class="current">array</a>
+			  <a href="index8.html">dynamic to</a>
+			  <a href="index9.html">repeat</a>
+			  <a href="index10.html">relative values</a>
+			  <a href="index11.html">yoyo</a>
+			  <a href="index12.html">stop all chained</a>
+			  <a href="index13.html">easing</a>
+			</div>
+		</header>
+		<div id="info" style="position: relative;">
+			<h3>07 _ array - The different interpolations if arrays are used as values.</h3>
+		</div>
+
+		<div id="target"></div>
+	</div>
+
+	<script src="js/tween.min.js"></script>
+	<script src="js/RequestAnimationFrame.js"></script>
+	<script>
+
+			init();
+			animate();
+
+			function init() {
+
+				var target = document.getElementById('target');
+
+				var width = 240, height = 160;
+
+				// random points
+				/*
+				var x0 = Math.random() * ( width - 40 ) + 20,
+					y0 = Math.random() * ( height - 40 ) + 20,
+					xA = [],
+					yA = [];
+
+				for ( var i = 0; i < 10; i++ ) {
+
+					xA.push( Math.random() * ( width - 40 ) + 20 );
+					yA.push( Math.random() * ( height - 40 ) + 20 );
+
+				}
+				*/
+
+				// fixed points
+
+				var min = 1 / 6,
+					max = 5 / 6;
+
+				var x0 = width * min,
+					y0 = height / 2,
+					xA = [ width * max, width / 2 ],
+					yA = [ height * min, height * max ];
+
+
+				target.appendChild( createPath( 'Linear', TWEEN.Interpolation.Linear ) );
+				target.appendChild( createPath( 'Bezier', TWEEN.Interpolation.Bezier ) );
+				target.appendChild( createPath( 'CatmullRom', TWEEN.Interpolation.CatmullRom ) );
+
+				target.appendChild( document.createElement( 'br' ) );
+
+				xA.push( x0 );
+				yA.push( y0 );
+
+				target.appendChild( createPath( 'start === end', TWEEN.Interpolation.Linear ) );
+				target.appendChild( createPath( '', TWEEN.Interpolation.Bezier ) );
+				target.appendChild( createPath( '', TWEEN.Interpolation.CatmullRom ) );
+
+				function createPath( title, interpolation ) {
+
+					var div = document.createElement( 'div' );
+					div.style.display = 'inline-block';
+					div.style.width = width + 20 + 'px';
+					div.style.height = height + 20 + 'px';
+
+					var canvas = document.createElement( 'canvas' );
+					canvas.width = width;
+					canvas.height = height;
+
+					var context = canvas.getContext( '2d' );
+					context.fillStyle = "rgb(250,250,250)";
+					context.fillRect( 0, 0, width, height );
+
+					context.fillStyle = "rgb(200,200,200)";
+					context.fillRect( x0 - 3, y0 - 3, 6, 6 );
+					context.fillRect( xA[ xA.length - 1 ] - 3, yA[ yA.length - 1 ] - 3, 6, 6 );
+
+					for ( var i = 0; i < xA.length; i++ ) {
+
+						context.fillRect( xA[i] - 2, yA[i] - 2, 4, 4 );
+
+					}
+
+					context.lineWidth = 2;
+					context.strokeStyle = "rgba(255,127,127,0.9)";
+
+					var obj = { x: x0, y: y0, old: { x: x0, y: y0 } };
+
+					new TWEEN.Tween( obj ).to( { x: xA, y: yA }, 3000 ).onUpdate( function() {
+
+						context.beginPath();
+						context.moveTo( this.old.x, this.old.y );
+						context.lineTo( this.x, this.y );
+						context.closePath();
+						context.stroke();
+
+						this.old.x = this.x;
+						this.old.y = this.y;
+
+					}).interpolation( interpolation ).easing( TWEEN.Easing.Linear.None ).delay( 250 ).start();
+
+					div.appendChild( document.createTextNode( title ) );
+					div.appendChild( document.createElement( 'br' ) );
+					div.appendChild( canvas );
+
+					return div;
+
+				}
+
+			}
+
+			function animate( time ) {
+
+				requestAnimationFrame( animate );
+
+				TWEEN.update( time );
+
+			}
+		</script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<button onclick="myFunction()">点我</button>
+		<script type="text/javascript">
+			function myFunction(){
+				try{
+				var a = "asdfghjk";
+				
+				var b = a.charAt(0);
+				
+//				alert(b);
+
+//				a.charAt(x)
+//				获取a字符串里面x下标的字符
+//				可以简写成a[x]
+
+
+//				a.charCodeAt(x)
+//				返回当前字符串a的1下标的编码
+//				var b = a.charCodeAt(1);
+				
+				
+//			在 a的字符串后面拼接xxx
+//				b = a.concat("xxx"); 
+				
+//				按照字符编码的结构来返回
+//	检测字符串有没有xxx
+//	有  返回该字符串的第一次出现的位置
+//	没有 返回-1
+
+				b = String.fromCharCode(100);
+				
+//				和indexOf("xxx")同理
+////				
+//				b = a.indexOf("xxx");
+//				但是 是最后一次出现位置
+				b = a.lastIndexOf("xxx");
+//				
+				b = a.localeCompare("aadfghjk");
+//				是按照每一个字符去比较的
+//				一旦碰到不一样的字符，比较久结束
+//				前 < 后 = -1（负数）
+//				前 == 后 = 0
+//				前 > 后 = 1（正数）
+//				
+
+//				查看字符串中有没有asd
+//				有	，返回asd
+//				没有，返回null
+				b = a.match("asd");
+
+//				a.replace("yyy" , "xxx")
+//				把a字符串中的yyy用xxx替换掉
+				b = a.replace("asd" , "xxx");
+
+//				搜索字符串a中是否包含xxx
+//				如果包含xxx 返回下标
+//				如果不包含 返回-1
+				b = a.search("sd")
+	
+//				从第3个下标开始切
+//				切到倒数第2个下标
+				b = a.slice(3 , -2);
+
+//				a.split(",")
+//				按照","将字符串a分割成一个数组
+				a = "a , b , c , d , f";
+				b = a.split(",")
+				
+//				
+//				从下标x开始截取（x可以去正负）
+//				截取y个长度的字符
+//				（长度y不可以去负数）
+				a = "asdfghjk";
+				b = a.substr(-4 , 2);
+
+				a = "Hello             World";
+//					转便大小写
+//				b = a.toLocaleLowerCase();		
+//				b = a.toLocaleUpperCase();
+//				b = a.toLocaleLowerCase();
+//				b = a.toUpperCase();
+				//把 字符串a前后空格给去掉
+//				b = a.trim();
+//				返回字符串a的原始值
+//				b = a.valueOf();
+//				类型的强制转换
+//				只有对象在强制转换的时候
+//				会变成[object object]
+//				b = String([1 , 3 , 5]);
+//				(123).toString();
+//				false.toString();
+//				转变成两种字符串的两种方式
+//				a = toString();
+//				String (a);
+//				var p = document.getElementById("myP");
+//				p.innerHTML = [1 , 2 , 5];
+				
+//				四种输出方式
+//				1. 向控制台输出
+//				console.log()
+//				2.向标签输出（）
+//				xxx.innerHTML
+//				3.向文档流输出
+//				document.write()
+//				4.向弹框输出
+//				alert（）；
+//				
+//				假设要输出a
+//				不管采取哪一种输出方式
+//				都会默认走a.toString()这个方法
+
+//				隐式转换
+//				a.concat();
+//				a+b;
+			
+//				字符串与null类型使用连接符
+//				null 自己 隐式转化成string
+//				b = "5" + null;
+				
+//				b = 5 + "6";
+				var a = "12349";
+				alrt(a);
+				
+				}catch(e){
+					alert("有错了" + e);
+				}
+
+			}
+		</script>
+	</body>
+</html>

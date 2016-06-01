@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>lib/ui/LButtonSample-0.1.0.js - The lufylegend.js API</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><a href="../index.html"><img src="../assets/css/logo.png" title="The lufylegend.js API"></a></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: 1.10.1</em>
+            <em>最后更新日期：2016年03月28日</em>
+			<form method="get" action="http://www.google.com.hk/search" target="google_window">
+        		<input type="hidden" name="ie" value="UTF-8">
+        		<input type="hidden" name="oe" value="UTF-8">
+        		<input type="hidden" name="as_sitesearch" id="as_sitesearch" value="lufylegend.com/api/zh_CN/out/">
+        		Google搜索&nbsp;
+        		<input type="text" class="input" style="width:150px;" name="q" id="q" size="31" maxlength="255" value="">
+        		&nbsp;
+        		<input type="submit" class="submit" name="sa" value="Go">
+      		</form>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="../classes/FPS.html">FPS</a></li>
+            
+                <li><a href="../classes/InteractivePNG.html">InteractivePNG</a></li>
+            
+                <li><a href="../classes/LAjax.html">LAjax</a></li>
+            
+                <li><a href="../classes/LAnimation.html">LAnimation</a></li>
+            
+                <li><a href="../classes/LAnimationTimeline.html">LAnimationTimeline</a></li>
+            
+                <li><a href="../classes/LBitmap.html">LBitmap</a></li>
+            
+                <li><a href="../classes/LBitmapData.html">LBitmapData</a></li>
+            
+                <li><a href="../classes/LBitmapFilter.html">LBitmapFilter</a></li>
+            
+                <li><a href="../classes/LBlendMode.html">LBlendMode</a></li>
+            
+                <li><a href="../classes/LBox2d.html">LBox2d</a></li>
+            
+                <li><a href="../classes/LButton.html">LButton</a></li>
+            
+                <li><a href="../classes/LColorMatrixFilter.html">LColorMatrixFilter</a></li>
+            
+                <li><a href="../classes/LColorTransform.html">LColorTransform</a></li>
+            
+                <li><a href="../classes/LConvolutionFilter.html">LConvolutionFilter</a></li>
+            
+                <li><a href="../classes/LDisplayObject.html">LDisplayObject</a></li>
+            
+                <li><a href="../classes/LDisplayObjectContainer.html">LDisplayObjectContainer</a></li>
+            
+                <li><a href="../classes/LDropShadowFilter.html">LDropShadowFilter</a></li>
+            
+                <li><a href="../classes/LEasing.html">LEasing</a></li>
+            
+                <li><a href="../classes/LEvent.html">LEvent</a></li>
+            
+                <li><a href="../classes/LEventDispatcher.html">LEventDispatcher</a></li>
+            
+                <li><a href="../classes/LFlash.html">LFlash</a></li>
+            
+                <li><a href="../classes/LFocusEvent.html">LFocusEvent</a></li>
+            
+                <li><a href="../classes/LFontLoader.html">LFontLoader</a></li>
+            
+                <li><a href="../classes/LGlobal.html">LGlobal</a></li>
+            
+                <li><a href="../classes/LGraphics.html">LGraphics</a></li>
+            
+                <li><a href="../classes/LInteractiveObject.html">LInteractiveObject</a></li>
+            
+                <li><a href="../classes/LKeyboardEvent.html">LKeyboardEvent</a></li>
+            
+                <li><a href="../classes/LLoader.html">LLoader</a></li>
+            
+                <li><a href="../classes/LLoadManage.html">LLoadManage</a></li>
+            
+                <li><a href="../classes/LMatrix.html">LMatrix</a></li>
+            
+                <li><a href="../classes/LMedia.html">LMedia</a></li>
+            
+                <li><a href="../classes/LMouseEvent.html">LMouseEvent</a></li>
+            
+                <li><a href="../classes/LMouseEventContainer.html">LMouseEventContainer</a></li>
+            
+                <li><a href="../classes/LMultitouch.html">LMultitouch</a></li>
+            
+                <li><a href="../classes/LMultitouchInputMode.html">LMultitouchInputMode</a></li>
+            
+                <li><a href="../classes/LoadingSample.html">LoadingSample</a></li>
+            
+                <li><a href="../classes/LObject.html">LObject</a></li>
+            
+                <li><a href="../classes/LPoint.html">LPoint</a></li>
+            
+                <li><a href="../classes/LQuadTree.html">LQuadTree</a></li>
+            
+                <li><a href="../classes/LRange.html">LRange</a></li>
+            
+                <li><a href="../classes/LRectangle.html">LRectangle</a></li>
+            
+                <li><a href="../classes/LShape.html">LShape</a></li>
+            
+                <li><a href="../classes/LSound(LMedia).html">LSound(LMedia)</a></li>
+            
+                <li><a href="../classes/LSound(LWebAudio).html">LSound(LWebAudio)</a></li>
+            
+                <li><a href="../classes/LSprite.html">LSprite</a></li>
+            
+                <li><a href="../classes/LStageAlign.html">LStageAlign</a></li>
+            
+                <li><a href="../classes/LStageScaleMode.html">LStageScaleMode</a></li>
+            
+                <li><a href="../classes/LStageWebView.html">LStageWebView</a></li>
+            
+                <li><a href="../classes/LStyleSheet.html">LStyleSheet</a></li>
+            
+                <li><a href="../classes/LTextEvent.html">LTextEvent</a></li>
+            
+                <li><a href="../classes/LTextField.html">LTextField</a></li>
+            
+                <li><a href="../classes/LTimer.html">LTimer</a></li>
+            
+                <li><a href="../classes/LTimerEvent.html">LTimerEvent</a></li>
+            
+                <li><a href="../classes/LTransform.html">LTransform</a></li>
+            
+                <li><a href="../classes/LTransition.html">LTransition</a></li>
+            
+                <li><a href="../classes/LTransitionManager.html">LTransitionManager</a></li>
+            
+                <li><a href="../classes/LTweenLite.html">LTweenLite</a></li>
+            
+                <li><a href="../classes/LTweenLiteChild.html">LTweenLiteChild</a></li>
+            
+                <li><a href="../classes/lufylegend.mvc.html">lufylegend.mvc</a></li>
+            
+                <li><a href="../classes/LURLLoader.html">LURLLoader</a></li>
+            
+                <li><a href="../classes/LVec2.html">LVec2</a></li>
+            
+                <li><a href="../classes/LVideo.html">LVideo</a></li>
+            
+                <li><a href="../classes/LWebAudio.html">LWebAudio</a></li>
+            
+                <li><a href="../classes/Q &amp; A (常见问题).html">Q &amp; A (常见问题)</a></li>
+            
+                <li><a href="../classes/UI:LButtonSample1.html">UI:LButtonSample1</a></li>
+            
+                <li><a href="../classes/UI:LButtonSample2.html">UI:LButtonSample2</a></li>
+            
+                <li><a href="../classes/UI:LCheckBox.html">UI:LCheckBox</a></li>
+            
+                <li><a href="../classes/UI:LComboBox.html">UI:LComboBox</a></li>
+            
+                <li><a href="../classes/UI:LListChildView.html">UI:LListChildView</a></li>
+            
+                <li><a href="../classes/UI:LListScrollBar.html">UI:LListScrollBar</a></li>
+            
+                <li><a href="../classes/UI:LListView.html">UI:LListView</a></li>
+            
+                <li><a href="../classes/UI:LMenubar.html">UI:LMenubar</a></li>
+            
+                <li><a href="../classes/UI:LMessageBox.html">UI:LMessageBox</a></li>
+            
+                <li><a href="../classes/UI:LPanel.html">UI:LPanel</a></li>
+            
+                <li><a href="../classes/UI:LRadio.html">UI:LRadio</a></li>
+            
+                <li><a href="../classes/UI:LRadioChild.html">UI:LRadioChild</a></li>
+            
+                <li><a href="../classes/UI:LRange.html">UI:LRange</a></li>
+            
+                <li><a href="../classes/UI:LScrollbar.html">UI:LScrollbar</a></li>
+            
+                <li><a href="../classes/UI:LTable.html">UI:LTable</a></li>
+            
+                <li><a href="../classes/UI:LTreeWidget.html">UI:LTreeWidget</a></li>
+            
+                <li><a href="../classes/UI:LWindow.html">UI:LWindow</a></li>
+            
+                <li><a href="../classes/全局函数.html">全局函数</a></li>
+            
+                <li><a href="../classes/全局变量.html">全局变量</a></li>
+            
+                <li><a href="../classes/全屏设置.html">全屏设置</a></li>
+            
+                <li><a href="../classes/旧版API.html">旧版API</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: lib/ui/LButtonSample-0.1.0.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+/** @language chinese
+ * &lt;p&gt;lufylegend.js专用UI，按钮类。&lt;/p&gt;
+ * &lt;p&gt;使用时需要引进lufylegend.ui-x.x.x.js文件。&lt;/p&gt;
+ * @class UI:LButtonSample1
+ * @constructor
+ * @extends LSprite
+ * @param {String} name 按钮文字。
+ * @param {int} size [可选]按钮文字的大小。
+ * @param {String} font [可选]按钮文字的格式。
+ * @param {String} color [可选]按钮文字的颜色。
+ * @since 0.1.0
+ * @examplelink &lt;p&gt;&lt;a href=&quot;../../../api/ui/LButtonSampleX.html&quot; target=&quot;_blank&quot;&gt;测试链接&lt;/a&gt;&lt;/p&gt;
+ * @public
+ */
+var LButtonSample1 = (function () {
+	function LButtonSample1 (name, size, font, color) {
+		var s = this;
+		if (!size) {
+			size = 16;
+		}
+		if (!color) {
+			color = &quot;#FFFFFF&quot;;
+		}
+		if (!font) {
+			font = &quot;Arial&quot;;
+		}
+		/** @language chinese
+		 * 按钮的颜色
+		 * @property backgroundColor
+		 * @type String
+		 * @since 0.1.0
+		 * @public
+		 */
+		s.backgroundColor = &quot;#000000&quot;;
+		var btn_up = new LSprite();
+		btn_up.shadow = new LSprite();
+		btn_up.back = new LSprite();
+		btn_up.addChild(btn_up.shadow);
+		btn_up.addChild(btn_up.back);
+		labelText = new LTextField();
+		labelText.color = color;
+		labelText.font = font;
+		labelText.size = size;
+		labelText.x = size * 0.5;
+		labelText.y = size * 0.5;
+		labelText.text = name;
+		s.labelText = labelText;
+		btn_up.back.addChild(labelText);
+		var shadow = new LDropShadowFilter(4, 45, &quot;#000000&quot;, 10);
+		btn_up.shadow.filters = [shadow];
+		var btn_down = new LSprite();
+		btn_down.x = btn_down.y = 1;
+		labelText = labelText.clone();
+		btn_down.addChild(labelText);
+		var btn_disable = btn_down.clone();
+		btn_disable.alpha = 0.5;
+		LExtends(s, LButton, [btn_up, btn_down, null, btn_disable]);
+		s.type = &quot;LButtonSample1&quot;;
+		/** @language chinese
+		 * 按钮的宽度
+		 * @property width
+		 * @type int
+		 * @since 0.1.0
+		 * @public
+		 */
+		s.baseWidth = s.width = labelText.getWidth() + size;
+		/** @language chinese
+		 * 按钮的高度
+		 * @property height
+		 * @type int
+		 * @since 0.1.0
+		 * @public
+		 */
+		s.baseHeight = s.height = 2.2 * size;
+		s.backgroundSet = null;
+		s.widthSet = null;
+		s.heightSet = null;
+		s.xSet = null;
+		s.ySet = null;
+		s.addEventListener(LEvent.ENTER_FRAME, s._onDraw);
+	}
+	LButtonSample1.prototype.clone = function () {
+		var s = this, name = s.labelText.text, size = s.labelText.size, font = s.labelText.font, color = s.labelText.color,
+		a = new LButtonSample1(name, size, font, color);
+		a.backgroundColor = s.backgroundColor;
+		a.x = s.x;
+		a.y = s.y;
+		return a;
+	};
+	/** @language chinese
+	 * 设置按钮文字。
+	 * @method setLabel
+	 * @param {String} text 按钮文字。
+	 * @since 0.1.0
+	 * @public
+	 */
+	LButtonSample1.prototype.setLabel = function (text) {
+		var s = this;
+		s.bitmap_over.getChildAt(0).text = s.bitmap_up.back.getChildAt(0).text = text;
+		s.baseWidth = s.width = s.bitmap_up.back.getChildAt(0).getWidth() + s.bitmap_up.back.getChildAt(0).size;
+		s.backgroundSet = null;
+	};
+	LButtonSample1.prototype._onDraw = function (s) {
+		var co = s.getRootCoordinate(), labelText;
+		if (s.backgroundSet == s.backgroundColor &amp;&amp; s.widthSet == s.width &amp;&amp; s.heightSet == s.height &amp;&amp; s.xSet == co.x &amp;&amp; s.ySet == co.y) {
+			return;
+		}
+		s.backgroundSet = s.backgroundColor;
+		s.widthSet = s.width &gt; s.baseWidth ? s.width : s.baseWidth;
+		s.heightSet = s.height &gt; s.baseHeight ? s.height : s.baseHeight;
+		s.width = s.widthSet;
+		s.height = s.heightSet;
+		s.xSet = co.x;
+		s.ySet = co.y;
+		labelText = s.bitmap_up.back.getChildAt(0);
+		labelText.x = (s.width - s.baseWidth + labelText.size) * 0.5;
+		labelText.y = (s.height - s.baseHeight + labelText.size) * 0.5;
+		labelText = s.bitmap_over.getChildAt(0);
+		labelText.x = (s.width - s.baseWidth + labelText.size) * 0.5;
+		labelText.y = (s.height - s.baseHeight + labelText.size) * 0.5;
+		var grd = LGlobal.canvas.createLinearGradient(0, -s.height * 0.5, 0, s.height * 2);
+		grd.addColorStop(0, &quot;#FFFFFF&quot;);
+		grd.addColorStop(1, s.backgroundColor);
+		var grd2 = LGlobal.canvas.createLinearGradient(0, -s.height, 0, s.height * 2);
+		grd2.addColorStop(0, &quot;#FFFFFF&quot;);
+		grd2.addColorStop(1, s.backgroundColor);
+		s.bitmap_up.back.graphics.clear();
+		s.bitmap_over.graphics.clear();
+		s.bitmap_up.shadow.graphics.clear();
+		s.bitmap_up.shadow.graphics.drawRoundRect(0, &quot;#000000&quot;, [1, 1, s.widthSet - 2, s.heightSet - 2, s.heightSet * 0.1], true, &quot;#000000&quot;);
+		s.bitmap_up.back.graphics.drawRect(1, s.backgroundColor, [0, 0, s.widthSet, s.heightSet], true, grd);
+		s.bitmap_up.back.graphics.drawRect(0, s.backgroundColor, [1, s.heightSet * 0.5, s.widthSet - 2, s.heightSet * 0.5 - 1], true, grd2);
+		s.bitmap_over.graphics.drawRect(1, s.backgroundColor, [0, 0, s.widthSet, s.heightSet], true, grd);
+		s.bitmap_over.graphics.drawRect(0, s.backgroundColor, [1, s.heightSet * 0.5, s.widthSet - 2, s.heightSet * 0.5 - 1], true, grd2);
+		s.disableState.graphics.drawRect(1, s.backgroundColor, [0, 0, s.widthSet, s.heightSet], true, grd);
+		s.disableState.graphics.drawRect(0, s.backgroundColor, [1, s.heightSet * 0.5, s.widthSet - 2, s.heightSet * 0.5 - 1], true, grd2);
+	};
+	return LButtonSample1;
+})();
+/** @language chinese
+ * &lt;p&gt;lufylegend.js专用UI，按钮类。&lt;/p&gt;
+ * &lt;p&gt;使用时需要引进lufylegend.ui-x.x.x.js文件。&lt;/p&gt;
+ * @class UI:LButtonSample2
+ * @constructor
+ * @extends LSprite
+ * @param {String} name 按钮文字。
+ * @param {int} size 按钮文字的大小。
+ * @param {String} font 按钮文字的格式。
+ * @param {String} color 按钮文字的颜色。
+ * @since 0.1.0
+ * @examplelink &lt;p&gt;&lt;a href=&quot;../../../api/ui/LButtonSampleX.html&quot; target=&quot;_blank&quot;&gt;测试链接&lt;/a&gt;&lt;/p&gt;
+ * @public
+ */
+var LButtonSample2 = (function () {
+	function LButtonSample2 (name, size, font, color) {
+		var s = this;
+		LExtends(s, LButtonSample1, [name, size, font, color]);
+		s.type = &quot;LButtonSample2&quot;;
+	}
+	LButtonSample2.prototype.clone = function () {
+		var s = this, name = s.labelText.text, size = s.labelText.size, font = s.labelText.font, color = s.labelText.color,
+		a = new LButtonSample2(name, size, font, color);
+		a.backgroundColor = s.backgroundColor;
+		a.x = s.x;
+		a.y = s.y;
+		return a;
+	};
+	LButtonSample2.prototype._onDraw = function (s) {
+		var co = s.getRootCoordinate(), labelText;
+		if (s.backgroundSet == s.backgroundColor &amp;&amp; s.widthSet == s.width &amp;&amp; s.heightSet == s.height &amp;&amp; s.xSet == co.x &amp;&amp; s.ySet == co.y) {
+			return;
+		}
+		s.backgroundSet = s.backgroundColor;
+		s.widthSet = s.width &gt; s.baseWidth ? s.width : s.baseWidth;
+		s.heightSet = s.height &gt; s.baseHeight ? s.height : s.baseHeight;
+		s.width = s.widthSet;
+		s.height = s.heightSet;
+		s.xSet = co.x;
+		s.ySet = co.y;
+		labelText = s.bitmap_up.back.getChildAt(0);
+		labelText.x = (s.width - s.baseWidth + labelText.size) * 0.5;
+		labelText.y = (s.height - s.baseHeight + labelText.size) * 0.5;
+		labelText = s.bitmap_over.getChildAt(0);
+		labelText.x = (s.width - s.baseWidth + labelText.size) * 0.5;
+		labelText.y = (s.height - s.baseHeight + labelText.size) * 0.5;
+		var grd = LGlobal.canvas.createLinearGradient(0, -s.height * 0.5, 0, s.height * 2);
+		grd.addColorStop(0, &quot;#FFFFFF&quot;);
+		grd.addColorStop(1, s.backgroundColor);
+		var grd2 = LGlobal.canvas.createLinearGradient(0, -s.height, 0, s.height * 2);
+		grd2.addColorStop(0, &quot;#FFFFFF&quot;);
+		grd2.addColorStop(1, s.backgroundColor);
+		s.bitmap_up.back.graphics.clear();
+		s.bitmap_over.graphics.clear();
+		s.bitmap_up.shadow.graphics.clear();
+		s.bitmap_up.back.graphics.drawRoundRect(1, s.backgroundColor, [0, 0, s.width, s.height, s.height * 0.1], true, grd);
+		s.bitmap_up.back.graphics.drawRoundRect(0, s.backgroundColor, [1, s.height * 0.5, s.width - 2, s.height * 0.5 - 1, s.height * 0.1], true, grd2);
+		s.bitmap_over.graphics.drawRoundRect(1, s.backgroundColor, [0, 0, s.width, s.height, s.height * 0.1], true, grd);
+		s.bitmap_over.graphics.drawRoundRect(0, s.backgroundColor, [1, s.height * 0.5, s.width - 2, s.height * 0.5 - 1, s.height * 0.1], true, grd2);
+		s.disableState.graphics.drawRoundRect(1, s.backgroundColor, [0, 0, s.width, s.height, s.height * 0.1], true, grd);
+		s.disableState.graphics.drawRoundRect(0, s.backgroundColor, [1, s.height * 0.5, s.width - 2, s.height * 0.5 - 1, s.height * 0.1], true, grd2);
+	};
+	return LButtonSample2;
+})();
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32497708-2']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>

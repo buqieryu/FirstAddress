@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#bigDiv{
+				width: 300px;
+				height: 300px;
+				border: 1px solid red;
+				position: relative;
+				margin: 30px auto;
+			}
+			#smallDiv{
+				width: 20px;
+				height: 20px;
+				/*border: 1px solid black;*/
+				box-sizing: border-box;
+				position: absolute;
+				background-color: aquamarine;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="bigDiv">
+			<div id="smallDiv">
+				
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var bigDiv = document.getElementById("bigDiv");
+		var smallDiv = document.getElementById("smallDiv");
+		var r = true;
+		var xia = false;
+		var l = false;
+		var shang = false;
+		var timer = null;
+		var x = bigDiv.clientHeight - smallDiv.offsetHeight;
+			var L = smallDiv.offsetLeft;
+			var T = smallDiv.offsetTop;
+		timer = setInterval(function(){
+		if(r){
+			L += 5;
+			if(L >= x){
+				r = false;
+				xia = true;
+			}
+			smallDiv.style.left = L + "px";
+		}
+			
+			if(xia){
+			T += 5;
+			if(T >= x){
+				xia = false;
+				l = true;
+			}
+			smallDiv.style.top = T + "px";
+			
+		}
+			
+			if(l){
+			L -= 5;
+			if(L <= 0){
+				l = false;
+				shang = true;
+			}
+			smallDiv.style.left = L + "px";
+		}
+			
+			if(shang){
+			T -= 5;
+			if(T <= 0){
+				shang = false;
+				r = true;
+			}
+			smallDiv.style.top = T + "px";
+		}
+			
+		} , 10);
+	</script>
+</html>

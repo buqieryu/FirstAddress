@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<title></title>
+		<style type="text/css">
+			#canvas1 {
+				/*background-color: red;*/
+				box-shadow: 3px 3px 10px black;
+			}
+		</style>
+	</head>
+
+	<body>
+		<canvas id="canvas1" width="500" height="500">
+			<!--你的浏览器当前不支持canvas-->
+		</canvas>
+	</body>
+	<script type="text/javascript">
+			var canvas = document.getElementById("canvas1");
+			var ctx = canvas.getContext("2d");
+			ctx.strokeStyle = "black";
+//			context.beginPath();
+//			context.closePath();
+//			线条的宽度
+			ctx.lineWidth = 0;
+//			画矩形的方法（rect）
+			ctx.strokeRect(10,10,100,200);
+			ctx.fillStyle = "red";
+			ctx.fillRect(100,10,100,100);
+			ctx.fillStyle = "yellow";
+			ctx.fillRect(10,100,100,100);
+			
+			ctx.stroke();
+			
+		
+	
+	</script>
+
+</html>

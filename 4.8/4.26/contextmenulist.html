@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#ul1{
+				position: absolute;
+				display: none;
+			}
+			ul{
+				list-style: none;
+			}
+			li{
+				position: relative;
+				background-color: #ccc;
+				width: 100px;
+				text-align: center;
+			}
+			li>ul{
+				width: 100px;
+				position: absolute;
+				left: 98px;
+				top:0px;
+				/*默认li下面的ul这个层次是隐藏的*/
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<ul id="ul1">
+			<li>我是li1</li>
+			<li>我是li2</li>
+			<li>我是li3
+			<ul>
+				<li>我是li3下的li1</li>
+				<li>我是li3下的li2</li>
+				<li>我是li3下的li3</li>
+			</ul>
+			</li>
+			<li>我是li4
+				<ul>
+					<li>我是li4下的li1</li>
+					<li>我是li4下的li2</li>
+				</ul>
+			</li>
+		</ul>
+	</body>
+	<script type="text/javascript">
+		var ul1 = document.querySelector("#ul1");
+		var lis = document.querySelectorAll("#ul1 li");
+		
+		document.oncontextmenu = function(event){
+			var x = event.clientX;
+			var y = event.clientY;
+//			右键点击事件一旦发生
+//			整个最外层的ul要显示出来
+			ul1.style.display = "block";
+			
+			ul1.style.left = x + "px";
+			ul1.style.top = y + "px";
+//			把系统默认的右键提示菜单去掉
+			return false;
+		}
+//		对每一个li都添加一个点击事件
+			for (var i = 0; i < lis.length;i++){
+				lis[i].onclick = function(event){
+//				阻止事件向上冒泡传递
+				event.cancelBubble = true;
+				}
+				lis[i].onmouseenter = function(){
+					var children = this.children;
+					if(children.length > 0){
+//						如果li的第一个孩子就是ul
+						console.log(children[0].tagName);
+						if(children[0].tagName == "UL"){
+							children[0].style.display = "block";
+							
+						}
+					}
+				}
+//				鼠标出来
+				lis[i].onmouseleave = function(){
+					var children = this.children;
+					if(children.length > 0){
+						if(children[0].tagName == "UL"){
+							children[0].style.display = "none";
+						}
+						
+					}
+					
+				}
+			}
+			document.onclick = function (){
+				ul1.style.display = "none";
+			}
+	</script>
+</html>

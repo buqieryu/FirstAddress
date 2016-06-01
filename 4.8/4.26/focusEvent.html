@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" name="txt1" id="txt1" placeholder="请输入电话号码" />
+		<br />
+		<input type="text" name="txt2" id="txt2"placeholder="输入密码" />
+		<br /><br />
+		
+		请输入用户名:
+		<input type="text" name="account" id="" placeholder="用户名" />
+		<br />
+		请输入密码:
+		<input type="text" name="account" id="mima" placeholder="请输入密码" />
+		<br />
+		请重新输入密码:
+		<input type="text" name="account" id="remima" placeholder="请重新输入密码" />
+		
+		<script type="text/javascript">
+			var txt1 = document.getElementById("txt1");
+			var txt2 = document.getElementById("txt2");
+			
+			//输入框1 的焦点事件
+			txt1.onfocus = function () {
+				this.value = "15518659736";
+			}
+			
+			//输入框失去焦点事件
+			txt2.onblur = function () {
+				this.value = "你咋没输入密码呢?";
+			}
+			
+			var mimaText = document.getElementById("mima");
+			var reMimaText = document.getElementById("remima");
+			reMimaText.onblur = function () {
+				var mimaValue = mimaText.value;
+				var reMimaValue = reMimaText.value;
+				if (mimaValue == reMimaValue) {
+					alert("输入正确");
+				}else {
+					alert("两次密码输入不一样");
+				}
+			}
+			
+		</script>
+	</body>
+</html>

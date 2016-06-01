@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#canvas1{
+				box-shadow: 3px 3px 10px black;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="canvas1" width="500" height="500"></canvas>
+	</body>
+	<script type="text/javascript">
+		var canvas = document.getElementById("canvas1");
+		var context = canvas.getContext("2d");
+		
+		var rectWidth = 50;
+		
+//		canvas.width = 1000;
+//		canvas.height = 1000;
+		
+		// 1. canva上面画一张图片
+		var myImage = new Image();
+		myImage.src = "333.jpg";
+		myImage.onload = function () {
+			context.drawImage(myImage , 0 , 0 , canvas.width , canvas.height);
+		}
+		
+		var x = 0 , y = 0;
+		var isDown = false;
+		
+		canvas.onmousedown = function () {
+			isDown = true;
+		}
+		
+		
+		canvas.onmousemove = function (event) {
+			
+			context.clearRect(0 , 0 , canvas.width , canvas.height);
+			
+			context.drawImage(myImage , 0 , 0 , canvas.width , canvas.height);
+			
+			if (!isDown) {
+				return;
+			}
+			
+			x = event.offsetX;
+			y = event.offsetY;
+			
+			var scaleX = canvas.width / myImage.width;
+			var scaleY = canvas.height / myImage.height;
+
+			var bigX = x / scaleX - (rectWidth / scaleX);
+			var bigY = y / scaleY - (rectWidth / scaleY);
+			var bigW = rectWidth * 2 / scaleX;
+			var bigH = rectWidth * 2 / scaleY;
+			
+			// 剪切大图的某一部分
+			// context.clip();
+			context.drawImage(myImage , bigX , bigY , bigW , bigH , x - rectWidth * 2 , y - rectWidth * 2 , rectWidth * 4 , rectWidth * 4);
+			
+		}
+		
+		canvas.onmouseup = function () {
+			isDown = false;
+		}
+		
+	</script>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>document</title>
+</head>
+<body>
+<!-- 音频格式
+audio
+视频格式
+video   -->
+<audio src="baliansha.mp3" controls loop></audio>
+  <!-- 你的浏览器不支持该版本 -->
+<video id="video1234567" width=500 height=500  src="vo.mp4" poster="logo.png" controls>
+</video>
+<br>
+<br>
+<br>
+<!-- 播放 -->
+<button type="button" onclick="bofang()">播放</button>
+<!-- 暂停 -->
+<button type="button" onclick="zanting()">暂停</button>
+<!-- 快进 -->
+<button type="button" onclick="kuaijin()">快进</button>
+<!-- 快退 -->
+<button type="button" onclick="kuaitui()">快退</button>
+<!-- 静音 -->
+<button type="button" onclick="jingyin(this)">静音</button>
+<!-- 加速 -->
+<button type="button" onclick="jiasu()">加速</button>
+<!-- 减速 -->
+<button type="button" onclick="jiansu()">减速</button>
+<!-- 正常 -->
+<button type="button" onclick="zhengchang()">正常</button>
+<!-- 提高音量 -->
+<button type="button" onclick="tigaoyinliang()">提高音量</button>
+<!-- 减低音量 -->
+<button type="button" onclick="jiandiyinliang()">减低音量</button>
+
+<button type="button" onclick="currentPlayTime()">当前时间</button>
+<button type="button" onclick="zongshijian()">总时间</button>
+
+<br>
+<br>
+<br>
+<progress id="suibian"  value="10" max="100">50%</progress>
+<meter id="shuibian"    min="200" max="500" value="350">
+  <br>
+  <br>
+  <br>
+<script type="text/javascript">
+var progress = document.getElementById('suibian')
+    setInterval(function(){
+      if(progress.value>=100){
+        progress.value=100;
+      }else{
+        var zongshijian =aaa.duration;
+        var currentPlayTime= aaa.currentTime;
+        var bili = currentPlayTime/aaa.duration;
+        console.log(bili);
+        progress.value=bili*100;
+                }
+              },100);
+
+var less = document.getElementById('shuibian')
+    setInterval(function(){
+      if(less.value>=500){
+         less.value=500;
+      }else{
+          less.value+=20;}
+      },500);
+
+
+
+
+
+
+
+
+
+
+var aaa=document.getElementById('video1234567')
+
+  function bofang(){
+  progress.value+=10;
+
+    aaa.play();
+  }
+  function zanting(){
+
+    aaa.pause();
+  }
+    function kuaijin(){
+    console.log("我是快进按钮");
+
+    aaa.currentTime = aaa.currentTime + 10;
+
+}
+    function kuaitui(){
+
+    aaa.currentTime = aaa.currentTime-10;
+
+    }
+   function jingyin(buttonObj){
+    //  voluse
+    //  如果有声音
+    // muted :静音
+     if(aaa.muted) {
+      //  1.让声音打开
+      aaa.muted=false;
+      buttonObj.innerHTML="静音"
+      //  2.让文字显示"静音"
+       }
+       else{
+        //  1.让声音停止
+        aaa.muted = true;
+        //  2.让文字显示"打开声音"
+        buttonObj.innerHTML= "打开声音"
+     }
+      // 如果有声音
+   }
+    function jiasu(){
+      // console.log("我是加速");
+
+        aaa.playbackRate = 3;
+    }
+
+
+    function jiansu(){
+       aaa.playbackRate=1/3;
+  }
+
+    function zhengchang(){
+         aaa.playbackRate=1;
+}
+    function tigaoyinliang(){
+          aaa.volume+=.2;
+}
+    function jiandiyinliang(){
+        aaa.volume -= .2;
+}
+
+
+</script>
+
+</body>
+</html>

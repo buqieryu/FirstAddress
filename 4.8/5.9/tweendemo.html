@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#wrap{
+				width: 100px;
+				height: 100px;
+				position: absolute;
+				left: 100px;
+				top: 100px;
+				background-color: lightsalmon;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			我是wrap
+		</div>
+	</body>
+	<script type="text/javascript"  src = "Tween.js">
+
+	</script>
+	<script type="text/javascript">
+//		var tween
+		var wrap = document.getElementById("wrap");
+//		var b = 100;
+//		var c = 150;
+//		var d = 1000;
+//		var t = 0;
+//		var once = 50;
+////		Math.ceil()向上取整-->
+//		function myFunction(){
+//		wrap.style.left = Math.ceil(Tween.Cubic.easeOut(t , b , c , d)) + "px";
+//		if(t < d){
+//			t = t + once;
+//			setTimeout(myFunction , 10);
+//			}
+//		}
+//		myFunction();
+//		起始位置  position start
+//		终点      tween.to
+//		持续时间  1000
+		var myPosition = {x:100 , y:0};
+
+		var tween = new TWEEN.Tween(myPosition);
+//		tween 有动画  有动画对象
+//		有动画：有动画的 属性和方法
+//		有动画的对象 ： 有myPosition
+		tween.to({x:400 , y:0},1000);
+//		重复次数
+		tween.repeat(Infinity);
+//		悠悠球效果 必须有repeat的支持
+		tween.yoyo(true);
+//		延迟执行
+//		tween.delay(1000);
+		tween.easing(TWEEN.Easing.Bounce.InOut);
+////		更新数值
+//		upDate();
+////		函数的更新回调
+//		onUpdate();
+//		只要x值发生变化，就会触发onUpdate()这个方法
+//		onUpdate叫做TWEEN动画库中的更新回调
+		tween.onUpdate(beginChangeWrap);
+		tween.start();
+
+		function beginChangeWrap(){
+			wrap.style.left = myPosition.x + "px";
+			wrap.style.top = myPosition.y + "px";
+		}
+		animate();
+		function animate(){
+			requestAnimationFrame(animate);
+			TWEEN.update();
+
+		}
+
+
+
+	</script>
+</html>

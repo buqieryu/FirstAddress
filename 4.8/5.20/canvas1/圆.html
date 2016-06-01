@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<title></title>
+		<style type="text/css">
+			#canvas1 {
+				/*background-color: red;*/
+				box-shadow: 3px 3px 10px black;
+			}
+		</style>
+	</head>
+
+	<body>
+		<canvas id="canvas1" width="500" height="500">
+			<!--你的浏览器当前不支持canvas-->
+		</canvas>
+	</body>
+	<script type="text/javascript">
+			var canvas = document.getElementById("canvas1");
+			var context = canvas.getContext("2d");
+			context.shadowOffsetX = 2;
+			context.shadowOffsetY = 2;
+			context.shadowColor = "yellow";
+			context.shadowBlur = 50;
+			
+			context.arc(250,250,100,0,Math.PI*2,true);
+			context.fillStyle = "blue";
+			context.fill();
+			context.lineWidth = 3;
+			context.strokeStyle = "red";
+			
+	
+
+			context.stroke();
+			
+		
+	
+	</script>
+
+</html>

@@ -1,0 +1,153 @@
+html{overflow: auto;}
+
+.join_wrap{
+
+	width: 80%;
+
+	margin: 0 auto;
+
+	color: black;
+
+	min-width: 300px;
+
+}
+
+.join_logo{
+
+	width: 80%;
+
+	margin: 0 auto;
+
+	min-width: 300px;
+
+}
+
+.join_logo img{
+
+	width: 100%;
+
+}
+
+.join_wrap h3{
+
+	margin: 20px 0;
+
+	/*font-size: 1.5em;*/
+
+}
+
+.join_wrap p{
+
+	line-height: 1.3em;
+
+}
+
+.join_title{
+
+	font-size: 0.9em;
+
+}
+
+.join_content{
+
+	font-size: 0.8em;
+
+	font-family:STSong,"宋体";
+
+	margin-bottom: 20px;
+
+}
+
+.last{
+
+	font-size: 0.8em;
+
+}
+
+.join_wrap p:last-child{
+
+	margin: 10px 0 20px 0;
+
+}
+
+
+
+/*内页*/
+
+.work_wrap{
+
+	width: 100%;
+
+	margin: 0 auto;
+
+}
+
+.work_wrap iframe{
+
+	width: 94%;
+
+	margin:0 3% 20px 3%;
+
+	box-shadow: 0px 0px 30px rgba(0,0,0,0.2);
+
+	z-index: -1;
+
+}
+
+.work_wrap a{
+
+	/*text-decoration: none;*/
+
+	margin:0 auto;
+
+	font-size: 0.8em;
+
+	color: #797979;
+
+}
+
+.details{
+
+	width: 70%;
+
+	margin: 0 auto;
+
+	min-width: 300px;
+
+	color: #797979;
+
+	text-align: center;
+
+}
+
+.details img{
+
+	margin-bottom: 20px;
+
+}
+
+.details_title{
+
+	margin: 20px 0;
+
+	text-align: center;
+
+}
+
+.details p{
+
+	margin-bottom: 20px;
+
+	line-height: 1.5em;
+
+	font-size: 0.9em;
+
+	font-family:STSong,"宋体";
+
+}
+
+.details h3{
+
+	margin: 40px 0 10px 0;
+
+}

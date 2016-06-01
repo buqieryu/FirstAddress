@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		*{margin: 0;
+			padding: 0;		
+			}
+		html, body,.wrap{
+			height: 100%;
+		}
+		.wrap{
+			/*开启弹性盒子
+			让子元素可以弹性的自适应布局*/
+			display: -webkit-box;
+			/*弹性盒子中默认子元素的排列方式是横向的，
+			horizon
+			veritcal*/
+			-webkit-box-align:start;
+			/*翻转子元素的排列顺序*/
+			-webkit-box-direction:reverse;
+		}
+			.son1{
+			background-color: yellow;
+			-webkit-box-flex: 1;
+			}
+			.son2{
+				-webkit-box-flex: 2;
+				background-color: hotpink;
+			}
+			.son3{-webkit-box-flex: 2;
+				background-color: deepskyblue;}
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="son1">我是孩子1</div>
+			<div class="son2">我是孩子2</div>
+			<div class="son3">我是孩子3</div>
+		</div>
+	</body>
+</html>

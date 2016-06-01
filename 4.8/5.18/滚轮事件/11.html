@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<style type="text/css">
+			#wrap {
+				width: 100px;
+				height: 100px;
+				background-color: #7FFFD4;
+				overflow: scroll;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="wrap">
+			呵呵哈哈哈 哈哈哈哈哈哈哈哈哈哈哈
+				呵呵哈哈哈 哈哈哈哈哈哈哈哈哈哈哈
+					呵呵哈哈哈 哈哈哈哈哈哈哈哈哈哈哈
+						呵呵哈哈哈 哈哈哈哈哈哈哈哈哈哈哈
+							呵呵哈哈哈 哈哈哈哈哈哈哈哈哈哈哈
+								呵呵哈哈哈 哈哈哈哈哈哈哈哈哈哈哈
+									呵呵哈哈哈 哈哈哈哈哈哈哈哈哈哈哈
+										呵呵哈哈哈 哈哈哈哈哈哈哈哈哈哈哈
+											呵呵哈哈哈 哈哈哈哈哈哈哈哈哈哈哈
+												呵呵哈哈哈 哈哈哈哈哈哈哈哈哈哈哈
+
+		</div>
+	</body>
+	<script type="text/javascript">
+		//		给元素添加额外事件
+		//		extend：mousewheel
+		$.fn.extend({
+			mousewheel: function(myFn) {
+				if (window.navigator.userAgent.indexOf("Firefox")  !=-1) {
+					//					火狐浏览器
+					$(this).get(0).addEventListener("DOMMouseWheel", fnWheel, false);
+				} else {
+					//					非火狐
+					//					this是你的jQuery
+					//					而不是滚轮事件
+					//					因为你的滚轮事件根本就不存在
+					//					（你现在正在做滚轮事件，，，）
+					$(this).get(0).onmousewheel = fnWheel;
+				}
+				var up = true;
+				function fnWheel(event) {
+					if (event.wheelDelta){
+						up = event.wheelDelta > 0;
+					} else {
+						up = event.wheelDelta < 0;
+					}
+					myFn.call($(this), event, up);
+					event.preventDefault();
+					return false;
+				}
+			}
+		});
+	</script>
+	<script type="text/javascript">
+		//		实现已经添加的额外事件
+//		var xxx = function() {};
+		$("#wrap").mousewheel(function(event,up) {
+			if(up){
+				alert("shang");
+			}else{
+				alert("xia");
+			}
+		});
+		
+	</script>
+
+	<!--<script type="text/javascript">
+		$(function($){
+			$("#wrap").on("mousewheel",function(){
+				alert("asdfgh")
+			});
+		});-->
+	<script type="text/javascript">
+		//实现已经添加上的额外事件
+		$("#wrap").mousewheel(function(event , up) {
+			if(up) {
+				//alert("shang");
+				$(this).css({
+					width:$(this).width() - 10,
+					height:$(this).height() - 10,
+				})
+			} else {
+				//alert("xia");
+				$(this).css({
+					width:$(this).width() + 10,
+					height:$(this).height() + 10,
+				})
+			}
+		});
+</script>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+		
+		
+			#myDiv{
+				width: 100px;
+				height: 100px;
+				background-color: #CCC;
+				border: 1px solid red;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="myDiv">
+		</div>
+	</body>
+			<!--只要鼠标有移动
+			onmousemove 事件就会一直监听-->
+	<script type="text/javascript">
+		var myDiv = document.getElementById("myDiv");
+		document.onmousemove = function(event){
+//			var x = event.clientX;
+			
+
+		
+			var ev = event || window.event;
+				var x = ev.clientX;
+				var y = ev.clientY;
+			myDiv.style.left = x + "px";
+			myDiv.style.top = y + "px";
+			
+		}
+	</script>
+</html>

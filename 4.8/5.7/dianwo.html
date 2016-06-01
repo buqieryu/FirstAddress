@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<p id="myP">我的一段文字</p>
+		<button onclick="changeColor()">点我</button>
+		<!--var myP=document.getElementById('myP'); myP.style.color='red' 改变字体颜色-->
+		<button onclick="output()">输出</button>
+		<script type="text/javascript">
+			var a=1
+			function changeColor(){
+				var myP=document.getElementById('myP') ; myP.style.color='red' ;
+				if(a % 2 == 0){
+					myP.style.fontSize="40px";
+				}
+				else
+				{
+					myP.style.fontSize="16px";
+				}
+				a++;
+			}
+//			输出方式
+			function output(){
+				var b=0;
+				while(b < 10){
+					var c = b +10;
+
+					document.write("<h1>我是第"+c+"人</h1>")
+					b++;
+					}
+				}
+
+
+
+		</script>
+	</body>
+</html>

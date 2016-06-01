@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<title></title>
+		<style type="text/css">
+			#canvas1 {
+				/*background-color: red;*/
+				box-shadow: 3px 3px 10px black;
+			}
+		</style>
+	</head>
+
+	<body>
+		<canvas id="canvas1" width="500" height="500">
+			<!--你的浏览器当前不支持canvas-->
+		</canvas>
+	</body>
+	<script type="text/javascript">
+			var canvas = document.getElementById("canvas1");
+			var context = canvas.getContext("2d");
+			
+			context.fillStyle = "blue";
+			context.fillRect(0,0,100,100);
+//			擦除原来的内容
+//			context.clearRect(0,0,100,100);
+//			内容的平移
+//			context.translate(150,150);
+////			缩放
+//			context.scale(2,2);
+			context.rotate(Math.PI/4);
+			context.fillStyle = "red";
+			context.fillRect(0,0,100,100);
+			
+
+	
+	</script>
+</html>

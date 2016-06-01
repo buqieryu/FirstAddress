@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>无限循环</title>
+		<style type="text/css">
+			#wrap{
+				width: 740px;
+				height: 410px;
+				position: relative;
+				border: 1px solid red;
+				overflow: hidden;	
+			}
+			#middle{
+				position: absolute;
+				left: 0;
+				top: 0;
+				height: 600px;
+			}
+			#middle img{
+				width: 740px;
+				float: left;
+				height: 410px;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<button id="last">上一页</button>
+		<button id="next">下一页</button>
+		<div id="wrap">
+			<div id="middle">
+			<img src="../4.14/index_files/1-1409161500550-L.jpg" alt="" />
+			<img src="../4.14/index_files/1-140Z62319550-L.jpg" alt="" />
+			<img src="../4.14/index_files/1-140ZF041280-L.jpg" alt="" />
+			<img src="../4.14/index_files/1-1409161500550-L.jpg" alt="" />
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="tween.js">
+		
+	</script>
+	<script type="text/javascript">
+//		当页面记载的时候要执行的方法
+		window.onload = function(){
+			var timer = null;
+//			middle img
+			var middle = document.querySelector("#middle");
+			var imgs = document.querySelectorAll("#middle>img");
+			var lastBtn = document.querySelector("#last");
+			var nextBtn = document.querySelector("#next");
+//			根据图片的数量
+//			计算承载图片的middle得宽度
+				middle.style.width = imgs[0].offsetWidth * imgs.length + "px" ;
+
+//			设置当前屏幕显示的图片
+//			当前屏幕应该显示第二张图片
+//			也就意味着 middle应该向左偏移一张图片的大小
+//			middle.left = -img[0].offsetWidth;
+			middle.style.left = -imgs[0].offsetWidth + "px";
+			
+//			按钮点击，让图片移动
+			function move(){
+//				移动刚开始的left坐标偏移量
+				var start = middle.offsetLeft;
+//				起始位置的偏移量
+//				就是yid最终的偏移量
+				var end = -index * imgs[0].offsetWidth;
+//				要发生改变的距离
+				var change = end - start;
+				var t = 0;
+				var d = 30;
+//				清除定时器的方法
+				clearInterval(timer);
+//				创建一个新的属于自己的定时器
+//				因为timer前没有加var
+//				所以当前变量timer是一个全局变量
+//				永远存在
+				 timer = setInterval(function (){
+					t++;
+					if(t >= d){
+						clearInterval(timer);
+					}
+					middle.style.left = Tween.Linear(t , start , change , d) + "px";
+				} , 30);
+			}
+//			记录当前显示图片的下标
+			var index = 1;
+//				下一页按钮事件
+				nextBtn.onclick = function(){
+					index++;
+					if(index > imgs.length - 1){
+						index = 1;
+						middle.style.left = "0px";
+					}
+					move(); 
+				}
+//				上一页按钮事件
+				lastBtn.onclick = function(){
+					index--;
+					if(index < 0){
+						index = imgs.length - 2;
+						middle.style.left = -(imgs.length - 1) * imgs[0].offsetWidth + "px" ;
+					}
+					move();
+				}
+				
+			}
+	
+		
+		
+		
+		
+		
+	</script>
+</html>

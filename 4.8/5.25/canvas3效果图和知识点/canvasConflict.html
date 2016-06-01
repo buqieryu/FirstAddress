@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#canvas1 {
+				box-shadow: 3px 3px 10px black;
+				/*background-color: deepskyblue;*/
+			}
+		</style>
+	</head>
+
+	<body>
+		<canvas id="canvas1" width="500" height="500"></canvas>
+	</body>
+	<script type="text/javascript">
+		var canvas = document.getElementById("canvas1");
+		var context = canvas.getContext("2d");
+		var img = new Image();
+		img.src = "222.jpg";
+
+		function Ball(x, y, r, color) {
+			this.x = x;
+			this.y = y;
+			this.r = r;
+			this.color = color;
+			var speedX = 13;
+			var speedY = 20;
+			// 移动的方法
+			this.move = function() {
+				this.x += speedX;
+				this.y += speedY;
+				// 边界的判断
+				if ((this.x - this.r) <= -(r - x) || (this.x + this.r) >= canvas.width + (r - x)) {
+					speedX *= -1;
+				}
+				if ((this.y - this.r) <= -(r - y) || (this.y + this.r) >= canvas.height + (r - y)) {
+					speedY *= -1;
+				}
+			}
+			// 绘制的方法
+			this.draw = function() {
+				context.strokeStyle = this.color;
+				context.beginPath();
+				context.arc(this.x, this.y, this.r, 0, 2 * Math.PI);
+				context.closePath();
+				context.stroke();
+			}
+		}
+		// 创建一个小球
+		var ball = new Ball(10, 10, 100, "red");
+		img.onload = function() {
+			context.drawImage(img, 0, 0, canvas.width, canvas.height);
+		}
+		// 循环移动的事件
+		function cycleAnimate() {
+			// 保存当前画布的状态
+			context.save();
+			context.clearRect(0, 0, canvas.width, canvas.height);
+			// 小球开始移动
+			ball.move();
+			// 开始绘制整个过程
+			ball.draw();
+			var animateId = window.requestAnimationFrame(cycleAnimate);
+			context.clip();
+			context.drawImage(img, 0, 0, canvas.width, canvas.height);
+			// 回复之前save()的状态
+			context.restore();
+			// 停止动画
+			// window.cancelAnimationFrame(animateId);
+		} // 循环结束的括号
+		cycleAnimate();
+	</script>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#wrap{
+				height: 100px;
+				width: 100px;
+				background-color: lightgreen;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			我是wrap
+		</div>
+	</body>
+	<script type="text/javascript" src="js/touch.js"></script>
+	
+	<script type="text/javascript">
+		touch.on(document,"touchstart touchmove",function(event){
+//			阻止默认事件
+			event.preventDefault();
+		});
+//		两个距离变量
+		var disX = 0;
+		var disY = 0;
+//		drag 拖拽
+		var x = 0;
+		var y = 0;
+		var wrap = document.getElementById("wrap");
+		touch.on(wrap,"drag",function(event){
+			x = disX + event.x;
+			y = disY + event.y;
+			console.log(x);
+			wrap.style.webkitTransform = "translate3d(" + x + "px," + y + "px,0)";
+		});
+//		拖拽结束事件
+		touch.on(wrap,"dragend",function(event){
+			disX = x;
+			disY = y;	
+		});
+		
+//		手势要想完成平移  旋转  缩放
+//		一般是配合 css 中的transform 属性来完成的	
+		
+		
+		
+		
+	</script>
+		
+		
+		
+		
+		
+	</script>
+</html>

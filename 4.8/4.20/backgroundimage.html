@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+		
+			/*wrap div的样式*/
+			#wrap{
+				width: 100%;
+				height: 600px;
+			/*	background-color: yellow;*/
+				overflow: hidden;
+				position: relative;
+			}
+			/*middle div*/
+			#middle{
+				/*保证承载的图片的DIV有足够的宽度*/
+				width:99999999px;
+				height: 600px;
+				float: left;
+			-webkit-transition: all 2s;
+				position: absolute;
+			}
+			#middle div{
+				float: left;
+				text-align: center;
+			}
+			#middle div:nth-child(1){
+				background-color: greenyellow;
+			}
+			#middle div:nth-child(2){
+				background-color: mediumspringgreen;
+			}
+			#middle div:nth-child(3){
+				background-color: lightblue;
+			}
+			#middle div:nth-child(4){
+				background-color: lightcoral;
+			}
+			#btns{
+				position: fixed;
+				right: 90px;
+				top: 60px;
+			}
+			#btns a{
+				text-decoration: none;
+				background-color: white;
+				margin: 10px;
+				padding: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			<div id="middle">
+				<div><img src="../4.14/index_files/1-140S12233350-L.jpg"/></div>
+				<div><img src="../4.14/index_files/1-1409161500550-L.jpg"/></div>
+				<div><img src="../4.14/1.jpg"/></div>
+				<div><img src="../4.14/index_files/1-140ZF01221342.jpg"/></div>
+			</div>
+			
+		<div id="btns">
+			<a id="last" href="###">&lt;</a>
+			<a id="next" href="###">&gt;</a>
+		</div>
+			
+			
+				
+		</div>
+		
+	</body>
+	<script type="text/javascript">
+	var wrap = document.getElementById("wrap");
+	var middle = document.getElementById("middle");
+	var divs = middle.getElementsByTagName("div");
+	var last = document.getElementById("last");
+	var next = document.getElementById("next");
+	var wrapWidth = wrap.offsetWidth;
+//	遍历
+//为每一个图片div设置宽度
+//宽度 = 整个大包裹的offseWidth
+	for (var i = 0; i < divs.length; i++){
+		divs[i].style.width = wrapWidth + "px"
+	}
+	var index = 0;
+//	按钮的点击事件
+		next.onclick = function (){
+		index++;
+		if(index > divs.length - 1){
+			index = 0;
+		}
+	var a = -index * wrapWidth
+	middle.style.left = a + "px";
+	
+	
+	
+}
+		last.onclick = function(){
+			index--;
+			if (index < 0){
+				index = divs.length - 1;	
+			}
+			var a = -index * wrapWidth;
+			middle.style.left = a + "px";
+		}
+		
+		
+		
+		
+		
+	</script>
+</html>

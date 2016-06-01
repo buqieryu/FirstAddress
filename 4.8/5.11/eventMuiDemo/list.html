@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="css/mui.css"/>
+</head>
+<body>
+    
+    <div class="mui-card">
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell">
+                <a class="mui-navigate-right">
+                    Item 1
+                </a>
+            </li>
+            <li class="mui-table-view-cell">
+                <a class="mui-navigate-right">
+                     Item 2
+                </a>
+            </li>
+            <li class="mui-table-view-cell">
+                <a class="mui-navigate-right">
+                     Item 3
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!--返回事件：
+    一定要有上一层，
+    如果没有上一层，返回事件是不管用的。
+    4种触发方式：
+    1.预加载的hide
+    2.给标签增加类：mui-action-back
+    3.调用mui的back（）的方法
+    		mui.back（）；
+    4.对于安卓系统
+    调用安卓自带的返回按钮-->
+    <!--小型设备的点击事件一般使用tap来触发
+    大型设备/或是浏览器里面的点击事件是用onclick来触发-->
+    <!--吧onclick在小型设备里面会照成一个300ms的延迟-->
+    <button id="btn" class="mui-action-back">返回</button>
+    <script src="js/mui.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+    mui.init({
+    	swipeBack:true,
+////  	关闭安卓手机back按钮的功能
+	keyEventBind:{
+		backbutton:false  //关闭back
+	}
+//	返回事件 back();
+//	返回back()事件需要beforeback给一个true才管用
+//	默认beforeback返回true
+//	beforeback:function(){
+//		console.log('我要返回了');
+//		return true;	
+//	}
+    });
+//  viewWillAppear
+//  viewDidAppear
+//  viewWillDisappear
+//  viewDidDisappear
+// A页面跳转到B页面
+// 1.A viewWillDisappear
+// 2.B viewWillAppear
+// 3.A viewDidDisappear
+// 4.B viewDidAppear
+    </script>
+</body>
+<script type="text/javascript">
+	btn.addEventListener('tap', function(){
+		mui.back();
+	});
+</script>
+</html>

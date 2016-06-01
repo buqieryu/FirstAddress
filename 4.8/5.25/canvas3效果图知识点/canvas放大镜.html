@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			#canvas1{
+					box-shadow: 3px 3px 10px black;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="canvas1" width="400" height="400"></canvas>
+	</body>
+	<script type="text/javascript">
+			var canvas = document.getElementById("canvas1");
+			var context = canvas.getContext("2d");
+//			1.canvas上面画一张图片
+			var myImage = new Image();
+			myImage.src = "img/3.jpg";
+			myImage.onload = function(){
+				context.drawImage(myImage,0,0,canvas.width,canvas.height);
+			}
+			var x = 0, y = 0;
+			var isDown = false;
+			canvas.onmousedown = function(){
+				isDown = true;
+			}
+			canvas.onmousemove = function(event){
+				if(!isDown){
+					return;
+				}
+				context.clearRect(0,0,canvas.width,canvas.height);
+			
+				context.drawImage(myImage,0,0);
+				x = event.clientX;
+				y = event.clientY;
+//				剪切大图的某一部分
+				context.drawImage(myImage,x-50,y-50,100,100,x-100,y-100,200,200)
+			}
+			canvas.onmouseup = function(){
+				isDown = false;
+			}
+	</script>
+</html>

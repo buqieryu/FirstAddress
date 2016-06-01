@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>tween.js强大的可生成平滑动画效果的js库|DEMO8_jQuery之家-自由分享jQuery、html5、css3的插件库</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/default.css"> -->
+	<style>
+		#target {
+			font-size: 13px;
+			padding: 0px 32px;
+		}
+	</style>
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+
+	<!--[if IE]>
+		<script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div class="container">
+		<header class="htmleaf-header">
+			<h1>tween.js强大的可生成平滑动画效果的js库 <span>A Javascript tweening engine</span></h1>
+			<div class="htmleaf-links">
+				<a class="htmleaf-icon icon-home" href="http://www.htmleaf.com/" title="jQuery之家" target="_blank"><span> jQuery之家</span></a>
+				<a class="htmleaf-icon icon-arrow-right3" href="http://www.htmleaf.com/jQuery/Layout-Interface/201501271284.html" title="返回下载页" target="_blank"><span> 返回下载页</span></a>
+			</div>
+			<div class="htmleaf-demo center">
+			  <a href="index.html">hello wrold</a>
+			  <a href="index2.html">bars</a>
+			  <a href="index3.html">colors</a>
+			  <a href="index4.html">graphs</a>
+			  <a href="index5.html">simplest</a>
+			  <a href="index6.html">video</a>
+			  <a href="index7.html">array</a>
+			  <a href="index8.html" class="current">dynamic to</a>
+			  <a href="index9.html">repeat</a>
+			  <a href="index10.html">relative values</a>
+			  <a href="index11.html">yoyo</a>
+			  <a href="index12.html">stop all chained</a>
+			  <a href="index13.html">easing</a>
+			</div>
+		</header>
+		<div id="info" style="position: relative;">
+			<h3>08 _ dynamic to - tweening towards a moving target</h3>
+		</div>
+
+		<div id="target"></div>
+	</div>
+
+	<script src="js/tween.min.js"></script>
+	<script src="js/RequestAnimationFrame.js"></script>
+	<script>
+
+			init();
+			animate();
+
+			function init() {
+
+				var width = 480;
+				var height = 320;
+
+				var target = document.getElementById('target');
+
+				var canvas = document.createElement( 'canvas' );
+				canvas.width = width;
+				canvas.height = height;
+				target.appendChild( canvas );
+
+				var context = canvas.getContext( '2d' );
+
+
+				var rabbit = { x: width - 50, y: 50 };
+
+				new TWEEN.Tween( rabbit ).to( { x: width - 50, y: height - 50 }, 3000 ).onUpdate( function() {
+
+					// draw background
+					context.fillStyle = "rgb(240,250,240)";
+					context.fillRect( 0, 0, width, height );
+
+					// draw rabbit
+					context.fillStyle = "rgb(150,150,150)";
+
+					context.save();
+					context.translate( this.x, this.y );
+
+					context.beginPath();
+					context.moveTo( 0, 0 );
+					context.bezierCurveTo( 15, 0, 15, -40, 5, -30 );
+					context.lineTo( 0, 0 );
+					context.bezierCurveTo( -15, 0, -15, -40, -5, -30 );
+					context.lineTo( 0, 0 );
+					context.fill();
+
+					context.beginPath();
+					context.arc( 0, 0, 15, 0, Math.PI * 2, true );
+					context.fill();
+
+					context.restore();
+
+				} ).start();
+
+
+				var fox = { x: 50, y: 50 };
+
+				new TWEEN.Tween( fox ).to( rabbit, 3000 ).onUpdate( function() {
+
+					// draw fox
+					context.fillStyle = "rgb(200,80,80)";
+
+					context.save();
+					context.translate( this.x, this.y - 13 );
+					context.scale( 1.2, 1.2 );
+
+					context.beginPath();
+					context.moveTo( 4, 24 );
+					context.lineTo( 8, 16 );
+					context.lineTo( 14, 10 );
+					context.lineTo( 15, 0 );
+					context.lineTo( 9, -10 );
+					context.lineTo( 2, 0 );
+					context.lineTo( -2, 0 );
+					context.lineTo( -9, -10 );
+					context.lineTo( -15, 0 );
+					context.lineTo( -14, 10 );
+					context.lineTo( -8, 16 );
+					context.lineTo( -4, 24 );
+					context.closePath();
+					context.fill();
+
+					context.restore();
+
+				} ).start();
+
+			}
+
+			function animate( time ) {
+
+				requestAnimationFrame( animate );
+
+				TWEEN.update( time );
+
+			}
+
+			animate();
+		</script>
+</body>
+</html>

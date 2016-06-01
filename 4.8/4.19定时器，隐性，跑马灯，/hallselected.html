@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="allselected">全选</button>
+		<button id="allcanceselected">全不选</button>
+		<button id="reverseselectd">反选</button>
+		<br>
+			<input type="checkbox" value="第一个" />第一个<br>
+			<input type="checkbox" value="第二个" />第二个<br>
+			<input type="checkbox" value="第三个" />第三个<br>
+			<input type="checkbox" value="第四个" />第四个<br>
+			<input type="checkbox" value="第五个" />第五个<br>
+			<input type="checkbox" value="第六个" />第六个<br>
+			<input type="checkbox" value="第七个" />第七个<br>
+			<input type="checkbox" value="第八个" />第八个<br><br><br>
+				
+			<input type="checkbox" value="music" />音乐<br>
+			<input type="checkbox" value="music" />音乐<br>
+			<input type="checkbox" value="music" />音乐<br>
+			<input type="checkbox" value="music" />音乐<br>
+			<input type="checkbox" value="music" />音乐<br>
+			<input type="checkbox" value="music" />音乐<br>
+			<input type="checkbox" value="music" />音乐<br>
+			<input type="checkbox" value="music" />音乐<br><br><br>
+				
+				
+				<script type="text/javascript">
+					var allbtn = document.getElementById("allselected");
+					var cancelbtn = document.getElementById("allcanceselected");
+					var reversebtn = document.getElementById("reverseselectd");
+//					DOM Document Object Model
+					
+//					获取全部复选框
+					var allCheckbox = document.getElementsByTagName("input");
+//					alert(allcheckbox.constructor);
+					
+//					全选
+						allbtn.onclick = function (){
+					for (var i = 0; i < allCheckbox.length; i++)
+					if (allCheckbox[i].value == "music" &&  allCheckbox[i].type == "checkbox"){
+					
+					allCheckbox[i].checked = true;
+						}
+					}
+//					全不选
+					cancelbtn.onclick = function (){
+						for (var i = 0; i < allCheckbox.length; i++)
+					allCheckbox[i].checked = false;
+						
+					}
+//					反选
+					reversebtn.onclick = function(){
+					for (var i = 0; i < allCheckbox.length; i++) {
+					if (allCheckbox[i].checked == false) {
+						allCheckbox[i].checked = true;
+					} else{
+						allCheckbox[i].checked = false;
+						}
+					}
+				}
+					
+					
+					
+					
+					
+				</script>
+	</body>
+</html>

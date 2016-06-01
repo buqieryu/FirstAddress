@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+
+	<body>
+
+	</body>
+	<!--把一段具有某些特定功能的代码封装到一块
+	并且把这个封装起一个唯一的名字-->
+
+	<!--js里面的函数不仅叫函数
+	又叫函数对象-->
+	<!--有参函数  无参函数
+		有返回值函数  无返回值函数
+		方法 == 函数-->
+	<script type="text/javascript">
+//				关键词 函数名 （参数列表）{方法执行体}
+//				function addTwoNumber (a , b){
+//					return = a + b;
+//				}
+//				根据年月日  求出这一天是这一年当中的第几天
+				function dayForAllYear(year, month, day){
+					var nowDays = null;
+					//		闰年的判断
+					//		是4的整数倍并且不是100的整数倍
+					//		或是400的整数倍
+					var isRunNian = false;
+					if ((year % 4 == 0 && year % 100 != 0) || (year % 100 == 0)) {
+						isRunNian = true;
+					} else {
+						isRunNian = false;
+					}
+					nowDays = (month - 1) * 31 + day;
+					switch (month) {
+						case 3:
+						case 4:
+							nowDays -= 3;
+						break;
+						case 5:
+						case 6:
+							nowDays = nowDays - 3 - 1;
+							break;
+						case 7:
+						case 8:
+						case 9:
+							nowDays = nowDays - 3 - 1 - 1;
+							break;
+						case 10:
+						case 11:
+							nowDays = nowDays - 3 - 1 - 1 - 1;
+							break;
+						case 12:
+							nowDays = nowDays - 3 - 1 - 1 - 1 - 1;
+							break;
+						default:
+							break;
+					}
+					if(isRunNian && month > 2){
+						nowDays++;
+					}
+								return nowDays;
+					}
+					var days = dayForAllYear(1990 , 6 , 8)
+					console.log(days);
+		//			求n得阶乘
+		//			function nnn(n){
+		////				sum用来存放乘积
+		//				var sum = 1;
+		////				i  用来控制乘法的次数
+		//				var i = 1;
+		//				while(i <= n){
+		//					sum = sum * i;
+		//					i++;
+		//				}
+		//				return sum;
+		//			}
+		//			var result= nnn(4);
+		//			console.log(result);
+		//			求三个数的中间值		
+		//			function midValue(a, b, c){
+		//				var max = a>b?(a>c?a:c):(b>c?b:c);
+		//				var min =a<b?(a<c?a:c):(b<c?b:c);
+		//				var sum = a+b+c;
+		//				return middle=sum - max - min; 
+		//			}
+		//			console.log(midValue(5,6,7));
+		//	每一个产品是在每一年的1.1 开始做的
+		//	1991 5 14 发布了一个新的产品
+		//	1992 6 12 发布了另一个产品
+		//	1993 3 23 发布了一个产品
+		function minValue(a, b, c) {
+			return a < b ? (a < c ? a : c) : (b < c ? b : c);
+		}
+		var obj1 = {};
+		var obj2 = {};
+		var obj3 = {};
+		var first = dayForAllYear(1991, 5, 14);
+		obj1.year = 1991;
+		obj1.days = first;
+		var second = dayForAllYear(1992, 6, 12);
+		obj2.year = 1992;
+		obj2.days = second;
+		var third = dayForAllYear(1993, 3, 23);
+		obj3.year = 1993;
+		obj3.days = third;
+		//	求天数  返回年号
+		function tianToYear(first, second, third) {
+			var min = minValue(first.days, second.days, third.days);
+			var objs = [first, second, third];
+			for (var i = 0; i < objs.length; i++) {
+				if (objs[i].days == min) {
+					return objs[i].year;
+					break;
+				}
+			}
+			return;
+		}
+		var zuiDuanDe = tianToYear(obj1, obj2, obj3);
+		console.log(zuiDuanDe);
+	</script>
+
+</html>

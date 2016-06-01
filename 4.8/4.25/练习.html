@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>无限循环</title>
+	</head>
+	<style type="text/css">
+		#wrap{
+			width: 740px;
+			height: 410px;
+			position: relative;
+			border: 1px solid red;
+			overflow: hidden;
+		}
+		#middle{
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		#middle img{
+			width: 740px;
+			height: 410px;
+			float: left;
+		}
+		
+	</style>
+	<body>
+		<button id="last">上一页</button>
+		<button id="next">下一页</button>
+		<div id="wrap">
+			<div id="middle">
+				<img src="../4.14/index_files/1-141213202J80-L.jpg" alt="" />
+				<img src="../4.14/index_files/1-14121Z251240-L.jpg" alt="" />
+				<img src="../4.14/index_files/1-1602291952390-L.jpg" alt="" />
+				<img src="../4.14/index_files/1-141213202J80-L.jpg" alt="" />
+			</div>
+		</div>
+		<script type="text/javascript">
+			window.onload = function(){
+				var timer = null;
+				var middle = document.querySelector("#middle");
+				var imgs = document.querySelectorAll("#middle>img");
+				var lastBtn = document.querySelector("#last");
+				var nextBtn = document.querySelector("#next");
+//				设置图片的数量
+//				计算承载图片的middle的宽度
+//				
+				middle.style.width = imgs[0].offsetWidth * imgs.length + "px";
+				
+				设置当前屏幕显示的图片
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

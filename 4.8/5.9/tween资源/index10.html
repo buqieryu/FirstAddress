@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>tween.js强大的可生成平滑动画效果的js库|DEMO10_jQuery之家-自由分享jQuery、html5、css3的插件库</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/default.css">
+	<style type="text/css">
+		.box {
+			width: 100px;
+			height: 100px;
+			margin: 10px;
+			padding: 10px;
+			display: inline-block;
+			float: left;
+		}
+		#target1 {
+			background: #fcc;
+		}
+	</style>
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+
+	<!--[if IE]>
+		<script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div class="container">
+		<header class="htmleaf-header">
+			<h1>tween.js强大的可生成平滑动画效果的js库 <span>A Javascript tweening engine</span></h1>
+			<div class="htmleaf-links">
+				<a class="htmleaf-icon icon-home" href="http://www.htmleaf.com/" title="jQuery之家" target="_blank"><span> jQuery之家</span></a>
+				<a class="htmleaf-icon icon-arrow-right3" href="http://www.htmleaf.com/jQuery/Layout-Interface/201501271284.html" title="返回下载页" target="_blank"><span> 返回下载页</span></a>
+			</div>
+			<div class="htmleaf-demo center">
+			  <a href="index.html">hello wrold</a>
+			  <a href="index2.html">bars</a>
+			  <a href="index3.html">colors</a>
+			  <a href="index4.html">graphs</a>
+			  <a href="index5.html">simplest</a>
+			  <a href="index6.html">video</a>
+			  <a href="index7.html">array</a>
+			  <a href="index8.html">dynamic to</a>
+			  <a href="index9.html">repeat</a>
+			  <a href="index10.html" class="current">relative values</a>
+			  <a href="index11.html">yoyo</a>
+			  <a href="index12.html">stop all chained</a>
+			  <a href="index13.html">easing</a>
+			</div>
+		</header>
+		<div id="info">
+			<h3>10 _ relative values - Tweening to relative values, with repeat.</h3>
+		</div>
+		<div style="position: absolute; left: 400px; ">
+			<div id="target1" style="position: absolute;" data-top="150" class="box">
+			</div>
+		</div>
+	</div>
+
+	<script src="js/tween.min.js"></script>
+	<script src="js/RequestAnimationFrame.js"></script>
+	<script>
+		window.onload = function() {
+				init();
+				animate();
+			}
+
+			function init() {
+				var target1 = document.getElementById( 'target1' ),
+					tween1 = new TWEEN.Tween( target1.dataset )
+						.to( { top: "+20", left: "-20" }, 1000 )
+						.repeat( 5 )
+						.delay( 500 )
+						.easing( TWEEN.Easing.Exponential.In )
+						.onUpdate( function() {
+							updateBox( target1, this );
+						})
+						.start();
+
+					updateBox( target1, target1.dataset );
+			}
+
+			function animate( time ) {
+
+				requestAnimationFrame( animate );
+
+				TWEEN.update( time );
+
+			}
+
+			function updateBox( box, params ) {
+				var field,
+					s = box.style;
+				for (field in params) {
+					s[field] = params[field] + "px";
+				}
+			}
+		</script>
+</body>
+</html>

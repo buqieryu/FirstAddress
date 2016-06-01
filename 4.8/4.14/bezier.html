@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="animate.css">
+		
+		<style type="text/css">
+		
+			
+			.first{
+				width: 300px;
+				height: 200px;
+				background-color: brown;
+				border: 1px dashed red;
+				-webkit-animation-iteration-count:infinite ;
+				-webkit-transition: 4s cubic-bezier(0.5,0.5,1,1);
+				
+			}
+			.first:hover{
+				/*margin-left: 700px;
+				*/
+				
+			}
+			.container{
+		list-style:none;
+		display: flex;
+		
+		/*flex-direction:row;
+		flex-wrap: wrap;*/
+		/*flex-flow: row wrap;*/
+	}
+	img{
+		width: 200px;
+		height: 200px;
+	}
+	/*B把一个普通的容器 按照弹性盒子来显示
+	display:flex*/
+		li:last-child{
+		order: -1;
+	}
+	/*flex-basis:auto
+	 flex-grow:没有负数，默认为1  
+	 
+	 flex-shrink*/
+			/*可变容器内部的小元素
+			也可以做一些弹性布局
+			来占据父级容器的空白部分*/
+			ul{
+				width:700px;
+				background-color: #008000;
+				/*1. 父容器的宽度<内容宽度
+				2. 让内容：flex：auto；
+				3. 让父容器，把超出的范围拉回来*/
+				display: flex;
+				flex-wrap:wrap;
+				}
+				
+				li{
+					flex:auto
+				}
+			li:nth-child(1){
+				/*flex-shrink:1;
+				flex-basis: auto;*/
+				}
+			li:nth-child(2){
+				/*flex-shrink:2;
+				flex-basis: auto;*/
+				}
+			li:nth-child(3){
+				/*flex-shrink:3;
+				flex-basis: auto;*/
+				}
+			li:nth-child(4){
+				/*flex-shrink:4;
+				flex-basis: auto;*/
+				}
+		</style>
+	</head>
+	<body>
+		<div class="first animated  bounce" >
+			div
+		</div>
+		
+		<ul class="container">
+			
+	
+		
+			<li><img src="1.jpg" alt="" /></li>
+			<li><img src="2.jpg" alt="" /></li>
+			<li><img src="3.jpg" alt="" /></li>
+			<li><img src="4.jpg" alt="" /></li>
+		</ul>
+		
+			
+		
+	</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			#canvas1{
+				box-shadow: 3px 3px 10px black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="canvas1" width="500" height="500"></canvas>
+	</body>
+	
+	<script type="text/javascript">
+		var canvas = document.getElementById("canvas1");
+		var context = canvas.getContext("2d");
+		
+		var myImage = new Image();
+		myImage.src = "222.jpg";
+		
+		// 准备一个路径
+//		context.beginPath();
+//		context.moveTo(100 , 100);
+//		context.lineTo(200 , 100);
+//		context.lineTo(200 , 200);
+//		context.lineTo(100 , 200);
+		context.arc(300 , 300 , 200 , 0 , 2 * Math.PI);
+		context.closePath();
+		context.strokeStyle = "red";
+		context.stroke();
+		
+		myImage.onload = function () {
+			context.drawImage(myImage , 0 , 0 , canvas.width , canvas.height);
+		}
+		
+		// 剪切
+		context.clip();
+		
+	</script>
+</html>

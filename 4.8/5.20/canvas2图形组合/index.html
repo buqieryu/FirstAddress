@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#canvas1{
+				
+				box-shadow:  0 0 50px red;
+			}
+		</style>
+	</head>
+	<body>
+	<canvas id="canvas1" width="500" height="500">
+			你的浏览器当前不支持canvas,请升级更高版本...
+		</canvas>
+	</body>
+	
+	<script type="text/javascript">
+		var canvas = document.getElementById("canvas1");
+		 var context = canvas.getContext("2d");
+//		 画两个圆
+		
+		context.fillStyle = "red";
+		context.beginPath();
+		context.arc(200,250,100,0,Math.PI*2);
+		context.closePath();
+		context.fill();
+//		设置两个圆的组合
+		context.globalCompositeOperation = "lighter";
+		context.fillStyle = "blue";
+		context.beginPath();
+		context.arc(300,250,100,0,Math.PI*2);
+		context.closePath();
+		context.fill();
+//		 context.globalCompositeOperation = "";
+		context.globalCompositeOperation = "lighter";
+		 context.fillStyle = "black";
+		context.beginPath();
+		context.arc(250,320,100,0,Math.PI*2);
+		context.closePath();
+		context.fill();
+		 
+		 
+		 
+	</script>
+	
+	
+</html>

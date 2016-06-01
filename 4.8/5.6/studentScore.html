@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+	</body>
+	<script type="text/javascript">
+		//		服务器上的数据
+		//		属性名都是有""
+		//		var a = {"x":1 , y:2}
+//	   服务器上的数据 都是有""
+		
+		var str = '[{"name":"张三" , "score":73} , {"name":"蛋蛋" , "score":72} , {"name":"完蛋" , "score":63} , {"name":"扯蛋" , "score":54} , {"name":"二蛋" , "score":23}]';
+		
+		
+//		console.log(students.length);
+//		求最小的分数
+		function minScore1 (allStudent) {
+			var minScore = allStudent[0].score;
+			
+			for (var i = 0 ; i < allStudent.length; i++) {
+				if(allStudent[i].score <= minScore){
+					minScore = allStudent[i].score;
+				}
+			}
+			return minScore;
+			
+			
+		}
+		
+//		拿着minFen看下是哪个学生的
+		function returnNameByFen (allStudent , zuixiaoFen) {
+			for (var i = 0 ; i < allStudent.length ; i++) {
+				if (allStudent[i].score == zuixiaoFen) {
+					return allStudent[i];
+					break;
+				}
+			}
+		}
+		function printMinStudentName (str ,result) {
+			var students = JSON.parse(str);
+			var zuixiaoFen = minScore1(students);
+			var minStudent = returnNameByFen(students , zuixiaoFen);
+			if(result == "fen") {
+				console.log(minStudent.score);
+			}
+			if(result == "name"){
+			console.log(minStudent.name);
+			}
+		}
+		printMinStudentName(str , "name");
+	</script>
+
+</html>

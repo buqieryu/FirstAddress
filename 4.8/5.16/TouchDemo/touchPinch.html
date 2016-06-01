@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#wrap {
+				width: 100px;
+				height: 100px;
+				background-color: burlywood;
+				position: absolute;
+				top: 100px;
+				left: 100px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="wrap">
+			代售点和预警和苦海了
+		</div>
+		<!--pinch 捏合-->
+	</body>
+	<script type="text/javascript" src="js/touch.js"></script>
+	<script type="text/javascript">
+		//		捏合事件的添加
+		//		捏合事件和rotate事件
+		//		几乎是一模一样
+		//		都能触发event事件的scale属性
+		//		唯一一点不同的地方在于
+		//		scale 的结束点在：fingerStatus == "end"
+		//		pinch 的结束点在：pinchend事件中（和drag一样）
+		//		swipe事件
+		//		清扫事件的触发方式：
+		//		不是on（xx，"swipe",function）;
+		//		是	on(xx,"swipeup",function);
+		//		等...
+		//	var wrap = document.getElementById("wrap");
+		//		var angle = 0;
+		//		touch.on(wrap,"pinch",function(event){
+		//			var deg = angle + event.rotation
+		////			wrap.innerHTML = deg;
+		////		如果触摸事件end了
+		//		if(event.fingerStatus == "end"){
+		//				angle = deg;
+		//				
+		//			}
+		//			wrap.style.webkitTransform = "rotate(" + deg + "deg)";
+		//		});
+		var scalestart = 0;
+		var myscale = 0;
+		touch.on("#wrap", "pinch", function(event) {
+			myscale = scalestart + event.scale;
+			if (myscale >= 2) {
+				myscale = 2;
+			} else if(myscale < 0.5){
+				myscale = 0.5;
+			};
+			wrap.style.webkitTransform = "scale(" + myscale + ")";
+		});
+		touch.on("#wrap", "pinchend", function(event) {
+			scalestart = myscale;
+		});
+	</script>
+
+</html>

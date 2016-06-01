@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				box-sizing: border-box;
+			}
+			#big{
+				width: 400px;
+				height: 400px;
+				border: 1px solid black;
+			}
+			#small{
+				width: 100px;
+				height: 400px;
+				position: relative;
+				overflow: hidden;
+				float: left;
+			}
+			#small div{
+				width: 100px;
+				height: 100px;
+				border: 1px solid red;
+				text-align: center;
+				line-height: 100px;
+				font-size: 28px;
+				
+			}
+			#small #arrow{
+				opacity: .5;
+				border: none;
+				width: 50px;
+				height: 50px;
+				background-color: black;
+				position: absolute;
+				top: 25px;
+				left: 75px;
+				-webkit-transform: rotate(45deg);
+				-webkit-transition: all .8s;
+			}
+			#abcd{
+				width: 290px;
+				height: 400px;
+				float: right;
+				text-align: center;
+				line-height: 100px;
+				font-size: 25px;
+			}
+			.active{
+				background-color: green;
+				color: white;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="big">
+			<div id="small">
+				<div class="active">剑圣</div>
+				<div>蛮王</div>
+				<div>德邦</div>
+				<div>盖伦</div>
+				<div id="arrow"></div>
+			</div>
+			<div id="abcd"><p id="myP">你的剑就是我的剑!</p></div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var small = document.getElementById("small");
+		var divs = small.getElementsByTagName("div");
+		var arrow = document.getElementById("arrow");
+		var abcd =document.getElementById("abcd");
+		var p = document.getElementById("myP");
+		var myArray = ["你的剑就是我的剑!" , "我的大刀早已饥渴难耐啦!" , "犯我德邦者,虽远必诛!" , "人在塔在!"];
+		
+		for (var i = 0; i < divs.length - 1; i++) {
+			divs[i].onclick = function() {
+				for (var j = 0; j < myArray.length; j++) {
+					if (this == divs[j]) {
+						divs[j].className = "active";
+						p.innerHTML = myArray[j];
+						arrow.style.top = j * 100 + 25 + "px";	
+					} else {
+						divs[j].className = "";
+					}
+				}
+			}
+		}
+	</script>
+	
+	
+	
+	
+	
+	
+</html>

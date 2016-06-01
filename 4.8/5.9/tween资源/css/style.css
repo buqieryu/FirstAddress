@@ -1,0 +1,31 @@
+	/*#info {
+		position: relative;
+		top: 0;
+		left: 0;
+		padding: 0.5rem 0.5rem; 
+	}
+
+		#info h1 {
+			font-size: 3em; 
+			color: #333; 
+			margin-top: 0;
+			letter-spacing: -0.05em; 
+		}
+
+		#info h2 {
+			font-size: 2.5em;
+			text-transform: uppercase;
+			color: #666;
+			margin-top: 0; 
+		}
+
+		#info p {
+			font-size: 2em;
+			line-height: 1em;
+			color: #aaa;
+			max-width: 10em;
+
+		}*/
+
+#info{width: 100%;}
+#info h3{text-align: center;}

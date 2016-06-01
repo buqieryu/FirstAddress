@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>灰太狼</title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			#wrap{
+				width: 300px;
+				height: 400px;
+				border: 1px solid red;
+				position: absolute;
+				left: 100px;
+				top: 100px;
+				overflow: hidden;
+				font-size: 1.5em;
+			}
+			#middle{
+				padding-right:20px;
+				position: absolute;
+			}
+			#sliderWrap{
+				position: absolute;
+				right: 0;top: 0;
+				width: 20px;
+				height: 100%;
+				background-color: #ccc;
+			}
+			#slider{
+				position: absolute;
+				height: 50px;
+				width: 100%;
+				background-color: red;
+				border-radius: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			<div id="middle">
+					start 我是午夜DJ,我是午夜DJ,我是午夜DJ,我是午夜DJ,我是午夜DJ, 我是午夜DJ,我是午夜DJ,我是午夜DJ,我是午夜DJ,我是午夜DJ, 我是午夜DJ,我是午夜DJ,我是午夜DJ,我是午夜DJ,我是午夜DJ, 我是午夜DJ,我是午夜DJ,我是午夜DJ,我是午夜DJ,我是午夜DJ, 我是午夜DJ,我是午夜DJ,我是午夜DJ,我是午夜DJ,我是午夜DJ, 我是午夜DJ,我是午夜DJ,我是午夜DJ,我是午夜DJ,我是午夜DJ, 我是午夜DJ,我是午夜DJ,我是午夜DJ,我是午夜DJ,我是午夜DJ,
+				我是午夜DJ,我是午夜DJ,我是午夜DJ,我是午夜DJ,我是午夜DJ, 我是午夜DJ,我是午夜DJ,	start 我是午夜DJ,我是午夜DJ,我是午夜DJ,我是午夜DJ,我是午夜DJ, 我是午夜DJ,我是午夜DJ,我是午夜DJ,我是午夜DJ,我是午夜DJ, 我是午夜DJ,我是午夜DJ,我是午夜DJ,我是午夜DJ,我是午夜DJ, 我是午夜DJ,我是午夜DJ,我是午夜DJ,我是午夜DJ,我是午夜DJ, 我是午夜DJ,我是午夜DJ,我是午夜DJ,我是午夜DJ,我是午夜DJ, 我是午夜DJ,我是午夜DJ,我是午夜DJ,我是午夜DJ,我是午夜DJ, 我是午夜DJ,我是午夜DJ,我是午夜DJ,我是午夜DJ,我是午夜DJ,
+				我是午夜DJ,我是午夜DJ,我是午夜DJ,我是午夜DJ,我是午夜DJ, 我是午夜DJ,我是午夜DJ end
+			</div>
+			<div id="sliderWrap">
+				<div id="slider">
+				</div>
+			</div>	
+		</div>
+	</body>
+	<script type="text/javascript">
+		function wheel(obj , fn){
+			var a = window.navigator.userAgent.indexOf("Firefox");
+			if (a != -1){
+				obj.addEventListener("doMMouseScroll", gunlunFunction,false);
+			}else{
+				obj.onmousewheel = gunlunFunction; 
+			}
+			function gunlunFunction(event){
+				var down = false;
+				if(event.detail){
+					down = event.detail > 0;
+				}else{
+					down = event.wheelDelta < 0;
+				}
+				fn.apply(obj , [event , down]);
+				return false;
+			}
+		}
+	</script>
+	<script type="text/javascript">
+		var wrap = document.querySelector("#wrap");
+		var middle = document.querySelector("#middle");
+		var sliderWrap = document.querySelector("#sliderWrap");
+		var slider = document.querySelector("#slider");
+		
+	</script>
+</html>

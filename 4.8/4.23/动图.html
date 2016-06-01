@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+			#big{
+				width: 400px;
+				height: 300px;
+				border: 1px solid red;
+			}
+			#small{
+				width: 50px;
+				height: 50px;
+				background-color: greenyellow;
+				border: 1px solid palegoldenrod;	
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="big">
+			<div id="small">
+				
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+	  var xiao = document.getElementById("small");
+            var  xiaoguo = canvas.getContext('2d');
+            var grad;
+		
+		 var box = {x:20,y:20,w:350,h:350,r:2};
+            //球的中心位置和偏移位置
+            var inbox = {
+            	//box内的限制范围
+                    bx:(box.w+box.x-box.r),
+                    by:(box.h+box.y-box.r),
+                    ix:box.x+(box.r*2),
+                    iy:box.y+(box.r*2)
+                };
+		 //球的初始位置和变化位置   
+            var ball = {x:50,y:50,vx:4,vy:8};
+            var small = new small();
+            var hue = [[255,0,0],[255,255,0],[0,255,0],[0,255,255],[0,0,255],[255,0,0]];
+            function init(){
+                grad = ctx.createLinearGradient(box.x,box.y,box.w,box.h);
+                for(var i=0;i<hue.length;i++){
+                    var color = 'rgb('+hue[i][1]+','+hue[i][1]+','+hue[i][2]+')';
+                    grad.addColorStop(i/hue.length,color);
+                }
+                ctx.lineWidth = box.r;
+                ctx.fillStyle = 'rgb(200,0,50)';
+                ctx.fillStyle = grad;
+                moveBall();
+                setInterval(moveBall,50);
+            }   
+            //碰撞检测并重新确定球的位置
+            function moveBallEndCheck(){
+                var nx = ball.x + ball.vx;
+                var ny = ball.y + ball.vy;
+                if(nx > inbox.bx){//当前x大于上边框边界
+                    ball.vx = -ball.vx;//球的变化x坐标当前当前变化x坐标的负数
+                    nx = inbox.bx;//当前位置为上边框的位置
+                }
+                if(nx < inbox.ix){//当前位置小于下边框
+                    nx = inbox.ix;//当前位置为下边框的x
+                    ball.vx = -ball.vx;//球的变化x坐标翻转取负
+                }
+                if(ny > inbox.by){
+                    ny = inbox.by;
+                    ball.vy = -ball.vy;
+                }
+                if(ny < inbox.iy){
+                    ny = inbox.iy;
+                    ball.vy = -ball.vy;
+                }
+                ball.x = nx;
+                ball.y = ny;
+            }
+            function moveBall(){
+                ctx.clearRect(box.x,box.y,box.w,box.h);
+                moveBallEndCheck();
+                ctx.beginPath();
+                  console.log(ball.x+"\t"+ball.y+"\t"+ball.vx+"\t"+ball.vy+"\t"+(ball.x-box.r)+"\t"+(ball.y-box.r));
+                ctx.drawImage(img,(ball.x-box.r),(ball.y-box.r));
+                ctx.fillRect(box.x,box.y,box.r,box.h);
+                ctx.fillRect((box.x+box.w-box.r),box.y,box.r,box.h);
+                ctx.fillRect(box.x,box.y,box.w,box.r);
+                ctx.fillRect(box.x,(box.y+box.h-box.r),box.w,box.r);
+                ctx.closePath();
+                ctx.fill();
+            }
+			
+	</script>
+	</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<style type="text/css">
+			.first {
+				width: 100px;
+				height: 100px;
+				background-color: #00FFFF;
+				position: absolute;
+			}
+			
+			#btn {
+				position: absolute;
+				top: 200px;
+			}
+			#stop{
+				position: absolute;
+				top: 200px;
+				left: 50px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="first">
+			我是div
+		</div>
+		<button id="btn">开始</button>
+		<button id="stop">停止</button>
+	</body>
+	<script type="text/javascript">
+		$(function($) {
+			$(document).on("click", function() {
+				//			hide()隐藏
+				//			fadeIn()淡出
+				//			fadeOut()淡入
+				//			fadeToggle()淡入淡出
+				//			toggle()隐藏或消失
+				//			fadeTo()到某个值停止
+				//			$(".first").fadeTo(1000, 0.5,function(){
+				////					alert("动画完成");
+				//					
+				//				});
+				//btn 按钮点击事件
+				$("#btn").on("click", function() {
+					$(".first").animate({
+						"left": "200px"
+					}, 4000).animate({"font-size": "2em"},3000);
+				});		
+			});
+		});
+		$("#stop").on("click", function() {
+//					参数一：是否停止整个动画组
+//					参数二：当前动画是否直接goToEnd
+					$(".first").stop();
+			});
+	</script>
+
+</html>

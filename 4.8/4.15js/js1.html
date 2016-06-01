@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+
+		<button onclick="myfunction()">点我</button>
+		<p id="ppp">我是一个段落</p>
+		<script type="text/javascript">
+			var p = document.getElementById('ppp')
+
+			function myfunction() {
+				//		数字类型
+				//		整数类型
+				//		var=1；
+				//		小数类型
+				//		var a=1.4;
+				//		p.innerHTML=a;
+				//		var a=1;
+				//		p.innerHTML=a;
+				//		var a=1.23e5;
+				//
+				//		var a=5;
+				//		var b=7;
+				//	可以在同一行一次性定义多个变量
+				//	中间用逗号隔开
+				//		var a =5 , b = 7; 
+				//		var	sum	= 0;
+				//		sum = a + b;
+				//		var max	=	0;
+				//		if(a>b){
+				//			max	= a;
+				//		}else{
+				//			max = b;
+				//		}
+				//		p.innerHTML = max;
+				//	}
+				//	三目运算符
+				//	var c = 4;
+				//	max = a > b ?( a > c ? a : c):( b > c ? b : c);
+				//	max = a > b ? a:b; 
+				//	p.innerHTML = max;
+				//	在新的界面里面打印1-100之间所有个位为7的数字！！
+				//定义一个范围变量
+				//用来控制整个范围是1-100
+			
+				//	开始在1-100这个范围之内
+				//	找数字打印
+				
+					var range = 0;
+				while(range <= 100) {
+					range++;
+					if (range % 10 == 7 || range % 7==0) {
+						document.write(range + "<br>");
+					}
+}
+//					while(min >= 1) {
+//			
+//					if (a % min == 0 || b % min==0) {
+//						jieguo = min;
+//						break;
+//										}
+//							min--;
+//							}
+
+				}
+			
+		</script>
+	</body>
+
+</html>

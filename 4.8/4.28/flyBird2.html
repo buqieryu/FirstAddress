@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#fbWrap {
+				width: 343px;
+				height: 480px;
+				background: url("img/bg.jpg");
+				margin: 0 auto;
+				position: relative;
+				overflow: hidden;
+			}
+			
+			#sliderWrap {
+				position: absolute;
+				top: 423px;
+				width: 9999px;
+				-webkit-animation: "sliderMove" 4s linear infinite;
+			}
+			
+			@-webkit-keyframes "sliderMove" {
+				0% {
+					left: 0;
+				}
+				100% {
+					left: -343px;
+				}
+			}
+			
+			#head {
+				position: absolute;
+				top: 100px;
+				left: 50px;
+				-webkit-animation: "headMove" 2s ease-in infinite;
+			}
+			
+			@-webkit-keyframes "headMove" {
+				0% {
+					top: 100px;
+				}
+				50% {
+					top: 120px;
+				}
+				100% {
+					top: 100px;
+				}
+			}
+			
+			#head span {
+				position: absolute;
+				left: 200px;
+				background: url("img/bird0.png");
+				width: 40px;
+				height: 26px;
+				top: 20px;
+				-webkit-animation: "birdMove" 0.5s linear infinite;
+			}
+			
+			@-webkit-keyframes "birdMove" {
+				0% {
+					background: url("img/bird0.png");
+				}
+				100% {
+					background: url("img/bird1.png");
+				}
+			}
+			
+			#scoring {
+				position: absolute;
+				top: 40px;
+				/*background-color: yellow;*/
+				width: 100%;
+				text-align: center;
+				display: none;
+				z-index: 2;
+			}
+			
+			#flyhappyBird {
+				position: absolute;
+				left: 50px;
+				top: 220px;
+				display: none;
+			}
+			
+			#start {
+				width: 85px;
+				height: 29px;
+				background: url("img/start.jpg");
+				float: left;
+			}
+			
+			#submit {
+				width: 85px;
+				height: 29px;
+				background: url("img/submit.jpg");
+				float: left;
+				margin-left: 30px;
+			}
+			
+			#menu {
+				position: absolute;
+				top: 300px;
+				left: 65px;
+			}
+			
+			#message {
+				width: 269px;
+				height: 135px;
+				background: url("img/message.jpg");
+				position: absolute;
+				top: 500px;
+				left: 40px;
+				font-size: 1.5em;
+				font-weight: bold;
+				-webkit-transition: all 1s ease-in-out;
+			}
+			
+			#endScoring {
+				position: absolute;
+				right: 25px;
+				top: 36px;
+			}
+			
+			#oldScoring {
+				position: absolute;
+				right: 25px;
+				top: 87px;
+			}
+			
+			#ok {
+				position: absolute;
+				top: 330px;
+				left: -120px;
+				-webkit-transition: all 1s ease-in-out;
+			}
+			
+			#gameover {
+				position: absolute;
+				left: 65px;
+				top: -50px;
+				-webkit-transition: all 1s ease-in-out;
+			}
+			
+			.pipe {
+				width: 62px;
+				height: 423px;
+				position: absolute;
+			}
+			
+			.top_pipe {
+				position: absolute;
+				background: url("img/up_mod.png");
+				top: 0;
+				width: 62px;
+			}
+			
+			.top_pipe div {
+				background: url("img/up_pipe.png") 0 bottom no-repeat;
+			}
+			
+			.bottom_pipe {
+				position: absolute;
+				background: url("img/down_mod.png");
+				bottom: 0;
+				width: 62px;
+			}
+			
+			.bottom_pipe div {
+				background: url("img/down_pipe.png") 0 top no-repeat;
+			}
+			
+			* {
+				padding: 0;
+				margin: 0;
+				list-style: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="fbWrap">
+			<div id="sliderWrap">
+				<img src="img/banner.jpg" /><img src="img/banner.jpg" />
+			</div>
+			<div id="head">
+				<img src="img/head.jpg" /><span></span>
+			</div>
+
+			<div id="scoring">
+				<img src="img/0.jpg" />
+			</div>
+
+			<ul id="guanDaoWrap"></ul>
+
+			<div id="flyhappyBird">
+				<img src="img/bird0.png" />
+			</div>
+
+			<div id="menu">
+				<div id="start"></div>
+				<div id="submit"></div>
+			</div>
+
+			<div id="message">
+				<div id="endScoring">121</div>
+				<div id="oldScoring">23</div>
+			</div>
+
+			<div id="ok">
+				<img src="img/ok.jpg" />
+			</div>
+
+			<div id="gameover"><img src="img/game_over.jpg" /></div>
+
+			<audio id="game_music" src="game_music.mp3" loop></audio>
+			<audio id="game_over_music" src="game_over.mp3"></audio>
+			<audio id="bullet" src="bullet.mp3"></audio>
+
+		</div>
+	</body>
+
+	<script type="text/javascript">
+		//		获取页面里面所有的元素
+		//		大div
+		var fbwrap = document.getElementById("fbWrap");
+		//		头部字体
+		var Head = document.getElementById("head");
+		//		分数
+		var scoring = document.getElementById("scoring");
+		//		管道
+		var guanDaoWrap = document.getElementById("guanDaoWrap");
+		//		小鸟
+		var flyhappyBird = document.getElementById("flyhappyBird");
+		//		菜单
+		var menu = document.getElementById("menu");
+		//		开始按钮
+		var start = document.getElementById("start");
+		//		提交按钮
+		var submitBtn = document.getElementById("submit");
+		//		信息面板
+		var message = document.getElementById("message");
+		//		成绩
+		var endScoring = document.getElementById("endScoring");
+		var oldScoring = document.getElementById("endScoring");
+		//		gameOver面板
+		var gameOver = document.getElementById("gameover");
+		//		游戏音乐
+		var gameMusic = document.getElementById("game_music");
+		//		按键音乐
+		var bullet = document.getElementById("bullet");
+		//		游戏结束音乐
+		var gameOverMusic = document.getElementById("game_over_music");
+		// 用来计分数的变量
+		var scoringNumber = 0;
+		//		存放成绩图片的数组
+		var aScoringImg = ["img/0.jpg", "img/1.jpg", "img/2.jpg", "img/3.jpg", "img/4.jpg", "img/5.jpg", "img/6.jpg", "img/7.jpg", "img/8.jpg", "img/9.jpg", ];
+
+		function fnScoring() {
+			scoring.innerHTML = "";
+			var scoringString = String(scoringNumber);
+			for (var i = 0; i < scoringString.length; i++) {
+				var oImg = document.createElement("img");
+				oImg.src = aScoringImg[scoringString[i]];
+				scoring.appendChild(oImg);
+			}
+		}
+		//		ok
+		var ok = document.getElementById("ok");
+		var downTime = null;
+		var crashTestTimer = null;
+		var createPipeTimer = null;
+		var speed = 0;
+		var maxSpeed = 6;
+
+		function gameOverFn() {
+			gameMusic.pause();
+			gameOverMusic.play();
+			clearInterval(downTime);
+			clearInterval(createPipeTimer);
+			clearInterval(crashTestTimer);
+			//				gameOver 面板掉下来
+			gameOver.style.top = "100px";
+			//				message 面板升上来
+			message.style.top = "270px";
+			//				改变分数
+			scoring.style.display = "none";
+			message.children[0].innerHTML = scoringNumber;
+			//				ok 面板 从左边跑过来
+			ok.style.left = "100px";
+			//				小鸟掉下去
+			flyhappyBird.children[0].src = "img/down_bird1.png";
+			flyhappyBird.style.webkitTransition = "all 2s ease-in-out";
+			flyhappyBird.style.top = "500px";
+		}
+		//		小鸟下落的方法
+		function down() {
+			speed += 0.3;
+			if (speed >= maxSpeed) {
+				speed = maxSpeed;
+			}
+			if (speed > 0) {
+				//				小鸟在下落
+				flyhappyBird.children[0].src = "img/down_bird0.png";
+			}
+			if (speed < 0) {
+				//				小鸟在上升
+				flyhappyBird.children[0].src = "img/up_bird0.png";
+			}
+			flyhappyBird.style.top = flyhappyBird.offsetTop + speed + "px";
+			if (flyhappyBird.offsetTop <= 0 || flyhappyBird.offsetTop >= 423) {
+				gameOverFn();
+			}
+		}
+		//		求随机数的rand方法
+		function rand(min, max) {
+			return parseInt(Math.random() * (max - min)) + min;
+		}
+		//		开始按钮的事件
+		start.onclick = function() {
+			Head.style.display = "none";
+			menu.style.display = "none";
+			flyhappyBird.style.display = "block";
+			scoring.style.display = "block";
+			gameMusic.play();
+			//			阻止start按钮的冒泡事件
+			event.cancelBubble = true;
+			//			小鸟落下来(定时器)
+			downTime = setInterval(down, 30);
+			//			碰撞检测(定时器)
+			crashTestTimer = setInterval(function() {
+				//				拿出管道div里面的所有li
+				var lis = guanDaoWrap.getElementsByTagName("li");
+				for (var i = 0; i < lis.length; i++) {
+					//					检测和图片碰撞的方法
+					var img1 = lis[i].children[0];
+					var img2 = lis[i].children[1];
+					crashTest(img1);
+					crashTest(img2);
+				}
+			}, 30);
+			//			检测是否和图片碰撞的方法
+			function crashTest(img) {
+				//				flyhappyBird 的 四个边
+				var l1 = flyhappyBird.offsetLeft;
+				var r1 = flyhappyBird.offsetWidth + l1;
+				var t1 = flyhappyBird.offsetTop;
+				var b1 = t1 + flyhappyBird.offsetHeight;
+				//				img 的 四个边
+				var l2 = img.offsetParent.offsetLeft;
+				var r2 = img.offsetWidth + l2;
+				var t2 = img.offsetTop;
+				var b2 = t2 + img.offsetHeight;
+				//				console.log(l2);
+				//				开始根据四个边的情况判断是否碰撞了
+				if (b1 < t2 || r1 < l2 || t1 > b2 || l1 > r2) {} else {
+					gameOverFn();
+				}
+			}
+			//			ok按钮点击事件
+			ok.onclick = function() {
+				location.reload();
+			}
+			//			创建每一个管道(定时器)
+			createPipeTimer = setInterval(function() {
+				//				在检测小鸟有没有碰到管道的同时
+				//				管道也在一直创建当中
+				//				创建管道
+				var li = document.createElement("li");
+				//				给新创建的管道起一个名字
+				li.className = "pipe";
+				//				新创建的管道要准备给小鸟送分数的
+				li.bAddScoring = true;
+				var maxWidth = fbwrap.offsetWidth;
+				//				保证新创建出来的管道li出现在屏幕的右侧
+				//				也就是说从屏幕的右侧慢慢移过来
+				li.style.left = maxWidth + "px";
+				//				高度
+				//				高度是随机值
+				//				top也是随机值
+				var topHeight = rand(55, 230);
+				var bottomHeight = 300 - topHeight;
+				li.innerHTML = "<div class='top_pipe'>" + "<div style='height:" + topHeight + "px;'></div>" + "</div>" + "<div class='bottom_pipe'>" + "<div style='height:" + bottomHeight + "px;'></div>" + "</div>";
+				guanDaoWrap.appendChild(li);
+				//				li 加入管道ul 之后
+				//				要靠定时器慢慢向左移动
+				//				管道向左移动的定时器
+				li.leftTimer = setInterval(function() {
+					maxWidth -= 2;
+					if (li.offsetLeft < -62) {
+						clearInterval(li.leftTimer);
+						guanDaoWrap.removeChild(li);
+					}
+					//					管道在向左移动的过程中
+					//					移动到某一个位置 还要送分
+					if (li.bAddScoring && maxWidth <= 30) {
+						//						用来计分的变量增加
+						scoringNumber++;
+						li.bAddScoring = false;
+						//						让显示分数的图片发生变化
+						fnScoring();
+					}
+					//					重新将li移动到屏幕最右侧
+					li.style.left = maxWidth + "px";
+				}, 30);
+			}, 3000);
+			document.onkeydown = function(event) {
+				if (event.keyCode == 32) {
+					bullet.play();
+					speed = -4;
+				}
+			}
+		}
+	</script>
+
+</html>

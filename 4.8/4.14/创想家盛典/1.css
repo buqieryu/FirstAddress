@@ -1,0 +1,112 @@
+body{
+		/*width: 320px;*/
+	min-width: 320px;
+	background: url(images/bgimage.jpg) no-repeat;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	height: 568px;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	overflow: hidden;
+	background-color: #000;
+}
+.main_content{
+	overflow: hidden;
+	/*width: 320px;*/
+	width: 100%;
+	position: absolute;
+	height: 568px;
+	top: 0;
+}
+.main_logo{
+	position: relative;
+	width: 208px;
+	height: 208px;
+	margin: 0 auto;
+	top:60px;
+	z-index: 10;
+}
+.first{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
+@-webkit-keyframes red_bg{
+	0%{
+		left: -200px;
+	}
+	100%{
+		left:0;
+	}
+}
+.red_bg{
+	width: 98px;
+	height: 208px;
+	position: absolute;
+	left: -200px;
+	animation: "red_bg" .5s linear 1s;
+	animation-fill-mode:forwards;
+}
+.red_bg img{
+	height: 100%;
+}
+@-webkit-keyframes blue_bg{
+	0%{
+		right:-400px;
+	}
+	100%{
+		right: 0;		
+	}	
+}
+.blue_bg{
+	width: 208px;
+	height: 208px;
+	position: absolute;
+	top: 0;
+	right: -400px;
+	animation: "blue_bg_move" .5s linear 1s;
+	animation-fill-mode: forwards;
+}
+.blue_bg img{
+	width: 100%;
+}
+
+/*黄色*/
+@-webkit-keyframes yellow_bg_move{
+	0%{
+		bottom: -500px;
+	}
+	100%{
+		bottom: 0px;
+	}
+}
+.yellow_bg{
+	width: 208px;
+	height: 124px;
+	position: absolute;
+	bottom: -500px;
+	animation: "yellow_bg_move" .5s linear 1s;
+	
+	animation-fill-mode: forwards;
+}
+.yellow_bg img{
+	width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

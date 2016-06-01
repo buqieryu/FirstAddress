@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+
+	<body>
+		<button onclick="myFunction()">点我</button>
+		<p id="myP">我是p段落</p>
+		<script type="text/javascript">
+			var p = document.getElementById('myP')
+
+			function myFunction() {
+				//				数组下标的最大值
+				//				永远是数组长度减1
+				var myArray = [4, 2, 7, 1, 9];
+				//				p.innerHTML = myArray[0];
+				//				p.innerHTML = myArray[0] * myArray[1];
+				//				Array Number String
+				//				myArray->Array
+				//				myArray[0]->Number
+				//				var myIndex = 0;
+				//				while (myIndex < 5){
+				//					
+				//					document.write(myArray[myIndex]);
+				//					myIndex++;
+				//					
+				//				}每个苹果摸一下
+				//					var myIndex = 0;
+				//				while (myIndex < 5){
+				//					if(myArray[myIndex] == 9){
+				//					document.write(myArray[myIndex]);
+				//					}
+				//					myIndex++;
+				//					}
+				//					var myIndex = 0;
+				//					for(
+				//					  var myIndex = 0; myIndex < 5; myIndex ++)
+				//					  
+				//					  if(myArray[myIndex] == 9){
+				//					document.write(myArray[myIndex]);
+				//						
+				//					}
+				//					  for 循环遍历整个数组
+				
+				//					求数组的最大值
+				
+				//					1.准备一个用来装最大值得容器max
+				//					var max = 0;
+				//					2.遍历数组每一个元素
+				//					for (var i =0; i < 5; i++){
+				//						if(myArray[i] > max){
+				//							max = myArray[i];
+				//							p.innerHTML = max;
+				//						}
+				//					}
+				//					求数组的最小值
+				//					var min = 10;
+				//					for (var i = 0; i < 5; i++){
+				//						if (myArray[i] < min){
+				//							min = myArray[i];	
+				//						}
+				//					}
+				
+//				
+//				var max = myArray[0];
+//				for (var i = 0; i<5; i++){
+//					if(myArray[i]> max){
+//						
+//						max = myArray[i];
+//					}
+//					
+//				}求最大
+//				
+				var max = 0;
+				for (var i = 0; i < 5; i++){
+					max += myArray[i];
+				}
+            p.innerHTML = myArray
+
+//
+//            调换位置
+//				for (var i = 0; i < 5; i++){
+//					if (i == 2){
+//						var temp = myArray[i];
+//						myArray[i] = myArray[i + 1];
+//						myArray[i + 1] = temp;
+//					}
+//				}
+//				排序   
+//				var myArray1 = [5 , 6];
+//				if(myArray1[i]< myArray1[i+1]){
+//					var a = myArray[i]}
+//				else{
+//					var a = myArray[i+1];
+//					
+//				}
+//				document.write(myArray1)
+//				双层for 循环
+//				外层for循环控制趟数
+//				内层for循环控制每一个趟的次数
+////					冒泡排序
+//				for(var i = 0; i < 5 - 1; i++){
+//					for (var j = 0; j < 5-i-1; j++){
+//						if(myArray[j] > myArray[j + 1]){
+//							var temp = myArray[j];
+//							myArray[j] = myArray[j+1];
+//							myArray[j + 1] = temp;
+//						}
+//					}
+//				}
+//				document.write(myArray);
+
+//				选择排序法
+//					var xiangxiang = 0;
+//				for (var i = 0; i < 5 - 1; i++) {
+//					xiangxiang = i;
+//					for (var j = i + 1; j < 5; j++) {
+//						if(myArray[j] < myArray[xiangxiang]){
+//							xiangxiang = j;
+//						}
+//					}
+//					
+//					if(xiangxiang != i){
+//						var temp = myArray[xiangxiang];
+//						myArray[xiangxiang] = myArray[i];
+//						myArray[i] = temp;
+//					}
+//					
+////				}
+//				for (var i = 0; i < 100; i++){
+//				if (i == 49){
+//					continue;	
+//				}
+//				document.write( i + 1 + "<br>");
+//				
+//			}
+//			}
+		</script>
+
+	</body>
+
+</html>

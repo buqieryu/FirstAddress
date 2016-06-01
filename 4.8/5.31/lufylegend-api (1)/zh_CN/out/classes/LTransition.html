@@ -1,0 +1,1827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>LTransition - The lufylegend.js API</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><a href="../index.html"><img src="../assets/css/logo.png" title="The lufylegend.js API"></a></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: 1.10.1</em>
+            <em>最后更新日期：2016年03月28日</em>
+			<form method="get" action="http://www.google.com.hk/search" target="google_window">
+        		<input type="hidden" name="ie" value="UTF-8">
+        		<input type="hidden" name="oe" value="UTF-8">
+        		<input type="hidden" name="as_sitesearch" id="as_sitesearch" value="lufylegend.com/api/zh_CN/out/">
+        		Google搜索&nbsp;
+        		<input type="text" class="input" style="width:150px;" name="q" id="q" size="31" maxlength="255" value="">
+        		&nbsp;
+        		<input type="submit" class="submit" name="sa" value="Go">
+      		</form>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="../classes/FPS.html">FPS</a></li>
+            
+                <li><a href="../classes/InteractivePNG.html">InteractivePNG</a></li>
+            
+                <li><a href="../classes/LAjax.html">LAjax</a></li>
+            
+                <li><a href="../classes/LAnimation.html">LAnimation</a></li>
+            
+                <li><a href="../classes/LAnimationTimeline.html">LAnimationTimeline</a></li>
+            
+                <li><a href="../classes/LBitmap.html">LBitmap</a></li>
+            
+                <li><a href="../classes/LBitmapData.html">LBitmapData</a></li>
+            
+                <li><a href="../classes/LBitmapFilter.html">LBitmapFilter</a></li>
+            
+                <li><a href="../classes/LBlendMode.html">LBlendMode</a></li>
+            
+                <li><a href="../classes/LBox2d.html">LBox2d</a></li>
+            
+                <li><a href="../classes/LButton.html">LButton</a></li>
+            
+                <li><a href="../classes/LColorMatrixFilter.html">LColorMatrixFilter</a></li>
+            
+                <li><a href="../classes/LColorTransform.html">LColorTransform</a></li>
+            
+                <li><a href="../classes/LConvolutionFilter.html">LConvolutionFilter</a></li>
+            
+                <li><a href="../classes/LDisplayObject.html">LDisplayObject</a></li>
+            
+                <li><a href="../classes/LDisplayObjectContainer.html">LDisplayObjectContainer</a></li>
+            
+                <li><a href="../classes/LDropShadowFilter.html">LDropShadowFilter</a></li>
+            
+                <li><a href="../classes/LEasing.html">LEasing</a></li>
+            
+                <li><a href="../classes/LEvent.html">LEvent</a></li>
+            
+                <li><a href="../classes/LEventDispatcher.html">LEventDispatcher</a></li>
+            
+                <li><a href="../classes/LFlash.html">LFlash</a></li>
+            
+                <li><a href="../classes/LFocusEvent.html">LFocusEvent</a></li>
+            
+                <li><a href="../classes/LFontLoader.html">LFontLoader</a></li>
+            
+                <li><a href="../classes/LGlobal.html">LGlobal</a></li>
+            
+                <li><a href="../classes/LGraphics.html">LGraphics</a></li>
+            
+                <li><a href="../classes/LInteractiveObject.html">LInteractiveObject</a></li>
+            
+                <li><a href="../classes/LKeyboardEvent.html">LKeyboardEvent</a></li>
+            
+                <li><a href="../classes/LLoader.html">LLoader</a></li>
+            
+                <li><a href="../classes/LLoadManage.html">LLoadManage</a></li>
+            
+                <li><a href="../classes/LMatrix.html">LMatrix</a></li>
+            
+                <li><a href="../classes/LMedia.html">LMedia</a></li>
+            
+                <li><a href="../classes/LMouseEvent.html">LMouseEvent</a></li>
+            
+                <li><a href="../classes/LMouseEventContainer.html">LMouseEventContainer</a></li>
+            
+                <li><a href="../classes/LMultitouch.html">LMultitouch</a></li>
+            
+                <li><a href="../classes/LMultitouchInputMode.html">LMultitouchInputMode</a></li>
+            
+                <li><a href="../classes/LoadingSample.html">LoadingSample</a></li>
+            
+                <li><a href="../classes/LObject.html">LObject</a></li>
+            
+                <li><a href="../classes/LPoint.html">LPoint</a></li>
+            
+                <li><a href="../classes/LQuadTree.html">LQuadTree</a></li>
+            
+                <li><a href="../classes/LRange.html">LRange</a></li>
+            
+                <li><a href="../classes/LRectangle.html">LRectangle</a></li>
+            
+                <li><a href="../classes/LShape.html">LShape</a></li>
+            
+                <li><a href="../classes/LSound(LMedia).html">LSound(LMedia)</a></li>
+            
+                <li><a href="../classes/LSound(LWebAudio).html">LSound(LWebAudio)</a></li>
+            
+                <li><a href="../classes/LSprite.html">LSprite</a></li>
+            
+                <li><a href="../classes/LStageAlign.html">LStageAlign</a></li>
+            
+                <li><a href="../classes/LStageScaleMode.html">LStageScaleMode</a></li>
+            
+                <li><a href="../classes/LStageWebView.html">LStageWebView</a></li>
+            
+                <li><a href="../classes/LStyleSheet.html">LStyleSheet</a></li>
+            
+                <li><a href="../classes/LTextEvent.html">LTextEvent</a></li>
+            
+                <li><a href="../classes/LTextField.html">LTextField</a></li>
+            
+                <li><a href="../classes/LTimer.html">LTimer</a></li>
+            
+                <li><a href="../classes/LTimerEvent.html">LTimerEvent</a></li>
+            
+                <li><a href="../classes/LTransform.html">LTransform</a></li>
+            
+                <li><a href="../classes/LTransition.html">LTransition</a></li>
+            
+                <li><a href="../classes/LTransitionManager.html">LTransitionManager</a></li>
+            
+                <li><a href="../classes/LTweenLite.html">LTweenLite</a></li>
+            
+                <li><a href="../classes/LTweenLiteChild.html">LTweenLiteChild</a></li>
+            
+                <li><a href="../classes/lufylegend.mvc.html">lufylegend.mvc</a></li>
+            
+                <li><a href="../classes/LURLLoader.html">LURLLoader</a></li>
+            
+                <li><a href="../classes/LVec2.html">LVec2</a></li>
+            
+                <li><a href="../classes/LVideo.html">LVideo</a></li>
+            
+                <li><a href="../classes/LWebAudio.html">LWebAudio</a></li>
+            
+                <li><a href="../classes/Q &amp; A (常见问题).html">Q &amp; A (常见问题)</a></li>
+            
+                <li><a href="../classes/UI:LButtonSample1.html">UI:LButtonSample1</a></li>
+            
+                <li><a href="../classes/UI:LButtonSample2.html">UI:LButtonSample2</a></li>
+            
+                <li><a href="../classes/UI:LCheckBox.html">UI:LCheckBox</a></li>
+            
+                <li><a href="../classes/UI:LComboBox.html">UI:LComboBox</a></li>
+            
+                <li><a href="../classes/UI:LListChildView.html">UI:LListChildView</a></li>
+            
+                <li><a href="../classes/UI:LListScrollBar.html">UI:LListScrollBar</a></li>
+            
+                <li><a href="../classes/UI:LListView.html">UI:LListView</a></li>
+            
+                <li><a href="../classes/UI:LMenubar.html">UI:LMenubar</a></li>
+            
+                <li><a href="../classes/UI:LMessageBox.html">UI:LMessageBox</a></li>
+            
+                <li><a href="../classes/UI:LPanel.html">UI:LPanel</a></li>
+            
+                <li><a href="../classes/UI:LRadio.html">UI:LRadio</a></li>
+            
+                <li><a href="../classes/UI:LRadioChild.html">UI:LRadioChild</a></li>
+            
+                <li><a href="../classes/UI:LRange.html">UI:LRange</a></li>
+            
+                <li><a href="../classes/UI:LScrollbar.html">UI:LScrollbar</a></li>
+            
+                <li><a href="../classes/UI:LTable.html">UI:LTable</a></li>
+            
+                <li><a href="../classes/UI:LTreeWidget.html">UI:LTreeWidget</a></li>
+            
+                <li><a href="../classes/UI:LWindow.html">UI:LWindow</a></li>
+            
+                <li><a href="../classes/全局函数.html">全局函数</a></li>
+            
+                <li><a href="../classes/全局变量.html">全局变量</a></li>
+            
+                <li><a href="../classes/全屏设置.html">全屏设置</a></li>
+            
+                <li><a href="../classes/旧版API.html">旧版API</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1>LTransition Class</h1>
+<div class="box meta">
+    
+
+    
+
+    
+        <div class="foundat">
+            Defined in: <a href="../files/lib_LTransitionManager-0.1.1.js.html#l1"><code>lib&#x2F;LTransitionManager-0.1.1.js:1</code></a>
+        </div>
+    
+
+    
+
+    
+        <p>Available since 1.8.0</p>
+    
+</div>
+
+
+
+<div class="box intro">
+    <p>Library:lufylegend.LTransitionManager-x.x.x.min.js</p>
+<p>为LTransitionManager提供动画效果。</p>
+</div>
+
+
+    <div class="constructor">
+        <h2>Constructor</h2>
+        <div id="method_LTransition" class="method item public">
+    <h3 class="name"><code>LTransition</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/lib_LTransitionManager-0.1.1.js.html#l1"><code>lib&#x2F;LTransitionManager-0.1.1.js:1</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.8.0</p>
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+
+    
+
+    
+    
+</div>
+
+    </div>
+
+
+<div id="classdocs" class="tabview">
+    <ul class="api-class-tabs">
+        <li class="api-class-tab index"><a href="#index">Index</a></li>
+
+        
+        
+            <li class="api-class-tab properties"><a href="#properties">Properties</a></li>
+        
+        
+        
+    </ul>
+
+    <div>
+        <div id="index" class="api-class-tabpanel index">
+            <h2 class="off-left">Item Index</h2>
+
+            
+
+            
+                <div class="index-section properties">
+                    <h3>Properties</h3>
+
+                    <ul class="index-list properties">
+                        
+                            <li class="index-item property public">
+                                <a href="#property_LTransition.Blinds">LTransition.Blinds</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_LTransition.Blinds">LTransition.Blinds</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_LTransition.Curtain">LTransition.Curtain</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_LTransition.Curtain">LTransition.Curtain</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_LTransition.Fade">LTransition.Fade</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_LTransition.Fade">LTransition.Fade</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_LTransition.Fly">LTransition.Fly</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_LTransition.Fly">LTransition.Fly</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_LTransition.IN">LTransition.IN</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_LTransition.IN">LTransition.IN</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_LTransition.Iris">LTransition.Iris</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_LTransition.Iris">LTransition.Iris</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_LTransition.OUT">LTransition.OUT</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_LTransition.OUT">LTransition.OUT</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_LTransition.PixelDissolve">LTransition.PixelDissolve</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_LTransition.PixelDissolve">LTransition.PixelDissolve</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_LTransition.Squeeze">LTransition.Squeeze</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_LTransition.Squeeze">LTransition.Squeeze</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_LTransition.Wipe">LTransition.Wipe</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_LTransition.Wipe">LTransition.Wipe</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_LTransition.Zoom">LTransition.Zoom</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_LTransition.Zoom">LTransition.Zoom</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                    </ul>
+                </div>
+            
+
+            
+
+            
+        </div>
+
+        
+
+        
+            <div id="properties" class="api-class-tabpanel">
+                <h2 class="off-left">Properties</h2>
+
+                
+                    <div id="property_LTransition.Blinds" class="property item public">
+    <h3 class="name"><code>LTransition.Blinds</code></h3>
+    <span class="type">Unknown</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/lib_LTransitionManager-0.1.0.js.html#l647"><code>lib&#x2F;LTransitionManager-0.1.0.js:647</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.8.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p><p>使用逐渐消失或逐渐出现的矩形来显示影剪对象。</p></p>
+<p><p>支持属性:</p></p>
+<table>
+<tr><th>属性</th><th>类型</th><th>说明</th></tr>
+<tr><td>numStrips</td><td>int</td><td>“遮帘”效果中的遮罩条纹数，建议范围1-50。</td></tr>
+<tr><td>dimension</td><td>0|1</td><td>指示遮罩条纹是垂直的（0）还是水平的（1）。遮罩条纹是垂直的，也意味着显示出来的是水平条纹的影片剪辑。</td></tr>
+</table>
+    </div>
+
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_LTransition.Blinds" class="property item public">
+    <h3 class="name"><code>LTransition.Blinds</code></h3>
+    <span class="type">Unknown</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/lib_LTransitionManager-0.1.1.js.html#l650"><code>lib&#x2F;LTransitionManager-0.1.1.js:650</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.8.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p><p>使用逐渐消失或逐渐出现的矩形来显示影剪对象。</p></p>
+<p><p>支持属性:</p></p>
+<table>
+<tr><th>属性</th><th>类型</th><th>说明</th></tr>
+<tr><td>numStrips</td><td>int</td><td>“遮帘”效果中的遮罩条纹数，建议范围1-50。</td></tr>
+<tr><td>dimension</td><td>0|1</td><td>指示遮罩条纹是垂直的（0）还是水平的（1）。遮罩条纹是垂直的，也意味着显示出来的是水平条纹的影片剪辑。</td></tr>
+</table>
+    </div>
+
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_LTransition.Curtain" class="property item public">
+    <h3 class="name"><code>LTransition.Curtain</code></h3>
+    <span class="type">Unknown</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/lib_LTransitionManager-0.1.1.js.html#l700"><code>lib&#x2F;LTransitionManager-0.1.1.js:700</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.8.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p><p>使用挤压遮帘效果水平或垂直显示对象。</p></p>
+<p><p>支持属性:</p></p>
+<table>
+<tr><th>属性</th><th>类型</th><th>说明</th></tr>
+<tr><td>dimension</td><td>int</td><td>挤压效果是水平的（0）还是垂直的（1）。</td></tr>
+</table>
+    </div>
+
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_LTransition.Curtain" class="property item public">
+    <h3 class="name"><code>LTransition.Curtain</code></h3>
+    <span class="type">Unknown</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/lib_LTransitionManager-0.1.0.js.html#l697"><code>lib&#x2F;LTransitionManager-0.1.0.js:697</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.8.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p><p>使用挤压遮帘效果水平或垂直显示对象。</p></p>
+<p><p>支持属性:</p></p>
+<table>
+<tr><th>属性</th><th>类型</th><th>说明</th></tr>
+<tr><td>dimension</td><td>int</td><td>挤压效果是水平的（0）还是垂直的（1）。</td></tr>
+</table>
+    </div>
+
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_LTransition.Fade" class="property item public">
+    <h3 class="name"><code>LTransition.Fade</code></h3>
+    <span class="type">Unknown</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/lib_LTransitionManager-0.1.0.js.html#l661"><code>lib&#x2F;LTransitionManager-0.1.0.js:661</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.8.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>淡入淡出效果。</p>
+<p>支持属性:无</p>
+    </div>
+
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_LTransition.Fade" class="property item public">
+    <h3 class="name"><code>LTransition.Fade</code></h3>
+    <span class="type">Unknown</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/lib_LTransitionManager-0.1.1.js.html#l664"><code>lib&#x2F;LTransitionManager-0.1.1.js:664</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.8.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>淡入淡出效果。</p>
+<p>支持属性:无</p>
+    </div>
+
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_LTransition.Fly" class="property item public">
+    <h3 class="name"><code>LTransition.Fly</code></h3>
+    <span class="type">Unknown</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/lib_LTransitionManager-0.1.0.js.html#l670"><code>lib&#x2F;LTransitionManager-0.1.0.js:670</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.8.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p><p>从某一指定方向滑入影片剪辑对象。</p></p>
+<p><p>支持属性:</p></p>
+<table>
+<tr><th>属性</th><th>类型</th><th>说明</th></tr>
+<tr><td>startPoint</td><td>int</td><td><p>一个指示起始位置的整数，范围1-9。</p><p>1：左上，2：上中，3：右上，4：左中，5：中心，6：右中，7：左下，8：下中，9：右下。</p></td></tr>
+</table>
+    </div>
+
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_LTransition.Fly" class="property item public">
+    <h3 class="name"><code>LTransition.Fly</code></h3>
+    <span class="type">Unknown</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/lib_LTransitionManager-0.1.1.js.html#l673"><code>lib&#x2F;LTransitionManager-0.1.1.js:673</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.8.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p><p>从某一指定方向滑入影片剪辑对象。</p></p>
+<p><p>支持属性:</p></p>
+<table>
+<tr><th>属性</th><th>类型</th><th>说明</th></tr>
+<tr><td>startPoint</td><td>int</td><td><p>一个指示起始位置的整数，范围1-9。</p><p>1：左上，2：上中，3：右上，4：左中，5：中心，6：右中，7：左下，8：下中，9：右下。</p></td></tr>
+</table>
+    </div>
+
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_LTransition.IN" class="property item public">
+    <h3 class="name"><code>LTransition.IN</code></h3>
+    <span class="type">Unknown</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/lib_LTransitionManager-0.1.1.js.html#l634"><code>lib&#x2F;LTransitionManager-0.1.1.js:634</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.8.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>指出现时的动画。</p>
+    </div>
+
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_LTransition.IN" class="property item public">
+    <h3 class="name"><code>LTransition.IN</code></h3>
+    <span class="type">Unknown</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/lib_LTransitionManager-0.1.0.js.html#l631"><code>lib&#x2F;LTransitionManager-0.1.0.js:631</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.8.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>指出现时的动画。</p>
+    </div>
+
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_LTransition.Iris" class="property item public">
+    <h3 class="name"><code>LTransition.Iris</code></h3>
+    <span class="type">Unknown</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/lib_LTransitionManager-0.1.1.js.html#l686"><code>lib&#x2F;LTransitionManager-0.1.1.js:686</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.8.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p><p>使用可以缩放的方形或圆形动画遮罩来显示影剪对象。</p></p>
+<p><p>支持属性:</p></p>
+<table>
+<tr><th>属性</th><th>类型</th><th>说明</th></tr>
+<tr><td>startPoint</td><td>int</td><td><p>一个指示起始位置的整数，范围1-9。</p><p>1：左上，2：上中，3：右上，4：左中，5：中心，6：右中，7：左下，8：下中，9：右下。</p></td></tr>
+<tr><td>shape</td><td>int</td><td><p>LIris.SQUARE(方形）的遮罩形状</p><p>LIris.CIRCLE（圆形）的遮罩形状</p></td></tr>
+</table>
+    </div>
+
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_LTransition.Iris" class="property item public">
+    <h3 class="name"><code>LTransition.Iris</code></h3>
+    <span class="type">Unknown</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/lib_LTransitionManager-0.1.0.js.html#l683"><code>lib&#x2F;LTransitionManager-0.1.0.js:683</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.8.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p><p>使用可以缩放的方形或圆形动画遮罩来显示影剪对象。</p></p>
+<p><p>支持属性:</p></p>
+<table>
+<tr><th>属性</th><th>类型</th><th>说明</th></tr>
+<tr><td>startPoint</td><td>int</td><td><p>一个指示起始位置的整数，范围1-9。</p><p>1：左上，2：上中，3：右上，4：左中，5：中心，6：右中，7：左下，8：下中，9：右下。</p></td></tr>
+<tr><td>shape</td><td>int</td><td><p>LIris.SQUARE(方形）的遮罩形状</p><p>LIris.CIRCLE（圆形）的遮罩形状</p></td></tr>
+</table>
+    </div>
+
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_LTransition.OUT" class="property item public">
+    <h3 class="name"><code>LTransition.OUT</code></h3>
+    <span class="type">Unknown</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/lib_LTransitionManager-0.1.1.js.html#l642"><code>lib&#x2F;LTransitionManager-0.1.1.js:642</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.8.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>指消失时的动画。</p>
+    </div>
+
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_LTransition.OUT" class="property item public">
+    <h3 class="name"><code>LTransition.OUT</code></h3>
+    <span class="type">Unknown</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/lib_LTransitionManager-0.1.0.js.html#l639"><code>lib&#x2F;LTransitionManager-0.1.0.js:639</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.8.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>指消失时的动画。</p>
+    </div>
+
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_LTransition.PixelDissolve" class="property item public">
+    <h3 class="name"><code>LTransition.PixelDissolve</code></h3>
+    <span class="type">Unknown</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/lib_LTransitionManager-0.1.0.js.html#l710"><code>lib&#x2F;LTransitionManager-0.1.0.js:710</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.8.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p><p>使用随机出现或消失的棋盘图案矩形来显示影剪。</p></p>
+<p><p>支持属性:</p></p>
+<table>
+<tr><th>属性</th><th>类型</th><th>说明</th></tr>
+<tr><td>xSections</td><td>int</td><td>沿水平轴的遮罩矩形的数目（建议1-25）</td></tr>
+<tr><td>ySections</td><td>int</td><td>沿垂直轴的遮罩矩形的数目（建议1-25）</td></tr>
+</table>
+    </div>
+
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_LTransition.PixelDissolve" class="property item public">
+    <h3 class="name"><code>LTransition.PixelDissolve</code></h3>
+    <span class="type">Unknown</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/lib_LTransitionManager-0.1.1.js.html#l713"><code>lib&#x2F;LTransitionManager-0.1.1.js:713</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.8.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p><p>使用随机出现或消失的棋盘图案矩形来显示影剪。</p></p>
+<p><p>支持属性:</p></p>
+<table>
+<tr><th>属性</th><th>类型</th><th>说明</th></tr>
+<tr><td>xSections</td><td>int</td><td>沿水平轴的遮罩矩形的数目（建议1-25）</td></tr>
+<tr><td>ySections</td><td>int</td><td>沿垂直轴的遮罩矩形的数目（建议1-25）</td></tr>
+</table>
+    </div>
+
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_LTransition.Squeeze" class="property item public">
+    <h3 class="name"><code>LTransition.Squeeze</code></h3>
+    <span class="type">Unknown</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/lib_LTransitionManager-0.1.0.js.html#l724"><code>lib&#x2F;LTransitionManager-0.1.0.js:724</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.8.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p><p>使用缩放效果水平或垂直影剪对象。</p></p>
+<p><p>支持属性:</p></p>
+<table>
+<tr><th>属性</th><th>类型</th><th>说明</th></tr>
+<tr><td>dimension</td><td>int</td><td>缩放效果是水平的（0）还是垂直的（1）。</td></tr>
+</table>
+    </div>
+
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_LTransition.Squeeze" class="property item public">
+    <h3 class="name"><code>LTransition.Squeeze</code></h3>
+    <span class="type">Unknown</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/lib_LTransitionManager-0.1.1.js.html#l727"><code>lib&#x2F;LTransitionManager-0.1.1.js:727</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.8.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p><p>使用缩放效果水平或垂直影剪对象。</p></p>
+<p><p>支持属性:</p></p>
+<table>
+<tr><th>属性</th><th>类型</th><th>说明</th></tr>
+<tr><td>dimension</td><td>int</td><td>缩放效果是水平的（0）还是垂直的（1）。</td></tr>
+</table>
+    </div>
+
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_LTransition.Wipe" class="property item public">
+    <h3 class="name"><code>LTransition.Wipe</code></h3>
+    <span class="type">Unknown</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/lib_LTransitionManager-0.1.0.js.html#l737"><code>lib&#x2F;LTransitionManager-0.1.0.js:737</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.8.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p><p>使用水平移动的某一形状的动画遮罩来显示或隐藏影剪对象。</p></p>
+<p><p>支持属性:</p></p>
+<table>
+<tr><th>属性</th><th>类型</th><th>说明</th></tr>
+<tr><td>startPoint</td><td>int</td><td><p>一个指示起始位置的整数，范围1-9。</p><p>1：左上，2：上中，3：右上，4：左中，5：中心，6：右中，7：左下，8：下中，9：右下。</p></td></tr>
+</table>
+    </div>
+
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_LTransition.Wipe" class="property item public">
+    <h3 class="name"><code>LTransition.Wipe</code></h3>
+    <span class="type">Unknown</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/lib_LTransitionManager-0.1.1.js.html#l740"><code>lib&#x2F;LTransitionManager-0.1.1.js:740</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.8.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p><p>使用水平移动的某一形状的动画遮罩来显示或隐藏影剪对象。</p></p>
+<p><p>支持属性:</p></p>
+<table>
+<tr><th>属性</th><th>类型</th><th>说明</th></tr>
+<tr><td>startPoint</td><td>int</td><td><p>一个指示起始位置的整数，范围1-9。</p><p>1：左上，2：上中，3：右上，4：左中，5：中心，6：右中，7：左下，8：下中，9：右下。</p></td></tr>
+</table>
+    </div>
+
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_LTransition.Zoom" class="property item public">
+    <h3 class="name"><code>LTransition.Zoom</code></h3>
+    <span class="type">Unknown</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/lib_LTransitionManager-0.1.0.js.html#l750"><code>lib&#x2F;LTransitionManager-0.1.0.js:750</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.8.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>通过按比例缩放来 放大或缩小 影剪对象。</p>
+<p>支持属性:无</p>
+    </div>
+
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_LTransition.Zoom" class="property item public">
+    <h3 class="name"><code>LTransition.Zoom</code></h3>
+    <span class="type">Unknown</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/lib_LTransitionManager-0.1.1.js.html#l753"><code>lib&#x2F;LTransitionManager-0.1.1.js:753</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.8.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>通过按比例缩放来 放大或缩小 影剪对象。</p>
+<p>支持属性:无</p>
+    </div>
+
+    
+
+    
+    
+
+    
+</div>
+
+                
+            </div>
+        
+
+        
+
+        
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32497708-2']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>

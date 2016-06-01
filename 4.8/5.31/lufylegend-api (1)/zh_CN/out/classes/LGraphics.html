@@ -1,0 +1,4240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>LGraphics - The lufylegend.js API</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><a href="../index.html"><img src="../assets/css/logo.png" title="The lufylegend.js API"></a></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: 1.10.1</em>
+            <em>最后更新日期：2016年03月28日</em>
+			<form method="get" action="http://www.google.com.hk/search" target="google_window">
+        		<input type="hidden" name="ie" value="UTF-8">
+        		<input type="hidden" name="oe" value="UTF-8">
+        		<input type="hidden" name="as_sitesearch" id="as_sitesearch" value="lufylegend.com/api/zh_CN/out/">
+        		Google搜索&nbsp;
+        		<input type="text" class="input" style="width:150px;" name="q" id="q" size="31" maxlength="255" value="">
+        		&nbsp;
+        		<input type="submit" class="submit" name="sa" value="Go">
+      		</form>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="../classes/FPS.html">FPS</a></li>
+            
+                <li><a href="../classes/InteractivePNG.html">InteractivePNG</a></li>
+            
+                <li><a href="../classes/LAjax.html">LAjax</a></li>
+            
+                <li><a href="../classes/LAnimation.html">LAnimation</a></li>
+            
+                <li><a href="../classes/LAnimationTimeline.html">LAnimationTimeline</a></li>
+            
+                <li><a href="../classes/LBitmap.html">LBitmap</a></li>
+            
+                <li><a href="../classes/LBitmapData.html">LBitmapData</a></li>
+            
+                <li><a href="../classes/LBitmapFilter.html">LBitmapFilter</a></li>
+            
+                <li><a href="../classes/LBlendMode.html">LBlendMode</a></li>
+            
+                <li><a href="../classes/LBox2d.html">LBox2d</a></li>
+            
+                <li><a href="../classes/LButton.html">LButton</a></li>
+            
+                <li><a href="../classes/LColorMatrixFilter.html">LColorMatrixFilter</a></li>
+            
+                <li><a href="../classes/LColorTransform.html">LColorTransform</a></li>
+            
+                <li><a href="../classes/LConvolutionFilter.html">LConvolutionFilter</a></li>
+            
+                <li><a href="../classes/LDisplayObject.html">LDisplayObject</a></li>
+            
+                <li><a href="../classes/LDisplayObjectContainer.html">LDisplayObjectContainer</a></li>
+            
+                <li><a href="../classes/LDropShadowFilter.html">LDropShadowFilter</a></li>
+            
+                <li><a href="../classes/LEasing.html">LEasing</a></li>
+            
+                <li><a href="../classes/LEvent.html">LEvent</a></li>
+            
+                <li><a href="../classes/LEventDispatcher.html">LEventDispatcher</a></li>
+            
+                <li><a href="../classes/LFlash.html">LFlash</a></li>
+            
+                <li><a href="../classes/LFocusEvent.html">LFocusEvent</a></li>
+            
+                <li><a href="../classes/LFontLoader.html">LFontLoader</a></li>
+            
+                <li><a href="../classes/LGlobal.html">LGlobal</a></li>
+            
+                <li><a href="../classes/LGraphics.html">LGraphics</a></li>
+            
+                <li><a href="../classes/LInteractiveObject.html">LInteractiveObject</a></li>
+            
+                <li><a href="../classes/LKeyboardEvent.html">LKeyboardEvent</a></li>
+            
+                <li><a href="../classes/LLoader.html">LLoader</a></li>
+            
+                <li><a href="../classes/LLoadManage.html">LLoadManage</a></li>
+            
+                <li><a href="../classes/LMatrix.html">LMatrix</a></li>
+            
+                <li><a href="../classes/LMedia.html">LMedia</a></li>
+            
+                <li><a href="../classes/LMouseEvent.html">LMouseEvent</a></li>
+            
+                <li><a href="../classes/LMouseEventContainer.html">LMouseEventContainer</a></li>
+            
+                <li><a href="../classes/LMultitouch.html">LMultitouch</a></li>
+            
+                <li><a href="../classes/LMultitouchInputMode.html">LMultitouchInputMode</a></li>
+            
+                <li><a href="../classes/LoadingSample.html">LoadingSample</a></li>
+            
+                <li><a href="../classes/LObject.html">LObject</a></li>
+            
+                <li><a href="../classes/LPoint.html">LPoint</a></li>
+            
+                <li><a href="../classes/LQuadTree.html">LQuadTree</a></li>
+            
+                <li><a href="../classes/LRange.html">LRange</a></li>
+            
+                <li><a href="../classes/LRectangle.html">LRectangle</a></li>
+            
+                <li><a href="../classes/LShape.html">LShape</a></li>
+            
+                <li><a href="../classes/LSound(LMedia).html">LSound(LMedia)</a></li>
+            
+                <li><a href="../classes/LSound(LWebAudio).html">LSound(LWebAudio)</a></li>
+            
+                <li><a href="../classes/LSprite.html">LSprite</a></li>
+            
+                <li><a href="../classes/LStageAlign.html">LStageAlign</a></li>
+            
+                <li><a href="../classes/LStageScaleMode.html">LStageScaleMode</a></li>
+            
+                <li><a href="../classes/LStageWebView.html">LStageWebView</a></li>
+            
+                <li><a href="../classes/LStyleSheet.html">LStyleSheet</a></li>
+            
+                <li><a href="../classes/LTextEvent.html">LTextEvent</a></li>
+            
+                <li><a href="../classes/LTextField.html">LTextField</a></li>
+            
+                <li><a href="../classes/LTimer.html">LTimer</a></li>
+            
+                <li><a href="../classes/LTimerEvent.html">LTimerEvent</a></li>
+            
+                <li><a href="../classes/LTransform.html">LTransform</a></li>
+            
+                <li><a href="../classes/LTransition.html">LTransition</a></li>
+            
+                <li><a href="../classes/LTransitionManager.html">LTransitionManager</a></li>
+            
+                <li><a href="../classes/LTweenLite.html">LTweenLite</a></li>
+            
+                <li><a href="../classes/LTweenLiteChild.html">LTweenLiteChild</a></li>
+            
+                <li><a href="../classes/lufylegend.mvc.html">lufylegend.mvc</a></li>
+            
+                <li><a href="../classes/LURLLoader.html">LURLLoader</a></li>
+            
+                <li><a href="../classes/LVec2.html">LVec2</a></li>
+            
+                <li><a href="../classes/LVideo.html">LVideo</a></li>
+            
+                <li><a href="../classes/LWebAudio.html">LWebAudio</a></li>
+            
+                <li><a href="../classes/Q &amp; A (常见问题).html">Q &amp; A (常见问题)</a></li>
+            
+                <li><a href="../classes/UI:LButtonSample1.html">UI:LButtonSample1</a></li>
+            
+                <li><a href="../classes/UI:LButtonSample2.html">UI:LButtonSample2</a></li>
+            
+                <li><a href="../classes/UI:LCheckBox.html">UI:LCheckBox</a></li>
+            
+                <li><a href="../classes/UI:LComboBox.html">UI:LComboBox</a></li>
+            
+                <li><a href="../classes/UI:LListChildView.html">UI:LListChildView</a></li>
+            
+                <li><a href="../classes/UI:LListScrollBar.html">UI:LListScrollBar</a></li>
+            
+                <li><a href="../classes/UI:LListView.html">UI:LListView</a></li>
+            
+                <li><a href="../classes/UI:LMenubar.html">UI:LMenubar</a></li>
+            
+                <li><a href="../classes/UI:LMessageBox.html">UI:LMessageBox</a></li>
+            
+                <li><a href="../classes/UI:LPanel.html">UI:LPanel</a></li>
+            
+                <li><a href="../classes/UI:LRadio.html">UI:LRadio</a></li>
+            
+                <li><a href="../classes/UI:LRadioChild.html">UI:LRadioChild</a></li>
+            
+                <li><a href="../classes/UI:LRange.html">UI:LRange</a></li>
+            
+                <li><a href="../classes/UI:LScrollbar.html">UI:LScrollbar</a></li>
+            
+                <li><a href="../classes/UI:LTable.html">UI:LTable</a></li>
+            
+                <li><a href="../classes/UI:LTreeWidget.html">UI:LTreeWidget</a></li>
+            
+                <li><a href="../classes/UI:LWindow.html">UI:LWindow</a></li>
+            
+                <li><a href="../classes/全局函数.html">全局函数</a></li>
+            
+                <li><a href="../classes/全局变量.html">全局变量</a></li>
+            
+                <li><a href="../classes/全屏设置.html">全屏设置</a></li>
+            
+                <li><a href="../classes/旧版API.html">旧版API</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1>LGraphics Class</h1>
+<div class="box meta">
+    
+
+    
+        <div class="extends">
+            Extends <a href="../classes/LObject.html" class="crosslink">LObject</a>
+        </div>
+    
+
+    
+        <div class="foundat">
+            Defined in: <a href="../files/display_LGraphics.js.html#l1"><code>display&#x2F;LGraphics.js:1</code></a>
+        </div>
+    
+
+    
+
+    
+        <p>Available since 1.0.0</p>
+    
+</div>
+
+
+
+<div class="box intro">
+    <p>LGraphics 类包含一组可用来创建矢量形状的方法。支持绘制的显示对象包括 LSprite 和 LShape 对象。这些类中的每一个类都包括 graphics 属性，该属性是一个 LGraphics 对象。
+以下是为便于使用而提供的一些辅助函数：drawRect()、drawRoundRect()、drawArc() 和 drawEllipse()。</p>
+
+</div>
+
+
+    <div class="constructor">
+        <h2>Constructor</h2>
+        <div id="method_LGraphics" class="method item public">
+    <h3 class="name"><code>LGraphics</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/display_LGraphics.js.html#l1"><code>display&#x2F;LGraphics.js:1</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.0.0</p>
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>LInit(50, &quot;legend&quot;, 800, 480, main);
+function main () {
+    var shape = new LShape();
+    addChild(shape);
+    shape.graphics.drawRect(2, &quot;#ff0000&quot;, [10, 10, 50, 100], true, &quot;#880088&quot;);
+}</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LGraphics/index.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+    </div>
+
+
+<div id="classdocs" class="tabview">
+    <ul class="api-class-tabs">
+        <li class="api-class-tab index"><a href="#index">Index</a></li>
+
+        
+            <li class="api-class-tab methods"><a href="#methods">Methods</a></li>
+        
+        
+            <li class="api-class-tab properties"><a href="#properties">Properties</a></li>
+        
+        
+        
+    </ul>
+
+    <div>
+        <div id="index" class="api-class-tabpanel index">
+            <h2 class="off-left">Item Index</h2>
+
+            
+                <div class="index-section methods">
+                    <h3>Methods</h3>
+
+                    <ul class="index-list methods extends">
+                        
+                            <li class="index-item method public">
+                                <a href="#method_add">add</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_arc">arc</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_beginBitmapFill">beginBitmapFill</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_beginPath">beginPath</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public inherited">
+                                <a href="#method_callParent">callParent</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_clear">clear</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_closePath">closePath</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_drawArc">drawArc</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_drawEllipse">drawEllipse</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_drawLine">drawLine</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_drawRect">drawRect</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_drawRoundRect">drawRoundRect</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_drawTriangles">drawTriangles</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_drawVertices">drawVertices</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_fill">fill</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_fillStyle">fillStyle</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_lineCap">lineCap</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_lineJoin">lineJoin</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_lineStyle">lineStyle</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_lineTo">lineTo</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_lineWidth">lineWidth</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_moveTo">moveTo</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_rect">rect</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_stroke">stroke</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_strokeStyle">strokeStyle</a>
+
+                                
+                                
+                            </li>
+                        
+                    </ul>
+                </div>
+            
+
+            
+                <div class="index-section properties">
+                    <h3>Properties</h3>
+
+                    <ul class="index-list properties extends">
+                        
+                            <li class="index-item property public inherited">
+                                <a href="#property_objectIndex">objectIndex</a>
+
+                                
+                                
+                            </li>
+                        
+                    </ul>
+                </div>
+            
+
+            
+
+            
+        </div>
+
+        
+            <div id="methods" class="api-class-tabpanel">
+                <h2 class="off-left">Methods</h2>
+
+                
+                    <div id="method_add" class="method item public">
+    <h3 class="name"><code>add</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>func</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/display_LGraphics.js.html#l899"><code>display&#x2F;LGraphics.js:899</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.0.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>使用原生的canvas函数进行绘图。</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">func</code>
+                        <span class="type">Function</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>一个函数</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var shape = new LShape();
+addChild(shape);
+shape.graphics.add(function(ctx){
+    ctx.beginPath();
+    ctx.strokeStyle = &quot;#FF0000&quot;;
+    ctx.lineWidth = 2;
+    ctx.moveTo(10,10);
+    ctx.lineTo(130,30);
+    ctx.stroke();
+});</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LGraphics/add.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_arc" class="method item public">
+    <h3 class="name"><code>arc</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>x</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>y</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>radius</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>startAngle</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>endAngle</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>counterclockwise</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/display_LGraphics.js.html#l341"><code>display&#x2F;LGraphics.js:341</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.0.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>用一个中心点和半径，为一个画布的当前子路径添加一条弧线。</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">x</code>
+                        <span class="type">Float</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>描述弧的圆形的圆心的坐标x。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">y</code>
+                        <span class="type">Float</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>描述弧的圆形的圆心的坐标y。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">radius</code>
+                        <span class="type">Float</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>描述弧的圆形的半径。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">startAngle</code>
+                        <span class="type">Float</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>沿着圆指定弧的开始点点的一个角度。这个角度用弧度来衡量。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">endAngle</code>
+                        <span class="type">Float</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>沿着圆指定弧的结束点的一个角度。这个角度用弧度来衡量。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">counterclockwise</code>
+                        <span class="type">Boolean</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>弧沿着圆周的逆时针方向（TRUE）还是顺时针方向（FALSE）遍历。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var shape = new LShape();
+addChild(shape);
+shape.graphics.arc(100,75,50,0,2*Math.PI);
+shape.graphics.stroke();</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LGraphics/arc.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_beginBitmapFill" class="method item public">
+    <h3 class="name"><code>beginBitmapFill</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>bitmap</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/display_LGraphics.js.html#l412"><code>display&#x2F;LGraphics.js:412</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.5.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>用位图图像填充绘图区。</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">bitmap</code>
+                        <span class="type"><a href="../classes/LBitmapData.html" class="crosslink">LBitmapData</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>包含要显示的位的透明或不透明位图图像。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>LInit(50, &quot;legend&quot;, 800, 480, main);
+function main () {
+    var loader = new LLoader();
+    loader.addEventListener(LEvent.COMPLETE, loadBitmapdata); 
+    loader.load(&quot;face.jpg&quot;, &quot;bitmapData&quot;);
+}
+function loadBitmapdata (event) {
+    var bitmapdata = new LBitmapData(event.currentTarget);  
+    var backLayer;
+    backLayer = new LSprite();
+    addChild(backLayer);
+    backLayer.graphics.beginBitmapFill(bitmapdata);
+    backLayer.graphics.drawArc(1,&quot;#000000&quot;,[150,50,50,0,Math.PI*2]);
+    backLayer = new LSprite();
+    addChild(backLayer);
+    backLayer.graphics.beginBitmapFill(bitmapdata);
+    backLayer.graphics.drawRect(1,&quot;#000000&quot;,[10,100,70,100]);
+    backLayer = new LSprite();
+    addChild(backLayer);
+    backLayer.graphics.beginBitmapFill(bitmapdata);
+    backLayer.graphics.drawVertices(1,&quot;#000000&quot;,[[120,100],[100,200],[200,150]]);
+}</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LGraphics/beginBitmapFill.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_beginPath" class="method item public">
+    <h3 class="name"><code>beginPath</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/display_LGraphics.js.html#l184"><code>display&#x2F;LGraphics.js:184</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.0.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>开始一个画布中的一条新路径（或者子路径的一个集合）。</p>
+
+    </div>
+
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var shape = new LShape();
+addChild(shape);
+shape.graphics.beginPath();
+shape.graphics.lineWidth(5);
+shape.graphics.strokeStyle(&quot;#FF0000&quot;);
+shape.graphics.moveTo(0,75);
+shape.graphics.lineTo(250,75);
+shape.graphics.stroke();
+shape.graphics.beginPath();
+shape.graphics.strokeStyle(&quot;#00FF00&quot;);
+shape.graphics.moveTo(50,0);
+shape.graphics.lineTo(150,130);
+shape.graphics.stroke();</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LGraphics/beginPath.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_callParent" class="method item public inherited">
+    <h3 class="name"><code>callParent</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>functionName</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>arguments</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LObject.html#method_callParent">LObject</a>:
+            
+        
+        
+        <a href="../files/utils_LObject.js.html#l22"><code>utils&#x2F;LObject.js:22</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.6.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>调用父类的函数。</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">functionName</code>
+                        <span class="type">String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>函数名</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">arguments</code>
+                        <span class="type">Array</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>固定值arguments</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>function funA(){
+    LExtends(this,LObject,[]);
+}
+funA.prototype.myName = function(){
+    return &quot;AAA&quot;;
+}
+function funB(){
+    LExtends(this,funA,[]);
+}
+funB.prototype.myName = function(){
+    return &quot;BBB&quot;;
+}
+function funC(){
+    LExtends(this,funA,[]);
+}
+funC.prototype.myName = function(){
+    return this.callParent(&quot;myName&quot;,arguments);
+}
+LInit(1000/50,&quot;legend&quot;,800,150,main);
+function main(){
+    LGlobal.setDebug(true);
+    var objB = new funB();
+    trace(objB.myName());//BBB
+    var objC = new funC();
+    trace(objC.myName());//AAA
+}</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LObject/callParent.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_clear" class="method item public">
+    <h3 class="name"><code>clear</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/display_LGraphics.js.html#l392"><code>display&#x2F;LGraphics.js:392</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.0.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>删除所有矢量形状。</p>
+
+    </div>
+
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var shape = new LShape();
+addChild(shape);
+shape.graphics.rect(20,20,150,100);
+shape.graphics.clear();
+shape.graphics.arc(100,75,50,0,2*Math.PI);
+shape.graphics.stroke();</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LGraphics/clear.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_closePath" class="method item public">
+    <h3 class="name"><code>closePath</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/display_LGraphics.js.html#l211"><code>display&#x2F;LGraphics.js:211</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.0.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>如果画布的子路径是打开的，closePath() 通过添加一条线条连接当前点和子路径起始点来关闭它。如果子路径已经闭合了，这个方法不做任何事情。</p>
+
+    </div>
+
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var shape = new LShape();
+addChild(shape);
+shape.graphics.beginPath();
+shape.graphics.moveTo(20,20);
+shape.graphics.lineTo(20,100);
+shape.graphics.lineTo(70,100);
+shape.graphics.closePath();
+shape.graphics.stroke();</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LGraphics/closePath.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_drawArc" class="method item public">
+    <h3 class="name"><code>drawArc</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>thickness</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>color</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>param</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>isFill</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>fillColor</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/display_LGraphics.js.html#l509"><code>display&#x2F;LGraphics.js:509</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.0.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>绘制一个圆或者扇形。</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">thickness</code>
+                        <span class="type">Int</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>一个整数，以点为单位表示线条的粗细；</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">color</code>
+                        <span class="type">String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>线的颜色，这个属性可能是一个字符串，或者一个 CanvasGradient 对象 或 CanvasPattern 对象。如果是一个字符串，它被解析为一个 CSS 颜色值，并且画笔用所得的实色来绘制。如果这个属性的值是一个 CanvasGradient 对象或 CanvasPattern 对象，画笔使用这个渐变或模式来实现。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">param</code>
+                        <span class="type">Array</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>[x,y,r,sAngle,eAngle,counterclockwise,isSector]:[描述弧的圆形的圆心的坐标x,描述弧的圆形的圆心的坐标y,描述弧的圆形的半径,沿着圆指定弧的开始点点的一个角度,沿着圆指定弧的结束点的一个角度,弧沿着圆周的逆时针方向（TRUE）还是顺时针方向（FALSE）遍历,是否绘制成扇形]。</p>
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">isFill</code>
+                        <span class="type">Boolean</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>是否填充图形</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">fillColor</code>
+                        <span class="type">String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>填充图形的颜色，这个属性可能是一个字符串，或者一个 CanvasGradient 对象 或 CanvasPattern 对象。如果是一个字符串，它被解析为一个 CSS 颜色值，并且画笔用所得的实色来绘制。如果这个属性的值是一个 CanvasGradient 对象或 CanvasPattern 对象，画笔使用这个渐变或模式来实现。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var shape = new LShape();
+addChild(shape);
+shape.graphics.drawArc(2, &quot;#ff0000&quot;, [50, 50, 40, 0, 2*Math.PI]);
+shape.graphics.drawArc(1, &quot;#000000&quot;, [50, 150, 40, 0, 2*Math.PI], true, &quot;#880088&quot;);
+shape.graphics.drawArc(2, &quot;#ff0000&quot;, [150, 50, 40, 0, 50*Math.PI/180,false,true]);
+shape.graphics.drawArc(1, &quot;#000000&quot;, [150, 150, 40, 0, 230*Math.PI/180,false,true], true, &quot;#880088&quot;);</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LGraphics/drawArc.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_drawEllipse" class="method item public">
+    <h3 class="name"><code>drawEllipse</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>thickness</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>color</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>param</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>isFill</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>fillColor</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/display_LGraphics.js.html#l449"><code>display&#x2F;LGraphics.js:449</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.8.8</p>
+        
+    </div>
+
+    <div class="description">
+        <p>绘制一个椭圆。</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">thickness</code>
+                        <span class="type">Int</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>一个整数，以点为单位表示线条的粗细；</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">color</code>
+                        <span class="type">String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>线的颜色，这个属性可能是一个字符串，或者一个 CanvasGradient 对象 或 CanvasPattern 对象。如果是一个字符串，它被解析为一个 CSS 颜色值，并且画笔用所得的实色来绘制。如果这个属性的值是一个 CanvasGradient 对象或 CanvasPattern 对象，画笔使用这个渐变或模式来实现。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">param</code>
+                        <span class="type">Array</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>[x,y,width,height]:[椭圆边框左上角相对于父显示对象注册点的 x 位置（以像素为单位）,椭圆边框左上角相对于父显示对象注册点的 y 位置（以像素为单位）,椭圆的宽度（以像素为单位）,椭圆的高度（以像素为单位）]。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">isFill</code>
+                        <span class="type">Boolean</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>是否填充图形</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">fillColor</code>
+                        <span class="type">String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>填充图形的颜色，这个属性可能是一个字符串，或者一个 CanvasGradient 对象 或 CanvasPattern 对象。如果是一个字符串，它被解析为一个 CSS 颜色值，并且画笔用所得的实色来绘制。如果这个属性的值是一个 CanvasGradient 对象或 CanvasPattern 对象，画笔使用这个渐变或模式来实现。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var shape = new LShape();
+addChild(shape);
+shape.graphics.drawEllipse(2, &quot;#ff0000&quot;, [10, 10, 100, 50]);
+shape.graphics.drawEllipse(1, &quot;#000000&quot;, [10, 100, 50, 100], true, &quot;#880088&quot;);</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LGraphics/drawEllipse.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_drawLine" class="method item public">
+    <h3 class="name"><code>drawLine</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>thickness</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>color</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>param</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/display_LGraphics.js.html#l871"><code>display&#x2F;LGraphics.js:871</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.0.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>绘制一条线段。</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">thickness</code>
+                        <span class="type">Int</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>一个整数，以点为单位表示线条的粗细；</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">color</code>
+                        <span class="type">String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>线的颜色，这个属性可能是一个字符串，或者一个 CanvasGradient 对象 或 CanvasPattern 对象。如果是一个字符串，它被解析为一个 CSS 颜色值，并且画笔用所得的实色来绘制。如果这个属性的值是一个 CanvasGradient 对象或 CanvasPattern 对象，画笔使用这个渐变或模式来实现。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">param</code>
+                        <span class="type">Array</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>[startX,startY,endX,endY]:[开始的 x 位置,开始的 y 位置,结束的 x 位置,结束的 y 位置]。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var shape = new LShape();
+addChild(shape);
+shape.graphics.drawLine(2, &quot;#ff0000&quot;, [10, 10, 100, 50]);
+shape.graphics.drawLine(1, &quot;#000000&quot;, [10, 100, 50, 100]);</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LGraphics/drawLine.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_drawRect" class="method item public">
+    <h3 class="name"><code>drawRect</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>thickness</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>color</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>param</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>isFill</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>fillColor</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/display_LGraphics.js.html#l561"><code>display&#x2F;LGraphics.js:561</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.0.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>绘制一个矩形。</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">thickness</code>
+                        <span class="type">Int</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>一个整数，以点为单位表示线条的粗细；</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">color</code>
+                        <span class="type">String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>线的颜色，这个属性可能是一个字符串，或者一个 CanvasGradient 对象 或 CanvasPattern 对象。如果是一个字符串，它被解析为一个 CSS 颜色值，并且画笔用所得的实色来绘制。如果这个属性的值是一个 CanvasGradient 对象或 CanvasPattern 对象，画笔使用这个渐变或模式来实现。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">param</code>
+                        <span class="type">Array</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>[x,y,width,height]:[矩形左上角的 x 位置,矩形左上角的 y 位置,矩形的宽度,矩形的高度]。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">isFill</code>
+                        <span class="type">Boolean</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>是否填充图形</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">fillColor</code>
+                        <span class="type">String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>填充图形的颜色，这个属性可能是一个字符串，或者一个 CanvasGradient 对象 或 CanvasPattern 对象。如果是一个字符串，它被解析为一个 CSS 颜色值，并且画笔用所得的实色来绘制。如果这个属性的值是一个 CanvasGradient 对象或 CanvasPattern 对象，画笔使用这个渐变或模式来实现。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var shape = new LShape();
+addChild(shape);
+shape.graphics.drawRect(2, &quot;#ff0000&quot;, [10, 10, 100, 50]);
+shape.graphics.drawRect(1, &quot;#000000&quot;, [10, 100, 50, 100], true, &quot;#880088&quot;);</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LGraphics/drawRect.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_drawRoundRect" class="method item public">
+    <h3 class="name"><code>drawRoundRect</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>thickness</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>color</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>param</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>isFill</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>fillColor</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/display_LGraphics.js.html#l608"><code>display&#x2F;LGraphics.js:608</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.7.1</p>
+        
+    </div>
+
+    <div class="description">
+        <p>绘制一个圆角矩形。</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">thickness</code>
+                        <span class="type">Int</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>一个整数，以点为单位表示线条的粗细；</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">color</code>
+                        <span class="type">String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>线的颜色，这个属性可能是一个字符串，或者一个 CanvasGradient 对象 或 CanvasPattern 对象。如果是一个字符串，它被解析为一个 CSS 颜色值，并且画笔用所得的实色来绘制。如果这个属性的值是一个 CanvasGradient 对象或 CanvasPattern 对象，画笔使用这个渐变或模式来实现。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">param</code>
+                        <span class="type">Array</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>[x,y,width,height,radius]:[矩形左上角的 x 位置,矩形左上角的 y 位置,矩形的宽度,矩形的高度,圆角的大小]。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">isFill</code>
+                        <span class="type">Boolean</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>是否填充图形</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">fillColor</code>
+                        <span class="type">String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>填充图形的颜色，这个属性可能是一个字符串，或者一个 CanvasGradient 对象 或 CanvasPattern 对象。如果是一个字符串，它被解析为一个 CSS 颜色值，并且画笔用所得的实色来绘制。如果这个属性的值是一个 CanvasGradient 对象或 CanvasPattern 对象，画笔使用这个渐变或模式来实现。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var shape = new LShape();
+addChild(shape);
+shape.graphics.drawRoundRect(2, &quot;#ff0000&quot;, [10, 10, 100, 50, 10]);
+shape.graphics.drawRoundRect(1, &quot;#000000&quot;, [10, 100, 50, 100, 10], true, &quot;#880088&quot;);</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LGraphics/drawRoundRect.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_drawTriangles" class="method item public">
+    <h3 class="name"><code>drawTriangles</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>vertices</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>indices</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>uvtData</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>thickness</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>color</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/display_LGraphics.js.html#l718"><code>display&#x2F;LGraphics.js:718</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.5.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>呈现一组三角形（通常用于扭曲位图），并为其指定三维外观。drawTriangles() 方法使用一组 (u,v) 坐标将当前填充或位图填充映射到三角形面。</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">vertices</code>
+                        <span class="type">Array</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>由数字构成的矢量，其中的每一对数字将被视为一个坐标位置（一个 x, y 对）。vertices 参数是必需的。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">indices</code>
+                        <span class="type">Array</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>一个由整数或索引构成的矢量，其中每三个索引定义一个三角形。如果 indexes 参数为 null，则每三个顶点（vertices 矢量中的 6 对 x,y）定义一个三角形。否则，每个索引将引用一个顶点，即 vertices 矢量中的一对数字。例如，indexes[1] 引用 (vertices[2], vertices[3])。indexes 参数是可选的，但 indexes 通常会减少提交的数据量和计算的数据量。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">uvtData</code>
+                        <span class="type">Array</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>由用于应用纹理映射的标准坐标构成的矢量。每个坐标引用用于填充的位图上的一个点。每个顶点必须具有一个 UV 或一个 UVT 坐标。对于 UV 坐标，(0,0) 是位图的左上角，(1,1) 是位图的右下角。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">thickness</code>
+                        <span class="type">Int</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>一个整数，以点为单位表示线条的粗细,默认为0；</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">color</code>
+                        <span class="type">String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>线的颜色</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var bitmapdata = new LBitmapData(event.currentTarget);  
+var backLayer = new LSprite();
+addChild(backLayer);
+var vertices = new Array();
+vertices.push(0, 0);
+vertices.push(-40, 90);
+vertices.push(0, 200);
+vertices.push(80, 0);
+vertices.push(90, 30);
+vertices.push(70,200);
+vertices.push(130, 10);
+vertices.push(140, 40);
+vertices.push(120,220);
+var indices = new Array();
+indices.push(0, 3, 1);
+indices.push(3, 1, 4);
+indices.push(1, 4, 2);
+indices.push(4, 2, 5);
+indices.push(3, 6, 4);
+indices.push(6, 4, 7);
+indices.push(4, 7, 5);
+indices.push(7, 5, 8);
+var uvtData = new Array();
+uvtData.push(0, 0);
+uvtData.push(0, 0.5);
+uvtData.push(0, 1);
+uvtData.push(0.5, 0);
+uvtData.push(0.5, 0.5);
+uvtData.push(0.5, 1);
+uvtData.push(1, 0);
+uvtData.push(1, 0.5);
+uvtData.push(1, 1);
+backLayer.graphics.beginBitmapFill(bitmapdata);
+backLayer.graphics.drawTriangles(vertices, indices, uvtData);</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LGraphics/drawTriangles.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_drawVertices" class="method item public">
+    <h3 class="name"><code>drawVertices</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>thickness</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>color</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>param</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>isFill</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>fillColor</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/display_LGraphics.js.html#l663"><code>display&#x2F;LGraphics.js:663</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.4.1</p>
+        
+    </div>
+
+    <div class="description">
+        <p>使用顶点数组绘制一个多边形。</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">thickness</code>
+                        <span class="type">Int</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>一个整数，以点为单位表示线条的粗细；</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">color</code>
+                        <span class="type">String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>线的颜色，这个属性可能是一个字符串，或者一个 CanvasGradient 对象 或 CanvasPattern 对象。如果是一个字符串，它被解析为一个 CSS 颜色值，并且画笔用所得的实色来绘制。如果这个属性的值是一个 CanvasGradient 对象或 CanvasPattern 对象，画笔使用这个渐变或模式来实现。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">param</code>
+                        <span class="type">Array</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>[[x1,y1],[x2,y2],[x3,y3],......]</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">isFill</code>
+                        <span class="type">Boolean</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>是否填充图形</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">fillColor</code>
+                        <span class="type">String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>填充图形的颜色，这个属性可能是一个字符串，或者一个 CanvasGradient 对象 或 CanvasPattern 对象。如果是一个字符串，它被解析为一个 CSS 颜色值，并且画笔用所得的实色来绘制。如果这个属性的值是一个 CanvasGradient 对象或 CanvasPattern 对象，画笔使用这个渐变或模式来实现。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var shape = new LShape();
+addChild(shape);
+shape.graphics.drawVertices(2, &quot;#ff0000&quot;, [[10, 10], [60, 100], [100, 50]]);
+shape.graphics.drawVertices(2, &quot;#ff0000&quot;, [[10, 160], [60, 250], [100, 200]], true, &quot;#880088&quot;);</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LGraphics/drawVertices.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_fill" class="method item public">
+    <h3 class="name"><code>fill</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/display_LGraphics.js.html#l322"><code>display&#x2F;LGraphics.js:322</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.0.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>使用指定颜色、渐变或模式来绘制或填充当前路径的内部。</p>
+
+    </div>
+
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var shape = new LShape();
+addChild(shape);
+shape.graphics.fillStyle(&quot;#FF0000&quot;);
+shape.graphics.rect(20,20,150,100);
+shape.graphics.fill();</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LGraphics/fillStyle_fill.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_fillStyle" class="method item public">
+    <h3 class="name"><code>fillStyle</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>style</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/display_LGraphics.js.html#l302"><code>display&#x2F;LGraphics.js:302</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.0.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>用来填充路径的当前的颜色、模式或渐变。</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">style</code>
+                        <span class="type">String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>这个属性可以设置为一个字符串或者一个 CanvasGradient 对象 或 CanvasPattern 对象。当设置为一个字符串时，它被解析为一个 CSS 颜色值并且用来进行实心填充。当设置为一个 CanvasGradient 或 CanvasPattern 对象，通过使用指定的渐变或模式来完成填充。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var shape = new LShape();
+addChild(shape);
+shape.graphics.fillStyle(&quot;#FF0000&quot;);
+shape.graphics.rect(20,20,150,100);
+shape.graphics.fill();</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LGraphics/fillStyle_fill.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_lineCap" class="method item public">
+    <h3 class="name"><code>lineCap</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>value</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/display_LGraphics.js.html#l57"><code>display&#x2F;LGraphics.js:57</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.8.8</p>
+        
+    </div>
+
+    <div class="description">
+        <p>定线段如何结束。只有绘制较宽线段时，它才有效。</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">value</code>
+                        <span class="type">String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>可以使用下面三个值butt, round, square。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var shape = new LShape();
+addChild(shape);
+shape.graphics.beginPath();
+shape.graphics.lineWidth(10);
+shape.graphics.lineCap(&quot;butt&quot;);
+shape.graphics.moveTo(20,20);
+shape.graphics.lineTo(200,20);
+shape.graphics.stroke();
+shape.graphics.beginPath();
+shape.graphics.lineCap(&quot;round&quot;);
+shape.graphics.moveTo(20,40);
+shape.graphics.lineTo(200,40);
+shape.graphics.stroke();
+shape.graphics.beginPath();
+shape.graphics.lineCap(&quot;square&quot;);
+shape.graphics.moveTo(20,60);
+shape.graphics.lineTo(200,60);
+shape.graphics.stroke();</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LGraphics/lineCap.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_lineJoin" class="method item public">
+    <h3 class="name"><code>lineJoin</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>value</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/display_LGraphics.js.html#l90"><code>display&#x2F;LGraphics.js:90</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.8.8</p>
+        
+    </div>
+
+    <div class="description">
+        <p>当一个路径包含了线段或曲线相交的交点的时候，lineJoin 属性说明如何绘制这些交点。只有当绘制具有宽度的线条的时候，这一属性的效果才能表现出来。</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">value</code>
+                        <span class="type">String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>可以使用下面三个值bevel, round, miter。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var shape = new LShape();
+addChild(shape);
+shape.graphics.beginPath();
+shape.graphics.lineWidth(10);
+shape.graphics.lineJoin(&quot;round&quot;);
+shape.graphics.moveTo(20,20);
+shape.graphics.lineTo(100,50);
+shape.graphics.lineTo(20,100);
+shape.graphics.stroke();</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LGraphics/lineJoin.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_lineStyle" class="method item public">
+    <h3 class="name"><code>lineStyle</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>thickness</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>color</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/display_LGraphics.js.html#l366"><code>display&#x2F;LGraphics.js:366</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.0.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>设置线条属性。</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">thickness</code>
+                        <span class="type">Int</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>一个整数，以点为单位表示线条的粗细；</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">color</code>
+                        <span class="type">String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>线的颜色，这个属性可能是一个字符串，或者一个 CanvasGradient 对象 或 CanvasPattern 对象。如果是一个字符串，它被解析为一个 CSS 颜色值，并且画笔用所得的实色来绘制。如果这个属性的值是一个 CanvasGradient 对象或 CanvasPattern 对象，画笔使用这个渐变或模式来实现。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var shape = new LShape();
+addChild(shape);
+shape.graphics.lineStyle(5,&quot;#FF0000&quot;);
+shape.graphics.rect(20,20,150,100);
+shape.graphics.stroke();</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LGraphics/lineStyle.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_lineTo" class="method item public">
+    <h3 class="name"><code>lineTo</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>x</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>y</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/display_LGraphics.js.html#l256"><code>display&#x2F;LGraphics.js:256</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.0.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>为当前的子路径添加一条直线线段。</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">x</code>
+                        <span class="type">Float</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>直线的终点的坐标x。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">y</code>
+                        <span class="type">Float</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>直线的终点的坐标y。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var shape = new LShape();
+addChild(shape);
+shape.graphics.beginPath();
+shape.graphics.moveTo(20,20);
+shape.graphics.lineTo(70,100);
+shape.graphics.stroke();</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LGraphics/moveTo_lineTo.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_lineWidth" class="method item public">
+    <h3 class="name"><code>lineWidth</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>value</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/display_LGraphics.js.html#l114"><code>display&#x2F;LGraphics.js:114</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.0.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>指定线条的宽度。</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">value</code>
+                        <span class="type">Float</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>线条的宽度。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var shape = new LShape();
+addChild(shape);
+shape.graphics.beginPath();
+shape.graphics.lineWidth(2);
+shape.graphics.moveTo(20,20);
+shape.graphics.lineTo(200,50);
+shape.graphics.stroke();
+shape.graphics.beginPath();
+shape.graphics.lineWidth(10);
+shape.graphics.moveTo(20,40);
+shape.graphics.lineTo(200,40);
+shape.graphics.stroke();</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LGraphics/lineWidth.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_moveTo" class="method item public">
+    <h3 class="name"><code>moveTo</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>x</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>y</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/display_LGraphics.js.html#l233"><code>display&#x2F;LGraphics.js:233</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.0.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>设置当前位置并开始一条新的子路径。</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">x</code>
+                        <span class="type">Float</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>新的当前点的坐标x。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">y</code>
+                        <span class="type">Float</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>新的当前点的坐标y。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var shape = new LShape();
+addChild(shape);
+shape.graphics.beginPath();
+shape.graphics.moveTo(20,20);
+shape.graphics.lineTo(70,100);
+shape.graphics.stroke();</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LGraphics/moveTo_lineTo.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_rect" class="method item public">
+    <h3 class="name"><code>rect</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>x</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>y</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>width</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>height</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/display_LGraphics.js.html#l279"><code>display&#x2F;LGraphics.js:279</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.0.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>为当前路径添加一条矩形子路径。</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">x</code>
+                        <span class="type">Float</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>矩形的左上角的坐标x。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">y</code>
+                        <span class="type">Float</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>矩形的左上角的坐标y。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">width</code>
+                        <span class="type">Float</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>矩形的宽。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">height</code>
+                        <span class="type">Float</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>矩形的高。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var shape = new LShape();
+addChild(shape);
+shape.graphics.rect(20,20,150,100);
+shape.graphics.stroke();</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LGraphics/rect.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_stroke" class="method item public">
+    <h3 class="name"><code>stroke</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/display_LGraphics.js.html#l163"><code>display&#x2F;LGraphics.js:163</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.0.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>沿着当前路径绘制或画一条直线。</p>
+
+    </div>
+
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var shape = new LShape();
+addChild(shape);
+shape.graphics.strokeStyle(&quot;#FF0000&quot;);
+shape.graphics.lineWidth(5);
+shape.graphics.lineJoin(&quot;round&quot;);
+shape.graphics.rect(20,20,150,100);
+shape.graphics.stroke();</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LGraphics/stroke_strokeStyle.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_strokeStyle" class="method item public">
+    <h3 class="name"><code>strokeStyle</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>value</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/display_LGraphics.js.html#l141"><code>display&#x2F;LGraphics.js:141</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.0.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>指定了用于画笔（绘制）路径的颜色、模式和渐变。这个属性可能是一个字符串，或者一个 CanvasGradient 对象 或 CanvasPattern 对象。</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">value</code>
+                        <span class="type">String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>可以使用下面三个值color|gradient|pattern。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var shape = new LShape();
+addChild(shape);
+shape.graphics.strokeStyle(&quot;#FF0000&quot;);
+shape.graphics.lineWidth(5);
+shape.graphics.lineJoin(&quot;round&quot;);
+shape.graphics.rect(20,20,150,100);
+shape.graphics.stroke();</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LGraphics/stroke_strokeStyle.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+            </div>
+        
+
+        
+            <div id="properties" class="api-class-tabpanel">
+                <h2 class="off-left">Properties</h2>
+
+                
+                    <div id="property_objectIndex" class="property item public inherited">
+    <h3 class="name"><code>objectIndex</code></h3>
+    <span class="type">Int</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LObject.html#property_objectIndex">LObject</a>:
+            
+        
+        
+        <a href="../files/utils_LObject.js.html#l11"><code>utils&#x2F;LObject.js:11</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.6.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>对象的ID</p>
+
+    </div>
+
+    
+
+    
+    
+
+    
+</div>
+
+                
+            </div>
+        
+
+        
+
+        
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32497708-2']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>

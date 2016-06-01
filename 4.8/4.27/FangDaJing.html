@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="{CHARSET}">
+		<title></title>
+		<style type="text/css">
+			#min_wrap{
+				border: 1px solid #ccc;
+				position: absolute;
+			}
+			#max_wrap{
+				border: 1px solid red;
+				width: 400px;
+				height: 400px;
+				position: absolute;
+				left: 370px;
+				overflow: hidden;
+				display: none;
+			}
+			#slider{
+				width: 175px;
+				height: 175px;
+				position: absolute;
+				background-color: lightgoldenrodyellow;
+				left: 0;
+				top: 0;
+				opacity: .5;
+				display: none;
+			}
+			#max_wrap img{
+				
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="min_wrap">
+			<img src="min.jpg"/>
+			<div id="slider"></div>
+		</div>
+		<div id="max_wrap">
+			<img src="max.jpg"/>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var minWrap = document.querySelector("#min_wrap");
+		var maxWrap = document.querySelector("#max_wrap");
+		var slider = document.querySelector("#slider");
+		var maximg = maxWrap.children[0];
+//		鼠标移动事件在min_wrap上面触发
+		minWrap.onmousemove = function(){
+//			让滑块和max——wrap出来
+			slider.style.display = "block";
+			maxWrap.style.display = "block";
+//			获取滑块所处在的小div中的位置
+			var x = event.clientX - minWrap.offsetLeft - slider.offsetWidth/2;
+			var y = event.clientY - minWrap.offsetTop - slider.offsetHeight/2;
+		
+//			获取到要显示区域的最大宽度和高度
+			var maxWidth = minWrap.clientWidth - slider.offsetWidth;
+			var maxHeight = minWrap.clientHeight - slider.offsetHeight;
+			if(x > maxWidth){
+				x = maxWidth;
+			}else if(x < 0){
+				x = 0;
+			}
+			if(y > maxHeight){
+				y = maxHeight;
+			}else if(y < 0){
+				y = 0;
+			}
+				console.log(x);
+				slider.style.left = x + "px";
+				slider.style.top = y + "px";
+//			位置和最大宽度拿到之后
+//			算出一个要缩放的比例值
+			var scaleX = x / maxWidth;
+			var scaleY = y / maxHeight;
+//			有了横向和竖向的显示比例之后
+//			右侧的max——div就可以按照比例
+//			显示某一个特定范围内的图片了
+			maxWrap.scrollLeft = scaleX * (maximg.offsetWidth - maxWrap.clientWidth);
+			maxWrap.scrollTop = scaleY * (maximg.offsetHeight - maxWrap.clientHeight);
+			minWrap.onmouseleave = function(){
+				slider.style.display = "none";
+				maxWrap.style.display = "none";
+				
+			}
+		}
+	</script>
+</html>

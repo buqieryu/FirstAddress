@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+
+	<!--	javascript 是一种基于对象和事件驱动的并且具有安全性能的脚本语言		-->
+		<!--js 的特点
+		1、简单性
+		2、安全性（不能反问本地存储的文件）
+		3、动态性
+		4、跨平台性  Dog *p1 = new Dog();-->
+			<p id="myP">我是段落</p>
+			<button id="mybtn">烦烦烦</button>
+			<br>
+				<input type="password" id="mytext" />
+				<input type="checkbox" id="myCheck"  />显示密码
+		<script type="text/javascript">
+//			显隐性的测试
+		var p = document.getElementById("myP");
+		var btn = document.getElementById("mybtn");
+		btn.innerHTML = "点我";
+		btn.onclick = function (){
+			if (p.style.display == "none"){
+				p.style.display = "block";
+			}else{
+				p.style.display = "none";
+			}
+		}
+		p.style.color = "red";
+		var mytext = document.getElementById("mytext");
+		var myCheck = document.getElementById("myCheck");
+		myCheck.onclick = function (){
+			if (myCheck.checked == true){
+				mytext.type = "text";
+			}else{
+				mytext.type = "password";
+			}
+		}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+	<title>tween.js强大的可生成平滑动画效果的js库|DEMO3_jQuery之家-自由分享jQuery、html5、css3的插件库</title>
+	<!-- <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/default.css">
+	<link href="css/style.css" rel="stylesheet" type="text/css" /> -->
+	<style>
+		table { border-collapse:collapse; }
+		td { width: 5px; height: 5px; }
+		#target { position: absolute; top: 20em; right: 3em; }
+	</style>
+	<!--[if IE]>
+		<script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div class="container">
+		<header class="htmleaf-header">
+			<h1>tween.js强大的可生成平滑动画效果的js库 <span>A Javascript tweening engine</span></h1>
+			<div class="htmleaf-links">
+				<a class="htmleaf-icon icon-home" href="http://www.htmleaf.com/" title="jQuery之家" target="_blank"><span> jQuery之家</span></a>
+				<a class="htmleaf-icon icon-arrow-right3" href="http://www.htmleaf.com/jQuery/Layout-Interface/201501271284.html" title="返回下载页" target="_blank"><span> 返回下载页</span></a>
+			</div>
+			<div class="htmleaf-demo center">
+			  <a href="index.html">hello wrold</a>
+			  <a href="index2.html">bars</a>
+			  <a href="index3.html" class="current">colors</a>
+			  <a href="index4.html">graphs</a>
+			  <a href="index5.html">simplest</a>
+			  <a href="index6.html">video</a>
+			  <a href="index7.html">array</a>
+			  <a href="index8.html">dynamic to</a>
+			  <a href="index9.html">repeat</a>
+			  <a href="index10.html">relative values</a>
+			  <a href="index11.html">yoyo</a>
+			  <a href="index12.html">stop all chained</a>
+			  <a href="index13.html">easing</a>
+			</div>
+		</header>
+		<div id="info">
+			<h3>02 _ Black and red - 4096 continuously changing color cells (in a 64x64 table)</h3>
+		</div>
+		<div id="target"></div>
+	</div>
+
+	<script src="js/tween.min.js"></script>
+	<script src="js/stats.min.js"></script>
+	<!-- <script src="js/RequestAnimationFrame.js"></script> -->
+	<script>
+			var stats;
+
+			init();
+			animate();
+
+			function init() {
+				var target = document.getElementById('target');
+				stats = new Stats();
+				target.appendChild(stats.domElement);
+
+				var t = document.createElement('table');
+				var index = 0;
+
+				for(var i = 0; i < 64; i++) {
+					var tr = t.insertRow(-1);
+					for(var j = 0; j < 64; j++) {
+						var td = tr.insertCell(-1);
+						td.style.background = '#000';
+						// var x = (i+j) * 0.1;
+						var cell = { 'td': td, value : 0 };
+						var tween = new TWEEN.Tween(cell)
+							.to({ value: 1 }, 8000)
+							.delay((0.001 * index + Math.random()) * 500)
+							.easing(TWEEN.Easing.Elastic.InOut)
+							.onUpdate(function() {
+								var c = Math.floor(this.value * 0xff);
+								this.td.style.background = 'rgb(' + c + ', 0, 0)';
+							});
+
+						var tweenBack = new TWEEN.Tween(cell)
+							.to({ value: 0 }, 4000)
+							.delay((0.001*index + Math.random()) * 500)
+							.easing(TWEEN.Easing.Elastic.InOut)
+							.onUpdate(function() {
+								var c = Math.floor(this.value * 0xff);
+								this.td.style.background = 'rgb(' + c + ', 0, 0)';
+							});
+
+						tween.chain(tweenBack);
+						tweenBack.chain(tween);
+
+						tween.start();
+						index++;
+					}
+				}
+
+				target.appendChild(t);
+			}
+
+			function animate( time ) {
+
+				requestAnimationFrame( animate );
+
+				TWEEN.update( time );
+				stats.update();
+			}
+		</script>
+</body>
+</html>

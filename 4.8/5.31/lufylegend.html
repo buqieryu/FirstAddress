@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="wrap">
+			
+		</div>
+	</body>
+	<script src="lufylegend-1.6.1.min (1).js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		//吧lufulegend 游戏引擎库初始化出来			
+		init(50 , "wrap" , 500 , 500 , main);
+		
+	/*	1.初始化游戏引擎环境 init();
+		2.创建LLoader对象 --> loader
+		3.给loader绑定图片路径
+		4.给loader添加加载完成的监听事件,通过LEvent.COMPLETE
+		5.在加载完成回调函数里面
+			a.获取到图片内容 --> loader.content
+			b.将图片内容做成bit数据(new LBitmapData)
+			c.将bit数据放到map中 (new LBitmap)
+			d.将bitmap放到sprite中 (new LSprite)
+				sprite.addChild()
+			e.将sprite展示到div中(全局方法)
+				addChild(sprite)               */
+		
+		
+		
+		
+		
+		var loader = null;
+		//游戏的入口函数
+		function main() {
+			//用LLoader类加载图片
+			//可以是任何图片
+			//如果加载的是gif图片，只显示第一帧
+			loader = new LLoader();
+			//给该loader添加点击事件，类似 image.onload
+			//监听加载完成的事件
+			loader.addEventListener(LEvent.COMPLETE , myLoaderImage);
+			//给loader绑定图片路径
+			loader.load("1.jpg" , "bitmapData");			
+		}
+		//图片加载完成之后出发的方法
+		function myLoaderImage(event) {
+			//loader图片加载成功就会出发这个方法
+			//图片就在loader.contecnt里面
+			//loader.commtent--> 是图片的data数据
+			//LBimMapData LBitMap
+			
+			//获取到图片的内容数据data
+			//后面4个参数，如果不写拿的是整个图片的数据Data
+			//如果写上拿的是某一个范围的数据Data
+			var imgData = new LBitmapData(loader.content , 250 , 200 , 200 , 200);
+			
+			//把图片数据滑到面板(div)上
+			//需要借助另外一个类 LBitMap
+			var imgMap = new LBitmap(imgData);
+			
+			//这样imgMap就有图片了，需要把图片交给div
+			//此时就需要借助于另外一个类 LSprite
+			var sprite = new LSprite();
+			
+			//接下来imgmap会放在sprite里面
+			sprite.addChild(imgMap);
+			
+			//全局调用 通过LGlobal
+			addChild(sprite);
+			
+			
+			
+			
+			
+			
+		}
+	</script>
+</html>

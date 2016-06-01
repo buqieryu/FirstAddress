@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		*{
+			margin:0;
+			padding: 0;
+		}	
+		body,html{
+				height: 100%;
+			}
+		#wrap{
+			width: 400px;
+			height: 100%;
+			/*background-color: yellow;*/
+			margin:0 auto;	
+			position: relative;
+			border: 1px solid red;
+			min-height: 500px;
+			max-height: 600px;
+		}	
+		#dao{
+			position: absolute;
+			left: 20px;
+			top: 20px;	
+			font-size: 2em ;
+			font-family: "楷体";
+			}
+		#wan{
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			font-size: 2em;
+			font-family: "楷体";
+		}
+		#show{
+			position: absolute;
+			top: 100px;
+			left: 120px;
+			font-size: 10em;
+			font-family: "楷体";
+		}
+		#menu{
+			position: absolute;
+			font-size: 1.5em;
+			top: 250px;
+			padding: 30px;
+			font-family: "楷体";
+		}
+		#ul1{
+			position: absolute;
+			left: 0;
+			bottom: 100px;
+			list-style: none;
+			font-family: "楷体";
+			
+		}
+		#ul1 li{
+			float: left;
+			font-size: 5em;
+			
+		}
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			<div id="dao">剩余时间：20</div>
+			<div id="wan">完成：0</div>
+			<div id="show">红</div>
+			<div id="menu">根据上面的文字的颜色从下面选择正确的字，选择会自动开始！</div>
+			<ul id="ul1">
+				<li>绿</li>
+				<li>蓝</li>
+				<li>黑</li>
+				<li>黄</li>
+				<li>红</li>
+			</ul>
+			
+			
+		</div>
+		
+	</body>
+	<script type="text/javascript">
+//		var show = document.getElementById("show");
+		var show = document.querySelector("#show");
+		var lis = document.querySelectorAll("#ul1>li");
+		var menu = document.querySelector("#menu");
+		var dao = document.querySelector("#dao");
+		var wan = document.querySelector("#wan");
+//		准备两个数组
+		var colors = ["red","green","blue","yellow","black"];
+		var fonts = ["红","绿", "蓝", "黄","黑"];
+//		准备一个分数计变量
+		var num = 0;
+		var showColorRandom;
+//		准备一个定时器技数变量
+		var countDown = 20;
+//		准备一个是否开始游戏的变量
+		var timeBool = false;
+//		准备一个是否被点击的变量
+		var clickBool = true;
+		
+		showRan();
+		textRan();
+		
+		function showRan(){
+//			取到一个随机数
+			var showColorR = myRandom(0 , 5);
+			var showFontR = myRandom(0 , 5);
+			show.style.color = colors[showColorR];
+			show.innerHTML = fonts[showFontR];
+		}
+		function textRan(){
+//			取到一个随机数
+//			myRandom(0 ,5);
+		var colorArray = smallArray();
+		var fontArray = smallArray();
+		for (var i = 0; i < colorArray.length; i++){
+			lis[i].style.color = colors[colorArray[i]];
+			lis[i].innerHTML = fonts[fontArray[i]];
+			lis[i].fontIndex = fontArray[i];
+			}
+		}
+		function smallArray(){
+//			会将一个存放有0，1，2，3，4这5个内容的数组以乱序的方式返回
+		var arr = [];
+//		存放内容
+		while(arr.length < 5){
+//			suijishu
+//			arr<--suijishu
+			var r = myRandom(0 , 5);
+//			判断数组里面有没有随机数
+//			若有  就不再要
+//			没有  就push进去
+			var bol = true;
+			for (var i = 0; i<arr.length;i++){
+				if(arr[i] == r){
+					bol = false;
+					break;	
+				}
+			}
+			if(bol == true){
+				arr.push(r);	
+				}	
+		}
+		
+		return arr;
+		}
+		for ( var i = 0; i<lis.length;i++){
+	
+	
+	lis[i].onclick = function(){
+		          if(showColorRandom == this.fontIndex && ){
+
+		       timeBool = true;
+		       menu.style.display = "none";
+		       showRan();
+		       textRan();
+		       num++;
+		       wan.innerHTML = "完成:" + num;
+				}
+		    }
+	}
+		var time = setInterval(function(){
+			if(timeBool == true){
+				countDown--;
+				dao.innerHTML = "剩余时间：" + countDown;
+				if(countDemo <= 0){
+					gameOver();
+					clickBool = false;
+					cleanInterval(time);
+					
+				}
+				
+			}
+		},1000);
+		function gameOver(){
+			if(num < 5){
+				alert("sb 真是一个色盲")；
+				
+			}else if(num < 10){ 
+			alert("洗洗睡吧  你不行");	
+			
+		}else{
+			alert("你是不是闲的蛋疼")
+			
+		}
+		}
+		function myRandom(min , max){
+			return parseInt(Math.random()*(max - min)) + min;
+		}
+	
+	</script>
+</html>

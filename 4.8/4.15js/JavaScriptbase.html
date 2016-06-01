@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#wrap {
+				width: 400px;
+				height: 500px;
+				border: 1px solid red;
+				position: relative;
+				margin: 0 auto;
+			}
+			
+			#qiu {
+				width: 10px;
+				height: 10px;
+				background-color: red;
+				position: absolute;
+			}
+			
+			#ban {
+				width: 100px;
+				height: 20px;
+				background-color: greenyellow;
+				position: absolute;
+				bottom: 0;
+			}
+			
+			#btn {
+				width: 100px;
+				height: 50px;
+				position: absolute;
+				left: 150px;
+				top: 225px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="wrap">
+			<div id="qiu">
+
+			</div>
+			<button id="btn">开始游戏</button>
+			<div id="ban">
+
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var wrap = document.getElementById("wrap");
+		var qiu = document.getElementById("qiu");
+		var ban = document.getElementById("ban");
+		var maxWidth = wrap.clientWidth - qiu.offsetWidth;
+		var maxHeight = wrap.clientHeight - qiu.offsetHeight;
+		var bol = false;
+		var mybol = false;
+		var timer = null;
+		document.onkeydown = function() {
+			switch (event.keyCode) {
+				case 37:
+					ban.style.left = ban.offsetLeft - 20 + 'px';
+					break;
+				case 39:
+					ban.style.left = ban.offsetLeft + 20 + 'px';
+					break;
+				default:
+					break;
+			}
+			if (ban.offsetLeft <= 0) {
+				ban.style.left = 0;
+			}
+			if (ban.offsetLeft >= 300) {
+				ban.style.left = 300 + 'px';
+			}
+		}
+		btn.onclick = function() {
+			btn.style.display = "none";
+			timer = setInterval(function() {
+				if (bol == false) {
+					qiu.style.left = qiu.offsetLeft + 15 + 'px';
+					if (qiu.offsetLeft > maxWidth) {
+						bol = true;
+					}
+				}
+				if(mybol == false){
+					qiu.style.top = qiu.offsetTop + 10 + "px";
+					if(qiu.offsetTop > maxHeight){
+//						clearInterval(timer);
+						mybol = true;
+					}
+				}
+				if (bol) {
+					qiu.style.left = qiu.offsetLeft - 15 + 'px';
+					if (qiu.offsetLeft <= 0) {
+						bol = false;
+					}
+				}
+				if(mybol){
+					qiu.style.top = qiu.offsetTop - 10 + "px";
+					if(qiu.offsetTop <= 0){
+						
+						mybol = false;
+					}
+				}
+				conclick()
+				
+			}, 100);
+		}
+		function conclick() {
+			//检测碰撞
+			//block1
+			var t1 = qiu.offsetTop;
+			var l1 = qiu.offsetLeft;
+			var r1 = qiu.offsetWidth + l1;
+			var b1 = t1 + qiu.offsetHeight;
+			//block2
+			var t2 = ban.offsetTop;
+			var l2 = ban.offsetLeft;
+			var r2 = ban.offsetWidth + l2;
+			if ((b1 >= t2 && r1 <= r2 && l1 >= l2)) {
+				mybol = true;
+			} 
+		}
+	</script>
+
+</html>

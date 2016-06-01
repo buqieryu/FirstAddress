@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>旋转</title>
+		<style type="text/css">
+			div{
+				width: 100px;
+				height: 100px;
+				position: absolute;
+				/*margin-left: 20px;*/
+				background-color: red;
+			}
+			#first{
+				background-color: black;
+				left: 20px;
+			}
+			#second{
+				background-color: lightsalmon;
+				left: 140px;
+			}
+			#third{
+				background-color: lightseagreen;
+				left: 260px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="first" data-rotatio="0">
+			repeat once
+		</div>
+		<div id="second" data-rotatio="0">
+			repeat 3 times
+		</div>
+		<div id="third" data-rotatio="0">
+			repeat infinete
+		</div>
+	</body>
+	<script type="text/javascript" src="tween/tween.min.js">
+		
+	</script>
+	
+	<script type="text/javascript">
+		var first = document.getElementById("first");
+		var second = document.getElementById("second");
+		var third = document.getElementById("third");
+		
+		// 三个div起始的旋转角度
+		var firstObj = {deg:0};
+		var secondObj = {deg:0};
+		var thirdObj = {deg:0};
+		
+		var tween1 = null;
+		var tween2 = null;
+		var tween3 = null;
+		
+		// 初始化三个动画对象的方法
+		// tween1 , tween2 , tween3
+		init();
+		function init(){
+			tween1 = initEveryOne(tween1 , firstObj , 1 , first);
+			tween2 = initEveryOne(tween2 , secondObj , 3 , second);
+			tween3 = initEveryOne(tween3 , thirdObj , Infinity , third);
+		}
+		
+		function initEveryOne(tween , initDeg , times , obj){
+			tween = new TWEEN.Tween(initDeg);
+			tween.to({deg:360} , 2000);
+			tween.repeat(times);
+			tween.onUpdate(function () {
+				rotateAllDiv(initDeg , obj);
+			});
+			tween.start();
+			return tween;
+		}
+		
+		animate();
+		function animate(){
+			requestAnimationFrame(animate);
+			TWEEN.update();
+		}
+		
+		
+		// 根据deg的改变,让特定的div开始旋转
+		function rotateAllDiv(deg , obj){
+			var transform = "rotate(" + Math.floor(deg.deg) + "deg)";
+			obj.style.webkitTransform = transform;
+		}
+		function firstFn() {
+			var transform = "rotate(" + Math.floor(firstObj.deg) + "deg)";
+			first.style.webkitTransform = transform;
+		}
+		function secondFn() {
+			var transform = "rotate(" + Math.floor(secondObj.deg) + "deg)";
+			second.style.webkitTransform = transform;
+		}
+		function thirdFn() {
+			var transform = "rotate(" + Math.floor(thirdObj.deg) + "deg)";
+			third.style.webkitTransform = transform;
+		}
+		
+	</script>
+</html>

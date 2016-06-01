@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button onclick="myFunction()">点我</button>
+		<p id="myp">我是一个段落</p>
+		<script type="text/javascript">
+		    var p = document.getElementById('myp');
+			function myFunction(){
+//				数组下标的最大值
+//				永远是数组的长度减1
+				var myArray = [4 , 2 , 7 , 1 , 9];
+//				p.innerHTML = myArray[3];
+				
+//				p.innerHTML = myArray;
+
+
+
+
+//				循环遍历
+//				var myIndex = 0;
+//				while (myIndex < 5){
+//					if (myArray[myIndex] == 9) {
+//						document.write(myArray[myIndex]);
+//					}
+//					myIndex++;
+//				}
+//			    for循环
+//				for(var myIndex = 0;myIndex < 5;myIndex++){
+//					if (myArray[myIndex] == 2) {
+//						document.write(myArray[myIndex]);
+//					}
+//				}
+
+
+
+
+//               求最大值
+//				var max = myArray[0];
+//				for(var myIndex = 0;myIndex<5;myIndex++){
+//					if (max < myArray[myIndex]) {
+//						max = myArray[myIndex]
+//					}
+//				}
+//				p.innerHTML = max;
+//				求最小值
+//				var min = myArray[0];
+//				for(var i = 0;i < 5;i++){
+//					if (min>myArray[i]) {
+//						min = myArray[i];
+//					}
+//				}
+//				p.innerHTML = min;
+
+
+
+
+				
+//				求数组所有元素之和
+//				var max = 0;
+//				for (var i = 0;i < 5;i++){
+////					max = max + myArray[i];
+//					max += myArray[i];
+//				}
+//				p.innerHTML = max;
+				
+//				for(var i = 0;i < 5;i++){
+//					if (i == 2) {
+//						var kong = myArray[i];
+//						myArray[i] = myArray[i + 1];
+//						myArray[i + 1] = kong
+//					}
+//				}
+//				p.innerHTML = myArray;
+
+
+
+
+//				排序
+//				双层for循环
+//				外层for控制趟数
+//              内层for控制次数
+//				冒泡排序
+				for(var i = 0;i < 4;i++){
+					for(var j = 0;j < 4-i;j++){
+						if (myArray[j] > myArray[j + 1]) {
+							var kong = myArray[j];
+							myArray[j] = myArray[j + 1];
+							myArray[j + 1] = kong;
+							kong = myArray[3];
+						}
+					}
+				}
+				p.innerHTML = kong;
+
+
+
+
+//              选择排序
+//				var keng = 0;
+//				for (var i = 0;i < 4;i++) {
+//					keng = i;
+//					for (var j = i + 1;j < 5;j++) {
+//						if (myArray[j] < myArray[keng]){
+//							keng = j;
+//						}
+//					}
+//					if (keng != i) {
+//						var temp = myArray[keng];
+//						myArray[keng] = myArray[i];
+//						myArray[i] = temp;
+//					}
+//				}
+//				p.innerHTML = myArray;
+				
+//				for (var i = 0;i < 100;i++) {
+//					if (i == 49) {
+////						continue; 
+//                      break;					
+//					}
+//					document.write(i + 1 + "<br>");
+////					document.write("<br>")
+//				}
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			}
+		</script>
+	</body>
+</html>

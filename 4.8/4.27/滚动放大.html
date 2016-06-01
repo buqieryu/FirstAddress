@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#div1{
+				width: 100px;
+				height: 100px;
+				background-color: #ccc;
+			}
+			
+		</style>
+	</head>
+
+	<body>
+		<div id="div1">
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+		//		滚动方法
+		function wheel(div , fn) {
+			var a = window.navigator.userAgent.indexOf("Firefox");
+			//			判断是否是火狐浏览器
+			//			根据浏览器的不同
+			//			选取不同的滚轮事件绑定方法
+			if (a != -1) {
+				//				火狐
+				div.addEventListener("DOMMouseScroll", xxx, false);
+			} else {
+				//				chrome
+				div.onmousewheel = xxx;
+			}
+			//			滚轮触发的方法xxx
+			function xxx() {
+				//detail 火狐
+				//wheelDelta Chrome
+				var down = true;
+				if (event.detail) {
+					//火狐里面的滚动事件
+					down = event.detail < 0;
+				} else {
+//					//Chrome 里面的滚动事件
+//					if(event.wheelDelta > 0){
+//						//下
+//						down = true;
+//					}
+//					if(event.wheelDelta < 0){
+//						//上
+//						down = false;
+//					}
+				down = event.wheelDelta > 0;
+				
+				}
+				fn.apply(div , [event , down]);
+				return false;
+			}
+			
+			}
+			
+			var div1 = document.getElementById("div1");
+			wheel(div1 , function(ev , bol){
+				if(bol){
+					//xia
+					this.style.width = this.offsetWidth+10+"px";
+					this.style.height = this.offsetHeight+10+"px";
+				}else{
+					this.style.width = this.offsetWidth-10+"px";
+					this.style.height = this.offsetHeight-10+"px";
+				}
+			});
+		
+	</script>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>冒泡</title>
+	</head>
+	<body>
+		<div id="wai">
+			<div id="zhongjian">
+				<div id="nei">
+					<button id="btn">点我</button>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var wai =document.getElementById("wai");
+		var zhongjian =document.getElementById("zhongjian");
+		var nei =document.getElementById("nei");
+		var btn =document.getElementById("btn");
+		
+		
+		wai.onclick = function(){
+			alert("我是wai");
+		}
+		zhongjian.onclick = function(){
+			alert("我是zhongjian");
+		}
+		nei.onclick = function(){
+			alert("我是nei");
+//			event.cancelBubble = true;
+//			event.stopPropagation();
+			return false;
+		}
+		btn.onclick = function(){
+			alert("我是btn");
+//			event.cancelBubble = true;
+		}
+	</script>
+</html>

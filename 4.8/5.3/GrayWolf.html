@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>吊打灰太狼</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			#wrap {
+				background: url(img/game_bg.jpg) no-repeat;
+				height: 480px;
+				width: 320px;
+				margin: 0 auto;
+				position: relative;
+			}
+			
+			#scoring {
+				position: absolute;
+				left: 60px;
+				top: 17px;
+				color: white;
+			}
+			/*倒计时样式*/
+			
+			#countDown {
+				background: url(img/progress.png) no-repeat;
+				height: 16px;
+				width: 180px;
+				position: absolute;
+				left: 63px;
+				top: 66px;
+			}
+			
+			#menu {
+				position: absolute;
+				width: 100%;
+				top: 200px;
+				text-align: center;
+			}
+			
+			#start,
+			#handle,
+			#gameOver{
+				font-size: 2em;
+				font-weight: bold;
+				color: orangered;
+				text-decoration: none;
+				text-shadow: 0 0 10px yellowgreen;
+				display: block;
+			}
+			
+			
+			#wolfs img {
+				position: absolute;
+			}
+			
+			#gameOver {
+				position: absolute;
+				text-align: center;
+				width: 100%;
+				top: 200px;
+				display: none;
+			}
+			#ok{
+			text-decoration: none;	
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="wrap">
+			<!--分数div-->
+			<div id="scoring">
+				00
+			</div>
+			<!--倒计时div-->
+			<div id="countDown">
+
+			</div>
+			<!--灰太狼们-->
+			<div id="wolfs">
+
+			</div>
+			<!--菜单div-->
+			<div id="menu">
+				<!--因为按钮有默认的按钮样式
+				所以在这个地方采用a标签样式
+				实现点击事件-->
+				<a href="#" id="start">开始</a>
+				<a href="#" id="handle">操作说明</a>
+			</div>
+			</div>
+			<!--游戏结束div-->
+			<div id="gameOver">
+				gameOver<br />
+				<a href=""id="ok">再来一次吧</a>
+			</div>
+		
+		</div>
+	</body>
+	<script type="text/javascript">
+		function rand(min, max) {
+			return parseInt(Math.random() * (max - min)) + min;
+		}
+		var arrPos = [{
+			l: "98px",
+			t: "115px"
+		}, {
+			l: "17px",
+			t: "160px"
+		}, {
+			l: "15px",
+			t: "220px"
+		}, {
+			l: "30px",
+			t: "293px"
+		}, {
+			l: "122px",
+			t: "273px"
+		}, {
+			l: "207px",
+			t: "295px"
+		}, {
+			l: "200px",
+			t: "211px"
+		}, {
+			l: "187px",
+			t: "141px"
+		}, {
+			l: "100px",
+			t: "185px"
+		}];
+		var countDown = document.getElementById("countDown");
+		var menu = document.getElementById("menu");
+		var createWolfTimer = null;
+		var wolfs = document.getElementById("wolfs");
+		var start = document.getElementById("start");
+		var scoring = document.getElementById("scoring");
+		var gameOver = document.getElementById("gameOver");
+		//		加分方法的实现
+		function scoringFunction(caozuo) {
+			var scoringNumber = parseInt(scoring.innerHTML);
+			if(caozuo == "jia"){
+				scoring.innerHTML = scoringNumber + 10;
+			}
+			if(caozuo == "jian"){
+				scoring.innerHTML = scoringNumber - 10;
+			}
+//			scoring.innerHTML = scoringNumber + 10;
+		}
+		//		根据类型创建图片的方法
+		function createImgByType(wolf) {
+			wolf.src = "img/" + wolf.type + wolf.index + ".png";
+		}
+		//		控制时间条的宽度
+		var countDownWidth = countDown.offsetWidth;
+		//		控制游戏时间的定时器
+	
+		var countDownBol = false;
+		var countDownTimer = setInterval(function() {
+			if (countDownBol) {
+				//				时间条宽度一直在减少
+				countDownWidth-=2;
+				if (countDownWidth <= 0) {
+					//				时间条的宽度剪完了
+					//				游戏结束
+					gameOver.style.display = "block";
+					//				清除创建狼的定时器
+					clearInterval(createWolfTimer);
+				}
+				countDown.style.width = countDownWidth + "px";
+			}
+		}, 100);
+		
+		//		计时器开始计时
+		
+		start.onclick = function() {
+						countDownBol = true;	
+			//			菜单栏消失
+			menu.style.display = "none";
+			//			创建灰太狼
+			createWolfTimer = setInterval(function() {
+				//				创建img
+				//				img.src = xxx
+				var wolf = document.createElement("img");
+				//			wolf 是一个对象
+				//			是一个从HTML标签里面实例化出来的一个对象
+				//			可以给任何一个对象增加任何的属性
+				//			wolf.xxx = 7；
+				//			console.log（wolf.xxx）
+				wolf.index = 0;
+				wolf.randNumber = rand(0, 9);
+				wolf.type = wolf.randNumber < 4 ?  "x" : "h";
+//				console.log(wolf.type);
+				//			wolf.src = "img/" + wolf.type + "wolf.index" + "px";
+				createImgByType(wolf);
+				//			wolf.style.left = arrPos[0].l;
+				//			wolf.style.top = arrPos[0].t;
+				//			wolfs.appendChild(wolf);
+				//			wolfs.img
+				//			默认是重复的
+				var bol = true;
+				//			0~8
+				while (bol) {
+					var r = rand(0, arrPos.length);
+					//			arrPos[r];
+					var nowWolfs = wolfs.children;
+					for (var i = 0; i < nowWolfs.length; i++) {
+						//				随机的坐标值  是否碰到重复的坐标
+						if (nowWolfs[i].offsetLeft == arrPos[r].l) {
+							bol = true;
+							break;
+						}
+					}
+					if (i == nowWolfs.length) {
+						bol = false;
+					}
+				}
+				wolf.style.left = arrPos[r].l;
+				wolf.style.top = arrPos[r].t;
+				wolfs.appendChild(wolf);
+				//		狼 wolf 标签已经做好
+				//		并且坐标值也赋值好
+				//		接下来
+				//		应该让狼慢慢升起来
+				//		升起来的过程就是改变src的过程
+				//		src h0 ~ h5
+				wolf.upTimer = setInterval(function() {
+					wolf.index++;
+					if (wolf.index > 4) {
+						clearInterval(wolf.upTimer);
+						//				被所有东西都能用的方法
+						//				downFunction();
+						//				只能被wolf来使用的方法
+						wolf.downFunction();
+					}
+					//			index 变化导致src变化
+					//			src变化 导致 狼上升效果出来
+					//			wolf.src= "img/h" + wolf.index + ".png";
+					createImgByType(wolf);
+				}, 150);
+				//			btn.onclick = function(){
+				//				
+				//			}
+				wolf.downFunction = function() {
+						//				这是一个函数，还是一个方法
+						//				但是这个东西只属于wolf
+						wolf.downTimer = setInterval(function() {
+							wolf.index--;
+							if (wolf.index < 0) {
+								//					清楚图片
+								wolfs.removeChild(wolf);
+								//					清楚定时器
+								clearInterval(wolf.downTimer);
+								return;
+							}
+							//					wolf.src = "img/h" + wolf.index + ".png";
+							createImgByType(wolf);
+						}, 150);
+					}
+					//			用来记录该wolf是否被点击过
+				wolf.clickBol = false;
+				wolf.onclick = function() {
+					if (wolf.clickBol == true) {
+						return;
+					}
+					wolf.clickBol = true;
+					//				加分
+					if (wolf.type == "h") {
+						scoringFunction("jia");
+					}
+					if (wolf.type == "x") {
+						//  	减分
+						scoringFunction("jian");
+					}
+//					scoringFunction(wolf);
+					//				图片 要切换
+					wolf.index = 5;
+					//				清除上升和下降的定时器
+					clearInterval(wolf.upTimer);
+					clearInterval(wolf.downTimer);
+					//				准备一个点击的定时器
+					wolf.clickTimer = setInterval(function() {
+						wolf.index++;
+						if (wolf.index >= 9) {
+							clearInterval(wolf.clickTimer);
+							wolfs.removeChild(wolf);
+						}
+						//					wolf.src = "img/h" + wolf.index + ".png";
+						createImgByType(wolf);
+					}, 100);
+				}
+			}, 1500);
+		}
+			ok.onclick = function() {
+					location.reload();
+				}
+	</script>
+
+</html>

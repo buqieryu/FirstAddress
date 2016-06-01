@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#wrap {
+				position: absolute;
+				width: 100px;
+				height: 100px;
+				left: 10px;
+				top: 10px;
+				background-color: deepskyblue;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="wrap">
+			我是div
+		</div>
+	</body>
+	<script type="text/javascript">
+		var div = document.getElementById("wrap");
+		var startX = null;
+		var startY = null;
+		var startLeft = null;
+		var startTop = null;
+		// 事件的绑定
+		div.addEventListener("touchstart", function(event) {
+			//			touches.length  判断当前有几个触摸点
+			//			alert(event.touches.length);
+			if (event.touches.length == 1){
+				var first = event.touches[0];
+				startX = first.screenX;
+				startY = first.screenY;
+				startLeft = div.offsetLeft;
+				startTop = div.offsetTop;
+				
+				
+				// 添加touchmove事件
+				div.addEventListener("touchmove", function() {
+					var firsTouch = event.touches[0];
+					div.innerHTML = firsTouch.screenX + "," + firsTouch.screenY;
+					var moveX = firsTouch.screenX;
+					var moveY = firsTouch.screenY;
+					var distanceX = moveX - startX;
+					var distanceY = moveY - startY;
+					
+					div.style.left = startLeft + distanceX + "px";
+					div.style.top = startTop + distanceY + "px";
+					
+//					阻止默认事件
+					event.preventDefault();
+				}, false);
+			}
+//			阻止默认事件
+			event.preventDefault();
+		}, false);
+	</script>
+
+</html>

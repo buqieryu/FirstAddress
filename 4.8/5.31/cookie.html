@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+
+	<body>
+
+	</body>
+
+	<script type="text/javascript">
+		//		document.cookie 是一个字符串
+		//		是存在计算机本地的一个缓存
+		//		一般是不会丢失的
+		//		但是还有一点
+		//		如果没有缓存时间,页面关闭,缓存就要消失
+		// 创建cookie
+		// 键值对
+		// 名值对
+		document.cookie = "username=zhangsan; password=1234";
+		document.cookie = "username=zhangsan";
+		document.cookie = "password=jjjjj";
+		// 修改缓存
+		document.cookie = "username=lisi";
+		//		var day = new Date();
+		// 获取这一天的时间
+		//		var currentDay = day.getDate();
+		//		day.setDate(currentDay + 1);
+		//		console.log(currentDay);
+		//		console.log(day);
+		//		document.cookie = "hobby=xijiao;expires=" + day;
+		// 获取当前时间
+		//		var date1 = new Date();
+		//		console.log(date1);
+		// 从一个时间对象里面获取到day
+		//		var day = date1.getDate();
+		//		// 给date1 设置一个时间点
+		//		date1.setDate(day + 13);
+		//		day = date1.getDate();
+		//		console.log(date1);
+		//		date1.setDate(day + 4);
+		//		console.log(date1);
+		var date1 = new Date();
+		var day = date1.getDate();
+		date1.setDate(day - 3);
+		document.cookie = "xxx=yyy";
+		// cookie 的删除
+		// 就是把一个键值对设置成过去的时间
+		document.cookie = "xxx=zzz;expires=" + date1;
+		// 获取cookie
+		//		console.log(document.cookie);
+		/*
+		 * // 查找cookie
+		var a = document.cookie;
+		console.log(a);
+		// 把cookie字符串转化成arrray
+		var cookieArray = a.split(";");
+		// 查找username的值
+		// 数组里面的每一个元素就是一个键值对
+		for (var i = 0; i < cookieArray.length; i++) {
+			// 把字符串的中的空格去掉
+			var noBlanceString = cookieArray[i].trim();
+			// console.log(noBlanceString);
+			// 查看当前字符串中有没有username
+			// 如果有返回username的起始坐标
+			// 如果没有返回-1
+			if (noBlanceString.indexOf("username") == 0) {
+				// 返回username=之后的内容
+				// substring(form , to)
+				// 从一个坐标 到 另一个坐标
+				// 可以从左向右取
+				// 也可以从右向左去
+				var username = "username";
+				console.log(noBlanceString.substring(username.length + 1));
+			} else {
+				console.log("对不起,缓存中没有这个键");
+			}
+		 */
+		var a = getCookieByName("password");
+		console.log(a);
+
+		function getCookieByName(name) {
+			var a = document.cookie;
+			var cookieArray = a.split(";");
+			for (var i = 0; i < cookieArray.length; i++) {
+				var noBlanceString = cookieArray[i].trim();
+				if (noBlanceString.indexOf(name) == 0) {
+					return noBlanceString.substring(name.length + 1);
+					break;
+				} 
+			}
+		}
+		
+		
+		setKeyValueByLostTime("uuu" , "iii" , 3);
+		function setKeyValueByLostTime(name , value , day) {
+			var date1 = new Date();
+			var currentDay = date1.getDate();
+			date1.setDate(currentDay + day);
+			document.cookie = name + "=" + value + ";expires=" + date1;
+			
+		}
+		
+		setKeyValueByLostTime("age" , "18" , 365);
+		
+		console.log(document.cookie);
+		
+		
+	</script>
+
+</html>

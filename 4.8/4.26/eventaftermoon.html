@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#div1{
+				width: 200px;
+				height: 200px;
+				display: none;
+				position: absolute;
+				border: 1px solid red;
+			}
+		</style>
+	</head>
+	<body>
+	<div id="div1">
+		我是右键显示的div
+	</div>
+	</body>
+		<!--右键菜单事件--> 
+		<script type="text/javascript">
+//			右键菜单触发事件contextmenu
+//			document.oncontextmenu = function(){
+//				alert("jasdfg");
+//				return false;
+//				返回值true
+//				会提示菜单框
+//				返回值false不会提示菜单框
+//			}
+		var div1 = document.querySelector("#div1");
+		document.oncontextmenu = function(){
+			div1.style.display = "block";
+			var x = event.clientX;
+			var y = event.clientY;
+//			横向上最大的坐标位置
+			var maxWidth = document.documentElement.clientWidth - div1.offsetWidth;
+//			纵向上最大的坐标位置
+			var maxHeight = document.documentElement.clientHeight - div1.offsetHeight;
+//			如果点击的坐标超过最大宽度坐标
+//			应该让点击坐标减少div1的宽度
+			if (x > maxWidth){
+				x = x - div1.offsetWidth;
+			}
+			if (y > maxHeight){
+				y = y - div1.offsetHeight;
+			}
+			div1.style.left = x + "px";
+			div1.style.top = y + "px";
+			return false;
+		}
+			document.onclick = function(){
+				div1.style.display = "none";
+			}
+
+		</script>
+</html>

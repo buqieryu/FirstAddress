@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="myBtn">点我</button>
+		
+		
+		
+		<script type="text/javascript">
+			//双击事件:是由两个间隔事件也别短的单击事件
+			//事件重叠:如果window和button都设置了相同的事件
+			//		  当你在触发button事件的同时会触发window事件
+			//类型的重叠:主要针对于单双击事件的重叠，需要通过一个定时器来区分单双击事件
+			
+			//屏幕点击事件
+			var timer = null;
+//			window.ondblclick = function () {
+//				if(timer) {
+//					window.clearTimeout(timer);
+//					timer = null;
+//				}
+//				timer = window.setTimeout(function () {
+//					alert("我是window双击事件");
+//				},300);
+//			}
+//			
+//			window.onclick = function () {
+//				if (timer) {
+//					window.clearTimeout(timer);
+//					timer = null;
+//				}
+//				timer = window.setTimeout(function () {
+//					alert("我是window的单击事件");
+//				}, 300);
+//			}
+			
+			//but点击事件
+			
+			var btn = document.querySelector("#myBtn");
+			btn.ondblclick = function () {
+				if(timer){
+					window.clearTimeout(timer);
+					timer = null;
+				}
+				timer = window.setTimeout(function() {
+					alert("我是button的双击事件");
+				},300);				
+			}
+			btn.onclick = function() {
+				if(timer){
+					window.clearTimeout(timer);
+					timer = null;
+				}
+				timer = window.setTimeout(function() {
+					alert("我是button的单击事件");
+				},300);
+			}
+		</script>
+	</body>
+	
+</html>

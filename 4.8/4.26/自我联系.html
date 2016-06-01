@@ -1,0 +1,193 @@
+<!DOCTYPE html >
+<html>
+
+	<head>
+		<meta charset="UTF-8" />
+		<title></title>
+		<style type="text/css">
+			.body {
+				width: 600px;
+				margin: 100px auto;
+				text-align: center;
+			}
+			
+			#main {
+				height: 300px;
+				border: 1px solid #f00;
+				position: relative;
+			}
+			
+			#main div {
+				width: 20px;
+				height: 20px;
+				background-color: green;
+				position: absolute;
+			}
+			
+			#main div.snake {
+				background-color: #ff0;
+			}
+			
+			.score {
+				font-size: 14px;
+			}
+			
+			.score strong {
+				color: Red;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="body">
+			<input type="button" value="加速" id="addspeed" /> <input type="button" id="btn" value="开始游戏" /> <span class="score">积分：<strong id="score">0</strong></span>
+			<div id="main">
+
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		window.onload = function() {
+			var omain = document.getElementById("main");
+			var r = 15,
+				c = 30;
+			var asnake = [];
+			var speed = 150;
+			var odiv = document.createElement("div");
+			asnake.push({
+				l: Math.floor(Math.random() * c),
+				t: Math.floor(Math.random() * r),
+				div: odiv,
+				d: "l"
+			});
+			omain.appendChild(odiv);
+			setPosition(asnake[0]);
+			//设置位置
+			function setPosition(obj) {
+				obj.div.style.left = obj.l * 20 + "px";
+				obj.div.style.top = obj.t * 20 + "px";
+			}
+			var aEat = null;
+			var d = "l";
+			//创建吃的
+			function createEat() {
+				var l = Math.floor(Math.random() * c);
+				var t = Math.floor(Math.random() * r);
+				var isexist = false;
+				//判断是否存在在设数组里面
+				for (var i = 0; i < asnake.length; i++) {
+					if (l == asnake[i].l && t == asnake[i].t) {
+						isexist = true;
+						break;
+					}
+				}
+				//如果存在再创建一个蛇
+				if (isexist) {
+					createEat();
+					return;
+				}
+				var onewdiv = document.createElement("div");
+				onewdiv.className = "snake";
+				aEat = {
+					l: l,
+					t: t,
+					div: onewdiv,
+					d: "l"
+				};
+				omain.appendChild(onewdiv);
+				setPosition(aEat);
+			}
+			createEat();
+			var obtn = document.getElementById("btn");
+			var oscore = document.getElementById("score");
+			var oaddspeed = document.getElementById("addspeed");
+			var otimer = null;
+			var isitem = true;
+			oaddspeed.onclick = function() {
+				clearInterval(otimer);
+				speed = speed < 50 ? 50 : speed - 20;
+				setasnke();
+			}
+			obtn.onclick = function() {
+				if (!isitem) {
+					clearInterval(otimer);
+					obtn.value = "继续游戏";
+					isitem = true;
+					return false;
+				}
+				obtn.value = "暂停游戏";
+				setasnke();
+				isitem = false;
+			}
+
+			function setasnke() {
+				otimer = setInterval(function() {
+					for (var i = asnake.length - 1; i > 0; i--) {
+						asnake[i].l = asnake[i - 1].l;
+						asnake[i].t = asnake[i - 1].t;
+						asnake[i].d = asnake[i - 1].d;
+					}
+					switch (d) {
+						case "l":
+							asnake[0].l--;
+							break;
+						case "r":
+							asnake[0].l++;
+							break;
+						case "t":
+							asnake[0].t--;
+							break;
+						case "b":
+							asnake[0].t++;
+							break;
+					}
+					//判断蛇是否撞墙了
+					if (asnake[0].l < 0 || asnake[0].l >= c || asnake[0].t < 0 || asnake[0].t >= r) {
+						alert("你死掉了");
+						clearInterval(otimer);
+						return;
+					}
+					//判断蛇是否撞到自己了
+					for (var n = 1; n < asnake.length; n++) {
+						if (asnake[0].l == asnake[n].l && asnake[0].t == asnake[n].t) {
+							alert("你已经死掉了");
+							clearInterval(otimer);
+							return;
+						}
+					}
+					//判断蛇是否吃到东西了
+					if (asnake[0].l == aEat.l && asnake[0].t == aEat.t) {
+						aEat.div.className = "";
+						oscore.innerHTML = parseInt(oscore.innerHTML) + 1;
+						asnake.push(aEat);
+						createEat();
+					}
+					//重新设置蛇的位置
+					for (var j = 0; j < asnake.length; j++) {
+						setPosition(asnake[j]);
+					}
+				}, speed);
+			}
+			//键盘改变蛇的方向
+			document.onkeydown = function(event) {
+				var oEn = event || window.event;
+				var oCode = oEn.keyCode;
+				switch (oCode) {
+					case 37:
+						d = "l";
+						break;
+					case 38:
+						d = "t";
+						break;
+					case 39:
+						d = "r";
+						break;
+					case 40:
+						d = "b";
+						break;
+				}
+			}
+		}
+	</script>
+
+</html>

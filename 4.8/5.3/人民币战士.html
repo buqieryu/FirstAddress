@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			#wrap {
+				width: 400px;
+				height: 500px;
+				border: 1px solid red;
+				margin: 0 auto;
+				background-color: #ccc;
+				position: relative;
+				text-align: center;
+				overflow: hidden;
+			}
+			#timeDiv {
+				position: absolute;
+				font-size: 1.5em;
+				left: 20px;
+			}
+			#scoring {
+				position: absolute;
+				right: 20px;
+				font-size: 1.5em;
+			}
+			#btn {
+				position: absolute;
+				top: 50px;
+				width: 50px;
+				height: 30px;
+				background-color: white;
+				margin-left: -25px;
+			}
+			#chengLong {
+				width: 70%;
+				position: absolute;
+				top: 180px;
+				left: 15%;
+			}
+			#chengLong img {
+				width: 100%;
+				margin-left: 10px;
+				margin-top: 10px;
+			}
+			#gameOver {
+				font-size: 3em;
+				width: 100%;
+				height: 50px;
+				color: red;
+				text-shadow: 0 0 10px yellow;
+				position: absolute;
+				top: -100px;
+				/*display: none;*/
+				-webkit-transition: 1s ease-in; 
+			}
+			#BUG {
+				position: absolute;
+				top: 50px;
+				right: 50px;
+				width: 100px;
+				height: 30px;
+				color: #000000;
+				background-color: palevioletred;
+				border-radius: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			<button id="BUG">人民币战士</button>
+			<div id="timeDiv">
+				剩余时间:60.00秒
+			</div>
+			<div id="scoring">
+				分数:0
+			</div>
+			<button id="btn">开始</button>
+			<div id="chengLong">
+				<img src="img/1.png"/>
+			</div>
+			<div id="gameOver">
+				GameOver
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		//思路
+		/* var number = 1;
+		var geshu = number;
+		btn.onclick = function () {
+			number++;
+			geshu = number + number;
+			width = wrap.width / number;
+		} */
+		var chengLong = document.getElementById("chengLong");
+		var btn = document.getElementById("btn");
+		var scoring = document.getElementById("scoring");
+		var timeDiv = document.getElementById("timeDiv");
+		var gameOver = document.getElementById("gameOver");
+		var BUG = document.getElementById("BUG");
+		
+		
+		function rand(min , max) {
+			return parseInt(Math.random() * (max - min)) + min;
+		}
+		
+		//移除当前界面中的所有图片的方法
+		function removeAllImgs() {
+			var chengLongSons = chengLong.children;
+			var sonNumber = chengLongSons.length;
+			for (var i = 0; i < sonNumber; i++) {
+				//chengLong.removeChild(chengLongSons[0]);
+				chengLong.removeChild(chengLong.firstElementChild);
+			}
+		}
+		
+		//行数默认是1行
+		//按钮点击一下变成2行
+		var a = 1;
+		var j = 0;
+		//展示新出来的图片的方法
+		function createNewImgs() {
+			//分数应该增加
+			//a 代表行数和列数
+			a++;
+			//分数 = 行数 - 2；
+			scoring.innerHTML = "分数:" + (j += 1);
+			if (a >= 9) {
+				a = 9;
+			}
+			//图片个数 = 行数 * 行数
+			var imgNumber = Math.pow(a , 2);
+			//var imgNumber = a * a;
+			
+			//图片的宽度 + 间距 = div.width / a;
+			//图片的宽度 = (div.width - a * 间距) / a;
+			
+			var imgWidth = (chengLong.offsetWidth - a * 10) / a + "px";
+			//开始创建图片
+			//根据图片的个数
+			for (var i = 0; i < imgNumber; i++) {
+				var imgObj = document.createElement("img");
+				imgObj.src = "img/1.png";
+				imgObj.index = i;
+				imgObj.style.width = imgWidth;
+				chengLong.appendChild(imgObj);
+			}
+			var r = rand(0 , imgNumber);
+			//从当前显示的所有图片里面找到随机值这张图片
+			var nowImgs = chengLong.children;
+			nowImgs[r].src = "img/2.png";
+			//快速找到答案
+			BUG .onclick = function() {
+				nowImgs[r].style.backgroundColor = "red";
+			}
+			//找到后下一步
+			nowImgs[r].onclick = function () {
+				//移除当前界面中的所有图片
+				removeAllImgs();
+				//展示新出来的图片
+				createNewImgs();	
+			}
+		}
+		
+		
+		
+		
+		
+		btn.onclick = function () {
+			btn.style.display = "none";
+			//移除当前界面中的所有图片
+			removeAllImgs();
+			//展示新出来的图片
+			createNewImgs();
+			var countDown = 60.00;
+			//准备一个是否开始游戏的变量
+
+			var time = setInterval(function () {
+				countDown -= 0.01;
+				timeDiv.innerHTML = '剩余时间:' +  Math.round(countDown * 100) / 100;;	
+				if (countDown <= 0.01) {
+					clearInterval(time);
+					gameOver.style.display = "block";
+					gameOver.style.top= "200px";
+					removeAllImgs();					
+				}
+			} ,10);
+		}
+	</script>
+</html>

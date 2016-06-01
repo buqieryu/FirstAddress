@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+
+	<body>
+
+		<button id="allSelectd">全选</button>
+		<button id="allCancelSelected">全不选</button>
+		<button id="reverseSelected">反选</button>
+
+		<br>
+		<input type="checkbox" name="music" />音乐1<br>
+		<input type="checkbox" name="music" />音乐2<br>
+		<input type="checkbox" name="music" />音乐3<br>
+		<input type="checkbox" name="music" />音乐4<br>
+		<input type="checkbox" name="music" />音乐5<br>
+		<input type="checkbox" name="music" />音乐6<br>
+		<input type="checkbox" name="music" />音乐7<br>
+		<input type="checkbox" name="music" />音乐8<br>
+			
+			
+			
+		<br>
+		<br>
+		<input type="checkbox" name="movie" />电影1<br>
+		<input type="checkbox" name="movie" />电影2<br>
+		<input type="checkbox" name="movie" />电影3<br>
+		<input type="checkbox" name="movie" />电影4<br>
+		<input type="checkbox" name="movie" />电影5<br>
+		<input type="checkbox" name="movie" />电影6<br>
+		<input type="checkbox" name="movie" />电影7<br>
+		<input type="checkbox" name="movie" />电影8<br>	
+		
+		
+		<br>
+		衣服的颜色
+		<input type="radio" name="second"/>
+		<input type="radio" name="second" />
+		
+		<br>
+		鞋子的颜色
+		<input type="radio" name="shoe"/>
+		<input type="radio" name="shoe" />
+		
+		
+		<br>
+		用户名:
+		<input type="text" placeholder="请输入用户名:"/>
+		
+		
+		<br>
+		<button id="movieAllSelected">电影全选按钮</button>
+
+		<script type="text/javascript">
+			var allBtn = document.getElementById("allSelectd");
+			var cancelBtn = document.getElementById("allCancelSelected");
+			var reverseBtn = document.getElementById("reverseSelected");
+			//			DOM Document Object Model
+			// 获取全部的复选框
+			var allCheckbox = document.getElementsByTagName("input");
+			//			alert(allCheckbox.constructor);
+			// 全选按钮的点击事件
+			allBtn.onclick = function() {
+				for (var i = 0; i < allCheckbox.length; i++) {
+					if (allCheckbox[i].name == "music" && allCheckbox[i].type == "checkbox") {
+					allCheckbox[i].checked = true;
+					}
+				}
+			}
+			// 全不选按钮的点击事件
+			cancelBtn.onclick = function() {
+				for (var i = 0; i < allCheckbox.length; i++) {
+					allCheckbox[i].checked = false;
+				}
+			}
+			// 反选按钮的点击事件
+			reverseBtn.onclick = function() {
+				for (var i = 0; i < allCheckbox.length; i++) {
+					if (allCheckbox[i].checked == false) {
+						allCheckbox[i].checked = true;
+					} else {
+						allCheckbox[i].checked = false;
+					}
+				}
+			}
+		</script>
+
+	</body>
+
+</html>

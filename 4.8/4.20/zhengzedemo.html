@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<p id="myP">我是段落</p>
+		<button id="btn">点我</button><br />
+		<input type="text"  id="myText" placeholder="请输入文字" />
+		<script type="text/javascript">
+			var p = document.getElementById('myP');
+			var btn = document.getElementById('btn');
+			var myText = document.getElementById('myText')
+			btn.onclick = function(){
+				var str = myText.value;
+				var re = null;
+//				re = /0\d/;
+//				re = new RegExp("0\\d");
+//				\b  匹配一个位置
+//				re = /\bhi\b/;\
+//				. 匹配除了换行符以外的任何字符
+//				* 匹配*前面的东西出现任意次数
+//				{n} 代表前面的内容必须连续的出现n次（大括号的）
+//				\s 匹配不是内容的东西，包括换行符，字表 tab  ，，，
+//				\w 匹配中文 数字 下划线，，，
+//				\W 匹配中文
+				
+//				re = /\bhi\b a*/;
+//				re = /\ba\w*\b/
+//				{n,m}匹配{}前面的内容出现n~m次数，其中包括n和m
+//				{n,}匹配>=n次
+//				？匹配0或1次
+//				^ 匹配的不是内容，仅仅是一个位置
+//				$ 和上面的^一样
+//				^ 整个字符串的开始
+//				$ 整个字符串的结束
+//				re = /^a\d{5,10}b/;
+//				正则表达式里面的转义字符
+//				\. 匹配
+//				\* 匹配*
+//				其他类似
+//				[abc]匹配a 匹配b 匹配c
+//				[a~h] 匹配a~h
+//				[a-h0~7]匹配a到h 或者0~7
+//				re = /^\.\*\\$/;
+//				re = /^[abc]*$/;
+//				| 把不同规则给分开
+//				   匹配前面的规则或后面的规则
+//				re = /^\d{5}$|\d{5}-\d{4}$/
+//				()用来组合一个特定的规则
+//				re = /^(a\d){3}$/;
+
+				re = /^\b(\w+) (\?<xxx>a\d)\b\s+\k<xxx>\b$/;
+				var result = re.test(str);
+				p.innerHTML = result;
+			}
+			
+
+			
+			
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

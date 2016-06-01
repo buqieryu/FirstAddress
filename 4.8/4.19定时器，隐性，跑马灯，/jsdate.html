@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	<p id="myP">我是段落</p>
+	
+	<button id = "mybtn">点我</button>
+		<script type="text/javascript">
+			var p = document.getElementById("myP")
+			var btn = document.getElementById("mybtn")
+			btn.onclick = function(){
+//				从1970年到现在的秒数
+				var nowDate = new Date();
+				p.innerHTML = nowDate.getTime();
+//				获取年份
+				p.innerHTML = nowDate.getVarDate();
+//				d定时器
+//				网页在刚开始加载的时候，回触发一个onload事件
+				
+			}
+		</script>
+	</body>
+</html>

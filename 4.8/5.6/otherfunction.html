@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	
+	
+	<script type="text/javascript">
+		
+//		var a = xxx(5 , 6);
+//		console.log(a);
+//	
+////		函数的声明(定义)
+////		声明的前置
+//		function xxx(a , b) {
+//			return a + b;
+//		}
+		
+//		函数的调用
+
+//		function xxx (a , b) {
+//			return a + b;
+//		}
+		
+		
+		
+		
+		
+		
+//		var xxx = function (a , b) {
+//			return a + b;
+//		}
+//		
+//		console.log(xxx(5 , 6));
+
+
+//		调用
+
+//		this
+//		function xxx(a , b){
+////			console.log(this);
+//			return a + b;
+//		}
+//		
+//		xxx(5 , 6);
+//		
+//		console.log(this.document === document);
+		
+		
+		
+//		对象内的方法内的this
+//		var o = {
+//			x:1 , 
+//			y:2 , 
+//			f:function () {
+//				return this.x + this.y;
+//			}
+//		};
+//		
+//		console.log(o.f());
+
+
+//		var o = {x:1 , y:2};
+//		
+//		function xxx (){
+//			return 6;
+//		}
+//		
+//		o.f = xxx;
+//		o.f = xxx();
+////		
+//		console.log(o.f());
+		
+//		console.log(function xxx() {
+//			return 6;
+//		});
+		
+		
+//		var a = 12 , b = 14;
+//		
+//		
+//		function xxx(a , b) {
+//			console.log(this.a);
+//			return this.a + b;
+//		}
+//		
+//		var result = xxx(5 , 6);
+//		
+//		console.log(result);
+		
+		
+//		var o = {
+//			a:1 , 
+//			b:2 ,
+//			f:function(a , b){
+//				return this.a + this.b;
+//			}
+//		};
+//		
+//		console.log(o.f(5 , 6));
+
+
+//		var o = {
+//			f:function (a , b) {
+//				return this.a + this.b;
+//			}
+//		};
+//		
+//		var oo = Object.create(o);
+//		oo.a = 5;
+//		oo.b = 6;
+//		console.log(o.f(1 , 2));
+		
+//		function xxx() {
+//			this.a = 7;
+//		}
+//		var o = new xxx();
+//		
+//		console.log(o.a);
+
+
+//		function xxx() {
+//			this.a = 7;
+//			return {a:8};
+//		}
+//		
+//		var o = function xxx() {
+//			this.a = 7;
+//			return {a:8};
+//		}
+//		
+//		--->
+//		o = {a:8};
+//		
+//		{a:8}.a
+//		
+//		console.log(o.a);
+		
+//		function xxx(a , b){
+//			console.log(a , b , this);
+//		}
+//		
+//		var o = {x:1 , y:2};
+		
+//		xxx.apply(4 , [5 , 6]);
+//		xxx.call(4 , 5 , 6);
+
+		function xxx(a , b , c){
+//			 函数接受到的参数
+//			arguments
+//			c undefined
+			arguments[2] = 20;
+			return a + b + c;
+		}
+		
+//		console.log(xxx.name);
+		var result = xxx();
+		console.log(result);
+		
+
+		
+	</script>
+	
+</html>

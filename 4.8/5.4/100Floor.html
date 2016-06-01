@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box {
+				width: 600px;
+				height: 300px;
+				border: 1px solid red;
+				margin: 0 auto;
+				position: relative;
+			}
+			
+			#wrap {
+				width: 600px;
+				/*height: 100px;*/
+				position: absolute;
+				bottom: 0;
+				/*background-color: yellow;*/
+			}
+			
+			.row {
+				position: absolute;
+			}
+			/*一行之内的所有div有两种情况
+			正常的div 和 将要掉下去的div*/
+			
+			.row div {
+				width: 20px;
+				height: 20px;
+				border: 1px solid black;
+				float: left;
+				background-color: #ccc;
+				box-sizing: border-box;
+				-webkit-transition: all 2s;
+				opacity: 1;
+			}
+			
+			.row div.remove {
+				-webkit-transform: translate(0 ,100px) rotate(360deg);
+				opacity: 0;
+			}
+			
+			#scoring {
+				text-align: center;
+				width: 100%;
+				color: red;
+				font-size: 3em;
+				/*让分数来的定位层
+				如果没有设置top的话
+				默认是为0的
+				所以就和红色边框在同一高度
+				又因为text-align：center；
+				所以会跑到居中的位置*/
+				position: absolute;
+			}
+			
+		</style>
+	</head>
+
+	<body>
+		<div id="scoring">
+			0
+		</div>
+		<div id="box">
+			<div id="wrap">
+				<!--行1
+				行2-->
+			</div>
+		</div>
+	</body>
+	
+	
+	
+	<script type="text/javascript">
+		var box = document.querySelector("#box"); 
+	
+		//		创建每一行的方法
+		//距离底部的距离
+		var botm = 0;
+		//		开始的时候左边的距离
+		var startLeft = 0;
+		//		每一行内  快的个数
+		var rowNum = 20;
+		//		每一个快的宽度
+		var pieceWidth = 20;
+//		每一行运行的时间速度
+		var time = 300;
+//		默认跑的方向
+//		true向右跑
+//		false向左跑
+		var direction = true;
+		var scoring = document.querySelector("#scoring");
+		var wrap = document.querySelector("#wrap");
+		function createRow() {
+			var row = document.createElement("div");
+			row.className = "row";
+			row.style.bottom = botm + "px";
+			row.style.left = startLeft + "px";
+			row.style.width = rowNum * pieceWidth + "px";
+			wrap.appendChild(row);
+			
+			for(var i = 0;i<rowNum;i++){
+				var pieceDiv = document.createElement("div");
+				row.appendChild(pieceDiv);
+			}
+//			开始让他跑
+//			最大允许跑的宽度
+			var maxWidth = wrap.clientWidth - row.offsetWidth;
+			row.timer = setInterval(function(){
+				if(direction){
+//					向右跑
+					startLeft += 20;
+					if(startLeft >= maxWidth){
+						direction = false;
+					}
+				}else{
+					startLeft -= 20;
+					if(startLeft <= 0){
+						direction = true;
+					}
+				}
+				row.style.left = startLeft + "px";
+			}, time);
+			return row;
+		}
+		
+		createRow();
+		var clickBol = false;
+		box.onclick= function(){
+			if(clickBol){
+				return;
+			}
+			clickBol = true;
+			setTimeout(function(){
+				clickBol = false;
+			} , 1000);
+			
+			time -= 50;
+			if(time < 100){
+				time = 100;
+			}
+			
+			
+			scoring.innerHTML++;
+			botm += 20;
+			if(botm > 200){
+			wrap.style.bottom = (200 - botm) + "px";
+			}
+			
+//			nowRow 正在移动的行
+			var nowRow = wrap.lastElementChild;
+//			previweRow前面的一行
+			var previerRow = nowRow.previousElementSibling;
+			
+			if(previerRow){
+				var difference = nowRow.offsetLeft - previerRow.offsetLeft;
+			}else{
+				var difference = 0;
+			}
+//			根据距离判断要掉多少块
+			 var removeNum = difference / pieceWidth;
+			 rowNum = rowNum - Math.abs(removeNum);
+//			createRow();
+			if(rowNum <= 0){
+				alert("游戏结束");
+				clearInterval(nowRow.timer);
+				return;
+			}
+			var pieceNum = nowRow.children;
+			
+//			有没有块要掉下去
+			if(removeNum > 0){
+				for(var i = 0; i < removeNum;i++){
+					var removeObj = nowRow.children[pieceNum.length - i -1];
+					removeObj.className = "remove";
+				}
+				var lastLeftNum = nowRow.offsetLeft;
+				setTimeout(function(){
+					for(var i = 0;i < removeNum;i++){
+				nowRow.removeChild(nowRow.lastElementChild);
+					}
+				},1000);
+			}else{
+				removeNum = Math.abs(removeNum);
+				for(var i = 0;i < removeNum;i++){
+					var removeObj = nowRow.children[i];
+					removeObj.className = "remove";
+				}
+				var iLastLeftNumber = nowRow.offsetLeft;
+				setTimeout(function() {
+					for (var i = 0; i < removeNum; i++) {
+						nowRow.removeChild(nowRow.firstElementChild);
+					}
+					nowRow.style.left = iLastLeftNumber + removeNum * 20 + "px";
+				}, 3000);
+			}
+				
+				
+				
+				
+			
+			
+			var row = createRow();
+//			没创建新的一行
+//			就把前面的一行的定时器取消
+			var qianyihang = row.previousElementSibling;
+			if(qianyihang){
+				clearInterval(qianyihang.timer);
+			}
+		}
+	</script>
+
+</html>

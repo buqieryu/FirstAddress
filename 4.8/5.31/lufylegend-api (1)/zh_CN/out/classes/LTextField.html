@@ -1,0 +1,5865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>LTextField - The lufylegend.js API</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><a href="../index.html"><img src="../assets/css/logo.png" title="The lufylegend.js API"></a></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: 1.10.1</em>
+            <em>最后更新日期：2016年03月28日</em>
+			<form method="get" action="http://www.google.com.hk/search" target="google_window">
+        		<input type="hidden" name="ie" value="UTF-8">
+        		<input type="hidden" name="oe" value="UTF-8">
+        		<input type="hidden" name="as_sitesearch" id="as_sitesearch" value="lufylegend.com/api/zh_CN/out/">
+        		Google搜索&nbsp;
+        		<input type="text" class="input" style="width:150px;" name="q" id="q" size="31" maxlength="255" value="">
+        		&nbsp;
+        		<input type="submit" class="submit" name="sa" value="Go">
+      		</form>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="../classes/FPS.html">FPS</a></li>
+            
+                <li><a href="../classes/InteractivePNG.html">InteractivePNG</a></li>
+            
+                <li><a href="../classes/LAjax.html">LAjax</a></li>
+            
+                <li><a href="../classes/LAnimation.html">LAnimation</a></li>
+            
+                <li><a href="../classes/LAnimationTimeline.html">LAnimationTimeline</a></li>
+            
+                <li><a href="../classes/LBitmap.html">LBitmap</a></li>
+            
+                <li><a href="../classes/LBitmapData.html">LBitmapData</a></li>
+            
+                <li><a href="../classes/LBitmapFilter.html">LBitmapFilter</a></li>
+            
+                <li><a href="../classes/LBlendMode.html">LBlendMode</a></li>
+            
+                <li><a href="../classes/LBox2d.html">LBox2d</a></li>
+            
+                <li><a href="../classes/LButton.html">LButton</a></li>
+            
+                <li><a href="../classes/LColorMatrixFilter.html">LColorMatrixFilter</a></li>
+            
+                <li><a href="../classes/LColorTransform.html">LColorTransform</a></li>
+            
+                <li><a href="../classes/LConvolutionFilter.html">LConvolutionFilter</a></li>
+            
+                <li><a href="../classes/LDisplayObject.html">LDisplayObject</a></li>
+            
+                <li><a href="../classes/LDisplayObjectContainer.html">LDisplayObjectContainer</a></li>
+            
+                <li><a href="../classes/LDropShadowFilter.html">LDropShadowFilter</a></li>
+            
+                <li><a href="../classes/LEasing.html">LEasing</a></li>
+            
+                <li><a href="../classes/LEvent.html">LEvent</a></li>
+            
+                <li><a href="../classes/LEventDispatcher.html">LEventDispatcher</a></li>
+            
+                <li><a href="../classes/LFlash.html">LFlash</a></li>
+            
+                <li><a href="../classes/LFocusEvent.html">LFocusEvent</a></li>
+            
+                <li><a href="../classes/LFontLoader.html">LFontLoader</a></li>
+            
+                <li><a href="../classes/LGlobal.html">LGlobal</a></li>
+            
+                <li><a href="../classes/LGraphics.html">LGraphics</a></li>
+            
+                <li><a href="../classes/LInteractiveObject.html">LInteractiveObject</a></li>
+            
+                <li><a href="../classes/LKeyboardEvent.html">LKeyboardEvent</a></li>
+            
+                <li><a href="../classes/LLoader.html">LLoader</a></li>
+            
+                <li><a href="../classes/LLoadManage.html">LLoadManage</a></li>
+            
+                <li><a href="../classes/LMatrix.html">LMatrix</a></li>
+            
+                <li><a href="../classes/LMedia.html">LMedia</a></li>
+            
+                <li><a href="../classes/LMouseEvent.html">LMouseEvent</a></li>
+            
+                <li><a href="../classes/LMouseEventContainer.html">LMouseEventContainer</a></li>
+            
+                <li><a href="../classes/LMultitouch.html">LMultitouch</a></li>
+            
+                <li><a href="../classes/LMultitouchInputMode.html">LMultitouchInputMode</a></li>
+            
+                <li><a href="../classes/LoadingSample.html">LoadingSample</a></li>
+            
+                <li><a href="../classes/LObject.html">LObject</a></li>
+            
+                <li><a href="../classes/LPoint.html">LPoint</a></li>
+            
+                <li><a href="../classes/LQuadTree.html">LQuadTree</a></li>
+            
+                <li><a href="../classes/LRange.html">LRange</a></li>
+            
+                <li><a href="../classes/LRectangle.html">LRectangle</a></li>
+            
+                <li><a href="../classes/LShape.html">LShape</a></li>
+            
+                <li><a href="../classes/LSound(LMedia).html">LSound(LMedia)</a></li>
+            
+                <li><a href="../classes/LSound(LWebAudio).html">LSound(LWebAudio)</a></li>
+            
+                <li><a href="../classes/LSprite.html">LSprite</a></li>
+            
+                <li><a href="../classes/LStageAlign.html">LStageAlign</a></li>
+            
+                <li><a href="../classes/LStageScaleMode.html">LStageScaleMode</a></li>
+            
+                <li><a href="../classes/LStageWebView.html">LStageWebView</a></li>
+            
+                <li><a href="../classes/LStyleSheet.html">LStyleSheet</a></li>
+            
+                <li><a href="../classes/LTextEvent.html">LTextEvent</a></li>
+            
+                <li><a href="../classes/LTextField.html">LTextField</a></li>
+            
+                <li><a href="../classes/LTimer.html">LTimer</a></li>
+            
+                <li><a href="../classes/LTimerEvent.html">LTimerEvent</a></li>
+            
+                <li><a href="../classes/LTransform.html">LTransform</a></li>
+            
+                <li><a href="../classes/LTransition.html">LTransition</a></li>
+            
+                <li><a href="../classes/LTransitionManager.html">LTransitionManager</a></li>
+            
+                <li><a href="../classes/LTweenLite.html">LTweenLite</a></li>
+            
+                <li><a href="../classes/LTweenLiteChild.html">LTweenLiteChild</a></li>
+            
+                <li><a href="../classes/lufylegend.mvc.html">lufylegend.mvc</a></li>
+            
+                <li><a href="../classes/LURLLoader.html">LURLLoader</a></li>
+            
+                <li><a href="../classes/LVec2.html">LVec2</a></li>
+            
+                <li><a href="../classes/LVideo.html">LVideo</a></li>
+            
+                <li><a href="../classes/LWebAudio.html">LWebAudio</a></li>
+            
+                <li><a href="../classes/Q &amp; A (常见问题).html">Q &amp; A (常见问题)</a></li>
+            
+                <li><a href="../classes/UI:LButtonSample1.html">UI:LButtonSample1</a></li>
+            
+                <li><a href="../classes/UI:LButtonSample2.html">UI:LButtonSample2</a></li>
+            
+                <li><a href="../classes/UI:LCheckBox.html">UI:LCheckBox</a></li>
+            
+                <li><a href="../classes/UI:LComboBox.html">UI:LComboBox</a></li>
+            
+                <li><a href="../classes/UI:LListChildView.html">UI:LListChildView</a></li>
+            
+                <li><a href="../classes/UI:LListScrollBar.html">UI:LListScrollBar</a></li>
+            
+                <li><a href="../classes/UI:LListView.html">UI:LListView</a></li>
+            
+                <li><a href="../classes/UI:LMenubar.html">UI:LMenubar</a></li>
+            
+                <li><a href="../classes/UI:LMessageBox.html">UI:LMessageBox</a></li>
+            
+                <li><a href="../classes/UI:LPanel.html">UI:LPanel</a></li>
+            
+                <li><a href="../classes/UI:LRadio.html">UI:LRadio</a></li>
+            
+                <li><a href="../classes/UI:LRadioChild.html">UI:LRadioChild</a></li>
+            
+                <li><a href="../classes/UI:LRange.html">UI:LRange</a></li>
+            
+                <li><a href="../classes/UI:LScrollbar.html">UI:LScrollbar</a></li>
+            
+                <li><a href="../classes/UI:LTable.html">UI:LTable</a></li>
+            
+                <li><a href="../classes/UI:LTreeWidget.html">UI:LTreeWidget</a></li>
+            
+                <li><a href="../classes/UI:LWindow.html">UI:LWindow</a></li>
+            
+                <li><a href="../classes/全局函数.html">全局函数</a></li>
+            
+                <li><a href="../classes/全局变量.html">全局变量</a></li>
+            
+                <li><a href="../classes/全屏设置.html">全屏设置</a></li>
+            
+                <li><a href="../classes/旧版API.html">旧版API</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1>LTextField Class</h1>
+<div class="box meta">
+    
+
+    
+        <div class="extends">
+            Extends <a href="../classes/LInteractiveObject.html" class="crosslink">LInteractiveObject</a>
+        </div>
+    
+
+    
+        <div class="foundat">
+            Defined in: <a href="../files/text_LTextField.js.html#l1"><code>text&#x2F;LTextField.js:1</code></a>
+        </div>
+    
+
+    
+
+    
+        <p>Available since 1.0.0</p>
+    
+</div>
+
+
+
+<div class="box intro">
+    <p>创建新的 LTextField 实例。在创建 LTextField 实例后，调用父 LSprite 对象的 addChild() 或 addChildAt() 方法可将 LTextField 实例添加到显示列表中。
+LTextField 类的方法允许您设置、选择并操作在创作过程中或运行时创建的动态或输入文本字段中的文本。</p>
+
+</div>
+
+
+    <div class="constructor">
+        <h2>Constructor</h2>
+        <div id="method_LTextField" class="method item public">
+    <h3 class="name"><code>LTextField</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/text_LTextField.js.html#l1"><code>text&#x2F;LTextField.js:1</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.0.0</p>
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var theTextField = new LTextField();
+theTextField.setType(LTextFieldType.INPUT);
+theTextField.x = 10;
+theTextField.y = 10;
+addChild(theTextField);</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LTextField/index.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+    </div>
+
+
+<div id="classdocs" class="tabview">
+    <ul class="api-class-tabs">
+        <li class="api-class-tab index"><a href="#index">Index</a></li>
+
+        
+            <li class="api-class-tab methods"><a href="#methods">Methods</a></li>
+        
+        
+            <li class="api-class-tab properties"><a href="#properties">Properties</a></li>
+        
+        
+        
+            <li class="api-class-tab events"><a href="#events">Events</a></li>
+        
+    </ul>
+
+    <div>
+        <div id="index" class="api-class-tabpanel index">
+            <h2 class="off-left">Item Index</h2>
+
+            
+                <div class="index-section methods">
+                    <h3>Methods</h3>
+
+                    <ul class="index-list methods extends">
+                        
+                            <li class="index-item method public inherited">
+                                <a href="#method_addEventListener">addEventListener</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public inherited">
+                                <a href="#method_cacheAsBitmap">cacheAsBitmap</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public inherited">
+                                <a href="#method_callParent">callParent</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_clone">clone</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_die">die</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public inherited">
+                                <a href="#method_dispatchEvent">dispatchEvent</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_focus">focus</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public inherited">
+                                <a href="#method_getBounds">getBounds</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public inherited">
+                                <a href="#method_getDataURL">getDataURL</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_getHeight">getHeight</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public inherited">
+                                <a href="#method_getParentByConstructor">getParentByConstructor</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public inherited">
+                                <a href="#method_getRootCoordinate">getRootCoordinate</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_getWidth">getWidth</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public inherited">
+                                <a href="#method_globalToLocal">globalToLocal</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public inherited">
+                                <a href="#method_hasEventListener">hasEventListener</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public inherited">
+                                <a href="#method_localToGlobal">localToGlobal</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public inherited">
+                                <a href="#method_remove">remove</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public inherited">
+                                <a href="#method_removeAllEventListener">removeAllEventListener</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public inherited">
+                                <a href="#method_removeEventListener">removeEventListener</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_setMultiline">setMultiline</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_setType">setType</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_setWordWrap">setWordWrap</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_updateInput">updateInput</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_wind">wind</a>
+
+                                
+                                
+                            </li>
+                        
+                    </ul>
+                </div>
+            
+
+            
+                <div class="index-section properties">
+                    <h3>Properties</h3>
+
+                    <ul class="index-list properties extends">
+                        
+                            <li class="index-item property public inherited">
+                                <a href="#property_alpha">alpha</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public inherited">
+                                <a href="#property_blendMode">blendMode</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_color">color</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_displayAsPassword">displayAsPassword</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public inherited">
+                                <a href="#property_filters">filters</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_font">font</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_heightMode">heightMode</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_htmlText">htmlText</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_lineColor">lineColor</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_lineWidth">lineWidth</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public inherited">
+                                <a href="#property_mask">mask</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public inherited">
+                                <a href="#property_mouseEnabled">mouseEnabled</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_numLines">numLines</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public inherited">
+                                <a href="#property_objectIndex">objectIndex</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public inherited">
+                                <a href="#property_parent">parent</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public inherited">
+                                <a href="#property_rotate">rotate</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public inherited">
+                                <a href="#property_scaleX">scaleX</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public inherited">
+                                <a href="#property_scaleY">scaleY</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_size">size</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_speed">speed</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_stroke">stroke</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_styleSheet">styleSheet</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_text">text</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_textAlign">textAlign</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_textBaseline">textBaseline</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public inherited">
+                                <a href="#property_transform">transform</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_type">type</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public inherited">
+                                <a href="#property_visible">visible</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_weight">weight</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_width">width</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public inherited">
+                                <a href="#property_x">x</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public inherited">
+                                <a href="#property_y">y</a>
+
+                                
+                                
+                            </li>
+                        
+                    </ul>
+                </div>
+            
+
+            
+
+            
+                <div class="index-section events">
+                    <h3>Events</h3>
+
+                    <ul class="index-list events extends">
+                        
+                            <li class="index-item event inherited">
+                                <a href="#event_LEvent.ENTER_FRAME">LEvent.ENTER_FRAME</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item event">
+                                <a href="#event_LFocusEvent.FOCUS_IN">LFocusEvent.FOCUS_IN</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item event">
+                                <a href="#event_LFocusEvent.FOCUS_OUT">LFocusEvent.FOCUS_OUT</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item event inherited">
+                                <a href="#event_LMouseEvent.DOUBLE_CLICK">LMouseEvent.DOUBLE_CLICK</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item event inherited">
+                                <a href="#event_LMouseEvent.MOUSE_DOWN">LMouseEvent.MOUSE_DOWN</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item event inherited">
+                                <a href="#event_LMouseEvent.MOUSE_MOVE">LMouseEvent.MOUSE_MOVE</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item event inherited">
+                                <a href="#event_LMouseEvent.MOUSE_OUT">LMouseEvent.MOUSE_OUT</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item event inherited">
+                                <a href="#event_LMouseEvent.MOUSE_OVER">LMouseEvent.MOUSE_OVER</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item event inherited">
+                                <a href="#event_LMouseEvent.MOUSE_UP">LMouseEvent.MOUSE_UP</a>
+
+                                
+                                
+                            </li>
+                        
+                    </ul>
+                </div>
+            
+        </div>
+
+        
+            <div id="methods" class="api-class-tabpanel">
+                <h2 class="off-left">Methods</h2>
+
+                
+                    <div id="method_addEventListener" class="method item public inherited">
+    <h3 class="name"><code>addEventListener</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>type</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>listener</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LEventDispatcher.html#method_addEventListener">LEventDispatcher</a>:
+            
+        
+        
+        <a href="../files/events_LEventDispatcher.js.html#l16"><code>events&#x2F;LEventDispatcher.js:16</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.8.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>使用 LEventDispatcher 对象注册事件侦听器对象，以使侦听器能够接收事件通知。可以为特定类型的事件、阶段和优先级在显示列表中的所有节点上注册事件侦听器。</p>
+<p>成功注册一个事件侦听器后，无法通过额外调用 addEventListener() 来更改其优先级。要更改侦听器的优先级，必须首先调用 removeListener()。然后，可以使用新的优先级再次注册该侦听器。</p>
+<p>如果不再需要某个事件侦听器，可调用 removeEventListener() 删除它，否则会产生内存问题。</p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">type</code>
+                        <span class="type">String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>事件的类型。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">listener</code>
+                        <span class="type">Function</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>处理事件的侦听器函数。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+    
+</div>
+
+                
+                    <div id="method_cacheAsBitmap" class="method item public inherited">
+    <h3 class="name"><code>cacheAsBitmap</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>value</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LDisplayObject.html#method_cacheAsBitmap">LDisplayObject</a>:
+            
+        
+        
+        <a href="../files/display_LDisplayObject.js.html#l407"><code>display&#x2F;LDisplayObject.js:407</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.9.11</p>
+        
+    </div>
+
+    <div class="description">
+        <p>如果设置为 true，则运行时将缓存显示对象的内部位图表示形式。此缓存可以提高包含复杂矢量内容的显示对象的性能。速度可能会大大加快，具体取决于矢量内容的复杂性。</p>
+<p>*动态改变的对象无法使用cacheAsBitmap</p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">value</code>
+                        <span class="type">Bool</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>分配给触摸点的整数(触摸设备)。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var layer = new LSprite();
+layer.x = layer.y = 100;
+addChild(layer);
+var bitmapdata = new LBitmapData(event.target);
+var bitmap = new LBitmap(bitmapdata);
+layer.addChild(bitmap);
+bitmap = new LBitmap(bitmapdata);
+bitmap.x = bitmap.y = 50;
+layer.addChild(bitmap);
+var sprite = new LSprite();
+sprite.graphics.drawRect(3, &quot;#000000&quot;, [0, 0, 190, 100],true,&quot;#00FF00&quot;);
+sprite.x = -100;
+layer.addChild(sprite);
+layer.cacheAsBitmap(true);</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LDisplayObject/cacheAsBitmap.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_callParent" class="method item public inherited">
+    <h3 class="name"><code>callParent</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>functionName</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>arguments</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LObject.html#method_callParent">LObject</a>:
+            
+        
+        
+        <a href="../files/utils_LObject.js.html#l22"><code>utils&#x2F;LObject.js:22</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.6.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>调用父类的函数。</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">functionName</code>
+                        <span class="type">String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>函数名</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">arguments</code>
+                        <span class="type">Array</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>固定值arguments</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>function funA(){
+    LExtends(this,LObject,[]);
+}
+funA.prototype.myName = function(){
+    return &quot;AAA&quot;;
+}
+function funB(){
+    LExtends(this,funA,[]);
+}
+funB.prototype.myName = function(){
+    return &quot;BBB&quot;;
+}
+function funC(){
+    LExtends(this,funA,[]);
+}
+funC.prototype.myName = function(){
+    return this.callParent(&quot;myName&quot;,arguments);
+}
+LInit(1000/50,&quot;legend&quot;,800,150,main);
+function main(){
+    LGlobal.setDebug(true);
+    var objB = new funB();
+    trace(objB.myName());//BBB
+    var objC = new funC();
+    trace(objC.myName());//AAA
+}</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LObject/callParent.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_clone" class="method item public">
+    <h3 class="name"><code>clone</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="../classes/LTextField.html" class="crosslink">LTextField</a></span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/text_LTextField.js.html#l625"><code>text&#x2F;LTextField.js:625</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.8.2</p>
+        
+    </div>
+
+    <div class="description">
+        <p>返回一个LTextField的克隆对象。</p>
+
+    </div>
+
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type"><a href="../classes/LTextField.html" class="crosslink">LTextField</a></span>:
+                    
+                    <p>一个新的 LTextField 对象，它与原始对象相同.</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var theTextField = new LTextField();
+theTextField.text = &quot;font test&quot;;
+addChild(theTextField);
+var theTextField2 = theTextField.clone();
+theTextField2.y = 50;
+addChild(theTextField2);</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LTextField/clone.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_die" class="method item public">
+    <h3 class="name"><code>die</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/text_LTextField.js.html#l959"><code>text&#x2F;LTextField.js:959</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.0.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>清空所使用的内存。</p>
+    </div>
+
+    
+
+    
+
+    
+    
+</div>
+
+                
+                    <div id="method_dispatchEvent" class="method item public inherited">
+    <h3 class="name"><code>dispatchEvent</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>event</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Boolean</span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LEventDispatcher.html#method_dispatchEvent">LEventDispatcher</a>:
+            
+        
+        
+        <a href="../files/events_LEventDispatcher.js.html#l59"><code>events&#x2F;LEventDispatcher.js:59</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.8.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>将事件调度到事件流中。事件目标是对其调用 dispatchEvent() 方法的 LEventDispatcher 对象。</p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">event</code>
+                        <span class="type"><a href="../classes/LEvent.html" class="crosslink">LEvent</a> | String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>调度到事件流中的 Event 对象。如果正在重新调度事件，则会自动创建此事件的一个克隆。在调度了事件后，其 target 属性将无法更改，因此您必须创建此事件的一个新副本以能够重新调度。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Boolean</span>:
+                    
+                    <p>如果成功调度了事件，则值为 true。</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>function MyEventObject(){
+    var self = this;
+    LExtends(self,LSprite,[]);
+    self.graphics.drawRect(1,&quot;#000000&quot;,[0,0,100,100],true,&quot;#000000&quot;);
+    self.graphics.drawRect(1,&quot;#FF0000&quot;,[100,0,100,100],true,&quot;#FF0000&quot;);
+    self.addEventListener(LMouseEvent.MOUSE_UP,self.onclick);
+    self.addEventListener(MyEventObject.CLICK_LEFT,function(event){
+        trace(&quot;dispatchEvent&quot;);
+    });
+    self.addEventListener(MyEventObject.CLICK_RIGHT,function(event){
+        trace(&quot;dispatchEvent event.name = &quot; + event.name);
+    });
+}
+MyEventObject.CLICK_LEFT = &quot;click_left&quot;;
+MyEventObject.CLICK_RIGHT = &quot;click_right&quot;;
+MyEventObject.prototype.onclick = function(event){
+    var self = event.clickTarget;
+    if(event.selfX &lt; 100){
+        self.dispatchEvent(MyEventObject.CLICK_LEFT);
+    }else{
+        var event = new LEvent(MyEventObject.CLICK_RIGHT);
+        event.name = &quot;LEvent Test&quot;;
+        self.dispatchEvent(event);
+    }
+}</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LEventDispatcher/dispatchEvent.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_focus" class="method item public">
+    <h3 class="name"><code>focus</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/text_LTextField.js.html#l714"><code>text&#x2F;LTextField.js:714</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.9.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>获取焦点。</p>
+
+    </div>
+
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var theTextField = new LTextField();
+theTextField.x = 20;
+theTextField.y = 20;
+theTextField.text = &quot;Click the Enter Key, please!&quot;;
+addChild(theTextField);
+var theTextField1 = new LTextField();
+theTextField1.x = 20;
+theTextField1.y = 100;
+theTextField1.setType(LTextFieldType.INPUT);
+addChild(theTextField1);
+theTextField1.addEventListener(LTextEvent.TEXT_INPUT, function (e) {
+    if(e.keyCode == 13){
+        theTextField2.focus();
+    }
+});
+var theTextField2 = new LTextField();
+theTextField2.x = 20;
+theTextField2.y = 140;
+theTextField2.setType(LTextFieldType.INPUT);
+addChild(theTextField2);
+theTextField2.addEventListener(LTextEvent.TEXT_INPUT, function (e) {
+    if(e.keyCode == 13){
+        theTextField1.focus();
+    }
+});
+setTimeout(function () {
+    theTextField1.focus();
+}, 200);</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LTextField/focus.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_getBounds" class="method item public inherited">
+    <h3 class="name"><code>getBounds</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>targetCoordinateSpace</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="../classes/LRectangle.html" class="crosslink">LRectangle</a></span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LDisplayObject.html#method_getBounds">LDisplayObject</a>:
+            
+        
+        
+        <a href="../files/display_LDisplayObject.js.html#l383"><code>display&#x2F;LDisplayObject.js:383</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.7.7</p>
+        
+    </div>
+
+    <div class="description">
+        <p>返回一个矩形，该矩形定义相对于 targetCoordinateSpace 对象坐标系的显示对象区域。</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">targetCoordinateSpace</code>
+                        <span class="type"><a href="../classes/LDisplayObject.html" class="crosslink">LDisplayObject</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>定义要使用的坐标系的显示对象。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type"><a href="../classes/LRectangle.html" class="crosslink">LRectangle</a></span>:
+                    
+                    <p>定义与 targetCoordinateSpace 对象坐标系统相关的显示对象面积的矩形。</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LDisplayObject/getBounds.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_getDataURL" class="method item public inherited">
+    <h3 class="name"><code>getDataURL</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>type</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>ratio</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Base64 Image</span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LDisplayObject.html#method_getDataURL">LDisplayObject</a>:
+            
+        
+        
+        <a href="../files/display_LDisplayObject.js.html#l472"><code>display&#x2F;LDisplayObject.js:472</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.7.7</p>
+        
+    </div>
+
+    <div class="description">
+        <p>将该对象转换成base64编码的image字符串。</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">type</code>
+                        <span class="type">String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>参数type在image/png，image/jpeg,image/svg+xml等 MIME类型中选择（可以不填，默认是image/png）。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">ratio</code>
+                        <span class="type">Float</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>如果是type = “image/jpeg”，可以有第二个参数，如果第二个参数ratio的值在0-1之间，则表示JPEG的质量等级，否则使用浏览器内置默认质量等级。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Base64 Image</span>:
+                    
+                    <p>base64编码的image字符串。</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+    
+</div>
+
+                
+                    <div id="method_getHeight" class="method item public">
+    <h3 class="name"><code>getHeight</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Float</span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/text_LTextField.js.html#l866"><code>text&#x2F;LTextField.js:866</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.0.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>获取显示对象的高度，以像素为单位。</p>
+
+    </div>
+
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Float</span>:
+                    
+                    <p>显示对象的高度。</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var theTextField = new LTextField();
+theTextField.text = &quot;getHeight test&quot;;
+addChild(theTextField);
+trace(theTextField.getHeight());</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LTextField/getHeight.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_getParentByConstructor" class="method item public inherited">
+    <h3 class="name"><code>getParentByConstructor</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>constructor</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Object</span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LDisplayObject.html#method_getParentByConstructor">LDisplayObject</a>:
+            
+        
+        
+        <a href="../files/display_LDisplayObject.js.html#l487"><code>display&#x2F;LDisplayObject.js:487</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.10.1</p>
+        
+    </div>
+
+    <div class="description">
+        <p>通过构造函数向上查找对象。</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">constructor</code>
+                        <span class="type">Constructor</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>某个构造函数</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Object</span>:
+                    
+                    <p>查找到的对象。</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>function MyClass1(){
+    base(self,LSprite,[]);
+}
+function MyClass2(){
+    base(self,LSprite,[]);
+}
+var obj1 = new MyClass1();
+var obj2 = new MyClass2();
+var obj3 = new LSprite();
+addChild(obj1);
+obj1.addChild(obj2);
+obj2.addChild(obj3);
+trace(obj1.objectIndex == obj3.getParentByConstructor(MyClass1).objectIndex);//out: true
+trace(obj2.objectIndex == obj3.getParentByConstructor(MyClass2).objectIndex);//out: true</code></pre>
+
+            </div>
+        </div>
+    
+    
+</div>
+
+                
+                    <div id="method_getRootCoordinate" class="method item public inherited">
+    <h3 class="name"><code>getRootCoordinate</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="../classes/LPoint.html" class="crosslink">LPoint</a></span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LDisplayObject.html#method_getRootCoordinate">LDisplayObject</a>:
+            
+        
+        
+        <a href="../files/display_LDisplayObject.js.html#l308"><code>display&#x2F;LDisplayObject.js:308</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.7.7</p>
+        
+    </div>
+
+    <div class="description">
+        <p>得到一个可显示对象相对于canvas标签左上点的坐标。</p>
+
+    </div>
+
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type"><a href="../classes/LPoint.html" class="crosslink">LPoint</a></span>:
+                    
+                    <p>一个LPoint对象。</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+    
+</div>
+
+                
+                    <div id="method_getWidth" class="method item public">
+    <h3 class="name"><code>getWidth</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Float</span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/text_LTextField.js.html#l805"><code>text&#x2F;LTextField.js:805</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.0.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>获取显示对象的宽度，以像素为单位。</p>
+
+    </div>
+
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Float</span>:
+                    
+                    <p>显示对象的宽度。</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var theTextField = new LTextField();
+theTextField.text = &quot;getWidth test&quot;;
+addChild(theTextField);
+trace(theTextField.getWidth());</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LTextField/getWidth.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_globalToLocal" class="method item public inherited">
+    <h3 class="name"><code>globalToLocal</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>point</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="../classes/LPoint.html" class="crosslink">LPoint</a></span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LDisplayObject.html#method_globalToLocal">LDisplayObject</a>:
+            
+        
+        
+        <a href="../files/display_LDisplayObject.js.html#l353"><code>display&#x2F;LDisplayObject.js:353</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.9.11</p>
+        
+    </div>
+
+    <div class="description">
+        <p>将 point 对象从舞台（全局）坐标转换为显示对象的（本地）坐标。</p>
+<p>要使用此方法，请先创建 LPoint 类的一个实例。您分配的 x 和 y 值表示全局坐标，因为它们是相对于主显示区域的原点 (0,0) 的。然后将 LPoint 实例作为参数传递给 globalToLocal() 方法。该方法会返回一个新的 LPoint 对象，该对象具有相对于显示对象原点（而不是舞台原点）的 x 和 y 值。</p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">point</code>
+                        <span class="type"><a href="../classes/LPoint.html" class="crosslink">LPoint</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>用 LPoint 类创建的对象。 该 LPoint 对象指定 x 和 y 坐标作为属性。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type"><a href="../classes/LPoint.html" class="crosslink">LPoint</a></span>:
+                    
+                    <p>具有相对于显示对象的坐标的 LPoint 对象。</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>LInit(50, &quot;legend&quot;, 800, 480, main);
+function main () {
+    LGlobal.setDebug(true);
+    var circle = new LSprite();
+    circle.x = 10;
+    addChild(circle);
+    var point1 = new LPoint(0, 0);
+    trace(circle.globalToLocal(point1)); // [x=-10, y=0]
+    var point2 = new LPoint(10, 1);
+    trace(circle.globalToLocal(point2)); // [x=0, y=1]
+    var point3 = new LPoint(30, 20);
+    trace(circle.globalToLocal(point3)); // [x=20, y=20]
+}</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LDisplayObject/globalToLocal.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_hasEventListener" class="method item public inherited">
+    <h3 class="name"><code>hasEventListener</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>type</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Boolean</span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LEventDispatcher.html#method_hasEventListener">LEventDispatcher</a>:
+            
+        
+        
+        <a href="../files/events_LEventDispatcher.js.html#l126"><code>events&#x2F;LEventDispatcher.js:126</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.8.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>检查 LEventDispatcher 对象是否为特定事件类型注册了任何侦听器。这样，您就可以确定 LEventDispatcher 对象在事件流层次结构中的哪个位置改变了对事件类型的处理。</p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">type</code>
+                        <span class="type">String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>事件的类型。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Boolean</span>:
+                    
+                    <p>如果指定类型的侦听器已注册，则值为 true；否则，值为 false。</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+    
+</div>
+
+                
+                    <div id="method_localToGlobal" class="method item public inherited">
+    <h3 class="name"><code>localToGlobal</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>point</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="../classes/LPoint.html" class="crosslink">LPoint</a></span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LDisplayObject.html#method_localToGlobal">LDisplayObject</a>:
+            
+        
+        
+        <a href="../files/display_LDisplayObject.js.html#l318"><code>display&#x2F;LDisplayObject.js:318</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.9.11</p>
+        
+    </div>
+
+    <div class="description">
+        <p>将 point 对象从显示对象的（本地）坐标转换为舞台（全局）坐标。</p>
+<p>此方法允许您将任何给定的 x 和 y 坐标从相对于特定显示对象原点 (0,0) 的值（本地坐标）转换为相对于舞台原点的值（全局坐标）。</p>
+<p>要使用此方法，请先创建 Point 类的一个实例。您分配的 x 和 y 的值表示本地坐标，因为它们是相对于显示对象原点的值。</p>
+<p>然后，您可以将创建的 Point 实例作为参数传递给 localToGlobal() 方法。该方法会返回一个新的 Point 对象，该对象具有相对于舞台原点（而不是显示对象原点）的 x 和 y 值。</p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">point</code>
+                        <span class="type"><a href="../classes/LPoint.html" class="crosslink">LPoint</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>使用 Point 类创建的点的名称或标识符，指定 x 和 y 坐标作为属性。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type"><a href="../classes/LPoint.html" class="crosslink">LPoint</a></span>:
+                    
+                    <p>具有相对于舞台的坐标的 Point 对象。</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>LInit(50, &quot;legend&quot;, 800, 480, main);
+var square;
+function main () {
+    LGlobal.setDebug(true);
+    square = new LSprite();
+    square.graphics.drawRect(1,&quot;#000000&quot;,[0, 0, 100, 100]);
+    square.x = 100;
+    square.y = 200;
+    addChild(square);
+    square.addEventListener(LMouseEvent.MOUSE_DOWN, traceCoordinates);
+}
+function traceCoordinates(event) {
+    var clickPoint = new LPoint(mouseX, mouseY);
+    trace(&quot;display object coordinates:&quot;, clickPoint);
+    trace(&quot;stage coordinates:&quot;, square.localToGlobal(clickPoint));
+}</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LDisplayObject/localToGlobal.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_remove" class="method item public inherited">
+    <h3 class="name"><code>remove</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LDisplayObject.html#method_remove">LDisplayObject</a>:
+            
+        
+        
+        <a href="../files/display_LDisplayObject.js.html#l602"><code>display&#x2F;LDisplayObject.js:602</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.7.7</p>
+        
+    </div>
+
+    <div class="description">
+        <p>将对象自己从父容器中移除。</p>
+
+    </div>
+
+    
+
+    
+
+    
+    
+</div>
+
+                
+                    <div id="method_removeAllEventListener" class="method item public inherited">
+    <h3 class="name"><code>removeAllEventListener</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LEventDispatcher.html#method_removeAllEventListener">LEventDispatcher</a>:
+            
+        
+        
+        <a href="../files/events_LEventDispatcher.js.html#l50"><code>events&#x2F;LEventDispatcher.js:50</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.8.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>从 LEventDispatcher 对象中删除所有侦听器。</p>
+    </div>
+
+    
+
+    
+
+    
+    
+</div>
+
+                
+                    <div id="method_removeEventListener" class="method item public inherited">
+    <h3 class="name"><code>removeEventListener</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>type</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>listener</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LEventDispatcher.html#method_removeEventListener">LEventDispatcher</a>:
+            
+        
+        
+        <a href="../files/events_LEventDispatcher.js.html#l29"><code>events&#x2F;LEventDispatcher.js:29</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.8.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>从 LEventDispatcher 对象中删除侦听器。如果没有向 LEventDispatcher 对象注册任何匹配的侦听器，则对此方法的调用没有任何效果。</p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">type</code>
+                        <span class="type">String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>事件的类型。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">listener</code>
+                        <span class="type">Function</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>要删除的侦听器对象。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+    
+</div>
+
+                
+                    <div id="method_setMultiline" class="method item public">
+    <h3 class="name"><code>setMultiline</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>value</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>height</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/text_LTextField.js.html#l522"><code>text&#x2F;LTextField.js:522</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.0.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>设置字段是否为多行文本字段。如果值为 true，则文本字段为多行文本字段；如果值为 false，则文本字段为单行文本字段。在类型为 LTextFieldType.INPUT 的字段中，将确定 Enter 键是否创建新行（如果值为 false，则将忽略 Enter 键）。</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">value</code>
+                        <span class="type">Boolean</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>表示字段是否为多行文本字段.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">height</code>
+                        <span class="type">Int</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>指定一行文本的高度.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var inputLayer = new LSprite();
+inputLayer.graphics.drawRect(1,&quot;#000000&quot;,[0, 0, 400, 150]);
+var theTextField = new LTextField();
+theTextField.setType(LTextFieldType.INPUT,inputLayer);
+theTextField.setMultiline(true);
+addChild(theTextField);</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LTextField/setMultiline.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_setType" class="method item public">
+    <h3 class="name"><code>setType</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>type</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>obj</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/text_LTextField.js.html#l567"><code>text&#x2F;LTextField.js:567</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.0.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>文本字段的类型。以下 LTextFieldType 常量中的任一个：LTextFieldType.DYNAMIC（指定用户无法编辑的动态文本字段），或 LTextFieldType.INPUT（指定用户可以编辑的输入文本字段）。默认值为 dynamic。</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">type</code>
+                        <span class="type">String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>文本字段的类型。</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">obj</code>
+                        <span class="type"><a href="../classes/LSprite.html" class="crosslink">LSprite</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>文本框形状.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var inputLayer = new LSprite();
+inputLayer.graphics.drawRect(1,&quot;#000000&quot;,[0, 0, 400, 30]);
+var theTextField = new LTextField();
+theTextField.setType(LTextFieldType.INPUT,inputLayer);
+addChild(theTextField);</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LTextField/setType.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_setWordWrap" class="method item public">
+    <h3 class="name"><code>setWordWrap</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>value</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>height</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/text_LTextField.js.html#l545"><code>text&#x2F;LTextField.js:545</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.0.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>表示文本字段是否自动换行。如果设置的值为 true，则该文本字段自动换行；如果值为 false，则该文本字段不自动换行。默认值为 false。</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">value</code>
+                        <span class="type">Boolean</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>表示文本字段是否自动换行.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">height</code>
+                        <span class="type">Int</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>指定一行文本的高度.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var theTextField = new LTextField();
+theTextField.setWordWrap(true);
+theTextField.width = 200;
+theTextField.text = &quot;text\ntext\ntexttexttexttexttexttexttexttexttexttexttexttexttexttext&quot;;
+addChild(theTextField);</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LTextField/setWordWrap.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_updateInput" class="method item public">
+    <h3 class="name"><code>updateInput</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/text_LTextField.js.html#l669"><code>text&#x2F;LTextField.js:669</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.9.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>当LTextField对象设置为输入框的时候，将LTextField对象的text值反映到输入框中。</p>
+
+    </div>
+
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var theTextField = new LTextField();
+theTextField.x = 20;
+theTextField.y = 20;
+theTextField.text = &quot;Click Enter Key to clear the text!&quot;;
+addChild(theTextField);
+var theTextField1 = new LTextField();
+theTextField1.text = &quot;test&quot;;
+theTextField1.x = 20;
+theTextField1.y = 100;
+theTextField1.setType(LTextFieldType.INPUT);
+addChild(theTextField1);
+theTextField1.addEventListener(LTextEvent.TEXT_INPUT, function (e) {
+    if(e.keyCode == 13){
+        e.currentTarget.text = &quot;&quot;;
+        e.currentTarget.updateInput();
+        e.preventDefault();
+    }
+});
+setTimeout(function () {
+    theTextField1.focus();
+}, 200);</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LTextField/updateInput.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_wind" class="method item public">
+    <h3 class="name"><code>wind</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/text_LTextField.js.html#l896"><code>text&#x2F;LTextField.js:896</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 1.3.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>文本逐字显示（打字机效果）。</p>
+
+    </div>
+
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>LInit(50, &quot;legend&quot;, 800, 480, main);
+function main () {
+    var theTextField = new LTextField();
+    theTextField.text = &quot;wait click&quot;;
+    theTextField.x = 10;
+    theTextField.y = 10;
+    theTextField.size = 20;
+    addChild(theTextField);
+    var button = new LButtonSample1(&quot;wind test start&quot;);
+    button.textField = theTextField;
+    button.x = 10;
+    button.y = 100;
+    addChild(button);
+    button.addEventListener(LMouseEvent.MOUSE_DOWN, onclick);
+}
+function windOver(event){
+    var theTextField = event.target;
+    theTextField.removeEventListener(LTextEvent.WIND_COMPLETE, windOver);
+    theTextField.text = &quot;wind over&quot;;
+}
+function onclick(event){
+var theTextField = event.currentTarget.textField;
+    if (theTextField.hasEventListener(LTextEvent.WIND_COMPLETE)) {
+        theTextField.removeEventListener(LTextEvent.WIND_COMPLETE, windOver);
+    }
+    theTextField.text = &quot;TEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXT&quot;;
+    theTextField.speed = 3;
+    theTextField.wind();
+    theTextField.addEventListener(LTextEvent.WIND_COMPLETE, windOver);
+}</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LTextField/wind.html" target="_blank">测试链接</a></p>
+        </div>
+    
+</div>
+
+                
+            </div>
+        
+
+        
+            <div id="properties" class="api-class-tabpanel">
+                <h2 class="off-left">Properties</h2>
+
+                
+                    <div id="property_alpha" class="property item public inherited">
+    <h3 class="name"><code>alpha</code></h3>
+    <span class="type">Float</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LDisplayObject.html#property_alpha">LDisplayObject</a>:
+            
+        
+        
+        <a href="../files/display_LDisplayObject.js.html#l55"><code>display&#x2F;LDisplayObject.js:55</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.6.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>表示指定对象的 Alpha 透明度值。有效值为 0（完全透明）到 1（完全不透明）。默认值为 1。alpha 设置为 0 的显示对象是活动的，即使它们不可见。</p>
+
+    </div>
+
+    
+        <p><strong>Default:</strong> 1</p>
+    
+
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LDisplayObject/alpha.html" target="_blank">测试链接</a></p>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="property_blendMode" class="property item public inherited">
+    <h3 class="name"><code>blendMode</code></h3>
+    <span class="type">String</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LDisplayObject.html#property_blendMode">LDisplayObject</a>:
+            
+        
+        
+        <a href="../files/display_LDisplayObject.js.html#l107"><code>display&#x2F;LDisplayObject.js:107</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.8.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>LBlendMode 类中的一个值，用于指定要使用的混合模式。 内部绘制位图的方法有两种。 如果启用了混合模式或外部剪辑遮罩，则将通过向矢量渲染器添加有位图填充的正方形来绘制位图。 如果尝试将此属性设置为无效值，运行时会将此值设置为 LBlendMode.NORMAL。</p>
+
+    </div>
+
+    
+        <p><strong>Default:</strong> null</p>
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_color" class="property item public">
+    <h3 class="name"><code>color</code></h3>
+    <span class="type">String</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/text_LTextField.js.html#l123"><code>text&#x2F;LTextField.js:123</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.0.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>表示文本的颜色。</p>
+
+    </div>
+
+    
+        <p><strong>Default:</strong> &quot;#000000&quot;</p>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var theTextField = new LTextField();
+theTextField.text = &quot;color test&quot;;
+theTextField.x = 10;
+theTextField.y = 10;
+theTextField.color = &quot;#FF0000&quot;;
+addChild(theTextField);</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LTextField/color.html" target="_blank">测试链接</a></p>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="property_displayAsPassword" class="property item public">
+    <h3 class="name"><code>displayAsPassword</code></h3>
+    <span class="type">Boolean</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/text_LTextField.js.html#l235"><code>text&#x2F;LTextField.js:235</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.0.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>指定文本字段是否是密码文本字段。如果此属性的值为 true，则文本字段被视为密码文本字段，并使用星号而不是实际字符来隐藏输入的字符。如果为 false，则不会将文本字段视为密码文本字段。</p>
+
+    </div>
+
+    
+        <p><strong>Default:</strong> false</p>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var theTextField = new LTextField();
+theTextField.setType(LTextFieldType.INPUT);
+theTextField.x = 10;
+theTextField.y = 10;
+theTextField.displayAsPassword = true;
+addChild(theTextField);</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LTextField/displayAsPassword.html" target="_blank">测试链接</a></p>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="property_filters" class="property item public inherited">
+    <h3 class="name"><code>filters</code></h3>
+    <span class="type">Array</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LDisplayObject.html#property_filters">LDisplayObject</a>:
+            
+        
+        
+        <a href="../files/display_LDisplayObject.js.html#l116"><code>display&#x2F;LDisplayObject.js:116</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.6.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>包含当前与显示对象关联的每个滤镜对象的索引数组。</p>
+
+    </div>
+
+    
+        <p><strong>Default:</strong> null</p>
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_font" class="property item public">
+    <h3 class="name"><code>font</code></h3>
+    <span class="type">String</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/text_LTextField.js.html#l89"><code>text&#x2F;LTextField.js:89</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.0.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>使用此文本格式的文本的字体名称，以字符串形式表示。</p>
+
+    </div>
+
+    
+        <p><strong>Default:</strong> Arial</p>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var theTextField = new LTextField();
+theTextField.text = &quot;font test&quot;;
+theTextField.x = 10;
+theTextField.y = 10;
+theTextField.font = &quot;Georgia&quot;;
+addChild(theTextField);</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LTextField/font.html" target="_blank">测试链接</a></p>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="property_heightMode" class="property item public">
+    <h3 class="name"><code>heightMode</code></h3>
+    <span class="type">Float</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/text_LTextField.js.html#l175"><code>text&#x2F;LTextField.js:175</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.9.1</p>
+        
+    </div>
+
+    <div class="description">
+        <p>获取文字高度的时候，是否以［gjpqy］为标准。</p>
+<p>可以设定的值有下面两种：</p>
+<p>LTextField.HEIGHT_MODE_BOTTOM：获取文字高度时，不考虑［gjpqy］的下半部。</p>
+<p>LTextField.HEIGHT_MODE_BASELINE：获取文字高度时，考虑［gjpqy］的下半部。</p>
+<p>也就是说使用LTextField.HEIGHT_MODE_BASELINE获取高度，比LTextField.HEIGHT_MODE_BOTTOM要略大。</p>
+<p>注意：HTML5中没有直接获取文字高度的方法，所以这两种方式无论使用哪一种获取的高度都无法绝对准确。</p>
+    </div>
+
+    
+        <p><strong>Default:</strong> LTextField.HEIGHT_MODE_BOTTOM</p>
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_htmlText" class="property item public">
+    <h3 class="name"><code>htmlText</code></h3>
+    <span class="type">String</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/text_LTextField.js.html#l39"><code>text&#x2F;LTextField.js:39</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.9.8</p>
+        
+    </div>
+
+    <div class="description">
+        <p>包含文本字段内容的 HTML 表示形式。
+目前支持以下 HTML 标签：</p>
+<table>
+<tr><th>标签</th><th>说明</th></tr>
+<tr><td>粗体标签</td><td>&lt;b&gt; 标签以粗体形式呈现文本。粗体必须可用于所使用的字体。</td></tr>
+<tr><td>字体标签</td><td>&lt;font&gt; 标签指定一种字体或一个字体列表来显示文本。字体标签支持以下属性：
+ <p>・color：字体的颜色。</p>
+ <p>・face：指定要使用的字体的名称。</p>
+ <p>・size：指定字体的大小。</p>
+    </td></tr>
+<tr><td>斜体标签</td><td>&lt;i&gt; 标签以斜体形式显示标签中的文本。斜体必须可用于所使用的字体。</td></tr>
+<tr><td>段落标签</td><td>&lt;p&gt; 标签创建一个新段落。必须将文本字段设置为多行文本字段才能使用此标签。</td></tr>
+<tr><td>span 标签</td><td>&lt;span&gt; 标签只可用于 CSS 文本样式。它支持以下属性：<p>・class：指定 LStyleSheet 对象定义的 CSS 样式类。</p></td></tr>
+<tr><td>下划线标签</td><td>&lt;u&gt; 标签为标签文本添加下划线。</td></tr>
+</table>
+    </div>
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var theTextField = new LTextField();
+theTextField.setWordWrap(true,30);
+theTextField.htmlText = &quot;ABC&lt;font face=&#39;Book Antiqua&#39; color=\&quot;#FF0000\&quot; size=&#39;20&#39;&gt;A&lt;p&gt;B&lt;/p&gt;C&lt;font color=&#39;#008800&#39; size=&#39;24&#39;&gt;&lt;i&gt;ABC&lt;/i&gt;&lt;font size=&#39;15&#39;&gt;ABC&lt;/font&gt;&lt;/font&gt;ABC&lt;/font&gt;ABC&lt;b&gt;ABC&lt;/b&gt;&lt;u&gt;ABC&lt;/u&gt;&quot;;
+theTextField.x = 10;
+theTextField.y = 100;
+theTextField.textBaseline = &quot;alphabetic&quot;;
+addChild(theTextField);</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LTextField/htmlText.html" target="_blank">测试链接</a></p>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="property_lineColor" class="property item public">
+    <h3 class="name"><code>lineColor</code></h3>
+    <span class="type">String</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/text_LTextField.js.html#l216"><code>text&#x2F;LTextField.js:216</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.0.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>文字描边效果的线的颜色。</p>
+
+    </div>
+
+    
+        <p><strong>Default:</strong> &quot;#000000&quot;</p>
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_lineWidth" class="property item public">
+    <h3 class="name"><code>lineWidth</code></h3>
+    <span class="type">Int</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/text_LTextField.js.html#l207"><code>text&#x2F;LTextField.js:207</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.0.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>文字描边效果的线宽。</p>
+
+    </div>
+
+    
+        <p><strong>Default:</strong> 1</p>
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_mask" class="property item public inherited">
+    <h3 class="name"><code>mask</code></h3>
+    <span class="type"><a href="../classes/LDisplayObject.html" class="crosslink">LDisplayObject</a></span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LDisplayObject.html#property_mask">LDisplayObject</a>:
+            
+        
+        
+        <a href="../files/display_LDisplayObject.js.html#l83"><code>display&#x2F;LDisplayObject.js:83</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.6.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>调用显示对象被指定的 mask 对象遮罩。要确保当舞台缩放时蒙版仍然有效，mask 显示对象必须处于显示列表的活动部分。但不绘制 mask 对象本身。将 mask 设置为 null 可删除蒙版。</p>
+
+    </div>
+
+    
+        <p><strong>Default:</strong> null</p>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>function main () {
+    var loader = new LLoader();
+    loader.addEventListener(LEvent.COMPLETE, loadBitmapdata); 
+    loader.load(&quot;face.png&quot;, &quot;bitmapData&quot;);
+}
+function loadBitmapdata (event) {
+    var bitmapdata = new LBitmapData(event.target);  
+    var bitmap = new LBitmap(bitmapdata);
+    addChild(bitmap);
+    var maskObj = new LSprite();
+    maskObj.graphics.drawRect(0, &quot;#ff0000&quot;, [10, 10, 150, 100]);
+    bitmap.mask = maskObj;
+}</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LDisplayObject/mask.html" target="_blank">测试链接</a></p>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="property_mouseEnabled" class="property item public inherited">
+    <h3 class="name"><code>mouseEnabled</code></h3>
+    <span class="type">Boolean</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LInteractiveObject.html#property_mouseEnabled">LInteractiveObject</a>:
+            
+        
+        
+        <a href="../files/display_LInteractiveObject.js.html#l14"><code>display&#x2F;LInteractiveObject.js:14</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.8.10</p>
+        
+    </div>
+
+    <div class="description">
+        <p>指定此对象是否接收鼠标或其他用户输入、消息。默认值为 true，这表示默认情况下，显示列表上的任何 LInteractiveObject 实例都会接收鼠标事件或其他用户输入事件。如果将 mouseEnabled 设置为 false，则实例将不接收任何鼠标事件（或其他用户输入事件，例如键盘事件）。显示列表上的该实例的任何子级都不会受到影响。要更改显示列表上对象的所有子级的 mouseEnabled 行为，请使用 LDisplayObjectContainer.mouseChildren。</p>
+
+    </div>
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>LGlobal.setDebug(true);
+var button01 = new LButtonSample1(&quot;mouseEnabled=true&quot;);
+button01.x = button01.y = 20;
+addChild(button01);
+button01.addEventListener(LMouseEvent.MOUSE_DOWN,function(e){
+    trace(&quot;button01 click&quot;);
+});
+var button02 = new LButtonSample1(&quot;mouseEnabled=false&quot;);
+button02.x = 20;
+button02.y = 150;
+button02.mouseEnabled = false;
+addChild(button02);
+button02.addEventListener(LMouseEvent.MOUSE_DOWN,function(e){
+    trace(&quot;button02 click&quot;);
+});</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LInteractiveObject/mouseEnabled.html" target="_blank">测试链接</a></p>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="property_numLines" class="property item public">
+    <h3 class="name"><code>numLines</code></h3>
+    <span class="type">Int</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/text_LTextField.js.html#l254"><code>text&#x2F;LTextField.js:254</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.9.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>[只读]定义多行文本字段中的文本行数。如果 setWordWrap(true)，则在文本自动换行时会增加行数。</p>
+
+    </div>
+
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_objectIndex" class="property item public inherited">
+    <h3 class="name"><code>objectIndex</code></h3>
+    <span class="type">Int</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LObject.html#property_objectIndex">LObject</a>:
+            
+        
+        
+        <a href="../files/utils_LObject.js.html#l11"><code>utils&#x2F;LObject.js:11</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.6.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>对象的ID</p>
+
+    </div>
+
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_parent" class="property item public inherited">
+    <h3 class="name"><code>parent</code></h3>
+    <span class="type"><a href="../classes/LDisplayObjectContainer.html" class="crosslink">LDisplayObjectContainer</a></span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LDisplayObject.html#property_parent">LDisplayObject</a>:
+            
+        
+        
+        <a href="../files/display_LDisplayObject.js.html#l148"><code>display&#x2F;LDisplayObject.js:148</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.0.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>[只读] 表示包含此显示对象的 DisplayObjectContainer 对象。</p>
+<p>使用 parent 属性可以指定高于显示列表层次结构中当前显示对象的显示对象的相对路径。</p>
+<p>可以使用 parent 在显示列表中上移多个级别，如下所示：</p>
+<p>this.parent.parent.x = 20;</p>
+    </div>
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var sprite1 = new LSprite();
+sprite1.name = &quot;sprite1&quot;;
+var sprite2 = new LSprite();
+sprite2.name = &quot;sprite2&quot;;
+var sprite3 = new LSprite();
+sprite3.name = &quot;sprite3&quot;;
+sprite1.addChild(sprite2);
+sprite2.addChild(sprite3);
+trace(sprite2.parent.name); // sprite1
+trace(sprite3.parent.name); // sprite2
+trace(sprite3.parent.parent.name); // sprite1</code></pre>
+
+            </div>
+        </div>
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_rotate" class="property item public inherited">
+    <h3 class="name"><code>rotate</code></h3>
+    <span class="type">Float</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LDisplayObject.html#property_rotate">LDisplayObject</a>:
+            
+        
+        
+        <a href="../files/display_LDisplayObject.js.html#l74"><code>display&#x2F;LDisplayObject.js:74</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.6.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>表示 LDisplayObject 实例距其原始方向的旋转程度，以度为单位。从 0 到 180 的值表示顺时针方向旋转；从 0 到 -180 的值表示逆时针方向旋转。对于此范围之外的值，可以通过加上或减去 360 获得该范围内的值。例如，my_video.rotate = 450语句与 my_video.rotate = 90 是相同的。</p>
+
+    </div>
+
+    
+        <p><strong>Default:</strong> 0</p>
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_scaleX" class="property item public inherited">
+    <h3 class="name"><code>scaleX</code></h3>
+    <span class="type">Float</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LDisplayObject.html#property_scaleX">LDisplayObject</a>:
+            
+        
+        
+        <a href="../files/display_LDisplayObject.js.html#l37"><code>display&#x2F;LDisplayObject.js:37</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.6.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>表示从注册点开始应用的对象的水平缩放比例（百分比）。默认注册点为 (0,0)。1.0 等于 100% 缩放。</p>
+
+    </div>
+
+    
+        <p><strong>Default:</strong> 1</p>
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_scaleY" class="property item public inherited">
+    <h3 class="name"><code>scaleY</code></h3>
+    <span class="type">Float</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LDisplayObject.html#property_scaleY">LDisplayObject</a>:
+            
+        
+        
+        <a href="../files/display_LDisplayObject.js.html#l46"><code>display&#x2F;LDisplayObject.js:46</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.6.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>表示从对象注册点开始应用的对象的垂直缩放比例（百分比）。默认注册点为 (0,0)。1.0 是 100% 缩放。</p>
+
+    </div>
+
+    
+        <p><strong>Default:</strong> 1</p>
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_size" class="property item public">
+    <h3 class="name"><code>size</code></h3>
+    <span class="type">Int</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/text_LTextField.js.html#l106"><code>text&#x2F;LTextField.js:106</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.0.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>使用此文本格式的文本的大小（以像素为单位）。</p>
+
+    </div>
+
+    
+        <p><strong>Default:</strong> 11</p>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var theTextField = new LTextField();
+theTextField.text = &quot;size test&quot;;
+theTextField.x = 10;
+theTextField.y = 10;
+theTextField.size = 20;
+addChild(theTextField);</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LTextField/size.html" target="_blank">测试链接</a></p>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="property_speed" class="property item public">
+    <h3 class="name"><code>speed</code></h3>
+    <span class="type">Int</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/text_LTextField.js.html#l262"><code>text&#x2F;LTextField.js:262</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.0.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>文本逐字显示的速度</p>
+
+    </div>
+
+    
+        <p><strong>Default:</strong> 0</p>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>LInit(50, &quot;legend&quot;, 800, 480, main);
+function main () {
+    var theTextField = new LTextField();
+    theTextField.text = &quot;wait click&quot;;
+    theTextField.x = 10;
+    theTextField.y = 10;
+    theTextField.size = 20;
+    addChild(theTextField);
+    var button = new LButtonSample1(&quot;wind test start&quot;);
+    button.textField = theTextField;
+    button.x = 10;
+    button.y = 100;
+    addChild(button);
+    button.addEventListener(LMouseEvent.MOUSE_DOWN, onclick);
+}
+function windOver(event){
+    var theTextField = event.target;
+    theTextField.removeEventListener(LTextEvent.WIND_COMPLETE, windOver);
+    theTextField.text = &quot;wind over&quot;;
+}
+function onclick(event){
+var theTextField = event.currentTarget.textField;
+    if (theTextField.hasEventListener(LTextEvent.WIND_COMPLETE)) {
+        theTextField.removeEventListener(LTextEvent.WIND_COMPLETE, windOver);
+    }
+    theTextField.text = &quot;TEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXT&quot;;
+    theTextField.speed = 3;
+    theTextField.wind();
+    theTextField.addEventListener(LTextEvent.WIND_COMPLETE, windOver);
+}</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LTextField/wind.html" target="_blank">测试链接</a></p>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="property_stroke" class="property item public">
+    <h3 class="name"><code>stroke</code></h3>
+    <span class="type">String</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/text_LTextField.js.html#l189"><code>text&#x2F;LTextField.js:189</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.0.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>文字描边效果。</p>
+
+    </div>
+
+    
+        <p><strong>Default:</strong> false</p>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var theTextField = new LTextField();
+theTextField.text = &quot;stroke test&quot;;
+theTextField.size = 50;
+theTextField.stroke = true;
+theTextField.lineWidth = 2;
+theTextField.lineColor = &quot;#FF0000&quot;;
+addChild(theTextField);</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LTextField/stroke.html" target="_blank">测试链接</a></p>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="property_styleSheet" class="property item public">
+    <h3 class="name"><code>styleSheet</code></h3>
+    <span class="type"><a href="../classes/LStyleSheet.html" class="crosslink">LStyleSheet</a></span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/text_LTextField.js.html#l70"><code>text&#x2F;LTextField.js:70</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.9.8</p>
+        
+    </div>
+
+    <div class="description">
+        <p>将样式表附加到文本字段。有关创建样式表的信息，请参阅 <a href="LStyleSheet.html">LStyleSheet</a> 类</p>
+
+    </div>
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var styleSheet = new LStyleSheet();
+styleSheet.setStyle(&quot;.test&quot;,&quot;{color:#FF0000;font-size:40}&quot;);
+styleSheet.setStyle(&quot;myText&quot;,&quot;{color:#008800;font-size:30}&quot;);
+var theTextField = new LTextField();
+theTextField.htmlText = &quot;ABC&lt;span class=&#39;test&#39;&gt;ABC&lt;myText&gt;&lt;i&gt;ABC&lt;/i&gt;ABC&lt;/myText&gt;ABC&lt;/span&gt;ABC&lt;b&gt;ABC&lt;/b&gt;&lt;u&gt;ABC&lt;/u&gt;&quot;;
+theTextField.x = 10;
+theTextField.y = 100;
+theTextField.styleSheet = styleSheet;
+addChild(theTextField);</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LTextField/styleSheet.html" target="_blank">测试链接</a></p>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="property_text" class="property item public">
+    <h3 class="name"><code>text</code></h3>
+    <span class="type">String</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/text_LTextField.js.html#l31"><code>text&#x2F;LTextField.js:31</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.0.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>作为文本字段中当前文本的字符串。各行之间用回车符（&#39;\n&#39;）分隔。</p>
+
+    </div>
+
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_textAlign" class="property item public">
+    <h3 class="name"><code>textAlign</code></h3>
+    <span class="type">String</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/text_LTextField.js.html#l157"><code>text&#x2F;LTextField.js:157</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.0.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>表示段落的对齐方式(水平)。</p>
+
+    </div>
+
+    
+        <p><strong>Default:</strong> left</p>
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_textBaseline" class="property item public">
+    <h3 class="name"><code>textBaseline</code></h3>
+    <span class="type">String</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/text_LTextField.js.html#l166"><code>text&#x2F;LTextField.js:166</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.0.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>表示段落的对齐方式(竖直)。</p>
+
+    </div>
+
+    
+        <p><strong>Default:</strong> top</p>
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_transform" class="property item public inherited">
+    <h3 class="name"><code>transform</code></h3>
+    <span class="type"><a href="../classes/LTransform.html" class="crosslink">LTransform</a></span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LDisplayObject.html#property_transform">LDisplayObject</a>:
+            
+        
+        
+        <a href="../files/display_LDisplayObject.js.html#l125"><code>display&#x2F;LDisplayObject.js:125</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.9.8</p>
+        
+    </div>
+
+    <div class="description">
+        <p>一个对象，具有与显示对象的矩阵有关的属性。在 LTransform 类的条目中对特定属性 matrix 进行了说明。</p>
+<p>transform 对象的每个属性本身都是一个对象。此概念很重要，因为设置 matrix 对象的新值的唯一方法是，创建新对象并将该对象复制到 transform.matrix 属性。</p>
+    </div>
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>function main () {
+    var square = new LSprite();
+    square.graphics.drawRect(1, &quot;#ff0000&quot;, [0, 0, 150, 100],true);
+    addChild(square);
+    square.addEventListener(LMouseEvent.MOUSE_UP, transformer);
+}
+function transformer(event) {
+    var square = event.currentTarget;
+    var tempMatrix = new LMatrix();
+    tempMatrix.skew(0.3, 0).translate(30,50);
+    square.transform.matrix = tempMatrix;
+}</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LDisplayObject/transform_matrix.html" target="_blank">测试链接</a></p>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="property_type" class="property item public">
+    <h3 class="name"><code>type</code></h3>
+    <span class="type">String</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/text_LTextField.js.html#l21"><code>text&#x2F;LTextField.js:21</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.0.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>对象的类型</p>
+
+    </div>
+
+    
+        <p><strong>Default:</strong> LTextField</p>
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_visible" class="property item public inherited">
+    <h3 class="name"><code>visible</code></h3>
+    <span class="type">Boolean</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LDisplayObject.html#property_visible">LDisplayObject</a>:
+            
+        
+        
+        <a href="../files/display_LDisplayObject.js.html#l65"><code>display&#x2F;LDisplayObject.js:65</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.6.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>显示对象是否可见。不可见的显示对象已被禁用。例如，如果 LInteractiveObject 实例的 visible=false，则无法单击该对象。</p>
+
+    </div>
+
+    
+        <p><strong>Default:</strong> true</p>
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_weight" class="property item public">
+    <h3 class="name"><code>weight</code></h3>
+    <span class="type">String</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/text_LTextField.js.html#l140"><code>text&#x2F;LTextField.js:140</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.0.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>规定字体的粗细。</p>
+
+    </div>
+
+    
+        <p><strong>Default:</strong> normal</p>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var theTextField = new LTextField();
+theTextField.text = &quot;weight test&quot;;
+theTextField.x = 10;
+theTextField.y = 10;
+theTextField.weight = &quot;bolder&quot;;
+addChild(theTextField);</code></pre>
+
+            </div>
+        </div>
+    
+    
+        <div class="examplelink">
+			<p><a href="../../../api/LTextField/weight.html" target="_blank">测试链接</a></p>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="property_width" class="property item public">
+    <h3 class="name"><code>width</code></h3>
+    <span class="type">Int</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/text_LTextField.js.html#l225"><code>text&#x2F;LTextField.js:225</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.0.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>当设置换行有效(setWordWrap(true))的时候，可以通过它来设置文字宽度。</p>
+
+    </div>
+
+    
+        <p><strong>Default:</strong> 150</p>
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_x" class="property item public inherited">
+    <h3 class="name"><code>x</code></h3>
+    <span class="type">Float</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LDisplayObject.html#property_x">LDisplayObject</a>:
+            
+        
+        
+        <a href="../files/display_LDisplayObject.js.html#l17"><code>display&#x2F;LDisplayObject.js:17</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.6.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>表示 LDisplayObject 实例相对于父级 LDisplayObjectContainer 本地坐标的 x 坐标。如果该对象位于具有变形的 LDisplayObjectContainer 内，则它也位于包含 LDisplayObjectContainer 的本地坐标系中。因此，对于逆时针旋转 90 度的 LDisplayObjectContainer，该 LDisplayObjectContainer 的子级将继承逆时针旋转 90 度的坐标系。对象的坐标指的是注册点的位置。</p>
+
+    </div>
+
+    
+        <p><strong>Default:</strong> 0</p>
+    
+
+    
+    
+
+    
+</div>
+
+                
+                    <div id="property_y" class="property item public inherited">
+    <h3 class="name"><code>y</code></h3>
+    <span class="type">Float</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LDisplayObject.html#property_y">LDisplayObject</a>:
+            
+        
+        
+        <a href="../files/display_LDisplayObject.js.html#l26"><code>display&#x2F;LDisplayObject.js:26</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 1.6.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>表示 LDisplayObject 实例相对于父级 LDisplayObjectContainer 本地坐标的 y 坐标。如果该对象位于具有变形的 LDisplayObjectContainer 内，则它也位于包含 LDisplayObjectContainer 的本地坐标系中。因此，对于逆时针旋转 90 度的 LDisplayObjectContainer，该 LDisplayObjectContainer 的子级将继承逆时针旋转 90 度的坐标系。对象的坐标指的是注册点的位置。</p>
+
+    </div>
+
+    
+        <p><strong>Default:</strong> 0</p>
+    
+
+    
+    
+
+    
+</div>
+
+                
+            </div>
+        
+
+        
+
+        
+            <div id="events" class="api-class-tabpanel">
+                <h2 class="off-left">Events</h2>
+
+                
+                    <div id="event_LEvent.ENTER_FRAME" class="events item inherited">
+    <h3 class="name"><code>LEvent.ENTER_FRAME</code></h3>
+    <span class="type"></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/LDisplayObject.html#event_LEvent.ENTER_FRAME">LDisplayObject</a>:
+            
+        
+        
+        <a href="../files/display_LDisplayObject.js.html#l622"><code>display&#x2F;LDisplayObject.js:622</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>[播放事件] 播放头进入新帧时调度。</p>
+<p><a href="LEvent.html#property_ENTER_FRAME">LEvent.ENTER_FRAME</a></p>
+    </div>
+
+    
+
+
+    
+</div>
+
+                
+                    <div id="event_LFocusEvent.FOCUS_IN" class="events item">
+    <h3 class="name"><code>LFocusEvent.FOCUS_IN</code></h3>
+    <span class="type"></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/text_LTextField.js.html#l974"><code>text&#x2F;LTextField.js:974</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>LTextField对象获得焦点后调度。</p>
+<p><a href="LFocusEvent.html#property_FOCUS_IN">LFocusEvent.FOCUS_IN</a></p>
+    </div>
+
+    
+
+
+    
+</div>
+
+                
+                    <div id="event_LFocusEvent.FOCUS_OUT" class="events item">
+    <h3 class="name"><code>LFocusEvent.FOCUS_OUT</code></h3>
+    <span class="type"></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/text_LTextField.js.html#l979"><code>text&#x2F;LTextField.js:979</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>LTextField对象失去焦点后调度。</p>
+<p><a href="LFocusEvent.html#property_FOCUS_OUT">LFocusEvent.FOCUS_OUT</a></p>
+    </div>
+
+    
+
+
+    
+</div>
+
+                
+                    <div id="event_LMouseEvent.DOUBLE_CLICK" class="events item">
+    <h3 class="name"><code>LMouseEvent.DOUBLE_CLICK</code></h3>
+    <span class="type"></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            <p>Inherited from
+            <a href="../classes/LInteractiveObject.html#event_LMouseEvent.DOUBLE_CLICK">
+                LInteractiveObject
+            </a>
+            
+            but overwritten in
+            
+        
+        
+        <a href="../files/text_LTextField.js.html#l1004"><code>text&#x2F;LTextField.js:1004</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>不可用。</p>
+
+    </div>
+
+    
+
+
+    
+</div>
+
+                
+                    <div id="event_LMouseEvent.MOUSE_DOWN" class="events item">
+    <h3 class="name"><code>LMouseEvent.MOUSE_DOWN</code></h3>
+    <span class="type"></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            <p>Inherited from
+            <a href="../classes/LInteractiveObject.html#event_LMouseEvent.MOUSE_DOWN">
+                LInteractiveObject
+            </a>
+            
+            but overwritten in
+            
+        
+        
+        <a href="../files/text_LTextField.js.html#l984"><code>text&#x2F;LTextField.js:984</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>不可用。</p>
+
+    </div>
+
+    
+
+
+    
+</div>
+
+                
+                    <div id="event_LMouseEvent.MOUSE_MOVE" class="events item">
+    <h3 class="name"><code>LMouseEvent.MOUSE_MOVE</code></h3>
+    <span class="type"></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            <p>Inherited from
+            <a href="../classes/LInteractiveObject.html#event_LMouseEvent.MOUSE_MOVE">
+                LInteractiveObject
+            </a>
+            
+            but overwritten in
+            
+        
+        
+        <a href="../files/text_LTextField.js.html#l992"><code>text&#x2F;LTextField.js:992</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>不可用。</p>
+
+    </div>
+
+    
+
+
+    
+</div>
+
+                
+                    <div id="event_LMouseEvent.MOUSE_OUT" class="events item">
+    <h3 class="name"><code>LMouseEvent.MOUSE_OUT</code></h3>
+    <span class="type"></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            <p>Inherited from
+            <a href="../classes/LInteractiveObject.html#event_LMouseEvent.MOUSE_OUT">
+                LInteractiveObject
+            </a>
+            
+            but overwritten in
+            
+        
+        
+        <a href="../files/text_LTextField.js.html#l996"><code>text&#x2F;LTextField.js:996</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>不可用。</p>
+
+    </div>
+
+    
+
+
+    
+</div>
+
+                
+                    <div id="event_LMouseEvent.MOUSE_OVER" class="events item">
+    <h3 class="name"><code>LMouseEvent.MOUSE_OVER</code></h3>
+    <span class="type"></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            <p>Inherited from
+            <a href="../classes/LInteractiveObject.html#event_LMouseEvent.MOUSE_OVER">
+                LInteractiveObject
+            </a>
+            
+            but overwritten in
+            
+        
+        
+        <a href="../files/text_LTextField.js.html#l1000"><code>text&#x2F;LTextField.js:1000</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>不可用。</p>
+
+    </div>
+
+    
+
+
+    
+</div>
+
+                
+                    <div id="event_LMouseEvent.MOUSE_UP" class="events item">
+    <h3 class="name"><code>LMouseEvent.MOUSE_UP</code></h3>
+    <span class="type"></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            <p>Inherited from
+            <a href="../classes/LInteractiveObject.html#event_LMouseEvent.MOUSE_UP">
+                LInteractiveObject
+            </a>
+            
+            but overwritten in
+            
+        
+        
+        <a href="../files/text_LTextField.js.html#l988"><code>text&#x2F;LTextField.js:988</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>不可用。</p>
+
+    </div>
+
+    
+
+
+    
+</div>
+
+                
+            </div>
+        
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32497708-2']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>

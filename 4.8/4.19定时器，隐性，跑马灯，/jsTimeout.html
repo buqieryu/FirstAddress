@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+
+
+	<body onload="xxx()">
+<div id="myTimeDiv">
+
+		</div>
+
+<script type="text/javascript">
+
+
+			function xxx() {
+				var nowDate = new Date();
+				var hour = nowDate.getHours();
+				var minutes = nowDate.getMinutes();
+
+				if (minutes < 10) {
+					minutes = "0" + minutes;
+				}
+				var seconds = nowDate.getSeconds();
+				if (seconds < 10) {
+					seconds = "0" + seconds;
+				}
+				var timeString = hour + "点" + minutes + "分" + seconds + "秒";
+				var timeDiv = document.getElementById("myTimeDiv");
+				timeDiv.innerHTML = timeString;
+			setTimeout(function(){
+				xxx();
+			} , 1000);
+			
+			}
+			
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,1 @@
+document.write('<script type="text/javascript" src="http://lufylegend.com/js/lib/lufylegend.InteractivePNG-0.1.0.min.js"></script> ');

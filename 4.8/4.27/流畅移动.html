@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>流畅移动</title>
+		<style type="text/css">
+			#div1{
+				width: 100px;
+				height: 100px;
+				background-color: #ccc;
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div1">
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+		var div1 = document.getElementById("div1");
+		var left = false;
+		var t = false;
+		var right = false;
+		var bottom = false;
+		var timer = setInterval(function(){
+			if(left){
+				div1.style.left = div1.offsetLeft - 5 + "px";
+			}
+			if(right){
+				div1.style.left = div1.offsetLeft + 5 + "px";
+			}
+			
+			if(t){
+				div1.style.top = div1.offsetTop - 5 + "px";
+			}
+			if(bottom){
+				div1.style.top = div1.offsetTop + 5 + "px";
+			}
+			
+		},30);
+		document.onkeydown = function(){
+			switch(event.keyCode){
+				case 37:
+				left = true;
+				break;
+				case 38:
+				t = true;
+				break;
+				case 39:
+				right = true;
+				break;
+				case 40:
+				bottom = true;
+				break;
+			}
+		}
+		document.onkeyup = function (){
+			left = false;
+			right = false;
+			t = false;
+			bottom = false;
+			
+		}
+		
+</script>
+</html>

@@ -1,0 +1,177 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+body{
+	font-family: "微软雅黑";
+}
+ul{
+	list-style: none;
+	
+}
+img{
+	border: none;
+}
+/*头部导航的定位*/
+.head_wrap{
+	width: 100%;
+	z-index: 300;
+	height:90px;
+	position: fixed;
+	top:0;
+	/*background-color: yellow;*/
+}
+.head{
+	background-color: black;
+	height: 75px;
+	width: 100%;
+	opacity: 0.7;
+	/*opacity 半透明*/
+	text-align: center;
+	padding-bottom: 13px;
+	box-shadow: 0px 4px 4px rgba(0,0,0,0.5);
+}
+.logo{
+	height: 60px;
+     width: 144px;	
+}
+/*a标签上面的板bar*/
+/*字体*/
+@font-face{
+font-family: "HUM521L";
+src: url(../font/HUM521L.TTF) format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+.bar{
+  position: absolute;
+  color: #ccc;
+  font-family: HUM521L;	
+	width: 100%;
+}
+.nav{
+	width: 80%;
+	text-align: center;
+	margin: 0 auto;
+	min-width: 320px;
+}
+.nav a{
+	color: #ddd;
+	text-decoration: none;
+	/*margin-left: 10%;
+	position: relative;
+	right: 30px;*/
+	padding: 6%;
+}
+.nav a:hover{
+	color: white;
+	
+}
+.nav .firstNav{
+	color: white;
+	margin-left: 0;
+}
+.center{
+	width: 75%;
+	margin:0 auto;
+	position: relative;
+	margin-top: 130px;
+	min-width: 640px;
+	max-width: 1200px;
+	
+}
+/*脚*/
+.footer{
+	background-color: #777;
+	position: relative;
+	width: 100%;
+	margin-top: 40px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-shadow: 1px 1px 1px white;
+	color: #aaa;
+	overflow: hidden;
+	
+}
+
+.footer_left , .footer_right{
+	width: 49%;
+	display: inline-block;
+}
+
+.footer_left{
+	vertical-align: top;
+	float: left;
+}
+
+.footer_right{
+	border-left: 1px solie white;
+	float: right;
+}
+
+.link{
+	float: right;
+	height: 50px;
+}
+
+.link a{
+	width: 30px;
+	float: left;
+	margin-left: 6px;
+}
+
+.link a img{
+	width: 100%;
+}
+
+.contact{
+	margin-left: 3%;
+}
+
+.contact_logo{
+	width: 144px;
+	margin-bottom: 10px;
+}
+
+.contact p{
+	margin-bottom: 5px;
+}
+
+.contact_logo img{
+	width: 100%;
+}
+
+@media screen and (max-width: 640px) {
+	body{
+		font-size: 86%;
+	}
+	
+	.center{
+		width: 95%;
+		margin-top: 90px;
+		min-width: 310px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.link{
+		margin-right: 0px;
+		
+	}
+	
+	.footer{
+		margin-top: 20px;
+	}
+	
+	.contact{
+		margin-left: 2px;
+	}
+}
+
+
+
+
+
+
+

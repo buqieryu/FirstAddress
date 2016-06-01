@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    
+    
+    <style type="text/css">#replayCount {
+	background-color: red;
+	border-radius: 10px;
+	float: right;
+	margin-right: 10px;
+	/*color: white;*/
+	margin-top: 8px;
+	height: 25px;
+}
+
+#container img {
+	width: 90%;
+	display: block;
+	margin: 10px auto;
+}
+
+#container title {
+	margin: 10px;
+}
+
+#container ptime {
+	margin: 10px;
+}
+
+#container body p {
+	padding: 0 10px;
+}</style>
+    	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="css/mui.css"/>
+</head>
+<body>
+    
+    
+  <header class="mui-bar mui-bar-nav">
+      <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" ></a>
+ <span id="replayCount"  >
+ 	0跟帖
+ </span>
+  </header>
+  
+  <!--正文-->
+  <div id="container"  class="mui-content">
+<!--标题+突变+内容-->
+
+
+  </div>
+
+</body>
+<script src="js/mui.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">mui.init()
+mui.plusReady(function() {
+
+	var self = plus.webview.currentWebview();
+
+	console.log(self.myObj);
+	//   	box.innerHTML ='http://c.m.163.com/nc/article/'+self.myObj1+'/full.html'
+
+	mui.ajax('http://c.m.163.com/nc/article/' + self.myObj + '/full.html', {
+		dataType: 'json',
+		type: 'get',
+		timeout: 10000,
+		success: function(data) {
+			//    				数据的解析
+			listDataAnalyze(data, self.myObj);
+		},
+		error: function(error) {
+			console.log("数据返回失败");
+			alert("无网络连接");
+		}
+	});
+
+})
+
+function listDataAnalyze(data, myObj) {
+
+	$("#replayCount").html(data[myObj].replyCount + "跟帖");
+
+	var title = data[myObj].title;
+
+	$("#container").append('<h3>' + title + '</h3>');
+	// 发布时间
+
+	var ptime = data[myObj].ptime;
+
+	$("#container").append('<span>' + ptime + '</span>')
+
+	var imgs = data[myObj].img;
+	for (var i = 0; i < imgs.length; i++) {
+		var src = imgs[i].src;
+		$("#container").append('<img src="' + src + '"/>')
+	}
+
+	var body = data[myObj].body;
+	$("#container").append(body)
+
+	//看看有没有图片.没有就不管了
+	//
+	//	    	var imgs = data[myObj1].img;
+	//for(var i=0;i<imgs.length;i++){
+	//	
+	//	
+	//	
+	//	var scr = imgs[i].src;
+	//	$("#container").append('<img src="'+src+'"/>')
+	//	}
+
+}
+
+//
+// 	var x =null;
+//		for(x in data){
+//		
+//		
+//		var datas = data[x];
+//		var box = document.getElementById("container")
+//		
+//var img =document.createElement("img");
+// img.src = datas.img[0].src;
+//box.appendChild(img);
+//
+//		
+//		
+//		
+//		
+//		
+//		console.log(datas);
+//		} 
+//		
+// 	 	var y =null;
+//		for(y in datas){
+//		
+//		
+//		
+//		console.log(y);
+//		} 
+// 	
+//
+//
+//
+//
+//  	
+//   	box.innerHTML =datas.body+datas.img[0].src;
+//  	 console.log()
+
+mui(document).on('tap', '.mui-btn-blue ', function() {
+
+	mui.back();
+
+})
+
+//   
+//   String = 'http://c.m.163.com/nc/article/'+self.myObj1+'/full.html';
+//   
+//   	var x =null;
+//		for(x in String){
+//			console.log(x);
+//			
+//			
+//		}</script>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<button onclick="myfunction()">输出</button>
+		<p id="niubi">来一起LOL啊</p>
+		<button  id="one"  onclick ="changeColor()">点我</button>
+		
+		<script type="text/javascript">
+		var p = document.getElementById('niubi')
+			
+					var a=1
+			function changeColor(){
+				var myP=document.getElementById('niubi');
+				if(a % 2 == 0){
+					myP.style.fontSize="60px", myP.style.color="red", one.innerHTML="再点我" ;
+				}
+				else
+				{
+					myP.style.fontSize="16px", myP.style.fontSize="66px";
+				}
+				a++;	
+			}
+//			输出方式
+			function myfunction(){
+				var b=0;
+				while(b<10){
+					var c= b +10;
+			
+					document.write("<h1>我是第"+c+"个人</h1>")
+					b++;
+					}
+				}
+		
+				
+			
+			
+			
+			
+		</script>
+		
+		
+	</body>
+</html>

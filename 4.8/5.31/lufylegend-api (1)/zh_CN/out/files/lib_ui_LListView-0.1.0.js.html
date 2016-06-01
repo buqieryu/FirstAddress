@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>lib/ui/LListView-0.1.0.js - The lufylegend.js API</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><a href="../index.html"><img src="../assets/css/logo.png" title="The lufylegend.js API"></a></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: 1.10.1</em>
+            <em>最后更新日期：2016年03月28日</em>
+			<form method="get" action="http://www.google.com.hk/search" target="google_window">
+        		<input type="hidden" name="ie" value="UTF-8">
+        		<input type="hidden" name="oe" value="UTF-8">
+        		<input type="hidden" name="as_sitesearch" id="as_sitesearch" value="lufylegend.com/api/zh_CN/out/">
+        		Google搜索&nbsp;
+        		<input type="text" class="input" style="width:150px;" name="q" id="q" size="31" maxlength="255" value="">
+        		&nbsp;
+        		<input type="submit" class="submit" name="sa" value="Go">
+      		</form>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="../classes/FPS.html">FPS</a></li>
+            
+                <li><a href="../classes/InteractivePNG.html">InteractivePNG</a></li>
+            
+                <li><a href="../classes/LAjax.html">LAjax</a></li>
+            
+                <li><a href="../classes/LAnimation.html">LAnimation</a></li>
+            
+                <li><a href="../classes/LAnimationTimeline.html">LAnimationTimeline</a></li>
+            
+                <li><a href="../classes/LBitmap.html">LBitmap</a></li>
+            
+                <li><a href="../classes/LBitmapData.html">LBitmapData</a></li>
+            
+                <li><a href="../classes/LBitmapFilter.html">LBitmapFilter</a></li>
+            
+                <li><a href="../classes/LBlendMode.html">LBlendMode</a></li>
+            
+                <li><a href="../classes/LBox2d.html">LBox2d</a></li>
+            
+                <li><a href="../classes/LButton.html">LButton</a></li>
+            
+                <li><a href="../classes/LColorMatrixFilter.html">LColorMatrixFilter</a></li>
+            
+                <li><a href="../classes/LColorTransform.html">LColorTransform</a></li>
+            
+                <li><a href="../classes/LConvolutionFilter.html">LConvolutionFilter</a></li>
+            
+                <li><a href="../classes/LDisplayObject.html">LDisplayObject</a></li>
+            
+                <li><a href="../classes/LDisplayObjectContainer.html">LDisplayObjectContainer</a></li>
+            
+                <li><a href="../classes/LDropShadowFilter.html">LDropShadowFilter</a></li>
+            
+                <li><a href="../classes/LEasing.html">LEasing</a></li>
+            
+                <li><a href="../classes/LEvent.html">LEvent</a></li>
+            
+                <li><a href="../classes/LEventDispatcher.html">LEventDispatcher</a></li>
+            
+                <li><a href="../classes/LFlash.html">LFlash</a></li>
+            
+                <li><a href="../classes/LFocusEvent.html">LFocusEvent</a></li>
+            
+                <li><a href="../classes/LFontLoader.html">LFontLoader</a></li>
+            
+                <li><a href="../classes/LGlobal.html">LGlobal</a></li>
+            
+                <li><a href="../classes/LGraphics.html">LGraphics</a></li>
+            
+                <li><a href="../classes/LInteractiveObject.html">LInteractiveObject</a></li>
+            
+                <li><a href="../classes/LKeyboardEvent.html">LKeyboardEvent</a></li>
+            
+                <li><a href="../classes/LLoader.html">LLoader</a></li>
+            
+                <li><a href="../classes/LLoadManage.html">LLoadManage</a></li>
+            
+                <li><a href="../classes/LMatrix.html">LMatrix</a></li>
+            
+                <li><a href="../classes/LMedia.html">LMedia</a></li>
+            
+                <li><a href="../classes/LMouseEvent.html">LMouseEvent</a></li>
+            
+                <li><a href="../classes/LMouseEventContainer.html">LMouseEventContainer</a></li>
+            
+                <li><a href="../classes/LMultitouch.html">LMultitouch</a></li>
+            
+                <li><a href="../classes/LMultitouchInputMode.html">LMultitouchInputMode</a></li>
+            
+                <li><a href="../classes/LoadingSample.html">LoadingSample</a></li>
+            
+                <li><a href="../classes/LObject.html">LObject</a></li>
+            
+                <li><a href="../classes/LPoint.html">LPoint</a></li>
+            
+                <li><a href="../classes/LQuadTree.html">LQuadTree</a></li>
+            
+                <li><a href="../classes/LRange.html">LRange</a></li>
+            
+                <li><a href="../classes/LRectangle.html">LRectangle</a></li>
+            
+                <li><a href="../classes/LShape.html">LShape</a></li>
+            
+                <li><a href="../classes/LSound(LMedia).html">LSound(LMedia)</a></li>
+            
+                <li><a href="../classes/LSound(LWebAudio).html">LSound(LWebAudio)</a></li>
+            
+                <li><a href="../classes/LSprite.html">LSprite</a></li>
+            
+                <li><a href="../classes/LStageAlign.html">LStageAlign</a></li>
+            
+                <li><a href="../classes/LStageScaleMode.html">LStageScaleMode</a></li>
+            
+                <li><a href="../classes/LStageWebView.html">LStageWebView</a></li>
+            
+                <li><a href="../classes/LStyleSheet.html">LStyleSheet</a></li>
+            
+                <li><a href="../classes/LTextEvent.html">LTextEvent</a></li>
+            
+                <li><a href="../classes/LTextField.html">LTextField</a></li>
+            
+                <li><a href="../classes/LTimer.html">LTimer</a></li>
+            
+                <li><a href="../classes/LTimerEvent.html">LTimerEvent</a></li>
+            
+                <li><a href="../classes/LTransform.html">LTransform</a></li>
+            
+                <li><a href="../classes/LTransition.html">LTransition</a></li>
+            
+                <li><a href="../classes/LTransitionManager.html">LTransitionManager</a></li>
+            
+                <li><a href="../classes/LTweenLite.html">LTweenLite</a></li>
+            
+                <li><a href="../classes/LTweenLiteChild.html">LTweenLiteChild</a></li>
+            
+                <li><a href="../classes/lufylegend.mvc.html">lufylegend.mvc</a></li>
+            
+                <li><a href="../classes/LURLLoader.html">LURLLoader</a></li>
+            
+                <li><a href="../classes/LVec2.html">LVec2</a></li>
+            
+                <li><a href="../classes/LVideo.html">LVideo</a></li>
+            
+                <li><a href="../classes/LWebAudio.html">LWebAudio</a></li>
+            
+                <li><a href="../classes/Q &amp; A (常见问题).html">Q &amp; A (常见问题)</a></li>
+            
+                <li><a href="../classes/UI:LButtonSample1.html">UI:LButtonSample1</a></li>
+            
+                <li><a href="../classes/UI:LButtonSample2.html">UI:LButtonSample2</a></li>
+            
+                <li><a href="../classes/UI:LCheckBox.html">UI:LCheckBox</a></li>
+            
+                <li><a href="../classes/UI:LComboBox.html">UI:LComboBox</a></li>
+            
+                <li><a href="../classes/UI:LListChildView.html">UI:LListChildView</a></li>
+            
+                <li><a href="../classes/UI:LListScrollBar.html">UI:LListScrollBar</a></li>
+            
+                <li><a href="../classes/UI:LListView.html">UI:LListView</a></li>
+            
+                <li><a href="../classes/UI:LMenubar.html">UI:LMenubar</a></li>
+            
+                <li><a href="../classes/UI:LMessageBox.html">UI:LMessageBox</a></li>
+            
+                <li><a href="../classes/UI:LPanel.html">UI:LPanel</a></li>
+            
+                <li><a href="../classes/UI:LRadio.html">UI:LRadio</a></li>
+            
+                <li><a href="../classes/UI:LRadioChild.html">UI:LRadioChild</a></li>
+            
+                <li><a href="../classes/UI:LRange.html">UI:LRange</a></li>
+            
+                <li><a href="../classes/UI:LScrollbar.html">UI:LScrollbar</a></li>
+            
+                <li><a href="../classes/UI:LTable.html">UI:LTable</a></li>
+            
+                <li><a href="../classes/UI:LTreeWidget.html">UI:LTreeWidget</a></li>
+            
+                <li><a href="../classes/UI:LWindow.html">UI:LWindow</a></li>
+            
+                <li><a href="../classes/全局函数.html">全局函数</a></li>
+            
+                <li><a href="../classes/全局变量.html">全局变量</a></li>
+            
+                <li><a href="../classes/全屏设置.html">全屏设置</a></li>
+            
+                <li><a href="../classes/旧版API.html">旧版API</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: lib/ui/LListView-0.1.0.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+/** @language chinese
+ * &lt;p&gt;lufylegend.js专用UI，list列表。&lt;/p&gt;
+ * &lt;p&gt;※此组件不可以添加LMouseEvent事件，如果需要使用点击事件，需要重写子项的onClick函数，具体做法参照 LListChildView。&lt;/p&gt;
+ * &lt;p&gt;使用时需要引进lufylegend.ui-x.x.x.js文件。&lt;/p&gt;
+ * @class UI:LListView
+ * @constructor
+ * @extends LSprite
+ * @since 1.10.0
+ * @examplelink &lt;p&gt;&lt;a href=&quot;../../../api/ui/LListView.html&quot; target=&quot;_blank&quot;&gt;测试链接&lt;/a&gt;&lt;/p&gt;
+ * @public
+ */
+var LListView = (function () {
+	function LListView(){
+		var self = this;
+		base(self,LSprite,[]);
+		/** @language chinese
+		 * [只读]LListView列表的画布，为了提升LListView的效率，LListView的所有子项都会被draw到这个LBitmapData对象上，由LListView内部控制刷新，所以是只读属性，外部不可操作。
+		 * @property bitmapData
+		 * @type LBitmapData
+		 * @since 1.10.0
+		 * @public
+		 */
+		self.bitmapData = new LBitmapData(null, 0, 0, 100, 100, LBitmapData.DATA_CANVAS);
+		self.addChild(new LBitmap(self.bitmapData));
+		/** @language chinese
+		 * LListView列表的可视范围，即大小。
+		 * @property clipping
+		 * @type LRectangle
+		 * @default new LRectangle (0, 0, 100, 100)
+		 * @since 1.10.0
+		 * @public
+		 */
+		self.clipping = new LRectangle (0, 0, 100, 100);
+		self.clipping.parent = self;
+		/** @language chinese
+		 * 单位宽度
+		 * @property cellWidth
+		 * @type float
+		 * @default 100
+		 * @since 1.10.0
+		 * @public
+		 */
+		self.cellWidth = 100;
+		/** @language chinese
+		 * 单位高度
+		 * @property cellHeight
+		 * @type float
+		 * @default 100
+		 * @since 1.10.0
+		 * @public
+		 */
+		self.cellHeight = 100;
+		/** @language chinese
+		 * 子单位平铺方向（只能是LListView.Direction.Horizontal或者LListView.Direction.Vertical中的一个）
+		 * @property arrangement
+		 * @type LListView.Direction
+		 * @default LListView.Direction.Horizontal
+		 * @since 1.10.0
+		 * @public
+		 */
+		self.arrangement = LListView.Direction.Horizontal;
+		/** @language chinese
+		 * 可拖动的方向
+		 * @property movement
+		 * @type LListView.Direction
+		 * @default LListView.Direction.Vertical
+		 * @since 1.10.0
+		 * @public
+		 */
+		self.movement = LListView.Direction.Vertical;
+		/** @language chinese
+		 * 拖动时的效果
+		 * @property dragEffect
+		 * @type LListView.DragEffects
+		 * @default LListView.DragEffects.MomentumAndSpring
+		 * @since 1.10.0
+		 * @public
+		 */
+		self.dragEffect = LListView.DragEffects.MomentumAndSpring;
+		self.scrollBarVertical = new LListScrollBar();
+		self.addChild(self.scrollBarVertical);
+		self.scrollBarHorizontal = new LListScrollBar();
+		self.addChild(self.scrollBarHorizontal);
+		/** @language chinese
+		 * &lt;p&gt;每行(列)的单位个数&lt;/p&gt;
+		 * &lt;p&gt;如果arrangement为LListView.Direction.Horizontal，则表示每行的单位个数&lt;/p&gt;
+		 * &lt;p&gt;如果arrangement为LListView.Direction.Vertical，则表示每列的单位个数&lt;/p&gt;
+		 * @property maxPerLine
+		 * @type int
+		 * @default 1
+		 * @since 1.10.0
+		 * @public
+		 */
+		self.maxPerLine = 1;/*每组长度*/
+		self._ll_items = [];
+		self._ll_x = Number.MAX_VALUE;
+		self._ll_y = 0;
+		self.addEventListener(LEvent.ENTER_FRAME,self._ll_onframe);
+		self.addEventListener(LMouseEvent.MOUSE_DOWN,self._ll_ondown);
+	}
+	LListView.DragEffects = {
+		None:&quot;none&quot;,/*无效果*/
+		Momentum:&quot;momentum&quot;,/*拖动惯性*/
+		MomentumAndSpring:&quot;momentumAndSpring&quot;/*拖动惯性+边界惯性*/
+	};
+	LListView.Direction = {
+		Horizontal:&quot;horizontal&quot;,/*水平*/
+		Vertical:&quot;vertical&quot;,/*垂直*/
+		Unrestricted:&quot;unrestricted&quot;/*无限制*/
+	};
+	LListView.ScrollBarCondition = {
+		Always:&quot;always&quot;,
+		OnlyIfNeeded:&quot;onlyIfNeeded&quot;,
+		WhenDragging:&quot;whenDragging&quot;
+	};
+	/** @language chinese
+	 * 定义LListView 列表的垂直方向的滚动条。
+	 * @method setVerticalScrollBar
+	 * @param {LListScrollBar} scrollBar 滚动条
+	 * @examplelink &lt;p&gt;&lt;a href=&quot;../../../api/ui/LListScrollBar.html&quot; target=&quot;_blank&quot;&gt;测试链接&lt;/a&gt;&lt;/p&gt;
+	 * @public
+	 * @since 1.10.0
+	 */
+	LListView.prototype.setVerticalScrollBar = function(value){
+		var self = this;
+		self.scrollBarVertical.remove();
+		self.scrollBarVertical = value;
+		self.addChild(self.scrollBarVertical);
+		self.scrollBarVertical.resizeHeight(self.clipping.height);
+	};
+	/** @language chinese
+	 * 定义LListView 列表的水平方向的滚动条。
+	 * @method setHorizontalScrollBar
+	 * @param {LListScrollBar} scrollBar 滚动条
+	 * @examplelink &lt;p&gt;&lt;a href=&quot;../../../api/ui/LListScrollBar.html&quot; target=&quot;_blank&quot;&gt;测试链接&lt;/a&gt;&lt;/p&gt;
+	 * @public
+	 * @since 1.10.0
+	 */
+	LListView.prototype.setHorizontalScrollBar = function(value){
+		var self = this;
+		self.scrollBarHorizontal.remove();
+		self.scrollBarHorizontal = value;
+		self.addChild(self.scrollBarHorizontal);
+		self.scrollBarHorizontal.resizeWidth(self.clipping.width);
+	};
+	LListView.prototype.resize = function(w, h){
+		var self = this;
+		self.bitmapData.image.height = self.bitmapData.height = h;
+		self.bitmapData.image.width = self.bitmapData.width = w;
+		self.clipping.width = w;
+		self.clipping.height = h;
+		self.scrollBarVertical.x = self.clipping.width;
+		self.scrollBarHorizontal.y = self.clipping.height;
+		self.scrollBarVertical.resizeHeight(self.clipping.height);
+		self.scrollBarHorizontal.resizeWidth(self.clipping.width);
+		self.resizeScrollBar();
+	};
+	LListView.prototype._ll_ondown = function(event){
+		var self = event.currentTarget;
+		var dragObject = new LListViewDragObject(self, event.selfX, event.selfY);
+		LGlobal.stage.addChild(dragObject);
+		dragObject.startDrag(event.touchPointID);
+		self.clickOnChild(event.selfX, event.selfY, &quot;touch&quot;);
+	};
+	/** @language chinese
+	 * 刷新LListView 列表
+	 * @method updateView
+	 * @public
+	 * @since 1.10.0
+	 */
+	LListView.prototype.updateView = function(){
+		var self = this;
+		self._ll_x = Number.MAX_VALUE;
+	};
+	LListView.prototype._ll_onframe = function(event){
+		var self = event.currentTarget;
+		if(self.clipping.x == self._ll_x &amp;&amp; self.clipping.y == self._ll_y){
+			return;
+		}
+		self.bitmapData.clear();
+		var length = self._ll_items.length;
+		var startX = self.clipping.x / self.cellWidth &gt;&gt; 0;
+		var startY = self.clipping.y / self.cellHeight &gt;&gt; 0;
+		var addX = self.clipping.width % self.cellWidth == 0 ? 0 : 1;
+		var addY = self.clipping.height % self.cellHeight == 0 ? 0 : 1;
+		addX = addY = 1;
+		if(self.arrangement == LListView.Direction.Horizontal){
+			for(var i = 0, l = Math.ceil(self.clipping.height / self.cellHeight) + addY; i &lt; l; i++){
+				var xIndex = (startY + i) * self.maxPerLine + startX;
+				for(var j = 0, jl = Math.ceil(self.clipping.width / self.cellWidth) + addX;j &lt; self.maxPerLine &amp;&amp; j &lt; jl; j++){
+					var index = xIndex + j;
+					if(index &lt; 0)continue;
+					if(index &gt;= length){
+						break;
+					}
+					var item = self._ll_items[index];
+					var x = (index % self.maxPerLine) * self.cellWidth;
+					var y = (index / self.maxPerLine &gt;&gt;&gt; 0) * self.cellHeight;
+					item.updateView(self.bitmapData, new LRectangle(0, 0, self.cellWidth, self.cellHeight), new LPoint(x - self.clipping.x, y - self.clipping.y));
+				}
+			}
+		}else{
+			var add = self.clipping.width % self.cellWidth == 0 ? 0 : 1;
+			for(var i = 0, l = Math.ceil(self.clipping.width / self.cellWidth) + addX; i &lt; l; i++){
+				var yIndex = (startX + i) * self.maxPerLine + startY;
+				for(var j = 0, jl = Math.ceil(self.clipping.height / self.cellHeight) + addY;j &lt; self.maxPerLine &amp;&amp; j &lt; jl; j++){
+					var index = yIndex + j;
+					if(index &lt; 0)continue;
+					if(index &gt;= length){
+						break;
+					}
+					var item = self._ll_items[index];
+					var y = (index % self.maxPerLine) * self.cellHeight;
+					var x = (index / self.maxPerLine &gt;&gt;&gt; 0) * self.cellWidth;
+					item.updateView(self.bitmapData, new LRectangle(0, 0, self.cellWidth, self.cellHeight), new LPoint(x - self.clipping.x, y - self.clipping.y));
+				}
+			}
+		}
+		self.setScrollBarsPositon();
+		self._ll_x = self.clipping.x;
+		self._ll_y = self.clipping.y;
+	};
+	LListView.prototype.clickOnChild = function(selfX, selfY, type){
+		var self = this;
+		var x = self.clipping.x + selfX;
+		var y = self.clipping.y + selfY;
+		var index;
+		if(self.arrangement == LListView.Direction.Horizontal){
+			index = (y / self.cellHeight &gt;&gt;&gt; 0) * self.maxPerLine + (x / self.cellWidth &gt;&gt;&gt; 0);
+		}else{
+			index = (y / self.cellHeight &gt;&gt;&gt; 0) + (x / self.cellWidth &gt;&gt;&gt; 0) * self.maxPerLine;
+		}
+		if(index &lt; self._ll_items.length){
+			var child = self._ll_items[index];
+			var event = {currentTarget:self,target:child,offsetX:mouseX,offsetY:mouseY,selfX:(x % self.cellWidth),selfY:(y % self.cellHeight)};
+			if(type == &quot;touch&quot;){
+				child.onTouch(event);
+			}else{
+				child.onClick(event);
+			}
+		}
+	};
+	/** @language chinese
+	 * 为LListView 列表增加一个子项。
+	 * @method insertChildView
+	 * @param {LListChildView} child 单元子项
+	 * @examplelink &lt;p&gt;&lt;a href=&quot;../../../api/ui/LListView.html&quot; target=&quot;_blank&quot;&gt;测试链接&lt;/a&gt;&lt;/p&gt;
+	 * @public
+	 * @since 1.10.0
+	 */
+	LListView.prototype.insertChildView = function(child, index){
+		var self = this;
+		if(typeof index == UNDEFINED){
+			self._ll_items.push(child);
+		}else{
+			self._ll_items.splice(index, 0, child);
+		}
+		self.resizeScrollBar();
+	};
+	/** @language chinese
+	 * 从LListView 列表中删除一个子项。
+	 * @method deleteChildView
+	 * @param {LListChildView} child 单元子项
+	 * @examplelink &lt;p&gt;&lt;a href=&quot;../../../api/ui/LListView.html&quot; target=&quot;_blank&quot;&gt;测试链接&lt;/a&gt;&lt;/p&gt;
+	 * @public
+	 * @since 1.10.0
+	 */
+	LListView.prototype.deleteChildView = function(child){
+		var self = this, c = self._ll_items, i, l;
+		for (i = 0, l = c.length; i &lt; l; i++) {
+			if (child.objectIndex == c[i].objectIndex) {
+				self._ll_items.splice(i, 1);
+				break;
+			}
+		}
+		self.resizeScrollBar();
+	};
+	/** @language chinese
+	 * LListView 列表不可以添加LMouseEvent事件，如果需要使用点击事件，需要重写子项的onClick函数。
+	 * @method updateList
+	 * @param {Array} list 单元子项的数组
+	 * @example
+	 * 	var list = [new ListChildView()];
+	 * 	var listView = new LListView();
+	 * 	listView.updateList(list);
+	 * @public
+	 * @since 1.10.0
+	 */
+	LListView.prototype.updateList = function(list){
+		var self = this;
+		self._ll_items = list;
+		self.resizeScrollBar();
+	};
+	LListView.prototype.setScrollBarsPositon = function(){
+		var self = this;
+		if(self.allWidth &gt; 0){
+			self.scrollBarHorizontal.setX(self.clipping.x / self.allWidth);
+		}
+		if(self.allHeight &gt; 0){
+			self.scrollBarVertical.setY(self.clipping.y / self.allHeight);
+		}
+	};
+	LListView.prototype.dragStart = function(){
+		var self = this;
+		if(self.scrollBarHorizontal.showCondition == LListView.ScrollBarCondition.WhenDragging){
+			self.scrollBarHorizontal.visible = true;
+		}
+		if(self.scrollBarVertical.showCondition == LListView.ScrollBarCondition.WhenDragging){
+			self.scrollBarVertical.visible = true;
+		}
+	};
+	LListView.prototype.dragEnd = function(){
+		var self = this;
+		if(self.scrollBarHorizontal.showCondition == LListView.ScrollBarCondition.WhenDragging){
+			self.scrollBarHorizontal.visible = false;
+		}
+		if(self.scrollBarVertical.showCondition == LListView.ScrollBarCondition.WhenDragging){
+			self.scrollBarVertical.visible = false;
+		}
+	};
+	LListView.prototype.resizeScrollBar = function(){
+		var self = this, scaleX, scaleY, w, h;
+		var length = self._ll_items.length;
+		if(self.arrangement == LListView.Direction.Horizontal){
+			w = self.cellWidth * (length &gt; self.maxPerLine ? self.maxPerLine : length);
+			h = self.cellHeight * Math.ceil(length / self.maxPerLine);
+		}else{
+			h = self.cellHeight * (length &gt; self.maxPerLine ? self.maxPerLine : length);
+			w = self.cellWidth * Math.ceil(length / self.maxPerLine);
+		}
+		scaleX = self.clipping.width &lt; w ? self.clipping.width / w : 1;
+		scaleY = self.clipping.height &lt; h ? self.clipping.height / h : 1;
+		self.allWidth = w - self.clipping.width;
+		self.allHeight = h - self.clipping.height;
+		self.scrollBarHorizontal.setWidthScale(scaleX);
+		self.setScrollBarVisible(self.scrollBarHorizontal, scaleX);
+		self.scrollBarVertical.setHeightScale(scaleY);
+		self.setScrollBarVisible(self.scrollBarVertical, scaleY);
+		self.updateView();
+	};
+	LListView.prototype.setScrollBarVisible = function(bar, scale){
+		if(bar.showCondition == LListView.ScrollBarCondition.Always){
+			bar.visible = true;
+		}else if(bar.showCondition == LListView.ScrollBarCondition.OnlyIfNeeded){
+			if(scale &gt;= 1){
+				bar.visible = false;
+			}else{
+				bar.visible = true;
+			}
+		}else{
+			bar.visible = false;
+		}
+	};
+	return LListView;
+})();
+/** @language chinese
+ * &lt;p&gt;lufylegend.js专用UI，LListView 列表的专用滚动条。&lt;/p&gt;
+ * &lt;p&gt;使用时需要引进lufylegend.ui-x.x.x.js文件。&lt;/p&gt;
+ * @class UI:LListScrollBar
+ * @constructor
+ * @extends LSprite
+ * @since 1.10.0
+ * @param {LPanel} background 滚动条背景。
+ * @param {LPanel} foreground 滚动条样式。
+ * @param {LListView.ScrollBarCondition} showCondition 滚动条的种类。
+ * @examplelink &lt;p&gt;&lt;a href=&quot;../../../api/ui/LListScrollBar.html&quot; target=&quot;_blank&quot;&gt;测试链接&lt;/a&gt;&lt;/p&gt;
+ * @public
+ */
+var LListScrollBar = (function () {
+	function LListScrollBar(background, foreground, showCondition){
+		var self = this;
+		base(self,LSprite,[]);
+		self.background = background ? background : new LPanel(&quot;#333333&quot;, 8, 8);
+		self.addChild(self.background);
+		self.foreground = foreground ? foreground : new LPanel(&quot;#CCCCCC&quot;, 8, 8);
+		self.addChild(self.foreground);
+		self.showCondition = showCondition ? showCondition : LListView.ScrollBarCondition.OnlyIfNeeded;
+	}
+	LListScrollBar.prototype.resizeWidth = function(value){
+		var self = this;
+		self.background.cacheAsBitmap(false);
+		self.background.resize(value, self.background.getSize().height);
+		self.background.cacheAsBitmap(true);
+	};
+	LListScrollBar.prototype.resizeHeight = function(value){
+		var self = this;
+		self.background.cacheAsBitmap(false);
+		self.background.resize(self.background.getSize().width, value);
+		self.background.cacheAsBitmap(true);
+	};
+	LListScrollBar.prototype.setWidthScale = function(value){
+		var self = this;
+		self.foreground.cacheAsBitmap(false);
+		self.foreground.resize(self.background.getSize().width * value, self.foreground.getSize().height);
+		self.foreground.cacheAsBitmap(true);
+	};
+	LListScrollBar.prototype.setHeightScale = function(value){
+		var self = this;
+		self.foreground.cacheAsBitmap(false);
+		self.foreground.resize(self.foreground.getSize().width, self.background.getSize().height * value);
+		self.foreground.cacheAsBitmap(true);
+	};
+	LListScrollBar.prototype.setX = function(scaleX){
+		var self = this;
+		if(scaleX &lt; 0){
+			scaleX = 0;
+		}else if(scaleX &gt; 1){
+			scaleX = 1;
+		}
+		self.foreground.x = (self.background.getSize().width - self.foreground.getSize().width) * scaleX;
+	};
+	LListScrollBar.prototype.setY = function(scaleY){
+		var self = this;
+		if(scaleY &lt; 0){
+			scaleY = 0;
+		}else if(scaleY &gt; 1){
+			scaleY = 1;
+		}
+		self.foreground.y = (self.background.getSize().height - self.foreground.getSize().height) * scaleY;
+	};
+	return LListScrollBar;
+})();
+/** @language chinese
+ * &lt;p&gt;lufylegend.js专用UI，LListView 列表的一个单元子项。&lt;/p&gt;
+ * &lt;p&gt;在使用LListView的子项的时候，需要先从LListChildView继承。&lt;/p&gt;
+ * &lt;p&gt;使用时需要引进lufylegend.ui-x.x.x.js文件。&lt;/p&gt;
+ * @class UI:LListChildView
+ * @constructor
+ * @extends LSprite
+ * @since 1.10.0
+ * @examplelink &lt;p&gt;&lt;a href=&quot;../../../api/ui/LListView.html&quot; target=&quot;_blank&quot;&gt;测试链接&lt;/a&gt;&lt;/p&gt;
+ * @public
+ */
+var LListChildView = (function () {
+	function LListChildView(){
+		var self = this;
+		base(self,LSprite,[]);
+	}
+	/** @language chinese
+	 * 当LListView 列表的子项LListChildView内容有改变的时候，需要使用调用updateView来刷新，如果被改变的对象在LListView的可视范围以外的话，则无需刷新。
+	 * @method updateView
+	 * @examplelink &lt;p&gt;&lt;a href=&quot;../../../api/ui/LListView_onClick.html&quot; target=&quot;_blank&quot;&gt;测试链接&lt;/a&gt;&lt;/p&gt;
+	 * @public
+	 * @since 1.10.0
+	 */
+	LListChildView.prototype.updateView = function(bitmapData, rectangle, point){
+		var self = this;
+		if(!self._ll_cacheAsBitmap){
+			self.cacheAsBitmap(true);
+		}
+		if(bitmapData){
+			self.ll_baseBitmapData = bitmapData;
+			self.ll_baseRectangle = rectangle;
+			self.ll_basePoint = point;
+		}
+		if(!self.ll_baseBitmapData){
+			return;
+		}
+		if(self.ll_basePoint.x &gt; self.ll_baseBitmapData.width || self.ll_basePoint.y &gt; self.ll_baseBitmapData.height || self.ll_basePoint.x + self.ll_baseRectangle.width &lt; 0 || self.ll_basePoint.y + self.ll_baseRectangle.height &lt; 0){
+			return;
+		}
+		if(!bitmapData){
+			self.ll_baseBitmapData.clear(new LRectangle(self.ll_basePoint.x, self.ll_basePoint.y, self.ll_baseRectangle.width, self.ll_baseRectangle.height));
+		}
+		self.ll_baseBitmapData.copyPixels(self._ll_cacheAsBitmap.bitmapData, self.ll_baseRectangle, self.ll_basePoint);
+	};
+	/** @language chinese
+	 * LListView 列表不可以添加LMouseEvent事件，如果需要使用点击事件，需要重写子项的onClick函数。
+	 * @method onClick
+	 * @param {Object} event {currentTarget:LListView对象,target:LListChildView自身,offsetX:同LMouseEvent,offsetY:同LMouseEvent,selfX:同LMouseEvent,selfY:同LMouseEvent}
+	 * @example
+	 * 	function MyListChildView(){
+	 * 		var self = this;
+	 * 		base(self,LListChildView,[]);
+	 * 		//处理
+	 * 	}
+	 * 	MyListChildView.prototype.onClick = function(event){
+	 * 		var self = event.target;
+	 * 		//处理
+	 * 	}
+	 * @examplelink &lt;p&gt;&lt;a href=&quot;../../../api/ui/LListView_onClick.html&quot; target=&quot;_blank&quot;&gt;测试链接&lt;/a&gt;&lt;/p&gt;
+	 * @public
+	 * @since 1.10.0
+	 */
+	LListChildView.prototype.onClick = function(event){};
+	LListChildView.prototype.onTouch = function(event){};
+	return LListChildView;
+})();
+var LListViewDragObject = (function () {
+	function LListViewDragObject(listView, selfX, selfY){
+		var self = this;
+		base(self,LSprite,[]);
+		self.graphics.drawRect(0, &quot;#000000&quot;, [-10, -10, 20, 20]);
+		self.listView = listView;
+		self.sx = self.x = mouseX;
+		self.sy = self.y = mouseY;
+		self.vx = self.listView.clipping.x;
+		self.vy = self.listView.clipping.y;
+		self.selfX = selfX;
+		self.selfY = selfY;
+		if(LGlobal.listViewDragObject){
+			LGlobal.listViewDragObject.remove();
+		}
+		self.horizontalStop = true, self.verticalStop = true;
+		if(listView.movement == LListView.Direction.Unrestricted){
+			self.horizontalStop = self.verticalStop = false;
+		}else if(listView.movement == LListView.Direction.Horizontal){
+			self.horizontalStop = false;
+			self.verticalStop = true;
+		}else if(listView.movement == LListView.Direction.Vertical){
+			self.horizontalStop = true;
+			self.verticalStop = false;
+		}
+		listView.dragStart();
+		LGlobal.listViewDragObject = self;
+		self.addEventListener(LMouseEvent.MOUSE_UP, self._ll_onup);
+		self.addEventListener(LEvent.ENTER_FRAME,self._ll_onframe);
+		LGlobal.stage.addEventListener(LFocusEvent.FOCUS_OUT, self._ll_focusout);
+	}
+	LListViewDragObject.prototype._ll_onup = function(event){
+		var self = event.currentTarget;
+		self._ll_stop();
+	};
+	LListViewDragObject.prototype._ll_focusout = function(event){
+		var self = LGlobal.listViewDragObject;
+		if(self){
+			self._ll_stop();
+		}
+	};
+	LListViewDragObject.prototype._ll_stop = function(){
+		var self = this;
+		if(self.isDeleted){
+			return;
+		}
+		self.listView.dragEnd();
+		self.stopDrag();
+		self.isDeleted = true;
+		if(Math.abs(mouseX - self.sx) &lt; 5 &amp;&amp; Math.abs(mouseY - self.sy) &lt; 5){
+			self.listView.clickOnChild(mouseX - self.sx + self.selfX, mouseY - self.sy + self.selfY);
+		}
+		if(self.listView.dragEffect == LListView.DragEffects.None){
+			return;
+		}
+		var move = self.inertia();
+		if(move){
+			return;
+		}
+		self._ll_tween();
+	};
+	LListViewDragObject.prototype.inertia = function(){
+		var self = this;
+		var listView = self.listView;
+		var mx = listView.clipping.x - self.fX;
+		var my = listView.clipping.y - self.fY;
+		if(Math.abs(mx) &lt; 5){
+			mx = 0;
+		}
+		if(Math.abs(my) &lt; 5){
+			my = 0;
+		}
+		if(mx == 0 &amp;&amp; my == 0){
+			return false;
+		}
+		var tx = listView.clipping.x;
+		var ty = listView.clipping.y;
+		if(mx != 0){
+			tx += mx * 5;
+		}
+		if(my != 0){
+			ty += my * 5;
+		}
+		if(listView.dragEffect == LListView.DragEffects.Momentum){
+			if(tx &lt; 0){
+				tx = 0;
+			}else if(tx &gt; listView.allWidth){
+				tx = listView.allWidth;
+			}
+			if(ty &lt; 0){
+				ty = 0;
+			}else if(ty &gt; listView.allHeight){
+				ty = listView.allHeight;
+			}
+		}
+		LTweenLite.to(self.listView.clipping,0.3,{x:tx,y:ty,ease:LEasing.Sine.easeOut,onComplete:self.tweenComplete});
+		return true;
+	};
+	LListViewDragObject.prototype.tweenComplete = function(event){
+		var self = event.target;
+		LListViewDragObject.prototype.dragAmend.apply(self, []);
+	};
+	LListViewDragObject.prototype._ll_tween = function(){
+		var self = this;
+		LTweenLite.to(self.listView.clipping,0.3,{x:self.toX,y:self.toY,ease:LEasing.Sine.easeOut});
+	};
+	LListViewDragObject.prototype._ll_onframe = function(event){
+		var self = event.currentTarget;
+		if(self.isDeleted){
+			self.remove();
+			LGlobal.listViewDragObject = null;
+			return;
+		}
+		var listView = self.listView;
+		self.fX = self.toX = listView.clipping.x;
+		self.fY = self.toY = listView.clipping.y;
+		if(!self.horizontalStop){
+			listView.clipping.x = self.sx - self.x + self.vx;
+		}
+		if(!self.verticalStop){
+			listView.clipping.y = self.sy - self.y + self.vy;
+		}
+		LListViewDragObject.prototype.dragAmend.apply(self, []);
+	};
+	LListViewDragObject.prototype.dragAmend = function(){
+		var self = this, listView, dragObject = false;
+		if(self.listView){
+			listView = self.listView;
+			dragObject = true;
+		}else{
+			listView = self.parent;
+		}
+		var tx = listView.clipping.x;
+		var ty = listView.clipping.y;
+		if(listView.clipping.x &lt; 0){
+			if(!dragObject){
+				tx = 0;
+			}else if(listView.dragEffect == LListView.DragEffects.MomentumAndSpring){
+				listView.clipping.x *= 0.5;
+				self.toX = 0;
+			}else{
+				listView.clipping.x = 0;
+			}
+		}else{
+			var length = listView._ll_items.length, width;
+			if(listView.arrangement == LListView.Direction.Horizontal){
+				width = (length &gt; listView.maxPerLine ? listView.maxPerLine : length) * listView.cellWidth;
+			}else{
+				width = Math.ceil(length / listView.maxPerLine) * listView.cellWidth;
+			}
+			if(width &lt;= listView.clipping.width){
+				if(dragObject){
+					listView.clipping.x = 0;
+				}else{
+					tx = 0;
+				}
+			}else if(listView.clipping.x &gt; width - listView.clipping.width){
+				if(!dragObject){
+					tx = width - listView.clipping.width;
+				}else if(listView.dragEffect == LListView.DragEffects.MomentumAndSpring){
+					self.toX = width - listView.clipping.width;
+					listView.clipping.x = self.toX + (listView.clipping.x - width + listView.clipping.width) * 0.5;
+				}else{
+					listView.clipping.x = width - listView.clipping.width;
+				}
+			}
+		}
+		if(listView.clipping.y &lt; 0){
+			if(!dragObject){
+				ty = 0;
+			}else if(listView.dragEffect == LListView.DragEffects.MomentumAndSpring){
+				listView.clipping.y *= 0.5;
+				self.toY = 0;
+			}else{
+				listView.clipping.y = 0;
+			}
+		}else{
+			var length = listView._ll_items.length, height;
+			if(listView.arrangement == LListView.Direction.Horizontal){
+				height = Math.ceil(length / listView.maxPerLine) * listView.cellHeight;
+			}else{
+				height = (length &gt; listView.maxPerLine ? listView.maxPerLine : length) * listView.cellHeight;
+			}
+			if(height &lt;= listView.clipping.height){
+				if(dragObject){
+					listView.clipping.y = 0;
+				}else{
+					ty = 0;
+				}
+			}else if(listView.clipping.y &gt; height - listView.clipping.height){
+				if(!dragObject){
+					ty = height - listView.clipping.height;
+				}else if(listView.dragEffect == LListView.DragEffects.MomentumAndSpring){
+					self.toY = height - listView.clipping.height;
+					listView.clipping.y = self.toY + (listView.clipping.y - height + listView.clipping.height) * 0.5;
+				}else{
+					listView.clipping.y = height - listView.clipping.height;
+				}
+			}
+		}
+		if(!dragObject &amp;&amp; (tx != listView.clipping.x || ty != listView.clipping.y)){
+			LTweenLite.to(listView.clipping,0.3,{x:tx,y:ty,ease:LEasing.Sine.easeOut});
+		}
+	};
+	return LListViewDragObject;
+})();
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32497708-2']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>

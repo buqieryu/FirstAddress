@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#video1{
+				display: none;
+			}
+			#canvas1{
+				box-shadow: 3px 3px 10px black;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="canvas1" width="500" height="500"></canvas>
+		<video id="video1" src="../volcano.mp4" type="video/mp4">浏览器不支持</video>
+	</body>
+	<script type="text/javascript">
+		var canvas = document.getElementById("canvas1");
+		var context = canvas.getContext("2d");
+		
+		var video = document.getElementById("video1");
+		
+		video.oncanplay = function () {
+			video.play();
+			switchToCanvas();
+		}
+		
+		function switchToCanvas () {
+			if (video.ended) {
+				return;
+			}
+			
+			// 将video上的图片的每一帧以图片的形式绘制的canvas上
+			context.drawImage(video , 0 , 0 , canvas.width - 100, canvas.height - 100);
+			
+			window.requestAnimationFrame(switchToCanvas);
+		}
+		
+	</script>
+</html>

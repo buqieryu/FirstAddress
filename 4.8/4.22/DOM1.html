@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+
+		<div id="wrap">
+			<p name="pName" type="xxx1">我是段落1<a>我是a1</a><a>我是a2</a></p>
+			<p name="pName" type="xxx2">我是段落2</p>
+		</div>
+			<button id="myBtn">点我</button>
+			<p id="myShow">我是用来显示内容的</p>
+			<input type="text" name="myInput" id="myInput" value="" />
+	</body>
+
+	<script type="text/javascript">
+		//	根据name来获取元素节点
+		//	主要针对于表单
+		//	NodeList
+		//	getElementsByName
+//			根据css选择器来获取元素
+//			获取第一个匹配到的元素
+//			querySelector
+			
+//			获取所有匹配到的元素
+//			querySelectorAll
+
+//			parentNode
+//			获取该节点的父节点
+			
+//			childNodes
+//			获取该节点的孩子节点
+			
+//			不仅获取到标签节点
+//			还会获取内容
+//			p>wenben +a +a
+
+			
+			var btn = document.getElementById("myBtn");
+			var p = document.querySelector("#myShow");
+			btn.onclick = function  () {
+				
+			var pNames = document.getElementsByName("pNamesv");
+//			p.innerHTML = pNames[0].innerHTML;
+//			p.innerHTML = pNames[1].parentNode.innerHTML;
+//			var aList = pNames[1].childNodes;
+//			var firstA = aList[0];
+//			p.innerHTML = aList[0].length;
+			
+//			firstChild
+//			lastChild
+//			获取第一个 和 最后一个
+//			（获取范围包括文本）
+//			p.innerHTML = pName[0].lastChild.innerHTML;
+			
+//			nodeType:1代表是element节点
+//					 3代表text节点
+////					 9代表的是document节点
+//			p.innerHTML = pName[1].nodeName;
+//			myInput = document.getElementById("myInput");
+//			p.innerHTML = myInput.nodeName;
+//			p.innerHTML = this.nodeName;
+			
+			}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	</script>
+
+</html>

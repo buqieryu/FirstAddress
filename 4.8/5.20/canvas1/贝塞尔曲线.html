@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<title></title>
+		<style type="text/css">
+			#canvas1 {
+				/*background-color: red;*/
+				box-shadow: 3px 3px 10px black;
+			}
+		</style>
+	</head>
+
+	<body>
+		<canvas id="canvas1" width="500" height="500">
+			<!--你的浏览器当前不支持canvas-->
+		</canvas>
+	</body>
+	<script type="text/javascript">
+			var canvas = document.getElementById("canvas1");
+			var context = canvas.getContext("2d");
+			context.lineWidth = 3;
+			context.strokeStyle = "red";
+//			圆角
+			context.lineCap = "round";
+			context.moveTo(0,0);
+//			quadraticCurveTo需要四个参数
+//			（dx ，dy，x，y）
+//			（dx，dy）控制点
+//			（x，y）目标点
+			context.quadraticCurveTo(0,0,100,200);
+			context.quadraticCurveTo(100,0,200,500)
+			
+			context.stroke();
+	</script>
+
+</html>

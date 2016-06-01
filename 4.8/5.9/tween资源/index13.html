@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<style type="text/css">
+		#target {
+			font-size: 13px;
+			padding: 0px 32px;
+		}
+	</style>
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+
+	<!--[if IE]>
+		<script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div class="container">
+		<header class="htmleaf-header">
+			<h1>tween.js强大的可生成平滑动画效果的js库 <span>A Javascript tweening engine</span></h1>
+			<div class="htmleaf-links">
+				<a class="htmleaf-icon icon-home" href="http://www.htmleaf.com/" title="jQuery之家" target="_blank"><span> jQuery之家</span></a>
+				<a class="htmleaf-icon icon-arrow-right3" href="http://www.htmleaf.com/jQuery/Layout-Interface/201501271284.html" title="返回下载页" target="_blank"><span> 返回下载页</span></a>
+			</div>
+			<div class="htmleaf-demo center">
+			  <a href="index.html">hello wrold</a>
+			  <a href="index2.html">bars</a>
+			  <a href="index3.html">colors</a>
+			  <a href="index4.html">graphs</a>
+			  <a href="index5.html">simplest</a>
+			  <a href="index6.html">video</a>
+			  <a href="index7.html">array</a>
+			  <a href="index8.html">dynamic to</a>
+			  <a href="index9.html">repeat</a>
+			  <a href="index10.html">relative values</a>
+			  <a href="index11.html">yoyo</a>
+			  <a href="index12.html">stop all chained</a>
+			  <a href="index13.html" class="current">easing</a>
+			</div>
+		</header>
+		<div id="info" style="position: relative;">
+			<h3>12 _ graphs for custom easing functions- A version of the <a href="03_graphs.html">graphs</a> example, but using custom easing functions (not included in <a href="https://github.com/sole/tween.js">tween.js</a> by default).</h3>
+		</div>
+
+		<div id="target"></div>
+	</div>
+
+	<script src="js/tween.min.js"></script>
+
+	<script src="js/createGraph.js"></script>
+	<script>
+		init();
+			animate();
+
+			function init() {
+
+				var target = document.getElementById('target');
+
+				target.appendChild( createGraph( 'Ten Steps', tenStepsEasing ) );
+
+				target.appendChild( document.createElement( 'br' ) );
+
+				for(var i = 0; i < 4; i++) {
+					var numSteps = (i + 1) * 4;
+					target.appendChild( createGraph(numSteps + ' steps', createStepFunction(numSteps)) );
+				}
+
+				target.appendChild( document.createElement( 'br' ) );
+
+				target.appendChild( createGraph('Random', randomEasing) );
+
+				target.appendChild( document.createElement( 'br' ) );
+
+				target.appendChild( createGraph('Noisy Exponential.InOut', createNoisyEasing(0.1, TWEEN.Easing.Exponential.InOut) ) );
+				target.appendChild( createGraph('Noisy Elastic.InOut', createNoisyEasing(0.1, TWEEN.Easing.Elastic.InOut) ) );
+				target.appendChild( createGraph('Noisy Circular.InOut', createNoisyEasing(0.1, TWEEN.Easing.Circular.InOut) ) );
+
+			}
+
+			function animate() {
+
+				requestAnimationFrame( animate );
+
+				TWEEN.update();
+
+			}
+
+			function tenStepsEasing(k) {
+				return (Math.floor(k * 10) / 10);
+			}
+
+			// This is where we get very meta and write a function for
+			// generating functions! The returned function is similar to
+			// the tenStepsEasing function above, but the number of steps
+			// is passed as a parameter
+			function createStepFunction(numSteps) {
+				return function(k) {
+					return (Math.floor(k * numSteps) / numSteps);
+				}
+			}
+
+			function randomEasing(k) {
+				return Math.random();
+			}
+
+
+			// Getting meta again: why not use existing functions as the
+			// base for new easing functions?
+			function createNoisyEasing(randomProportion, easingFunction) {
+				var normalProportion = 1.0 - randomProportion;
+				return function(k) {
+					return randomProportion * Math.random() + normalProportion * easingFunction(k);
+				}
+			}
+		</script>
+</body>
+</html>

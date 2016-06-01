@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#wrap{
+				height: 200px;
+				width: 200px;
+				background-color: lightcyan;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			我是wrap
+		</div>
+	</body>
+	<script type="text/javascript" src="js/touch.js"></script>
+		<script type="text/javascript">
+		var wrap = document.getElementById("wrap");
+		var angle = 0;
+		touch.on(wrap,"rotate",function(event){
+			var deg = angle + event.rotation
+//			wrap.innerHTML = deg;
+//		如果触摸事件end了
+		if(event.fingerStatus == "end"){
+				angle = deg;
+				
+			}
+			wrap.style.webkitTransform = "rotate(" + deg + "deg)";
+		});
+		
+	</script>
+</html>

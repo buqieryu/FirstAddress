@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title></title>
+</head>
+<body>
+	<input type="text" id="shu" />
+	<button onclick="btn()">结果</button>
+	<script type="text/javascript">	
+	var da = document.getElementById('shu');
+		function btn(){
+			var array = [10 , 7 , 10 , 6 , 9 , 78];
+			for (var i = 0;i < 5;i++){
+				for (var j = 0;j < 5-i;j++){
+					if (array[j] > array[j + 1]) {
+						var kong = array[j];
+						array[j] = array[j + 1];
+						array[j + 1] = kong;
+						kong = array[4];
+					}
+				}
+			}
+			da.value = kong;
+		}
+		
+	</script>
+</body>
+</html>

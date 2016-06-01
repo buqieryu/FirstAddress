@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>hello world</title>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<style type="text/css">
+			.wrapdiv {
+				width: 200px;
+				height: 200px;
+				background-color: aqua;
+			}
+			.mindiv {
+				width: 50px;
+				height: 50px;
+				background-color: red;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="wrapdiv">
+			我是wrapdiv
+			<div class="mindiv">
+				mindiv
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		//	$(function(){
+		//	$(document).ready(function(){
+		//		$(document).on("click",function(){
+		//			$(".wrap").animate({
+		//				"width":"200px",
+		//				"height":"200px"
+		//			},2000);
+		//		});
+		//	});
+		$(function($){
+			$(document).on("click",function(){
+				var newEle = $('<a href="#">百度</a>');
+				$(".wrap").append(newEle)
+				$('<a href="#">百度</a>').appendTo('.wrap')
+				
+			});
+		});
+//		$(function($) {
+//			$(".wrap").hover(function() {
+//				alert("hongze");
+//			}, function() {alert("likai");});
+//		});
+		
+		
+//		var obj = {
+//			"width":"200px",
+//			"height":"200px",
+//			"background-color":"red"
+//		};
+//		for(var i in obj){
+//			alert(obj[i]);
+//		}
+//		jQuery选择器
+//		基本选择器
+//		层次选择器
+//		过滤选择器
+//		表单选择器
+		
+	</script>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<p id="myP">直到有一天，看着你的眼，才知道我的心离你有多远！</p>
+		<button id="mybtn"></button>
+		<br><br>
+		<input type="password" id="mytext" />
+		<input type="checkbox" id="myCheck" />显示密码
+		<script type="text/javascript">
+			var p = document.getElementById("myP");
+			var btn = document.getElementById("mybtn");
+			btn.innerHTML = "我";
+			btn.onclick = function() {
+				if (p.style.display == "none") {
+					p.style.display = "block";
+				} else {
+					p.style.display = "none";
+				}
+			}
+			p.style.color = "cadetblue";
+			
+			var mytext = document.getElementById("mytext");
+			var myCheck = document.getElementById("myCheck");
+			myCheck.onclick = function (){
+				if (myCheck.checked == true){
+					mytext.type = "text";
+					
+				}else{
+					mytext.type = "password";
+				}
+			}
+			
+		</script>
+
+	</body>
+
+</html>

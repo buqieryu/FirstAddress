@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			
+			li {
+				list-style: none;
+			}
+			
+			#box {
+				width: 560px;
+				margin: 10px auto;
+				/*background-color: lightgoldenrodyellow;*/
+				padding: 10px;
+				border: 1px solid red;
+			}
+			
+			#fill_in {
+				margin-bottom: 10px;
+			}
+			
+			#fill_in li {
+				padding: 5px 0px;
+			}
+			
+			#fill_in .text {
+				width: 400px;
+				height: 30px;
+				padding: 0px 10px;
+				line-height: 30px;
+				border: 1px solid #ccc;
+			}
+			
+			#fill_in textarea {
+				width: 410px;
+				height: 100px;
+				padding: 5px;
+				vertical-align: top;
+			}
+			
+			#message_text li {
+				background-color: #888;
+				border: 1px solid #ccc;
+				/*为了让li里面的一些小的元素
+				能够进行浮动定位
+				li自己应该进行overflow*/
+				overflow: hidden;
+			}
+			
+			#message_text li a {
+				float: right;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="box">
+			<ul id="fill_in">
+				
+					<li>姓名：<input id="txt1" type="text" class="text" /></li>
+					<li>内容：<textarea id="txt2"></textarea></li>
+					<li><input type="button" class="btn" id="btn" value="提交" /></li>
+				
+			</ul>
+			<div id="message_text">
+				<input type="button" id="delete_button" value="一键删除" class="delete_button" />
+				 <h2>显示留言</h2>
+				<ul></ul>
+			</div>
+		</div>
+	</body>
+<script type="text/javascript">
+	var user = document.getElementById("txt1");
+	var content = document.getElementById("txt2");
+	var btn = document.getElementById("btn");
+	
+	var ul1 = document.getElementById("message_text").getElementsByTagName("ul")[0];
+	btn.onclick = function(){
+		var userValue = user.value;
+		var contentValue = content.value;
+		if(userValue == "" || contentValue == ""){
+			alert("输入不能为空");
+			return;
+		}
+		
+//		var li = document.clearAttributes("li");
+//		如果输入内容不为空，开始创建li
+	var li = document.createElement("li");
+//	创建好li之后
+//	应该把输入的内容装进li里面
+//	再装进去之前
+//	应该先对内容用标签包裹一下
+	li.innerHTML = '<h3>' + userValue + '</h3> <p>' + contentValue + '<a href="#">删除</a></p>';
+//	第一个参数：你要插入的元素
+//	第二个参数：那个元素之前
+	
+	ul1.insertBefore(li , ul1.firstElementChild);
+	var link1 = li.getElementsByTagName("a")[0];
+	link1.onclick = function(){
+		ul1.removeChild(li);
+	}
+	
+	
+	delete_button.onclick = function() {
+				ul1.remove(li);	
+			}
+	
+	}
+	
+	
+</script>
+</html>

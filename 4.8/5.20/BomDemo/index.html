@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#wrap {
+				width: 300px;
+				height: 2000px;
+				background-color: aqua;
+			}
+		</style>
+	</head>
+
+	<body>
+		<button id="openUrl">打开新地址</button>
+		<br />
+		<button id="closeWindow">关闭</button>
+		<br />
+		<button id="moveTo">移动到</button>
+		<div id="wrap">
+
+		</div>
+
+	</body>
+	<script type="text/javascript">
+		/*	BOM:Borwer Object Model
+								浏览器对象模型  主要用于管理窗口和窗口之间的通讯
+								window 是BOM 中的顶层对象 也是BOM的核心对象
+								self === window   当self出现open()时候才有可能发生变化
+								
+								BOM对象有很多,每一个对象都有自己的属性和方法
+								
+								BOM中的所有对象都是靠window 点出来的
+								也就是说靠window延伸出来的
+								
+								window中的一下对象
+								document对象
+								history对象
+								navigator对象
+								location对象
+								screen对象
+								frames对象      */
+		$(function($) {
+			var newWindows = [];
+			//****************open()打开一个新的窗口*****************
+			$("#openUrl").click(function() {
+					var a = window.open("http://www.baidu.com", "", "width=200 , height=100 , left=500 , top=300");
+					newWindows.push(a);
+				})
+				//*******************关闭窗口**************************
+				//window.close()
+				/*	只能关闭脚本open出来的窗口
+					不能关闭费脚本open的窗口
+					比如用户通过点击网站打开的窗口就不能close掉   */
+			var i = 0
+			$("#closeWindow").click(function() {
+				for (; i < newWindows.length; i++) {
+					newWindows[0].close();
+				}
+			});
+			//****************窗口的移动***************************
+			$("#moveTo").click(function() {
+				//moveTo() 直接移动到某一位置上
+				//newWindows[0].moveTo(100 , 100);
+				//moveBy() 相对原来的位置再移动一些距离
+//				newWindows[i].moveBy(100, 100);
+//				//调整窗口大小
+//				newWindows[i].resizeBy(100, 100);
+//				//调整窗口大小
+//				newWindows[i].document.body.style.backgroundColor;
+			
+			//***********滚动，控制当前页面滚动到(xx , yy)*******
+			//			window.scrollBy(0, 30);
+			//			警告框
+			//			alert("asdghjj");
+			//			window.alert("asdadad");
+			//			var result = window.confirm("你是胡hi会");
+			//			if(resule){
+			//				alert("yuema");
+			//			}else{
+			//				alert("nane yeyao")
+			//			}
+			//
+			//		 var a = prompt("妹子，你的温馨多少","haoren");
+			//			console.log(a);
+			//			a === null  代表取消按钮
+			//			a != null 是确定按钮
+			//			if(a.length == 0){
+			//				alert("尽然不说")
+			//			}else{
+			//				alert("这周，，，？")
+			//			}
+			//			window中的history对象
+			//			历史记录
+			//			在同一个窗口中，切换网页才会产生的历史记录
+			//			history对象中两个方法
+			//			history.forward():前进一页
+			//			history.back()：后退一页
+			//			history.go(x)：直接到指定的位置
+			//			x > 0代表前进
+			//			x < 0代表后退
+			document.write("location:" + location);
+			document.write("</br>协议:" + location.protocol);
+			document.write("</br>主机：" + location.host);
+			document.write("</br>主机名：" + location.hostname);
+			document.write("</br>端口号：" + location.port);
+			document.write("</br>文件，目录：" + location.pathname);
+			document.write("</br>参数列表" + location.search);
+			//			window.navigator导航对象
+			//			主要用于检测浏览器和当前操作系统的一些信息
+			document.write(navigator);
+			document.write("</br>浏览器代码" + navigator.appCodeName);
+			document.write("</br>浏览器名" + navigator.appname);
+			document.write("</br>浏览器版本信息" + navigator.appVersion);
+			document.write("</br>开启cookie" + navigator.cookieEnabled);
+			document.write("</br>是否开启java" + navigator.javaEnabled);
+			document.write("</br>所在系统平台" + navigator.platform);
+			document.write("</br>所安装的插件" + navigator.plugins[0].name);
+			//			用户代理信息，包含硬件平台信息
+			//			系统软件信息
+			//			应用软件信息
+			//			个人偏好设置信息
+			document.write("</br>和用户有关的信息" + navigator.userAgent);
+			
+//			window.screen
+			document.write("<br>显示器的高度" + screen.height);
+			document.write("<br>显示器的高度" + screen.height);
+			});
+		});
+	</script>
+
+</html>

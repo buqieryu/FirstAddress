@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<title></title>
+		<style type="text/css">
+			#canvas1 {
+				/*background-color: red;*/
+				box-shadow: 3px 3px 10px black;
+			}
+		</style>
+	</head>
+
+	<body>
+		<canvas id="canvas1" width="500" height="500">
+			<!--你的浏览器当前不支持canvas-->
+		</canvas>
+	</body>
+	<script type="text/javascript">
+			var canvas = document.getElementById("canvas1");
+			var context = canvas.getContext("2d");
+			var text1 = "🐂🐔伟";
+//			给文字增加渐变
+			var gradient = context.createLinearGradient(100,10,300,10);
+			gradient.addColorStop(0,"blue");
+			gradient.addColorStop(0.6,"red");
+			gradient.addColorStop(1,"green");
+			context.font = "italic 60px serif";
+			
+//			context.strokeStyle = gradient;
+//			context.strokeText(text1,100,100)
+			context.fillStyle = gradient;
+			context.fillText(text1,100,100);
+			context.fill();
+	</script>
+</html>

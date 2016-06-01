@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>tween.js强大的可生成平滑动画效果的js库|DEMO12_jQuery之家-自由分享jQuery、html5、css3的插件库</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/default.css"> -->
+	<style type="text/css">
+		.box {
+			width: 100px;
+			height: 100px;
+			margin: 10px;
+			padding: 10px;
+			display: inline-block;
+			float: left;
+		}
+		#target1 {
+			background: #fcc;
+		}
+	</style>
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+
+	<!--[if IE]>
+		<script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div class="container">
+		<header class="htmleaf-header">
+			<h1>tween.js强大的可生成平滑动画效果的js库 <span>A Javascript tweening engine</span></h1>
+			<div class="htmleaf-links">
+				<a class="htmleaf-icon icon-home" href="http://www.htmleaf.com/" title="jQuery之家" target="_blank"><span> jQuery之家</span></a>
+				<a class="htmleaf-icon icon-arrow-right3" href="http://www.htmleaf.com/jQuery/Layout-Interface/201501271284.html" title="返回下载页" target="_blank"><span> 返回下载页</span></a>
+			</div>
+			<div class="htmleaf-demo center">
+			  <a href="index.html">hello wrold</a>
+			  <a href="index2.html">bars</a>
+			  <a href="index3.html">colors</a>
+			  <a href="index4.html">graphs</a>
+			  <a href="index5.html">simplest</a>
+			  <a href="index6.html">video</a>
+			  <a href="index7.html">array</a>
+			  <a href="index8.html">dynamic to</a>
+			  <a href="index9.html">repeat</a>
+			  <a href="index10.html">relative values</a>
+			  <a href="index11.html">yoyo</a>
+			  <a href="index12.html"  class="current">stop all chained</a>
+			  <a href="index13.html">easing</a>
+			</div>
+		</header>
+		<div id="info">
+			<h3>12 _ stop all chained tweens - Tween#stopChainedTweens</h3>
+		</div>
+		<div style="position: absolute; top: 25em; left: 10em; ">
+			<button id="start">Start</button>
+			<button id="stop">Stop</button>
+			<div id="target1" data-rotation="0" data-y="0" class="box" style="left: 0px; top: 50px">
+				Box One
+			</div>
+			<div id="target2" data-rotation="0" data-y="0" class="box" style="left: 0px; top: 200px">
+				Box Two
+			</div>
+		</div>
+	</div>
+
+	<script src="js/tween.min.js"></script>
+	<script src="js/RequestAnimationFrame.js"></script>
+	<script>
+		function animate( time ) {
+				requestAnimationFrame( animate );
+				TWEEN.update( time );
+			}
+
+			animate();
+
+			var a = document.getElementById('target1');
+			var b = document.getElementById('target2');
+			var start = document.getElementById('start');
+			var stop = document.getElementById('stop');
+			var t0, t1;
+			var p0 = { x: 0 },
+				p1 = { x: 0 }
+
+			start.onclick = function() {
+				if (!t0 && !t1) {
+					t0 = new TWEEN.Tween(p0)
+						.to({ x: 700 }, 2000)
+						.delay(1000)
+						.easing(TWEEN.Easing.Elastic.InOut)
+						.onUpdate(function() {
+							a.style.left = p0.x + 'px';
+						})
+						.onComplete(function() {
+							p0.x = 0;
+							a.style.left = p0.x + 'px';
+						});
+
+					t1 = new TWEEN.Tween(p1)
+						.to({ x: 1000 }, 3000)
+						.delay(1000)
+						.easing(TWEEN.Easing.Elastic.InOut)
+						.onUpdate(function() {
+							b.style.left = p1.x + 'px';
+						})
+						.onComplete(function() {
+							p1.x = 0;
+							b.style.left = p1.x + 'px';
+						});
+
+					t0.chain(t1);
+					t1.chain(t0);
+				}
+				t0.start();
+			};
+
+			stop.onclick = function () {
+				t0.stop();
+			};
+		</script>
+
+		<style type="text/css">
+			.box {
+				width: 100px;
+				height: 100px;
+				display: block;
+				-webkit-border-radius: 70px;
+				-moz-border-radius: 70px;
+				border-radius: 70px;
+				position: absolute;
+				border: 1px solid black;
+				font-size: 10px;
+				padding: 20px;
+			}
+
+			#target1 {
+				background: #fcc;
+			}
+
+			#target2 {
+				background: #cfc;
+			}
+		</script>
+</body>
+</html>

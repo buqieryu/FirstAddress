@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#wrap{
+				width: 100px;
+				height: 100px;
+				background-color: red;
+				position: absolute;
+				left: 100px;
+				top: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			
+		</div>
+	</body>
+	<script type="text/javascript" src="tween/tween.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		var wrap = document.getElementById("wrap");
+//		初始化动画对象
+//		initialize
+		
+		var myPosition = {x:100 , y:0};
+		init();
+		function init(){
+			var tween = new TWEEN.Tween(myPosition);
+			tween.to({x:400 , y:400});
+			tween.easing(TWEEN.Easing.Bounce.InOut);
+			tween.onUpdate(changeWrap);
+			tween.start();
+			tween.repeat(Infinity);
+		}
+//		改变wrap标签元素
+		function changeWrap(){
+			wrap.innerHTML = Math.ceil(myPosition.x);
+			wrap.style.left = myPosition.x + "px";
+//			var transform = "translateX(" + myPosition.x + "px)";
+//			wrap.style.webkitTransform = transform;
+//			wrap.style.transform = transform;
+			wrap.style.top = myPosition.y + "px";
+		}
+		//		调用animationFrame
+		animate();
+		function animate(){
+			requestAnimationFrame(animate);
+			TWEEN.update();	
+		}
+	</script>
+</html>
+

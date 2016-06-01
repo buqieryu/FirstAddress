@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+				font-family: "楷体";
+				font-size: 26px;
+			}
+			body,html{
+				height: 100%;
+				
+			}
+		
+			#wrap{
+				width: 1180px;
+				height: 1360px;
+				border: 1px solid red;	
+				margin:0 auto;
+				position: relative;
+				min-height: 800px;
+				max-height: 1200px;
+				
+				
+			}
+			#head{
+				width: 1180px;
+				height: 30%;
+				border: 1px solid green;	
+				margin-right: 200px;
+				padding-left: 20px;
+				padding-top: 30px ;
+				overflow: hidden;
+				
+			}
+			#name{
+				width: 1000px;
+				height: 50px;
+				position: absolute;
+				right: 60px;
+				top: 20px;	
+			}
+			
+				
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			<div id="head">
+			姓 名：
+			<input type="text"  id="name" placeholder="请输入用户名"/><br /><br />
+			内 容：
+			<textarea name="textarea" rows="7" cols="83"></textarea><br /><br />
+			<input type="button" value="提交" style="width:100px;height:50px;border-left: 0px;background-color: white;"/>
+			
+			
+			</div>
+			
+			
+			<div id="footer">
+			显示留言<br /><br />
+			<ul>
+				<li>姓名</li>
+				<li id="">内容</li>
+				<li>姓名</li>
+				<li>内容</li>
+				<li>姓名</li>
+				<li>内容</li>
+				<li>姓名</li>
+				<li>内容</li>
+			</ul>
+			</div>
+			
+		</div>
+		
+	</body>
+</html>

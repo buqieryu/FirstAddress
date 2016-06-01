@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+//		onkeydown:键盘声所有的键
+//		onkeypress：键盘上功能键之外的键
+		document.onkeydown = function(event){
+			
+//			event.keyCode:
+//			获取按键当前的字符编码
+			var str = String.fromCharCode(event.keyCode) ;
+			alert(str);
+			
+		}
+		
+	</script>
+</html>

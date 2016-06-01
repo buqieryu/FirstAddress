@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<title></title>
+		<style type="text/css">
+			.wrap{
+				height: 100px;
+				width: 100px;
+				background-color: #00FFFF;
+			}
+			.newName{
+				border: 1px solid blue;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			我是wrap
+		</div>
+		<ul>
+			<li>我是li1</li>
+		</ul>
+		
+	</body>
+	<script type="text/javascript">
+		var a = 1;
+		$(function($){
+			//添加属性 addClass
+			$(document).on("click",function(){
+//				addclass
+				
+//				么有增加新的属性
+//				只是在class属性中  增加一个新的value
+				
+				
+				$(".wrap").addClass("newName");
+//				增加div after before
+//				$(".wrap").before("<div>after</div>");
+//				$(".wrap").after("<div>after</div>");
+				//插入  insertAfter   insertBefore
+//				$("<div>urlBefore</div>").insertBefore("ul");
+//				$("<li>我是li2</li>").insertAfter("li");
+				
+				
+				//下一个标签  next
+//				var a = $(".wrap").next().html();
+//				alert(a);
+				
+				
+//				增加新的属性 .attr()
+//				div.attr(a,b)
+//				div.attribute(x,y)
+//				
+//				div.attr({
+//					"a":"b",
+//					"x":"y"
+//				})
+//				给div设置新的属性a  值为b
+//				
+//				div.attr(a)
+//				获取div的属性a的值
+//				
+//				$(".wrap").attr({
+//					"xxx":"yyy",
+//					"aaa":"bbb"
+//				});
+//				alert($(".wrap").attr("aaa"));
+
+//				父子之间的插入
+//				$(".wrap").append("<p>111</p>")
+//				$("ul").append("<li>222</li>")
+				a++;
+				$("ul").append("<li>"+a+a+a+"</li>");
+//				if(a == 5){
+//					
+//					$("<li>" + a + a + a + "</li>").prependTo("ul");
+//				}
+//				获取一个标签元素的高度
+//				var height = $(".wrap").height();
+//				alert(height);
+//				outerHeight
+//				获取包含margin padding
+//				 border 加起来的高度
+//				alert($(".wrap").outerHeight(true));
+				
+				//parent 父标签
+//				alert($(".wrap").parent());
+				if(a > 5){
+//				$(".wrap").remove();
+				$(".wrap").empty();
+				}
+			});
+		});
+
+
+//		append()
+//		appenTo()
+//		prepend()
+//		after()
+//		insertAfter()
+//		before()
+//		inserBefore()
+//		
+//		删除
+//		remove()
+////		removeChild()
+//		empty()//清空
+//
+//
+//     替换
+//     克隆
+//     var a = b.clone();	
+//	遍历
+//	a.children()
+//	
+//	a.next()紧邻的，，同辈的元素
+//	a.siblings()获得a所有同辈元素
+//	parent()
+//	prev()获取上一个元素
+//	find(".xxx")获取当前匹配到的元素集合中每个元素的后代
+
+
+
+	</script>
+</html>

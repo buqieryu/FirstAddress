@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<!--要在页面加载的时候触发一件事情-->
+
+	<body onload="setInterval('fangfaming()', second)">
+
+		<div id="myword">
+
+		</div>
+		<div id="myTimeDiv">
+
+		</div>
+		<script type="text/javascript">
+			//		页面加载时触发的方法
+			var str = "我是文字，我要一点点出来";
+			//			时间间隔变量
+			var second = 1000;
+			//			当前已经完成的步数
+			var step = 0;
+			var mydiv = document.getElementById("myword")
+
+			function fangfaming() {
+				//				让一窜文字一点点显示出来
+				//			一直在发生变化的字符窜
+				var message = str.substr(0, step + 1);
+				mydiv.innerHTML = message;
+				step++;
+				if (step >= str.length) {
+					step = 0;
+				}
+			}
+
+			function xxx() {
+				var nowDate = new Date();
+				var hour = nowDate.getHours();
+				var minutes = nowDate.getMinutes();
+				//			对分钟进行修改
+				if (minutes < 10) {
+					minutes = "0" + minutes;
+				}
+				var seconds = nowDate.getSeconds();
+				if (seconds < 10) {
+					seconds = "0" + seconds;
+				}
+				var timeString = hour + "点" + minutes + "分" + seconds + "秒";
+				var timeDiv = document.getElementById("myTimeDiv");
+				timeDiv.innerHTML = timeString;
+			}
+			shijian = setTimeout(function(){
+				xxx();
+			} , 1000);
+			
+		</script>
+	</body>
+
+</html>

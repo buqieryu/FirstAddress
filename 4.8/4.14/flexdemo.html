@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.container{
+
+
+				background: #ccc;}
+			.first{
+				width: 100px;
+				height: 100px;
+				background-color: yellow;
+				font-size: 20px;
+			}
+			.second{
+				width: 100px;
+				height: 100px;
+				background-color: darkgoldenrod;
+				font-size: 30px;
+				/*margin-left: auto;*/
+			}
+			.third{
+				width: 100px;
+				height: 100px;
+				background-color: #A52A2A;
+				font-size: 40px;
+			}
+			/*小内容的对齐方式有三种
+			第一个：
+			margin-left：auto；
+			会告诉当前的小内容元素自动使用父容器的空白部分
+			父容器的空白部分会被声明为auto的空白边给占据*/
+/*
+			.second{
+			justify-content:flex-start;
+			}
+			*/
+
+			/*第二个：自适应布局
+			justify-content
+			是父容器来操作的
+			需要父容器有一定的空白部分
+			在父容器的主方向上来回调位置
+			*/
+			/*space-between:在每两个小内容
+			中间留一点空隙
+			并且这个空隙是平均分配的*/
+			/*space-around:
+			和上边差不多一样的效果
+			不过第一个内容的左边
+			和最后一个内容的右边
+			会留有空隙
+			并且这个空隙是内容之间空隙的一半
+			*/
+			/*垂直方向的布局*/
+			.container{
+				height: 400px;
+				align-items:baseline;
+			}
+			.container{
+				justify-content:space-around;
+				}
+
+			.container{
+				display: flex;
+			}
+
+
+		</style>
+	</head>
+	<body>
+
+		<div class="container">
+			<div class="first">我是1
+
+			</div>
+
+			<div class="second">我是2
+
+			</div>
+			<div class="third">我是3
+
+			</div>
+		</div>
+	</body>
+</html>

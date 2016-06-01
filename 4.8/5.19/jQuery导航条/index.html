@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<title>hello world</title>
+		<style type="text/css">
+		* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			.wrap {
+				position: absolute;
+			}
+			
+			#slider {
+				height: 3px;
+				width: 50px;
+				background-color: red;
+				position: absolute;
+				top: 40px;
+			}
+			
+			ul li {
+				float: left;
+				list-style: none;
+				padding: 10px;
+			}
+			
+			#slider span {
+				width: 0;
+				height: 0;
+				border-left: 5px solid transparent;
+				border-right: 5px solid transparent;
+				border-bottom: 10px solid red;
+				position: absolute;
+				top: -10px;
+				left: 20px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="wrap" style="top: 0px;">
+			<ul class="nav">
+				<li>光辉</li>
+				<li>盲僧</li>
+				<li>露露</li>
+				<li>艾希</li>
+				<li>剑圣</li>
+				<li>皇子</li>
+			</ul>
+			<div id="slider">
+				<span></span>
+			</div>
+		</div>
+		<div class="wrap" style="top: 50px">
+			<ul class="nav">
+				<li>光辉</li>
+				<li>盲僧</li>
+				<li>露露</li>
+				<li>艾希</li>
+				<li>剑圣</li>
+				<li>皇子</li>
+			</ul>
+			<div id="slider">
+				<span></span>
+			</div>
+		</div>
+		<div class="wrap" style="top: 100px">
+			<ul class="nav">
+				<li>光辉</li>
+				<li>盲僧</li>
+				<li>露露</li>
+				<li>艾希</li>
+				<li>剑圣</li>
+				<li>皇子</li>
+			</ul>
+			<div id="slider">
+				<span></span>
+			</div>
+		</div>
+		<div class="wrap" style="top: 150px;">
+			<ul class="nav">
+				<li>光辉</li>
+				<li>盲僧</li>
+				<li>露露</li>
+				<li>艾希</li>
+				<li>剑圣</li>
+				<li>皇子</li>
+			</ul>
+			<div id="slider">
+				<span></span>
+			</div>
+		</div>
+		<div class="wrap" style="top: 200px;">
+			<ul class="nav">
+				<li>光辉</li>
+				<li>盲僧</li>
+				<li>露露</li>
+				<li>艾希</li>
+				<li>剑圣</li>
+				<li>皇子</li>
+			</ul>
+			<div id="slider">
+				<span></span>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+	$(function($){
+		$(".nav li").on("mousemove",function(){
+//			获取当前over上去的下标
+			var index = $(this).parent().children().index($(this));
+			$(this).parent().next().animate({
+				left:index * 50
+			},30);
+		});
+		
+	});
+	</script>
+
+</html>

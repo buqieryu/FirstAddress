@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<title></title>
+		<style type="text/css">
+			body {
+				background-color: sandybrown;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!---->
+		<button id="back">后退</button>
+		<button id="forwrad">前进</button>
+		<a href="2.html">2</a>
+	</body>
+	
+	<script type="text/javascript">
+		$(function ($) {
+//			后退
+			$("#back").click(function () {
+				history.back();	
+			});
+			$("#forward").click(function () {
+				history.forward();	
+			});
+			
+		})
+	</script>
+
+</html>

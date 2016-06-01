@@ -1,0 +1,138 @@
+<!--<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#box {
+			width: 500px;
+			height: 500px;
+			border: 1px solid red;
+			position: relative;
+		}
+		
+		#move {
+			height: 200px;
+			width: 200px;
+			background-color: red;
+			position: absolute;
+			/*border-radius: 25px;*/
+		}
+	</style>
+
+	<body>
+		<div id="box">
+
+			<div id="move">
+
+			</div>
+
+		</div>
+	</body>
+
+	<script type="text/javascript">
+		var timer = null;
+		  timer = setInterval(function moveDiv() {
+			var maxwidth = box.offsetWidth - move.offsetWidth;
+			var maxheight = box.offsetHeight - move.offsetHeight;
+			
+			if (move.offsetTop <= 0) {
+				move.style.left = move.offsetLeft + 5 + "px";
+			}
+			if (move.offsetLeft >= maxwidth) {
+				move.style.left = maxwidth + "px";
+				move.style.top = move.offsetTop + 5 + "px";
+			}
+			if (move.offsetTop >= maxheight) {
+				move.style.top = maxheight + "px";
+				move.style.left = move.offsetLeft - 5 + "px";
+			}
+			if (move.offsetLeft <= 0) {
+				move.style.left = 0 + "px";
+				move.style.top = move.offsetTop - 5 + "px";
+			}
+//			if (move.offsetTop <= 0) {
+//				move.style.top = 0 + "px";
+//			}
+//								move.style.width = 400 + "px";
+//								move.style.height = 400 + "px";
+			
+		}, 10)
+				
+		
+	</script>
+
+</html>-->
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box {
+				width: 500px;
+				height: 500px;
+				border: 1px solid red;
+				position: relative;
+			}
+			
+			#move {
+				width: 100px;
+				height: 100px;
+				background-color: pink;
+				position: absolute;
+			}
+		</style>
+
+	</head>
+
+	<body>
+
+		<div id="box">
+
+			<div id="move">
+
+			</div>
+
+		</div>
+	</body>
+
+	<script type="text/javascript">
+		var box = document.getElementById("box");
+		var move = document.getElementById("move");
+		var maxwidth = box.offsetWidth - move.offsetWidth;
+		var maxheight = box.offsetHeight - move.offsetHeight;
+		var wbol = false;
+		var hbol = false;
+		timer = setInterval(function() {
+			if (wbol == false) {
+				move.style.left = move.offsetLeft + 5 + "px";
+				if (move.offsetLeft >= maxwidth) {
+					wbol = true;
+				}
+			}
+			if (wbol) {
+				move.style.left = move.offsetLeft - 6 + "px";
+				if (move.offsetLeft <= 0) {
+					wbol = false;
+				}
+			}
+			if (hbol == false) {
+				move.style.top = move.offsetTop + 4 + "px";
+				if (move.offsetTop >= maxheight) {
+					hbol = true;
+				}
+			}
+			if (hbol) {
+				move.style.top = move.offsetTop - 5 + "px";
+				if (move.offsetTop <= 0) {
+					hbol = false;
+				}
+			}
+		}, 10)
+	</script>
+
+</html>

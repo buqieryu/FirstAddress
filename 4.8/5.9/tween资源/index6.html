@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>tween.js强大的可生成平滑动画效果的js库|DEMO6_jQuery之家-自由分享jQuery、html5、css3的插件库</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/default.css">
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	
+	<!--[if IE]>
+		<script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div class="container">
+		<header class="htmleaf-header">
+			<h1>tween.js强大的可生成平滑动画效果的js库 <span>A Javascript tweening engine</span></h1>
+			<div class="htmleaf-links">
+				<a class="htmleaf-icon icon-home" href="http://www.htmleaf.com/" title="jQuery之家" target="_blank"><span> jQuery之家</span></a>
+				<a class="htmleaf-icon icon-arrow-right3" href="http://www.htmleaf.com/jQuery/Layout-Interface/201501271284.html" title="返回下载页" target="_blank"><span> 返回下载页</span></a>
+			</div>
+			<div class="htmleaf-demo center">
+			  <a href="index.html">hello wrold</a>
+			  <a href="index2.html">bars</a>
+			  <a href="index3.html">colors</a>
+			  <a href="index4.html">graphs</a>
+			  <a href="index5.html">simplest</a>
+			  <a href="index6.html" class="current">video</a>
+			  <a href="index7.html">array</a>
+			  <a href="index8.html">dynamic to</a>
+			  <a href="index9.html">repeat</a>
+			  <a href="index10.html">relative values</a>
+			  <a href="index11.html">yoyo</a>
+			  <a href="index12.html">stop all chained</a>
+			  <a href="index13.html">easing</a>
+			</div>
+		</header>
+		<div id="info">
+			<h3>06 _ video and time-Playing a video, synchronizing a tween to it</h3>
+		</div>
+
+		<div id="target" style="position: absolute; left: 50px; top: 420px; font-size: 100px; letter-spacing: -7px; ">
+			<video id="video" src="video/sintel.webm" width="320" height="138" autoplay></video>
+		</div>
+	</div>
+	
+	<script src="js/tween.min.js"></script>
+	<script src="js/RequestAnimationFrame.js"></script>
+	<script>
+		
+			var video;
+
+			init();
+			animate();
+
+			function init() {
+
+				var output = document.createElement( 'div' );
+
+				var target = document.getElementById( 'target' );
+				target.appendChild( output );
+
+				video = document.getElementById( 'video' );
+				video.addEventListener( 'play', function() {
+
+					new TWEEN.Tween( { x: 50, y: 0 } )
+						.to( { x: 400 }, this.duration )
+						.easing( TWEEN.Easing.Linear.None )
+						.onUpdate( function () {
+
+							output.innerHTML = 'x == ' + Math.round( this.x );
+							target.style.left = ( this.x ) + 'px';
+
+						} )
+						.start( video.currentTime );
+
+				}, false );
+
+			}
+
+			function animate() {
+
+				requestAnimationFrame( animate );
+
+				if ( video.readyState === video.HAVE_ENOUGH_DATA ) {
+
+					TWEEN.update( video.currentTime );
+
+				}
+				
+			}
+		</script>
+</body>
+</html>

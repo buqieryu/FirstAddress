@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#wrap{
+				position: absolute;
+				left: 10px;
+				top: 10px;
+				width: 100px;
+				height: 100px;
+				background-color: red;
+			}
+		</style>
+	</head>
+	<body>
+	<div id="wrap">
+		我是wrapdiv
+		
+	</div>
+	</body>
+	<script type="text/javascript" src="js/touch.js">
+		touch.on("#wrap","tap",function(event){
+			
+			console.log(event.position.X);
+		});
+		
+	</script>
+</html>

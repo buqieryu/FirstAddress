@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#wrap{
+				width: 100px;
+				height: 100px;
+				position: absolute;
+				top: 100px;
+				left: 100px;
+				background-color: #90EE90;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			hugjghhihojo
+		</div>
+	</body>
+	<script type="text/javascript" src="js/touch.js"></script>
+	<script type="text/javascript">
+		var wrap = document.getElementById("wrap");
+		var scale = 1;
+		touch.on(wrap, "rotate",function(event){
+			var tempScale = event.scale.toFixed(2)-1;
+			wrap.innerHTML = scale + tempScale;
+			var newScale = scale + tempScale;
+			
+			
+		
+//			
+			console.log(newScale);
+			if(newScale >= 2){
+				newScale = 2;
+			}else if(newScale <= 0.5){
+				newScale = 0.5;
+			}
+			
+			
+			wrap.style.webkitTransform = "scale("+newScale +")";
+//			控制一个放大和缩小的极端值问题
+			event.preventDefault();
+			if(event.fingerStatus == "end"){
+				scale = tempScale + scale;
+			}
+		});
+			
+		
+	</script>
+</html>

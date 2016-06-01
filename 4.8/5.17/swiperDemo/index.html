@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>hello world</title>
+    <style type="text/css">
+    	.swiper-container{
+    		/*padding: 10px;*/
+    		margin-top:25px;
+    	}
+    	#first{
+    		background-color: pink;
+    	}
+	#second{
+		background-color: antiquewhite;
+	}    	
+    	#third{
+    		background-color: aquamarine;
+    	}
+    	#fourth{
+    		background-color: brown;
+    	}
+    	.swiper-wrapper div{
+    		width: 100%;
+    		height: 200px;
+    	}
+    </style>
+    
+    
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+    
+    <script type="text/javascript">
+   
+   		
+    </script>
+</head>
+<body>
+	<!--只需要给对应的快增加相应的class就可以-->
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide" id="first">
+				我是第一个页面
+			</div>
+			<div class="swiper-slide" id="second">
+				我是第二个页面
+			</div>
+			<div class="swiper-slide" id="third">
+				我是第三个页面
+			</div>
+			<div class="swiper-slide" id="fourth">
+				我是第四个页面
+			</div>
+		</div>
+		<div class="swiper-pagination-black">
+			
+		</div>
+		<div class="swiper-button-prev">
+			
+		</div>
+		<div class="swiper-button-next">
+
+		</div>
+		<div class="swiper-scrollbar">
+			
+		</div>
+		
+	
+	</div>
+	
+	
+</body>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript">
+//	初始化出来一个swiper
+	var mySwiper = new Swiper(".swiper-container",{
+//		direction:'vertical'
+		//配置  分页指示器元素
+		pagination:'.swiper-pagination-black',
+		prevButton:'.swiper-button-pre',
+		nextButton:'.swiper-button-next',
+		scrollbar:'.swiper-scrollbar',
+//		默认是0，开始显示那个slider
+//		initialSlide:1,
+//		speed:1000
+//		autoplay:1000,
+//		随机停止		
+//		autoplayDisableOnInteraction:true
+//		最后一个停止
+//		autoplayStopOnLast:true
+//		手势
+		grabCursor:true,
+//		roundLengths:true
+//		loop:true
+	});
+</script>
+</html>

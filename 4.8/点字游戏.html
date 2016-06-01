@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8" />
+		<title>点字游戏</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			body,
+			html {
+				height: 100%;
+			}
+			
+			#wrap {
+				width: 400px;
+				height: 100%;
+				/*background-color: yellow;*/
+				margin: 0 auto;
+				position: relative;
+				border: 2px solid red;
+				height: 600px;
+				min-height: 600px;
+			}
+			
+			#dao {
+				position: absolute;
+				left: 20px;
+				top: 20px;
+				font-size: 2rem;
+			}
+			
+			#wan {
+				position: absolute;
+				right: 20px;
+				top: 20px;
+				font-size: 2rem;
+			}
+			
+			#show {
+				position: absolute;
+				top: 100px;
+				left: 130px;
+				font-size: 10rem;
+			}
+			
+			#menu {
+				position: absolute;
+				top: 250px;
+				font-size: 1.5rem;
+				padding: 30px;
+			}
+			
+			#ul1 {
+				position: absolute;
+				left: 0px;
+				bottom: 0px;
+				list-style: none;
+			}
+			
+			#ul1 li {
+				float: left;
+				font-size: 5rem;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="wrap">
+
+			<div id="dao"> 剩余时间:20s</div>
+			<div id="wan"> 完成:0</div>
+			<div id="show"> 红 </div>
+			<div id="menu"> 根据上面文字颜色,从下边选着正确的字,选着正确的话会自动开始........</div>
+			<ul id="ul1">
+				<li> 绿</li>
+				<li> 蓝</li>
+				<li> 黑</li>
+				<li> 黄</li>
+				<li> 红</li>
+			</ul>
+
+		</div>
+
+	</body>
+
+	<script type="text/javascript">
+		//	var show = document.getElementById("show");
+		var show = document.querySelector("#show");
+		var lis = document.querySelectorAll("#ul1>li");
+		var menu = document.querySelector("#menu")
+		var dao = document.querySelector("#dao")
+		var wan = document.querySelector("#wan")
+			//准备两个数组
+		var colors = ["red", "green", "blue", "yellow", "black"]
+		var fonts = ["红", "绿", "蓝", "黄", "黑"]
+			//	准备一个分数计变量
+		var num = 0;
+		var showColorRandom
+			//	准备一个定时器便变量
+		var countDown = 20;
+		//	准备一个是否开始游戏变量
+		var timeBool = false;
+		//准备一个是否被点击变量
+		var clickBool = true;
+		showRan();
+		textRan();
+
+		function showRan() {
+			//		取到一个随机数
+			var showColorR = myRandom(0, 5);
+			var showFontR = myRandom(0, 5);
+			showColorRandom = showColorR
+			
+		
+			
+			
+			show.style.color = colors[showColorR]
+			show.innerHTML = fonts[showFontR]
+		}
+
+		function textRan() {
+			//		取到一个随机数
+			//	   myRandom(0,5);
+			var colorArray = smallArray();
+			var fontArray = smallArray();
+			for (var i = 0; i < colorArray.length; i++) {
+				lis[i].style.color = colors[colorArray[i]];
+				lis[i].innerHTML = fonts[fontArray[i]]
+				lis[i].fontIndex = fontArray[i];
+			}
+		}
+		function smallArray () {
+//			会将一个存放有0，1，2，3，4这五个内容的数组
+//			以乱序的方式返回
+			var arr = [];
+			
+//			存放内容。。。
+			while (arr.length < 5){
+				var r = myRandom(0,5);
+//				判断数组里有没有该随机数
+//				如果有 就不再要了
+//				如果没有 就push进去
+				 var bol = true;
+				 for (var i = 0; i < arr.length; i++) {
+				 	if (arr[i] == r) {
+				 		bol = false;
+				 		break;
+				 	}
+				 }
+			if (bol == true) {
+					arr.push(r);
+				}
+				
+				
+				}
+				return arr;
+			}
+for( var i = 0; i<lis.length;i++){
+	
+	
+	
+	
+	
+	lis[i].onclick = function(){
+		          if(showColorRandom == this.fontIndex &&  clickBool){
+          
+            
+            
+            
+            
+		       timeBool =true;
+	timeBool = true;
+					menu.style.display = "none";
+					showRan();
+					textRan();
+					
+					  if(	num == 0){
+		      		alert(" 点击确定,计时开始... ");
+		      }
+					
+					num++;
+					wan.innerHTML = "完成：" +num;
+		
+		       
+		          
+		
+	}
+}	
+}
+
+
+		var time = setInterval(function  () {
+			if (timeBool == true) {
+				countDown--;
+				dao.innerHTML = "剩余时间："+ countDown;
+				if (countDown <= 0) {
+					gameOver();
+					clickBool = false;
+					clearInterval(time);
+				}
+			}
+		},1000); 	function gameOver(){
+ 		
+ 		if( num<5 ){
+ 			alert("香香.大声告诉我,你是不是色盲??");
+ 		}else if(num<10){  alert("我发现,香香真的是色盲一枚.鉴定完毕")
+ 				
+ 				
+ 				
+ 		}else{
+ 			alert("好吧,你用行动证明了,你是个执着的妹纸0.0")
+ 		}
+ 	}
+ 		
+ 		
+
+ 	
+
+ 
+
+
+			function myRandom(min, max) {
+				return parseInt(Math.random() * (max - min)) + min;
+			}
+	</script>
+
+</html>

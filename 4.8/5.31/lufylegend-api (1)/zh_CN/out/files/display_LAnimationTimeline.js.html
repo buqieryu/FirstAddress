@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>display/LAnimationTimeline.js - The lufylegend.js API</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><a href="../index.html"><img src="../assets/css/logo.png" title="The lufylegend.js API"></a></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: 1.10.1</em>
+            <em>最后更新日期：2016年03月28日</em>
+			<form method="get" action="http://www.google.com.hk/search" target="google_window">
+        		<input type="hidden" name="ie" value="UTF-8">
+        		<input type="hidden" name="oe" value="UTF-8">
+        		<input type="hidden" name="as_sitesearch" id="as_sitesearch" value="lufylegend.com/api/zh_CN/out/">
+        		Google搜索&nbsp;
+        		<input type="text" class="input" style="width:150px;" name="q" id="q" size="31" maxlength="255" value="">
+        		&nbsp;
+        		<input type="submit" class="submit" name="sa" value="Go">
+      		</form>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="../classes/FPS.html">FPS</a></li>
+            
+                <li><a href="../classes/InteractivePNG.html">InteractivePNG</a></li>
+            
+                <li><a href="../classes/LAjax.html">LAjax</a></li>
+            
+                <li><a href="../classes/LAnimation.html">LAnimation</a></li>
+            
+                <li><a href="../classes/LAnimationTimeline.html">LAnimationTimeline</a></li>
+            
+                <li><a href="../classes/LBitmap.html">LBitmap</a></li>
+            
+                <li><a href="../classes/LBitmapData.html">LBitmapData</a></li>
+            
+                <li><a href="../classes/LBitmapFilter.html">LBitmapFilter</a></li>
+            
+                <li><a href="../classes/LBlendMode.html">LBlendMode</a></li>
+            
+                <li><a href="../classes/LBox2d.html">LBox2d</a></li>
+            
+                <li><a href="../classes/LButton.html">LButton</a></li>
+            
+                <li><a href="../classes/LColorMatrixFilter.html">LColorMatrixFilter</a></li>
+            
+                <li><a href="../classes/LColorTransform.html">LColorTransform</a></li>
+            
+                <li><a href="../classes/LConvolutionFilter.html">LConvolutionFilter</a></li>
+            
+                <li><a href="../classes/LDisplayObject.html">LDisplayObject</a></li>
+            
+                <li><a href="../classes/LDisplayObjectContainer.html">LDisplayObjectContainer</a></li>
+            
+                <li><a href="../classes/LDropShadowFilter.html">LDropShadowFilter</a></li>
+            
+                <li><a href="../classes/LEasing.html">LEasing</a></li>
+            
+                <li><a href="../classes/LEvent.html">LEvent</a></li>
+            
+                <li><a href="../classes/LEventDispatcher.html">LEventDispatcher</a></li>
+            
+                <li><a href="../classes/LFlash.html">LFlash</a></li>
+            
+                <li><a href="../classes/LFocusEvent.html">LFocusEvent</a></li>
+            
+                <li><a href="../classes/LFontLoader.html">LFontLoader</a></li>
+            
+                <li><a href="../classes/LGlobal.html">LGlobal</a></li>
+            
+                <li><a href="../classes/LGraphics.html">LGraphics</a></li>
+            
+                <li><a href="../classes/LInteractiveObject.html">LInteractiveObject</a></li>
+            
+                <li><a href="../classes/LKeyboardEvent.html">LKeyboardEvent</a></li>
+            
+                <li><a href="../classes/LLoader.html">LLoader</a></li>
+            
+                <li><a href="../classes/LLoadManage.html">LLoadManage</a></li>
+            
+                <li><a href="../classes/LMatrix.html">LMatrix</a></li>
+            
+                <li><a href="../classes/LMedia.html">LMedia</a></li>
+            
+                <li><a href="../classes/LMouseEvent.html">LMouseEvent</a></li>
+            
+                <li><a href="../classes/LMouseEventContainer.html">LMouseEventContainer</a></li>
+            
+                <li><a href="../classes/LMultitouch.html">LMultitouch</a></li>
+            
+                <li><a href="../classes/LMultitouchInputMode.html">LMultitouchInputMode</a></li>
+            
+                <li><a href="../classes/LoadingSample.html">LoadingSample</a></li>
+            
+                <li><a href="../classes/LObject.html">LObject</a></li>
+            
+                <li><a href="../classes/LPoint.html">LPoint</a></li>
+            
+                <li><a href="../classes/LQuadTree.html">LQuadTree</a></li>
+            
+                <li><a href="../classes/LRange.html">LRange</a></li>
+            
+                <li><a href="../classes/LRectangle.html">LRectangle</a></li>
+            
+                <li><a href="../classes/LShape.html">LShape</a></li>
+            
+                <li><a href="../classes/LSound(LMedia).html">LSound(LMedia)</a></li>
+            
+                <li><a href="../classes/LSound(LWebAudio).html">LSound(LWebAudio)</a></li>
+            
+                <li><a href="../classes/LSprite.html">LSprite</a></li>
+            
+                <li><a href="../classes/LStageAlign.html">LStageAlign</a></li>
+            
+                <li><a href="../classes/LStageScaleMode.html">LStageScaleMode</a></li>
+            
+                <li><a href="../classes/LStageWebView.html">LStageWebView</a></li>
+            
+                <li><a href="../classes/LStyleSheet.html">LStyleSheet</a></li>
+            
+                <li><a href="../classes/LTextEvent.html">LTextEvent</a></li>
+            
+                <li><a href="../classes/LTextField.html">LTextField</a></li>
+            
+                <li><a href="../classes/LTimer.html">LTimer</a></li>
+            
+                <li><a href="../classes/LTimerEvent.html">LTimerEvent</a></li>
+            
+                <li><a href="../classes/LTransform.html">LTransform</a></li>
+            
+                <li><a href="../classes/LTransition.html">LTransition</a></li>
+            
+                <li><a href="../classes/LTransitionManager.html">LTransitionManager</a></li>
+            
+                <li><a href="../classes/LTweenLite.html">LTweenLite</a></li>
+            
+                <li><a href="../classes/LTweenLiteChild.html">LTweenLiteChild</a></li>
+            
+                <li><a href="../classes/lufylegend.mvc.html">lufylegend.mvc</a></li>
+            
+                <li><a href="../classes/LURLLoader.html">LURLLoader</a></li>
+            
+                <li><a href="../classes/LVec2.html">LVec2</a></li>
+            
+                <li><a href="../classes/LVideo.html">LVideo</a></li>
+            
+                <li><a href="../classes/LWebAudio.html">LWebAudio</a></li>
+            
+                <li><a href="../classes/Q &amp; A (常见问题).html">Q &amp; A (常见问题)</a></li>
+            
+                <li><a href="../classes/UI:LButtonSample1.html">UI:LButtonSample1</a></li>
+            
+                <li><a href="../classes/UI:LButtonSample2.html">UI:LButtonSample2</a></li>
+            
+                <li><a href="../classes/UI:LCheckBox.html">UI:LCheckBox</a></li>
+            
+                <li><a href="../classes/UI:LComboBox.html">UI:LComboBox</a></li>
+            
+                <li><a href="../classes/UI:LListChildView.html">UI:LListChildView</a></li>
+            
+                <li><a href="../classes/UI:LListScrollBar.html">UI:LListScrollBar</a></li>
+            
+                <li><a href="../classes/UI:LListView.html">UI:LListView</a></li>
+            
+                <li><a href="../classes/UI:LMenubar.html">UI:LMenubar</a></li>
+            
+                <li><a href="../classes/UI:LMessageBox.html">UI:LMessageBox</a></li>
+            
+                <li><a href="../classes/UI:LPanel.html">UI:LPanel</a></li>
+            
+                <li><a href="../classes/UI:LRadio.html">UI:LRadio</a></li>
+            
+                <li><a href="../classes/UI:LRadioChild.html">UI:LRadioChild</a></li>
+            
+                <li><a href="../classes/UI:LRange.html">UI:LRange</a></li>
+            
+                <li><a href="../classes/UI:LScrollbar.html">UI:LScrollbar</a></li>
+            
+                <li><a href="../classes/UI:LTable.html">UI:LTable</a></li>
+            
+                <li><a href="../classes/UI:LTreeWidget.html">UI:LTreeWidget</a></li>
+            
+                <li><a href="../classes/UI:LWindow.html">UI:LWindow</a></li>
+            
+                <li><a href="../classes/全局函数.html">全局函数</a></li>
+            
+                <li><a href="../classes/全局变量.html">全局变量</a></li>
+            
+                <li><a href="../classes/全屏设置.html">全屏设置</a></li>
+            
+                <li><a href="../classes/旧版API.html">旧版API</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: display/LAnimationTimeline.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+/** @language chinese
+ * 创建一个新的 LAnimationTimeline 实例。
+ * LAnimationTimeline类在LAnimation 类的基础上提供了很多扩展。LAnimation 类需要调用本身的onframe函数才能播放动画，而LAnimationTimeline类则不需要。
+ * @class LAnimationTimeline
+ * @extends LAnimation
+ * @constructor
+ * @param {LBitmapData | Array} data 一个LBitmapData对象，既包含一组或多组frame的精灵图表。或者是一个LBitmapData对象的数组。
+ * @param {Array} list &lt;p&gt;每个frame的属性值。&lt;/p&gt;
+ * &lt;p&gt;每个数组元素格式为{x : 0, y : 0, width : 100, height : 100, sx : 0, sy : 0, dataIndex : 0}。 x, y, width, height分别对应LBitmapData对象的属性值，sx, sy是图像显示时的起始点坐标，当data是一个LBitmapData对象的数组的时候，dataIndex表示该数组的索引，用来指定使用哪个LBitmapData对象。&lt;/p&gt;
+ * &lt;p&gt;＊如果需要直接给对象设定label，可以给元素设定label属性，设定label属性时候，可以同时设定isMirror属性。&lt;/p&gt;
+ * &lt;p&gt;＊也可以给元素设定mirror（true或者false）属性，设定mirror属性的时候需要同时给所有元素设定mirror属性，如果元素和label同时设定了mirror属性，则优先使用元素中设定的mirror属性。&lt;/p&gt;
+ * &lt;p&gt;如果精灵图表中的每个frame大小都是的，你可以使用LGlobal.divideCoordinate函数来直接对图表进行分割。&lt;/p&gt;
+ * @example
+ * 	LInit(50, &quot;legend&quot;, 800, 480, main);
+ * 	var imgData = [
+ * 		{name : &quot;player-0&quot;, path : &quot;./player-0.png&quot;}, 
+ * 		{name : &quot;player-1&quot;, path : &quot;./player-1.png&quot;}, 
+ * 		{name : &quot;player-2&quot;, path : &quot;./player-2.png&quot;}, 
+ * 		{name : &quot;player-3&quot;, path : &quot;./player-3.png&quot;}, 
+ * 		{name : &quot;player-4&quot;, path : &quot;./player-4.png&quot;}
+ * 	];
+ * 	function main () {
+ * 		LLoadManage.load(imgData, null, gameInit);
+ * 	}
+ * 	function gameInit(result) {
+ * 		var list = LGlobal.divideCoordinate(480, 210, 1, 4);
+ * 		var data = new LBitmapData(result[&quot;player-0&quot;], 0, 0, 120, 210);
+ * 		var playerLeft = new LAnimationTimeline(data, list);
+ * 		addChild(playerLeft);
+ * 		
+ * 		var datas = [];
+ * 		var listChild = [];
+ * 		for (var i = 0; i &lt; 4; i++) {
+ * 			datas.push(new LBitmapData(result[&quot;player-&quot; + (i + 1)]));
+ * 			listChild.push({dataIndex : i, x : 0, y : 0, width : 120, height : 210, sx : 0, sy : 0});
+ * 		}
+ * 		var playerRight = new LAnimationTimeline(datas, [listChild]);
+ * 		playerRight.x = 200;
+ * 		addChild(playerRight);
+ * 	}
+ * @examplelink &lt;p&gt;&lt;a href=&quot;../../../api/LAnimationTimeline/index.html&quot; target=&quot;_blank&quot;&gt;测试链接&lt;/a&gt;&lt;/p&gt;
+ * @since 1.8.0
+ * @public
+ */
+var LAnimationTimeline = (function() {
+	function LAnimationTimeline(data, list) {
+		var s = this;
+		LExtends(s, LAnimation, [null, data, list]);
+		/** @language chinese
+		 * 对象的类型
+		 * @property type
+		 * @type String
+		 * @default LAnimationTimeline
+		 * @since 1.8.0
+		 * @public
+		 */
+		s.type = &quot;LAnimationTimeline&quot;;
+		/** @language chinese
+		 * 动画播放速度
+		 * @property speed
+		 * @type int
+		 * @default 0
+		 * @since 1.8.0
+		 * @example
+		 * 	function loadBitmapdata(event){
+		 * 		var backLayer = new LSprite();
+		 * 		addChild(backLayer);
+		 * 		var list = LGlobal.divideCoordinate(480,630,3,4);
+		 * 		var data = new LBitmapData(event.target,0,0,120,210);
+		 * 		var player = new LAnimationTimeline(data,list);
+		 * 		player.speed = 10;
+		 * 		backLayer.addChild(player);
+		 * 		var player2 = new LAnimationTimeline(data.clone(),list);
+		 * 		player2.speed = 5;
+		 * 		player2.x = 150;
+		 * 		backLayer.addChild(player2);
+		 * 	}
+		 * @examplelink &lt;p&gt;&lt;a href=&quot;../../../api/LAnimationTimeline/speed.html&quot; target=&quot;_blank&quot;&gt;测试链接&lt;/a&gt;&lt;/p&gt;
+		 * @public
+		 */
+		s.speed = 0;
+		s._speedIndex = 0;
+		s.ll_labelList = {};
+		for (var i = 0, sublist, j, child; i &lt; list.length; i++) {
+			sublist = list[i];
+			for ( j = 0; j &lt; sublist.length; j++) {
+				child = sublist[j];
+				if (child.label) {
+					s.setLabel(child.label, i, j, 1, child.isMirror ? true : false);
+				}
+			}
+		}
+		s.addEventListener(LEvent.ENTER_FRAME, s._ll_onframe);
+	};
+	var p = {
+		/** @language chinese
+		 * 返回一个LAnimationTimeline的克隆对象。
+		 * @method clone
+		 * @return {LAnimationTimeline} 一个新的 LAnimationTimeline 对象，它与原始对象相同.
+		 * @since 1.8.8
+		 * @public
+		 * @example
+		 * 	LInit(200,&quot;legend&quot;,800,450,main);
+		 * 	var player;
+		 * 	var player2;
+		 * 	function main(){
+		 * 		var loader = new LLoader();
+		 * 		loader.addEventListener(LEvent.COMPLETE, loadBitmapdata);
+		 * 		loader.load(&quot;player.png&quot;, &quot;bitmapData&quot;);
+		 * 	}
+		 * 	function loadBitmapdata(event){
+		 * 		var backLayer = new LSprite();
+		 * 		addChild(backLayer);
+		 * 		var list = LGlobal.divideCoordinate(480,630,3,4);
+		 * 		var data = new LBitmapData(event.target,0,0,120,210);
+		 * 		player = new LAnimation(backLayer,data,list);
+		 * 		player2 = player.clone();
+		 * 		player2.setAction(2,0);
+		 * 		player2.x = 150;
+		 * 		backLayer.addChild(player2);
+		 * 		backLayer.addEventListener(LEvent.ENTER_FRAME,onframe);
+		 * 	}
+		 * 	function onframe(event){
+		 * 		player.onframe();
+		 * 		player2.onframe();
+		 * 	}
+		 * @examplelink &lt;p&gt;&lt;a href=&quot;../../../api/LAnimationTimeline/clone.html&quot; target=&quot;_blank&quot;&gt;测试链接&lt;/a&gt;&lt;/p&gt;
+		 */
+		clone : function() {
+			var s = this, k, o, a = new s.constructor(s.bitmapList, s.imageArray.slice(0));
+			a.copyProperty(s);
+			a.childList.length = 0;
+			a.bitmap = s.bitmap.clone();
+			a.addChild(a.bitmap);
+			for (k in s.ll_labelList) {
+				o = s.ll_labelList[k];
+				a.ll_labelList[k] = {
+					rowIndex : o.rowIndex,
+					colIndex : o.colIndex,
+					mode : o.mode,
+					isMirror : o.isMirror
+				};
+			}
+			return a;
+		},
+		setFrameSpeedAt : function(rowIndex, colIndex, speed) {
+			var s = this;
+			if (!s._ll_stepArray[rowIndex]) {
+				s._ll_stepArray[rowIndex] = [];
+			}
+			s._ll_stepArray[rowIndex][colIndex] = speed;
+		},
+		_ll_onframe : function(event) {
+			var self = event.target;
+			if (self._ll_stop) {
+				return;
+			}
+			if (self._speedIndex++ &lt; self.speed) {
+				return;
+			}
+			if(self._send_complete){
+				self.dispatchEvent(LEvent.COMPLETE);
+				self._send_complete = false;
+				if (self._ll_stop) {
+					return;
+				}
+			}
+			self._speedIndex = 0;
+			self.onframe();
+		},
+		/** @language chinese
+		 * 在LAnimationTimeline实例的时间轴中设置标签。
+		 * @method setLabel
+		 * @param {String} name 标签名称.
+		 * @param {int} rowIndex 行号.
+		 * @param {int} colIndex 列号.
+		 * @param {int} mode (1,0,-1)分别代表(正序播放,静止,倒序播放)。
+		 * @param {Boolean} isMirror 是否使用镜像来水平翻转显示对象。
+		 * @since 1.8.0
+		 * @public
+		 * @example
+		 * 	LInit(200,&quot;legend&quot;,800,450,main);
+		 * 	function loadBitmapdata(event){
+		 * 		var backLayer = new LSprite();
+		 * 		addChild(backLayer);
+		 * 		var list = LGlobal.divideCoordinate(480,630,3,4);
+		 * 		var data = new LBitmapData(event.target,0,0,120,210);
+		 * 		var player = new LAnimationTimeline(backLayer,data,list);
+		 * 		player.setLabel(&quot;right&quot;,2,0,1,true);
+		 * 		backLayer.addChild(player);
+		 * 		player.gotoAndPlay(&quot;right&quot;);
+		 * 	}
+		 * @examplelink &lt;p&gt;&lt;a href=&quot;../../../api/LAnimationTimeline/setLabel.html&quot; target=&quot;_blank&quot;&gt;测试链接&lt;/a&gt;&lt;/p&gt;
+		 */
+		setLabel : function(name, _rowIndex, _colIndex, _mode, _isMirror) {
+			this.ll_labelList[name] = {
+				rowIndex : _rowIndex,
+				colIndex : _colIndex,
+				mode : (typeof _mode == UNDEFINED ? 1 : _mode),
+				isMirror : (typeof _isMirror == UNDEFINED ? false : _isMirror)
+			};
+		},
+		/** @language chinese
+		 * 开始播放 LAnimationTimeline 动画。
+		 * @method play
+		 * @since 1.8.0
+		 * @public
+		 * @example
+		 * 	LInit(200,&quot;legend&quot;,800,450,main);
+		 * 	function loadBitmapdata(event){
+		 * 		var backLayer = new LSprite();
+		 * 		addChild(backLayer);
+		 * 		var list = LGlobal.divideCoordinate(480,630,3,4);
+		 * 		var data = new LBitmapData(event.target,0,0,120,210);
+		 * 		var player = new LAnimationTimeline(backLayer,data,list);
+		 * 		player.setLabel(&quot;right&quot;,2,0,1,true);
+		 * 		backLayer.addChild(player);
+		 * 		player.gotoAndPlay(&quot;right&quot;);
+		 * 	}
+		 * @examplelink &lt;p&gt;&lt;a href=&quot;../../../api/LAnimationTimeline/play_stop.html&quot; target=&quot;_blank&quot;&gt;测试链接&lt;/a&gt;&lt;/p&gt;
+		 */
+		play : function() {
+			this._ll_stop = false;
+		},
+		/** @language chinese
+		 * 停止播放 LAnimationTimeline 动画。
+		 * @method stop
+		 * @since 1.8.0
+		 * @public
+		 * @example
+		 * 	LInit(200,&quot;legend&quot;,800,450,main);
+		 * 	function loadBitmapdata(event){
+		 * 		var backLayer = new LSprite();
+		 * 		addChild(backLayer);
+		 * 		var list = LGlobal.divideCoordinate(480,630,3,4);
+		 * 		var data = new LBitmapData(event.target,0,0,120,210);
+		 * 		var player = new LAnimationTimeline(backLayer,data,list);
+		 * 		player.setLabel(&quot;right&quot;,2,0,1,true);
+		 * 		backLayer.addChild(player);
+		 * 		player.gotoAndPlay(&quot;right&quot;);
+		 * 	}
+		 * @examplelink &lt;p&gt;&lt;a href=&quot;../../../api/LAnimationTimeline/play_stop.html&quot; target=&quot;_blank&quot;&gt;测试链接&lt;/a&gt;&lt;/p&gt;
+		 */
+		stop : function() {
+			this._ll_stop = true;
+		},
+		/** @language chinese
+		 * 从指定标签开始播放 LAnimationTimeline 动画。
+		 * @method gotoAndPlay
+		 * @param {String} label 表示播放头转到的帧标签的字符串。
+		 * @since 1.8.0
+		 * @public
+		 * @example
+		 * 	LInit(200,&quot;legend&quot;,800,450,main);
+		 * 	function loadBitmapdata(event){
+		 * 		var backLayer = new LSprite();
+		 * 		addChild(backLayer);
+		 * 		var list = LGlobal.divideCoordinate(480,630,3,4);
+		 * 		var data = new LBitmapData(event.target,0,0,120,210);
+		 * 		var player = new LAnimationTimeline(backLayer,data,list);
+		 * 		player.setLabel(&quot;right&quot;,2,0,1,true);
+		 * 		backLayer.addChild(player);
+		 * 		player.gotoAndPlay(&quot;right&quot;);
+		 * 	}
+		 * @examplelink &lt;p&gt;&lt;a href=&quot;../../../api/LAnimationTimeline/gotoAndPlay.html&quot; target=&quot;_blank&quot;&gt;测试链接&lt;/a&gt;&lt;/p&gt;
+		 */
+		gotoAndPlay : function(name) {
+			var s = this, l = s.ll_labelList[name];
+			s.setAction(l.rowIndex, l.colIndex, l.mode, l.isMirror);
+			s.play();
+			s.onframe();
+		},
+		/** @language chinese
+		 * 将播放头移到影片剪辑的指定标签并停在那里。
+		 * @method gotoAndStop
+		 * @param {String} label 表示播放头转到的帧标签的字符串。
+		 * @since 1.8.0
+		 * @public
+		 * @example
+		 * 	LInit(200,&quot;legend&quot;,800,450,main);
+		 * 	function loadBitmapdata(event){
+		 * 		var backLayer = new LSprite();
+		 * 		addChild(backLayer);
+		 * 		var list = LGlobal.divideCoordinate(480,630,3,4);
+		 * 		var data = new LBitmapData(event.target,0,0,120,210);
+		 * 		var player = new LAnimationTimeline(backLayer,data,list);
+		 * 		player.setLabel(&quot;right&quot;,2,0,1,true);
+		 * 		backLayer.addChild(player);
+		 * 		player.gotoAndStop(&quot;right&quot;);
+		 * 	}
+		 * @examplelink &lt;p&gt;&lt;a href=&quot;../../../api/LAnimationTimeline/gotoAndStop.html&quot; target=&quot;_blank&quot;&gt;测试链接&lt;/a&gt;&lt;/p&gt;
+		 */
+		gotoAndStop : function(name) {
+			var s = this, l = s.ll_labelList[name];
+			s.setAction(l.rowIndex, l.colIndex, l.mode, l.isMirror);
+			s.stop();
+			s.onframe();
+		},
+		/** @language chinese
+		 * 向指定标签位置添加执行脚本。
+		 * @method addFrameScript
+		 * @param {String} label 指定标签。
+		 * @param {Function} func 动画到达指定标签位置时要执行的函数。
+		 * @param {Array} params 执行函数时的参数。
+		 * @since 1.8.0
+		 * @public
+		 * @example
+		 * 	LInit(200,&quot;legend&quot;,800,450,main);
+		 * 	function loadBitmapdata(event){
+		 * 		var backLayer = new LSprite();
+		 * 		addChild(backLayer);
+		 * 		var list = LGlobal.divideCoordinate(480,630,3,4);
+		 * 		var data = new LBitmapData(event.target,0,0,120,210);
+		 * 		var player = new LAnimationTimeline(backLayer,data,list);
+		 * 		player.setLabel(&quot;right&quot;,2,0,1,true);
+		 * 		player.addFrameScript(&quot;right&quot;,scriptTest,[&quot;testParams1&quot;,&quot;testParams2&quot;]);
+		 * 		backLayer.addChild(player);
+		 * 		player.gotoAndPlay(&quot;right&quot;);
+		 * 	}
+		 * 	function scriptTest(param1,param2){
+		 * 		trace(&quot;scriptTest Run : &quot; + param1 + &quot;,&quot; + param2);
+		 * 	}
+		 * @examplelink &lt;p&gt;&lt;a href=&quot;../../../api/LAnimationTimeline/addFrameScript.html&quot; target=&quot;_blank&quot;&gt;测试链接&lt;/a&gt;&lt;/p&gt;
+		 */
+		addFrameScript : function(name, func, params) {
+			var l = this.ll_labelList[name];
+			var arr = this.imageArray[l.rowIndex][l.colIndex];
+			if (!arr.script) {
+				arr.script = [];
+			}
+			arr.script.push({func : func, params : params, name : name});
+		},
+		/** @language chinese
+		 * 删除指定标签位置的执行脚本。
+		 * @method removeFrameScript
+		 * @param {String} label 指定标签。
+		 * @since 1.8.0
+		 * @public
+		 * @example
+		 * 	LInit(200,&quot;legend&quot;,800,450,main);
+		 * 	function loadBitmapdata(event){
+		 * 		var backLayer = new LSprite();
+		 * 		addChild(backLayer);
+		 * 		var list = LGlobal.divideCoordinate(480,630,3,4);
+		 * 		var data = new LBitmapData(event.target,0,0,120,210);
+		 * 		var player = new LAnimationTimeline(backLayer,data,list);
+		 * 		player.setLabel(&quot;right&quot;,2,0,1,true);
+		 * 		player.addFrameScript(&quot;right&quot;,scriptTest,[&quot;testParams1&quot;,&quot;testParams2&quot;]);
+		 * 		backLayer.addChild(player);
+		 * 		player.gotoAndPlay(&quot;right&quot;);
+		 * 	}
+		 * 	function scriptTest(param1,param2){
+		 * 		trace(&quot;scriptTest Run : &quot; + param1 + &quot;,&quot; + param2);
+		 * 	}
+		 * @examplelink &lt;p&gt;&lt;a href=&quot;../../../api/LAnimationTimeline/removeFrameScript.html&quot; target=&quot;_blank&quot;&gt;测试链接&lt;/a&gt;&lt;/p&gt;
+		 */
+		removeFrameScript : function(name) {
+			var l = this.ll_labelList[name], obj, script, i;
+			script = this.imageArray[l.rowIndex][l.colIndex].script;
+			if (!script) {
+				return;
+			}
+			for(i = 0; i &lt; script.length; i++){
+				obj = script[i];
+				if(obj.name == name){
+					script.splice(i, 1);
+					break;
+				}
+			}
+		}
+	};
+	for (var k in p) {
+		LAnimationTimeline.prototype[k] = p[k];
+	}
+	return LAnimationTimeline;
+})(); 
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32497708-2']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>

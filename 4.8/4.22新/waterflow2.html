@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#wrap{
+				margin: 0 auto;
+				list-style: none;
+				position: relative;
+			}
+			#wrap li{
+				width: 200px;
+				font-size: 1.5em;
+				position: absolute;
+				background-color: #ccc;
+				transition: all;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<ul id="wrap">		
+		</ul>
+	</body>
+	<script type="text/javascript">
+		function randomFunction(min , max){
+			return parseInt(Math.random()*(max - min)) + min;
+		}
+		
+		var wrapUl = document.getElementById("wrap");
+		var width = 200;
+		var RightPadding = 10;
+		var hs = [];
+		var num = 0;
+		function setLiPos(bol){
+			var lis = wrapUl.getElementsByTagName("li");
+//			拿到整个页面的可视区域的宽度
+			var windowBody = document.documentElement.clientWidth;
+			var cols =parseInt( windowBody / width );
+	
+//			整个ul的宽度
+			wrapUl.style.width = cols * (width + RightPadding) + "px";
+			var arrT = [	];
+			for (var i = 0; i < cols; i++){
+				arrT[i] = 0;
+			}
+			function createLi(index){
+				var li = lis[index] || document.createElement("li");
+				li.innerHTML = index;
+				var h = hs[index] || randomFunction(100 , 300);
+				li.style.height = h + "px";
+				
+				if(bol){
+					hs.push(h);
+				}
+//				从所有列的高度里面
+//				找一个最小高度
+				var min = arrT[0];
+				var minIndex = 0;
+				for (var i = 0; i < arrT.length; i++){
+					if(min > arrT[i]){
+						min = arrT[i];
+						minIndex = i;	
+					}
+				}
+				li.style.top = arrT[minIndex] + "px";
+				li.style.left = minIndex * (width + RightPadding) + "px";
+				arrT[minIndex] += (h + RightPadding);
+				
+				bol&&wrapUl.appendChild(li);
+			}
+//			默认加载20个li
+			for(var i = 0; i < 20; i++){
+				if(bol){
+					num++;
+				}
+				createLi(i);
+			}	
+		}
+		setLiPos(true);
+//		检测屏幕的变化
+		window.onresize = function(){
+			setLiPos(false);
+		}
+		
+	</script>
+</html>

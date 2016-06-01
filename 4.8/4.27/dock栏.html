@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#wrap {
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				text-align: center;
+			}
+			
+			#wrap img {
+				width: 50px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="wrap">
+			<img src="../4.14/index_files/1-140S12233350-L.jpg" alt="" />
+			<img src="../4.14/index_files/1-140ZF01221342.jpg" alt="" />
+			<img src="../4.14/index_files/1-140ZF041280-L.jpg" alt="" />
+			<img src="../4.14/index_files/1-1409161636060-L.jpg" alt="" />
+			<img src="../4.14/index_files/1-1409161500550-L.jpg" alt="" />
+		</div>
+	</body>
+	<script type="text/javascript">
+		window.onload = function() {
+			var wrap = document.querySelector("#wrap");
+			var imgs = document.querySelectorAll("#wrap>img");
+			var maxDis = 50 * imgs.length;
+			//			鼠标移动上去要发生一些效果
+			document.onmousemove = function() {
+				//			获取到当前鼠标移动到那个位置
+				var x = event.clientX;
+				var y = event.clientY;
+				
+				for(var i = 0;i < imgs.length;i++){
+					
+				
+				//		获取中心点位置
+				var centerX = imgs[i].offsetLeft + imgs[i].offsetWidth / 2;
+				var centerY = wrap.offsetTop + imgs[i].offsetHeight / 2;
+				//		获取鼠标点的位置到中心点的距离
+				var disX = centerX - x;
+				var disY = centerY - y;
+				//		根据数学函数
+				//		通过间距来判断弹起多高，
+				//		间距越小，意味着弹起的高度越高
+				//		间距越大，弧度越大
+				var sb = Math.sqrt(disX * disX + disY * disY);
+				//		要产生弧度的宽度所占的百分比
+				var scale = 1 - sb / maxDis;
+				if (scale <= 0.5) {	
+					scale = 0.5;	
+				}
+				imgs[i].style.width = scale * 100 + "px";
+			}
+		}
+		}
+	</script>
+
+</html>

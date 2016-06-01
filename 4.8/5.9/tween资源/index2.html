@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>tween.js强大的可生成平滑动画效果的js库|DEMO2_jQuery之家-自由分享jQuery、html5、css3的插件库</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/default.css">
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	<!--[if IE]>
+		<script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div class="container">
+		<header class="htmleaf-header">
+			<h1>tween.js强大的可生成平滑动画效果的js库 <span>A Javascript tweening engine</span></h1>
+			<div class="htmleaf-links">
+				<a class="htmleaf-icon icon-home" href="http://www.htmleaf.com/" title="jQuery之家" target="_blank"><span> jQuery之家</span></a>
+				<a class="htmleaf-icon icon-arrow-right3" href="http://www.htmleaf.com/jQuery/Layout-Interface/201501271284.html" title="返回下载页" target="_blank"><span> 返回下载页</span></a>
+			</div>
+			<div class="htmleaf-demo center">
+			  <a href="index.html">hello wrold</a>
+			  <a href="index2.html" class="current">bars</a>
+			  <a href="index3.html">colors</a>
+			  <a href="index4.html">graphs</a>
+			  <a href="index5.html">simplest</a>
+			  <a href="index6.html">video</a>
+			  <a href="index7.html">array</a>
+			  <a href="index8.html">dynamic to</a>
+			  <a href="index9.html">repeat</a>
+			  <a href="index10.html">relative values</a>
+			  <a href="index11.html">yoyo</a>
+			  <a href="index12.html">stop all chained</a>
+			  <a href="index13.html">easing</a>
+			</div>
+		</header>
+		<div id="info">
+			<h3>01 _ Bars - 1000 bars, moving horizontally, looped.</h3>
+		</div>
+		<div id="target"></div>
+	</div>
+
+	<script src="js/tween.min.js"></script>
+	<script src="js/stats.min.js"></script>
+	<script src="js/RequestAnimationFrame.js"></script>
+	<script>
+			var stats;
+			var elems = [];
+
+			init();
+			animate();
+
+			function init() {
+				stats = new Stats();
+				var sds = stats.domElement.style;
+				sds.position = 'absolute';
+				sds.right = '0px';
+				sds.top = '0px';
+				sds.margin = '4em 3em';
+				document.body.appendChild(stats.domElement);
+
+				elems = [];
+
+				for(var i = 0; i < 1000; i++) {
+
+					var startValue = 500 + (Math.random() - Math.random()) * 250;
+					var endValue = 500 + (Math.random() - Math.random()) * 250;
+
+					var domElement = document.createElement('div');
+					var bg = (Math.random() * 0xffffff) >> 0;
+					domElement.style.position = 'absolute';
+					domElement.style.top = (Math.random() * window.innerHeight) + 'px';
+					domElement.style.left = startValue + 'px';
+					domElement.style.background = '#' + bg.toString(16);
+					domElement.style.width = '100px';
+					domElement.style.height = '2px';
+
+					var elem = { x: startValue, domElement: domElement };
+
+					var updateCallback = function() {
+						this.domElement.style.left = this.x + 'px';
+					}
+
+					var tween = new TWEEN.Tween(elem)
+						.to({ x: endValue }, 4000)
+						.delay(Math.random() * 1000)
+						.onUpdate(updateCallback)
+						.easing(TWEEN.Easing.Back.Out)
+						.start();
+
+					var tweenBack = new TWEEN.Tween(elem, false)
+						.to({ x: startValue}, 4000)
+						.delay(Math.random() * 1000)
+						.onUpdate(updateCallback)
+						.easing(TWEEN.Easing.Elastic.InOut);
+
+					tween.chain(tweenBack);
+					tweenBack.chain(tween);
+
+					document.body.appendChild(elem.domElement);
+
+					elems.push(elem);
+				}
+
+			}
+
+			function animate( time ) {
+
+				requestAnimationFrame( animate );
+
+				TWEEN.update( time );
+				stats.update();
+
+			}
+
+		</script>
+</body>
+</html>

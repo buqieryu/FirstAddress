@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#content div {
+				width: 300px;
+				height: 300px;
+				display: none;
+			}
+			
+			#content div:nth-child(1) {
+				background-color: yellow;
+			}
+			
+			#content div:nth-child(2) {
+				background-color: pink;
+			}
+			
+			#content div:nth-child(3) {
+				background-color: lightblue;
+			}
+			
+			.active {
+				background: red;
+			}
+			
+			#content .show {
+				display: block;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="btns">
+			<button id="btn1" class="active" >第一个</button>
+			<button id="btn2">第二个</button>
+			<button id="btn3">第三个</button>
+
+		</div>
+		<div id="content">
+			<div id="first" class="show">我是第一个内容</div>
+			<div id="second">我是第二个内容</div>
+			<div id="third">我是第三个内容</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var btn1 = document.getElementById("btn1");
+		var btn2 = document.getElementById("btn2");
+		var btn3 = document.getElementById("btn3");
+		var content = document.getElementById("content");
+		var divs = content.getElementsByTagName("div");
+		var div1 = document.getElementById("first");
+		var div2 = document.getElementById("second");
+		var div3 = document.getElementById("third");
+		btn2.onclick = function() {
+				//			btn2.className = "active";
+				//			btn1.className = "";
+				//			btn3.className = "";
+				xxx(1);
+			}
+			//			divs[2].className = "show";
+			//			divs[0].className = "";
+			//			divs[1].className = "";
+		btn1.onclick = function() {
+				//			btn2.className = "active";
+				//			btn1.className = "";
+				//			btn3.className = "";
+				xxx(0);
+			}
+			//			divs[2].className = "show";
+			//			divs[0].className = "";
+			//			divs[1].className = "";
+		btn3.onclick = function() {
+			//			btn2.className = "active";
+			//			btn1.className = "";
+			//			btn3.className = "";
+			//			
+			xxx(2);
+			//			divs[2].className = "show";
+			//			divs[0].className = "";
+			//			divs[1].className = "";
+		}
+
+		function xxx(a) {
+			var btns = document.getElementsByTagName("button")
+			for (var i = 0; i < btns.length; i++)
+				if (i == a) {
+					btns[i].className = "active";
+					divs[i].className = "show";
+				} else {
+					btns[i].className = "";
+					divs[i].className = "";
+				}
+		}
+	</script>
+
+	<script type="text/javascript">
+		//	获取文档里面的所有的button
+		var btns = document.getElementById("button")
+		var content = document.getElementById("content")
+		var divs = content.getElementsByTagName("div")
+		for (var i = 0; i < btns.length; i++) {
+			btns[i].onclick = function() {
+				for (var j = 0; j < btns.length; j++) {
+					if (this == btns[j]) {
+						btns[j].className = "active";
+						divs[j].className = "show";
+					} else {
+						btns[j].className = "";
+						divs[j].className = "";
+					}
+				}
+			}
+		}
+	</script>
+
+</html>

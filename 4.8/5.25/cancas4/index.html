@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<style type="text/css">
+			#canvas1 {
+				box-shadow: 3px 3px 10px black;
+				;
+			}
+		</style>
+	</head>
+
+	<body>
+		<canvas id="canvas1" width="500" height="500"></canvas>
+	</body>
+	<script type="text/javascript">
+		$(function($) {
+			var canvas = document.getElementById("canvas1");
+			var context = canvas.getContext("2d");
+			context.beginPath();
+			//			//		设置要绘制的路线
+			//			context.moveTo(100, 300);
+			////			context.lineTo(100, 300);
+			//			context.lineTo(150,250);
+			////			context.lineTo(300,100);
+			////			context.lineTo(200,50);
+			//			context.lineTo(104,300);
+			//			//		3.给路径做修饰（填充）
+			//			//		stroke填充
+			////			context.closePath();
+			//			context.strokeStyle = "red";
+			//			context.lineWidth = 5;
+			//			context.lineJoin = "miter";
+			//			//尖度 miter
+			//			context.miterLimit = 200;
+			//			context.stroke();
+			//			context.lineTo(200,50);
+			//			context.lineTo(200,300);
+			//		3.给路径做修饰（填充）
+			//		stroke填充
+			//					context.save();
+			////			context.closePath();
+			//			context.strokeStyle = "red";
+			//			context.translate(10,10);
+			//			context.strokeRect(0,0,100,100);
+			//			
+			////			context.fillStyle = "yellow"
+			////			context.fill();
+			////			context.
+			////			context.stroke();
+			//	
+			//			context.translate(10 , 10);
+			////				context.closePath();
+			//			context.strokeStyle = "blue";
+			////			context.translate(10,10);
+			//			context.strokeRect(10,10,100,100);
+			//			context.fillStyle = "yellow"
+			//			context.fill();
+			//			context.
+			//			transform(a,b,c,d,e,f);
+			//			context.transform(a, b, c, d, e, f)
+			//			a 水平方向的缩放
+			//			b 水平倾斜
+			//			c 垂直方向的倾斜
+			//			d 垂直方向的缩放
+			//			e 水平平移
+			//			f 垂直平移
+//			context.strokeStyle = "black";
+//			context.strokeRect(0, 0, 100, 100);
+//			context.stroke();
+//			context.scale(2, 2);
+//			context.scale(0.5, 0.5);
+//			context.strokeStyle = "black";
+//			context.strokeRect(10, 10, 100, 100);
+//			context.stroke();
+//			1. 线的空闭合出出现空白问题的修复方法
+//			lineCap = "square";
+//			或者closePath()
+//			2. 线的端冒: lineCap 三个值
+//			butt, round, square
+//			默认是butt
+//			3. 线的端冒是在线开始和结束的地方增加一个小方块或者小圆块
+//			所以有端冒的线段会稍微比没端冒的线段长
+//			4. fillStyle 和 strokeStyle 填充先后的区别
+//			5. fillStyle 可以接受的东西: 比如: fillStyle = xxx;
+//			颜色, img, 渐变, canvas
+//			创建 xxx = context.createPattern(img, "repeat-style");
+//			其中img 也可以用 一个canvas对象来替换掉(其中这个canvas需要自己创建出来, 或者从html文档中获得)
+//			fillStyle = xxx;
+//			等fillStyle有了值之后, 可以用在任何地方
+//			比如: fillRect(0, 0, 100, 100)
+//			或者 fillText("jalkdsf", 100, 100);
+//			6. 图形的转变: 四种方式
+//			translate 改变整个canvas坐标系的坐标
+//			rotate 旋转整个canvas坐标系的角度
+//			scale 缩放整个canvas的比例(特殊: 不仅改变宽高属性, 还会改变其他的属性, 比如坐标和线条粗细)
+//			这三种方式都可以产生叠加的效果, 所以要求我们再用完一次之后, 必须马上把canvas在恢复成原来的状态
+//			比如: translate(100, 100)
+//				.....
+//			translate(-100, -100)
+//			第四种方式: transform(a: H缩放, b: H倾斜, c: V倾斜, d: V缩放, e: H位移, f: V位移)
+//			通过矩阵方式来转变,
+//			transform 也可以效果叠加
+//			如果效果叠加太多, 想回到初始效果状态, 可以写下面一行代码:
+//				setTransform(1, 0, 0, 1, 0, 0)
+//			setTransform 从初始状态开始改变效果
+//			7，曲线的绘制
+//			arc();
+//		arcTo();
+//			quadraticCurveTo()(二次贝塞尔曲线)
+//			bezierCurveTo()(三次贝塞尔曲线)
+//			context.arc(200,200,50,Math.PI*0.5,Math.PI*1.5,false);
+//			context.strokeStyle = "black";
+//			arcTo(x1,y1,x2,y2,r) x2 y2弧度终止点
+//			context.moveTo(100,100);
+//			context.arcTo(300,300,300,200,50)
+//			前两个为控制点
+//			后两个为终点
+//			context.moveTo(100,100);
+////			context.quadraticCurveTo(100,200,200,200);
+//			context.strokeStyle = "red";
+//			context.bezierCurveTo(150,10,250,190,300,100);
+//			context.stroke();
+//			圆角矩形
+			context.moveTo(100,100);
+			context.lineTo(200,100);
+			context.strokeStyle = "red"
+//			右上角的弧度
+			context.moveTo(220,120);
+			context.arc(200,120,20,0,Math.PI*1.5,true);
+			context.moveTo(220,120);
+			context.lineTo(220,220);
+			context.arc(200,220,20,0,Math.PI*0.5,false);
+			context.moveTo(200,240);
+			context.lineTo(100,240);
+			context.stroke();
+			
+			
+		});
+	</script>
+
+</html>

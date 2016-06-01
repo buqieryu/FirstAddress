@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				padding: 100px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div style="background-color: yellow;">
+			<div style="background-color: green;">
+				<div style="background-color: blue;">
+					
+				</div>			
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var divs = document.querySelectorAll("div")	;
+		for(var i = 0;i < divs.length;i++){
+//			divs[i].onclick = function(){
+//				alert(this.style.backgroundColor);
+//			}
+		divs[i].addEventListener("click",function(){
+			alert(this.style.backgroundColor)
+		},true);
+		
+		}
+//		true 下沉
+//		false 冒泡
+	</script>
+</html>

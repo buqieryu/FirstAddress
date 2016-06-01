@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>transitions/LTweenLite.js - The lufylegend.js API</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><a href="../index.html"><img src="../assets/css/logo.png" title="The lufylegend.js API"></a></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: 1.10.1</em>
+            <em>最后更新日期：2016年03月28日</em>
+			<form method="get" action="http://www.google.com.hk/search" target="google_window">
+        		<input type="hidden" name="ie" value="UTF-8">
+        		<input type="hidden" name="oe" value="UTF-8">
+        		<input type="hidden" name="as_sitesearch" id="as_sitesearch" value="lufylegend.com/api/zh_CN/out/">
+        		Google搜索&nbsp;
+        		<input type="text" class="input" style="width:150px;" name="q" id="q" size="31" maxlength="255" value="">
+        		&nbsp;
+        		<input type="submit" class="submit" name="sa" value="Go">
+      		</form>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="../classes/FPS.html">FPS</a></li>
+            
+                <li><a href="../classes/InteractivePNG.html">InteractivePNG</a></li>
+            
+                <li><a href="../classes/LAjax.html">LAjax</a></li>
+            
+                <li><a href="../classes/LAnimation.html">LAnimation</a></li>
+            
+                <li><a href="../classes/LAnimationTimeline.html">LAnimationTimeline</a></li>
+            
+                <li><a href="../classes/LBitmap.html">LBitmap</a></li>
+            
+                <li><a href="../classes/LBitmapData.html">LBitmapData</a></li>
+            
+                <li><a href="../classes/LBitmapFilter.html">LBitmapFilter</a></li>
+            
+                <li><a href="../classes/LBlendMode.html">LBlendMode</a></li>
+            
+                <li><a href="../classes/LBox2d.html">LBox2d</a></li>
+            
+                <li><a href="../classes/LButton.html">LButton</a></li>
+            
+                <li><a href="../classes/LColorMatrixFilter.html">LColorMatrixFilter</a></li>
+            
+                <li><a href="../classes/LColorTransform.html">LColorTransform</a></li>
+            
+                <li><a href="../classes/LConvolutionFilter.html">LConvolutionFilter</a></li>
+            
+                <li><a href="../classes/LDisplayObject.html">LDisplayObject</a></li>
+            
+                <li><a href="../classes/LDisplayObjectContainer.html">LDisplayObjectContainer</a></li>
+            
+                <li><a href="../classes/LDropShadowFilter.html">LDropShadowFilter</a></li>
+            
+                <li><a href="../classes/LEasing.html">LEasing</a></li>
+            
+                <li><a href="../classes/LEvent.html">LEvent</a></li>
+            
+                <li><a href="../classes/LEventDispatcher.html">LEventDispatcher</a></li>
+            
+                <li><a href="../classes/LFlash.html">LFlash</a></li>
+            
+                <li><a href="../classes/LFocusEvent.html">LFocusEvent</a></li>
+            
+                <li><a href="../classes/LFontLoader.html">LFontLoader</a></li>
+            
+                <li><a href="../classes/LGlobal.html">LGlobal</a></li>
+            
+                <li><a href="../classes/LGraphics.html">LGraphics</a></li>
+            
+                <li><a href="../classes/LInteractiveObject.html">LInteractiveObject</a></li>
+            
+                <li><a href="../classes/LKeyboardEvent.html">LKeyboardEvent</a></li>
+            
+                <li><a href="../classes/LLoader.html">LLoader</a></li>
+            
+                <li><a href="../classes/LLoadManage.html">LLoadManage</a></li>
+            
+                <li><a href="../classes/LMatrix.html">LMatrix</a></li>
+            
+                <li><a href="../classes/LMedia.html">LMedia</a></li>
+            
+                <li><a href="../classes/LMouseEvent.html">LMouseEvent</a></li>
+            
+                <li><a href="../classes/LMouseEventContainer.html">LMouseEventContainer</a></li>
+            
+                <li><a href="../classes/LMultitouch.html">LMultitouch</a></li>
+            
+                <li><a href="../classes/LMultitouchInputMode.html">LMultitouchInputMode</a></li>
+            
+                <li><a href="../classes/LoadingSample.html">LoadingSample</a></li>
+            
+                <li><a href="../classes/LObject.html">LObject</a></li>
+            
+                <li><a href="../classes/LPoint.html">LPoint</a></li>
+            
+                <li><a href="../classes/LQuadTree.html">LQuadTree</a></li>
+            
+                <li><a href="../classes/LRange.html">LRange</a></li>
+            
+                <li><a href="../classes/LRectangle.html">LRectangle</a></li>
+            
+                <li><a href="../classes/LShape.html">LShape</a></li>
+            
+                <li><a href="../classes/LSound(LMedia).html">LSound(LMedia)</a></li>
+            
+                <li><a href="../classes/LSound(LWebAudio).html">LSound(LWebAudio)</a></li>
+            
+                <li><a href="../classes/LSprite.html">LSprite</a></li>
+            
+                <li><a href="../classes/LStageAlign.html">LStageAlign</a></li>
+            
+                <li><a href="../classes/LStageScaleMode.html">LStageScaleMode</a></li>
+            
+                <li><a href="../classes/LStageWebView.html">LStageWebView</a></li>
+            
+                <li><a href="../classes/LStyleSheet.html">LStyleSheet</a></li>
+            
+                <li><a href="../classes/LTextEvent.html">LTextEvent</a></li>
+            
+                <li><a href="../classes/LTextField.html">LTextField</a></li>
+            
+                <li><a href="../classes/LTimer.html">LTimer</a></li>
+            
+                <li><a href="../classes/LTimerEvent.html">LTimerEvent</a></li>
+            
+                <li><a href="../classes/LTransform.html">LTransform</a></li>
+            
+                <li><a href="../classes/LTransition.html">LTransition</a></li>
+            
+                <li><a href="../classes/LTransitionManager.html">LTransitionManager</a></li>
+            
+                <li><a href="../classes/LTweenLite.html">LTweenLite</a></li>
+            
+                <li><a href="../classes/LTweenLiteChild.html">LTweenLiteChild</a></li>
+            
+                <li><a href="../classes/lufylegend.mvc.html">lufylegend.mvc</a></li>
+            
+                <li><a href="../classes/LURLLoader.html">LURLLoader</a></li>
+            
+                <li><a href="../classes/LVec2.html">LVec2</a></li>
+            
+                <li><a href="../classes/LVideo.html">LVideo</a></li>
+            
+                <li><a href="../classes/LWebAudio.html">LWebAudio</a></li>
+            
+                <li><a href="../classes/Q &amp; A (常见问题).html">Q &amp; A (常见问题)</a></li>
+            
+                <li><a href="../classes/UI:LButtonSample1.html">UI:LButtonSample1</a></li>
+            
+                <li><a href="../classes/UI:LButtonSample2.html">UI:LButtonSample2</a></li>
+            
+                <li><a href="../classes/UI:LCheckBox.html">UI:LCheckBox</a></li>
+            
+                <li><a href="../classes/UI:LComboBox.html">UI:LComboBox</a></li>
+            
+                <li><a href="../classes/UI:LListChildView.html">UI:LListChildView</a></li>
+            
+                <li><a href="../classes/UI:LListScrollBar.html">UI:LListScrollBar</a></li>
+            
+                <li><a href="../classes/UI:LListView.html">UI:LListView</a></li>
+            
+                <li><a href="../classes/UI:LMenubar.html">UI:LMenubar</a></li>
+            
+                <li><a href="../classes/UI:LMessageBox.html">UI:LMessageBox</a></li>
+            
+                <li><a href="../classes/UI:LPanel.html">UI:LPanel</a></li>
+            
+                <li><a href="../classes/UI:LRadio.html">UI:LRadio</a></li>
+            
+                <li><a href="../classes/UI:LRadioChild.html">UI:LRadioChild</a></li>
+            
+                <li><a href="../classes/UI:LRange.html">UI:LRange</a></li>
+            
+                <li><a href="../classes/UI:LScrollbar.html">UI:LScrollbar</a></li>
+            
+                <li><a href="../classes/UI:LTable.html">UI:LTable</a></li>
+            
+                <li><a href="../classes/UI:LTreeWidget.html">UI:LTreeWidget</a></li>
+            
+                <li><a href="../classes/UI:LWindow.html">UI:LWindow</a></li>
+            
+                <li><a href="../classes/全局函数.html">全局函数</a></li>
+            
+                <li><a href="../classes/全局变量.html">全局变量</a></li>
+            
+                <li><a href="../classes/全屏设置.html">全屏设置</a></li>
+            
+                <li><a href="../classes/旧版API.html">旧版API</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: transitions/LTweenLite.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+var LTweenLiteTimeline;
+var LTweenLite = (function () {
+	/** @language chinese
+	 * &lt;p&gt;LTweenLite用来控制动画的一个单位。&lt;/p&gt;
+	 * @class LTweenLiteChild
+	 * @constructor
+	 * @since 1.4.0
+	 * @public
+	 */
+	function LTweenLiteChild ($target, $duration, $vars) {
+		var s = this;
+		LExtends (s, LObject, []);
+		s.type = &quot;LTweenLiteChild&quot;;
+		s.toNew = [];
+		s.init($target, $duration, $vars);
+	}
+	var p = {
+		init : function($target, $duration, $vars) {
+			var s = this, k = null;
+			if (typeof $vars[&quot;tweenTimeline&quot;] == UNDEFINED) {
+				$vars[&quot;tweenTimeline&quot;] = LTweenLite.TYPE_FRAME;
+			}
+			s.target = $target;
+			s.duration = $duration || 0.001;
+			s.vars = $vars;
+			s.delay = s.vars.delay || 0;
+			if(s.vars[&quot;tweenTimeline&quot;] == LTweenLite.TYPE_TIMER){
+				s.currentTime = (new Date()).getTime() / 1000;
+				s.initTime = s.currentTime;
+				s.startTime = s.initTime + s.delay;
+			}else{
+				s.currentTime = 0;
+				s.duration *= 1000;
+				s.currentTime -= s.delay * 1000;
+			}
+			s.combinedTimeScale = s.vars.timeScale || 1;
+			s.active = s.duration == 0 &amp;&amp; s.delay == 0;
+			s.varsto = {};
+			s.varsfrom = {};
+			s.varsDiff = {};
+			s.varsListIndex = {};
+			s.varsListCurr = {};
+			s.varsListTo = {};
+			s.varsListLength = {};
+			s.stop = false;
+			if (typeof(s.vars.ease) != &quot;function&quot;) {
+				s.vars.ease = LEasing.None.easeIn;
+			}
+			s.ease = s.vars.ease;
+			delete s.vars.ease;
+			if (s.vars.onComplete) {
+				s.onComplete = s.vars.onComplete;
+				delete s.vars.onComplete;
+			}
+			if (s.vars.onUpdate) {
+				s.onUpdate = s.vars.onUpdate;
+				delete s.vars.onUpdate;
+			}
+			if (s.vars.onStart) {
+				s.onStart = s.vars.onStart;
+				delete s.vars.onStart;
+			}
+			for (k in s.vars) {
+				if (k == &quot;coordinate&quot; &amp;&amp; Array.isArray(s.vars[k])) {
+					var diff = 0, curr = {x:s.target.x,y:s.target.y};
+					for (var i = 0, l = s.vars[k].length; i &lt; l; i++) {
+						var p = s.vars[k][i];
+						diff += LPoint.distance(p,curr);
+						curr = p;
+					}
+					s.varsListIndex[k] = 0;
+					s.varsListCurr[k] = 0;
+					s.varsListTo[k] = diff;
+					s.varsto[k] = s.vars[k];
+					s.varsfrom[k] = {x:s.target.x,y:s.target.y};
+					continue;
+				} else if (typeof s.vars[k] != &quot;number&quot;) {
+					continue;
+				}
+				s.varsto[k] = s.vars[k];
+				s.varsfrom[k] = s.target[k];
+				s.varsDiff[k] = s.vars[k] - s.target[k];
+			}
+		},
+		/** @language chinese
+		 * 将动画暂停。
+		 * @method pause
+		 * @example
+		 * 	var tween = LTweenLite.to(rect,1,{x:500,loop:true,ease:LEasing.Sine.easeInOut,tweenTimeline:LTweenLite.TYPE_FRAME})
+		 * 	.to(rect,1,{x:50,ease:LEasing.Quad.easeInOut});
+		 * 	tween.pause();
+		 * @examplelink &lt;p&gt;&lt;a href=&quot;../../../api/LTweenLite/pause_resume.html&quot; target=&quot;_blank&quot;&gt;测试链接&lt;/a&gt;&lt;/p&gt;
+		 * @public
+		 * @since 1.9.1
+		 */
+		pause : function () {
+			this.stop = true;
+		},
+		/** @language chinese
+		 * 将暂停的动画重新播放。
+		 * @method resume
+		 * @example
+		 * 	var tween = LTweenLite.to(rect,1,{x:500,loop:true,ease:LEasing.Sine.easeInOut,tweenTimeline:LTweenLite.TYPE_FRAME})
+		 * 	.to(rect,1,{x:50,ease:LEasing.Quad.easeInOut});
+		 * 	tween.pause();
+		 * 	tween.resume();
+		 * @examplelink &lt;p&gt;&lt;a href=&quot;../../../api/LTweenLite/pause_resume.html&quot; target=&quot;_blank&quot;&gt;测试链接&lt;/a&gt;&lt;/p&gt;
+		 * @public
+		 * @since 1.9.1
+		 */
+		resume : function () {
+			this.stop = false;
+		},
+		tween : function () {
+			var s = this, tweentype;
+			var type_timer = (s.vars[&quot;tweenTimeline&quot;] == LTweenLite.TYPE_TIMER);
+			if (type_timer) {
+				var time = (new Date()).getTime() / 1000, etime = time - s.startTime;
+				if (etime &lt; 0) {
+					return;
+				}
+			} else {
+				if (s.stop) {
+					return;
+				}
+				s.currentTime += LGlobal.speed;
+				if (s.currentTime &lt; 0) {
+					return;
+				}
+			}
+			for (k in s.varsto) {
+				if (typeof s.varsListTo[k] != UNDEFINED){
+					var curr = s.ease(type_timer ? etime : s.currentTime, 0, s.varsListTo[k], s.duration);
+					if(curr &gt; s.varsListTo[k]){
+						curr = s.varsListTo[k];
+					}
+					var c = s.varsListIndex[k] &gt; 0 ? s.vars[k][s.varsListIndex[k] - 1] : s.varsfrom[k];
+					var v = s.vars[k][s.varsListIndex[k]];
+					var d = LPoint.distance(c,v);
+					while(s.varsListCurr[k] + d &lt; curr){
+						s.varsListCurr[k] += d;
+						c = v;
+						s.varsListIndex[k]++;
+						v = s.vars[k][s.varsListIndex[k]];
+						d = LPoint.distance(c,v);
+					}
+					s.target.x = c.x;
+					s.target.y = c.y;
+					if(d != 0 &amp;&amp; v.x - c.x != 0){
+						s.target.x += (v.x - c.x)*(curr - s.varsListCurr[k])/d;
+					}
+					if(d != 0 &amp;&amp; v.y - c.y != 0){
+						s.target.y += (v.y - c.y)*(curr - s.varsListCurr[k])/d;
+					}
+					continue;
+				}
+				s.target[k] = s.ease(type_timer ? etime : s.currentTime, s.varsfrom[k], s.varsDiff[k], s.duration);
+			}
+			if (s.onStart) {
+				s._dispatchEvent(s.onStart);
+				delete s.onStart;
+			}
+			var e;
+			if (type_timer) {
+				e = (etime &gt;= s.duration);
+			} else {
+				e = (s.currentTime &gt;= s.duration);
+			}
+			if (e) {
+				for (tweentype in s.varsto) {
+					if (typeof s.varsListTo[tweentype] != UNDEFINED){
+						var p = s.varsto[tweentype][s.vars[tweentype].length - 1];
+						s.target.x = p.x;
+						s.target.y = p.y;
+						continue;
+					}
+					s.target[tweentype] = s.varsto[tweentype];
+				}
+				if (s.onComplete) {
+					s._dispatchEvent(s.onComplete);
+				}
+				return true;
+			} else if (s.onUpdate) {
+				s._dispatchEvent(s.onUpdate);
+			}
+			return false;
+		},
+		_dispatchEvent : function (f) {
+			var s = this;
+			s.target.target = s.target;
+			s.target.currentTarget = s;
+			f(s.target);
+			delete s.target.currentTarget;
+			delete s.target.target;
+		},
+		to : function ($target, $duration, $vars, $data) {
+			var s = this;
+			s.toNew.push({target : $target, duration : $duration, vars : $vars, data : $data});
+			return s;
+		},
+		keep : function () {
+			var s = this, t, vs, k, d;
+			if (s.toNew.length &gt; 0) {
+				t = s.toNew.shift();
+				if (t.vars.loop) {
+					s.loop = true;
+				}
+				if (s.loop) {
+					d = {};
+					vs = {};
+					for (k in t.vars) {
+						vs[k] = t.vars[k];
+						if(typeof t.target[k] == UNDEFINED || t.vars.playStyle != LTweenLite.PlayStyle.Init){
+							continue;
+						}
+						if(t.data){
+							t.target[k] = t.data[k];
+							continue;
+						}
+						d[k] = t.target[k];
+					}
+					if(!t.data){
+						t.data = d;
+					}
+					s.to(t.target, t.duration, vs, t.data);
+				}
+				s.init(t.target, t.duration, t.vars);
+				return true;
+			}
+			return false;
+		}
+	};
+	for (var k in p) {
+		LTweenLiteChild.prototype[k] = p[k];
+	}
+	/** @language chinese
+	 * &lt;p&gt;LTweenLite是比较常用的一个动画库，包含各种缓动效果，使用LTweenLite能够简化动画制作的代码编写工作。&lt;/p&gt;
+	 * @class LTweenLite
+	 * @constructor
+	 * @since 1.4.0
+	 * @public
+	 */
+	function LTweenLite () {
+		var s = this;
+		LExtends (s, LObject, []);
+		s.type = &quot;LTweenLite&quot;;
+		s.tweens = [];
+	}
+	/** @language chinese
+	 * &lt;p&gt;缓动动画循环的类型&lt;/p&gt;
+	 * &lt;table&gt;
+	 * &lt;tr&gt;&lt;th&gt;属性&lt;/th&gt;&lt;th&gt;说明&lt;/th&gt;&lt;/tr&gt;
+	 * &lt;tr&gt;&lt;td&gt;LTweenLite.PlayStyle.None&lt;/td&gt;&lt;td&gt;无效果&lt;/td&gt;&lt;/tr&gt;
+	 * &lt;tr&gt;&lt;td&gt;LTweenLite.PlayStyle.Init&lt;/td&gt;&lt;td&gt;每次缓动都从第一次缓动开始时的值开始进行。&lt;/td&gt;&lt;/tr&gt;
+	 * &lt;/table&gt;
+	 * @property LTweenLite.PlayStyle
+	 * @type Object
+	 * @static
+	 * @since 1.10.0
+	 * @public
+	 * @examplelink &lt;p&gt;&lt;a href=&quot;../../../api/LTweenLite/playStyle.html&quot; target=&quot;_blank&quot;&gt;测试链接&lt;/a&gt;&lt;/p&gt;
+	 */
+	LTweenLite.PlayStyle = {
+		None : &quot;none&quot;,
+		Init : &quot;init&quot;
+	};
+	LTweenLite.TYPE_FRAME = &quot;type_frame&quot;;
+	LTweenLite.TYPE_TIMER = &quot;type_timer&quot;;
+	p = {
+		count : function(){
+			return this.tweens.length;
+		},
+		ll_show : function(){
+			var s = this;
+			var i, length = s.tweens.length, t;
+			for (i = 0; i &lt; length; i++) {
+				t = s.tweens[i];
+				if (t &amp;&amp; t.tween &amp;&amp; t.tween()) {
+					s.tweens.splice(i, 1);
+					i--;
+					length = s.tweens.length;
+					if (t.keep()) {
+						s.add(t);
+					}
+				}
+			}
+		},
+		/** @language chinese
+		 * ［静态方法］用于创建一个LTweenLiteChild实例动画，让某对象的某些属性缓动到指定的目标的值（从当前值）。
+		 * @method LTweenLite.to
+		 * @static
+		 * @param {Object} target 要缓动的对象(这里注意类型是Object,并不仅仅是LSprite,LBitmap).
+		 * @param {float} duration 持续的时间(单位是秒)
+		 * @param {Object} vars &lt;p&gt;一个Object,包含你想要缓动的所有属性，比如 onComplete, ease, etc。举例, 将一个 对象mc.x 缓动到 100 ，将 mc.y 缓动到 200 ，缓动结束后执行一个函数 myFunction, 这时候，你可以这么写: TweenLite.to(mc, 1, {x:100, y:200, onComplete:myFunction});&lt;/p&gt;
+		 * &lt;p&gt;除了使用对象的属性之外，你也可以使用一些特殊的值:&lt;/p&gt;
+		 * &lt;table&gt;
+		 * &lt;tr&gt;&lt;th&gt;属性&lt;/th&gt;&lt;th&gt;类型&lt;/th&gt;&lt;th&gt;说明&lt;/th&gt;&lt;/tr&gt;
+		 * &lt;tr&gt;&lt;td&gt;tweenTimeline&lt;/td&gt;&lt;td&gt;float&lt;/td&gt;&lt;td&gt;&lt;p&gt;动画播放的类型，默认值为LTweenLite.TYPE_FRAME。&lt;/p&gt;&lt;p&gt;LTweenLite.TYPE_FRAME:用桢来播放动画。&lt;/p&gt;&lt;p&gt;LTweenLite.TYPE_TIMER：用时间来播放动画。&lt;/p&gt;&lt;p&gt;为了测试两者的区别，接下来的demo在进行缓动时首先延迟2秒钟，使用LTweenLite.TYPE_FRAME播放是无间断，而使用LTweenLite.TYPE_TIMER播放则会直接跳到结束。&lt;a href=&quot;../../../api/LTweenLite/to2.html&quot; target=&quot;_blank&quot;&gt;测试链接&lt;/a&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+		 * &lt;tr&gt;&lt;td&gt;delay&lt;/td&gt;&lt;td&gt;float&lt;/td&gt;&lt;td&gt;延时几秒后开始缓动，这在有先后顺序的缓动效果中很有用&lt;/td&gt;&lt;/tr&gt;
+		 * &lt;tr&gt;&lt;td&gt;ease&lt;/td&gt;&lt;td&gt;LEasing (or Function)&lt;/td&gt;&lt;td&gt;应用在variables上的缓动函数，比如LEasing.Quad.easeIn or LEasing.Cubic.easeOut。默认值是LEasing.None.easeIn.&lt;/td&gt;&lt;/tr&gt;
+		 * &lt;tr&gt;&lt;td&gt;onComplete&lt;/td&gt;&lt;td&gt;Function&lt;/td&gt;&lt;td&gt;在缓动效果结束时触发此方法。回调函数是有参数的，使用方法同下面的例子。&lt;/td&gt;&lt;/tr&gt;
+		 * &lt;tr&gt;&lt;td&gt;onStart&lt;/td&gt;&lt;td&gt;Function&lt;/td&gt;&lt;td&gt;在缓动开始时触发此方法.回调函数是有参数的，使用方法同下面的例子。&lt;/td&gt;&lt;/tr&gt;
+		 * &lt;tr&gt;&lt;td&gt;onUpdate&lt;/td&gt;&lt;td&gt;Function&lt;/td&gt;&lt;td&gt;当属性值发生改变时(缓动进行中的每一帧，每一秒)触发此方法。回调函数是有参数的，使用方法同下面的例子。&lt;/td&gt;&lt;/tr&gt;
+		 * &lt;tr&gt;&lt;td&gt;loop&lt;/td&gt;&lt;td&gt;Boolean&lt;/td&gt;&lt;td&gt;如果设定为 true, 缓动就会持续循环.&lt;/td&gt;&lt;/tr&gt;
+		 * &lt;tr&gt;&lt;td&gt;playStyle&lt;/td&gt;&lt;td&gt;LTweenLite.PlayStyle&lt;/td&gt;&lt;td&gt;只有设定loop为true, playStyle才会有效。&lt;a href=&quot;../../../api/LTweenLite/playStyle.html&quot; target=&quot;_blank&quot;&gt;测试链接&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+		 * &lt;tr&gt;&lt;td&gt;coordinate&lt;/td&gt;&lt;td&gt;Array&lt;/td&gt;&lt;td&gt;你可以自定义缓动路径，路径的每个点必须是LPoint对象,或者类似于{x:1,y:2}的形式，&lt;a href=&quot;../../../api/LTweenLite/toList.html&quot; target=&quot;_blank&quot;&gt;测试链接&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+		 * &lt;/table&gt;
+		 * @return {LTweenLiteChild} 一个LTweenLiteChild的实例
+		 * @example
+		 * 	LInit(1000/50,&quot;legend&quot;,800,450,main);
+		 * 	function main(){
+		 * 		LGlobal.setDebug(true);
+		 * 		var circle = new LSprite();
+		 * 		circle.x = 50;
+		 * 		circle.y = 50;
+		 * 		circle.graphics.drawArc(&quot;#FF0000&quot;,1,[0,0,20,0,Math.PI*2],true,&quot;#FF0000&quot;);
+		 * 		addChild(circle);
+		 * 		var rect = new LSprite();
+		 * 		rect.x = 50;
+		 * 		rect.y = 100;
+		 * 		rect.graphics.drawRect(&quot;#FF00FF&quot;,1,[0,0,20,20],true,&quot;#FF00FF&quot;);
+		 * 		addChild(rect);
+		 * 		LTweenLite.to(circle,2,{x:500,y:400,scaleX:3,scaleY:3,ease:LEasing.Strong.easeInOut})
+		 * 		.to(circle,2,{x:700,y:50,scaleX:1,scaleY:1,ease:LEasing.Quint.easeIn,onComplete:function(e){
+		 * 			trace(e.currentTarget);
+		 * 			trace(e.target);//circle
+		 * 		}});
+		 * 		LTweenLite.to(rect,1,{x:500,loop:true,ease:LEasing.Sine.easeInOut})
+		 * 		.to(rect,1,{x:50,ease:LEasing.Quad.easeInOut});
+		 * 	}
+		 * @examplelink &lt;p&gt;&lt;a href=&quot;../../../api/LTweenLite/to.html&quot; target=&quot;_blank&quot;&gt;测试链接&lt;/a&gt;&lt;/p&gt;
+		 * @public
+		 * @since 1.4.0
+		 */
+		to : function ($target, $duration, $vars) {
+			if (!$target) {
+				return;
+			}
+			var s = this;
+			var tween = new LTweenLiteChild({}, 0, {});
+			s.tweens.push(tween);
+			tween.to($target, $duration, $vars);
+			return tween;
+		},
+		add : function (tween) {
+			this.tweens.push(tween);
+		},
+		/** @language chinese
+		 * ［静态方法］停止当前的缓动动画。
+		 * @method LTweenLite.remove
+		 * @static
+		 * @param {LTweenLiteChild} tween 当前正在进行缓动的对象.
+		 * @example
+		 * 	LInit(1000/50,&quot;legend&quot;,800,450,main);
+		 * 	var tween;
+		 * 	function main(){
+		 * 		LGlobal.setDebug(true);
+		 * 		var rect = new LSprite();
+		 * 		rect.x = 50;
+		 * 		rect.y = 50;
+		 * 		rect.graphics.drawRect(&quot;#FF00FF&quot;,1,[0,0,20,20],true,&quot;#FF00FF&quot;);
+		 * 		addChild(rect);
+		 * 		tween = LTweenLite.to(rect,1,{x:500,loop:true,ease:LEasing.Sine.easeInOut})
+		 * 		.to(rect,1,{x:50,ease:LEasing.Quad.easeInOut});
+		 * 		var stopButton = new LButtonSample1(&quot;stop&quot;);
+		 * 		stopButton.x = 50;
+		 * 		circle.y = 50;
+		 * 		stopButton.y = 100;
+		 * 		addChild(stopButton);
+		 * 		stopButton.addEventListener(LMouseEvent.MOUSE_UP,stopTween);
+		 * 	}
+		 * 	function stopTween(e){
+		 * 		LTweenLite.remove(tween);
+		 * 	}
+		 * @examplelink &lt;p&gt;&lt;a href=&quot;../../../api/LTweenLite/remove.html&quot; target=&quot;_blank&quot;&gt;测试链接&lt;/a&gt;&lt;/p&gt;
+		 * @public
+		 * @since 1.8.0
+		 */
+		remove : function (tween) {
+			var s = this;
+			if (typeof tween == UNDEFINED) {
+				return;
+			}
+			for (var i = 0, l = s.tweens.length; i &lt; l; i++) {
+				if (tween.objectIndex == s.tweens[i].objectIndex) {
+					s.tweens.splice(i, 1);
+					break;
+				}
+			}
+		},
+		/** @language chinese
+		 * ［静态方法］停止所有正在进行的缓动动画。
+		 * @method LTweenLite.removeAll
+		 * @static
+		 * @example
+		 * 	LInit(1000/50,&quot;legend&quot;,800,450,main);
+		 * 	function main(){
+		 * 		LGlobal.setDebug(true);
+		 * 		var circle = new LSprite();
+		 * 		circle.x = 50;
+		 * 		circle.y = 50;
+		 * 		circle.graphics.drawArc(&quot;#FF0000&quot;,1,[0,0,20,0,Math.PI*2],true,&quot;#FF0000&quot;);
+		 * 		addChild(circle);
+		 * 		var rect = new LSprite();
+		 * 		rect.x = 50;
+		 * 		rect.y = 50;
+		 * 		rect.graphics.drawRect(&quot;#FF00FF&quot;,1,[0,0,20,20],true,&quot;#FF00FF&quot;);
+		 * 		addChild(rect);
+		 * 		LTweenLite.to(circle,1,{x:500,y:400,scaleX:3,scaleY:3,loop:true,ease:LEasing.Strong.easeInOut})
+		 * 		.to(circle,1,{x:700,y:50,scaleX:1,scaleY:1,ease:LEasing.Quint.easeIn})
+		 * 		.to(circle,1,{x:50,y:50,ease:LEasing.Quint.easeIn});
+		 * 		LTweenLite.to(rect,1,{x:500,loop:true,ease:LEasing.Sine.easeInOut})
+		 * 		.to(rect,1,{x:50,ease:LEasing.Quad.easeInOut});
+		 * 		var stopButton = new LButtonSample1(&quot;stopAll&quot;);
+		 * 		stopButton.x = 50;
+		 * 		circle.y = 50;
+		 * 		stopButton.y = 100;
+		 * 		addChild(stopButton);
+		 * 		stopButton.addEventListener(LMouseEvent.MOUSE_UP,stopTween);
+		 * 	}
+		 * 	function stopTween(e){
+		 * 		LTweenLite.removeAll();
+		 * 	}
+		 * @examplelink &lt;p&gt;&lt;a href=&quot;../../../api/LTweenLite/removeAll.html&quot; target=&quot;_blank&quot;&gt;测试链接&lt;/a&gt;&lt;/p&gt;
+		 * @public
+		 * @since 1.8.0
+		 */
+		removeAll : function () {
+			this.tweens.splice(0, this.tweens.length);
+		},
+		/** @language chinese
+		 * ［静态方法］暂停所有正在进行的缓动动画。
+		 * @method LTweenLite.pauseAll
+		 * @static
+		 * @example
+		 * 	LTweenLite.pauseAll();
+		 * @examplelink &lt;p&gt;&lt;a href=&quot;../../../api/LTweenLite/pauseAll_resumeAll.html&quot; target=&quot;_blank&quot;&gt;测试链接&lt;/a&gt;&lt;/p&gt;
+		 * @public
+		 * @since 1.8.0
+		 */
+		pauseAll : function () {
+			for(var i = 0, l = this.tweens.length; i &lt; l; i++){
+				this.tweens[i].pause();
+			}
+		},
+		/** @language chinese
+		 * ［静态方法］重新播放被暂停的所有缓动动画。
+		 * @method LTweenLite.resumeAll
+		 * @static
+		 * @example
+		 * 	LTweenLite.pauseAll();
+		 * 	LTweenLite.resumeAll();
+		 * @examplelink &lt;p&gt;&lt;a href=&quot;../../../api/LTweenLite/pauseAll_resumeAll.html&quot; target=&quot;_blank&quot;&gt;测试链接&lt;/a&gt;&lt;/p&gt;
+		 * @public
+		 * @since 1.8.0
+		 */
+		resumeAll : function () {
+			for(var i = 0, l = this.tweens.length; i &lt; l; i++){
+				this.tweens[i].resume();
+			}
+		}
+	};
+	for (var k in p) {
+		LTweenLite.prototype[k] = p[k];
+	}
+	LTweenLiteTimeline = new LTweenLite();
+	LGlobal.childList.push(LTweenLiteTimeline);
+	var tween = new LTweenLite();
+	tween.TYPE_FRAME = LTweenLite.TYPE_FRAME;
+	tween.TYPE_TIMER = LTweenLite.TYPE_TIMER;
+	tween.PlayStyle = LTweenLite.PlayStyle;
+	LGlobal.childList.push(tween);
+	return tween;
+})();
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32497708-2']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>

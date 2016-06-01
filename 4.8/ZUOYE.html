@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style type="text/css">
+    *{
+      padding: 0px;
+      margin: 0px;
+    }
+
+      .wrap{
+        margin:0 auto;
+        margin-left: 50%;
+        margin-top: 300px;
+      }
+
+
+    .wrap div img {
+    	width: 200px;
+    	height: 200px;
+    }
+    body,html{
+      perspective-origin:100% 100%;
+      /*perspective:2500px;*/
+    }
+    .wrap {
+      width: 200px;
+      height: 200px;
+      position: relative;
+
+    -webkit-transform-style: preserve-3d;
+    -webkit-transform: rotateX(deg) rotateZ(deg);
+    -webkit-transition: all 1s;
+}
+
+    .wrap:hover{
+    	-webkit-transform: rotateY(10000deg);
+    }
+
+    .wrap div {
+    	position: absolute;
+    	left: 0;
+        top: 0;
+    }
+    .wrap div:nth-child(1) {
+    	-webkit-transform: rotateY(30deg) translateZ(700px);}
+    .wrap div:nth-child(2) {
+      -webkit-transform: rotateY(60deg) translateZ(700px);}
+    .wrap div:nth-child(3) {
+      -webkit-transform: rotateY(90deg) translateZ(700px);}
+    .wrap div:nth-child(4) {
+      -webkit-transform: rotateY(120deg) translateZ(700px);}
+    .wrap div:nth-child(5) {
+      -webkit-transform: rotateY(150deg) translateZ(700px);}
+    .wrap div:nth-child(6) {
+      -webkit-transform: rotateY(180deg) translateZ(700px);}
+    .wrap div:nth-child(7) {
+      -webkit-transform: rotateY(210deg) translateZ(700px);}
+    .wrap div:nth-child(8) {
+      -webkit-transform: rotateY(240deg) translateZ(700px);}
+    .wrap div:nth-child(9) {
+      -webkit-transform: rotateY(270deg) translateZ(700px);}
+    .wrap div:nth-child(10) {
+      -webkit-transform: rotateY(300deg) translateZ(700px);}
+    .wrap div:nth-child(11) {
+      -webkit-transform: rotateY(330deg) translateZ(700px);}
+    .wrap div:nth-child(12) {
+      -webkit-transform: rotateY(360deg) translateZ(700px);}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+		<div><img src="0001.jpg" alt=""></div>
+		<div><img src="0001.jpg" alt=""></div>
+		<div><img src="0001.jpg" alt=""></div>
+		<div><img src="0001.jpg" alt=""></div>
+    <div><img src="0001.jpg" alt=""></div>
+    <div><img src="0001.jpg" alt=""></div>
+    <div><img src="0001.jpg" alt=""></div>
+    <div><img src="0001.jpg" alt=""></div>
+    <div><img src="0001.jpg" alt=""></div>
+    <div><img src="0001.jpg" alt=""></div>
+    <div><img src="0001.jpg" alt=""></div>
+    <div><img src="0001.jpg" alt=""></div>
+	</div>
+</body>
+</html>

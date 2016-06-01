@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			#wrap {
+				width: 300px;
+				height: 400px;
+				border: 1px solid blueviolet;
+				position: absolute;
+				left: 100px;
+				top: 100px;
+				overflow: hidden;
+				font-size: 2em;
+			}
+			
+			#middle {
+				padding-right: 20px;
+				position: absolute;
+			}
+			
+			#sliderWrap {
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: 20px;
+				height: 100%;
+				background-color: #ccc;
+			}
+			
+			#slider {
+				position: absolute;
+				height: 50px;
+				width: 100%;
+				background-color: red;
+				border-radius: 10px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="wrap">
+			<div id="middle">
+				start 我是午夜DJ,我是午夜DJ,我是午夜DJ,我是午夜DJ,我是午夜DJ, 我是午夜DJ,我是午夜DJ,我是午夜DJ,我是午夜DJ,我是午夜DJ, 我是午夜DJ,我是午夜DJ,我是午夜DJ,我是午夜DJ,我是午夜DJ, 我是午夜DJ,我是午夜DJ,我是午夜DJ,我是午夜DJ,我是午夜DJ, 我是午夜DJ,我是午夜DJ,我是午夜DJ,我是午夜DJ,我是午夜DJ, 我是午夜DJ,我是午夜DJ,我是午夜DJ,我是午夜DJ,我是午夜DJ, 我是午夜DJ,我是午夜DJ,我是午夜DJ,我是午夜DJ,我是午夜DJ,
+				我是午夜DJ,我是午夜DJ,我是午夜DJ,我是午夜DJ,我是午夜DJ, 我是午夜DJ,我是午夜DJ,我是午夜DJ,我是午夜DJ,我是午夜DJ, 我是午夜DJ,我是午夜DJ,我是午夜DJ,我是午夜DJ,我是午夜DJ, 我是午夜DJ,我是午夜DJ,我是午夜DJ,我是午夜DJ,我是午夜DJ, 我是午夜DJ,我是午夜DJ,我是午夜DJ,我是午夜DJ,我是午夜DJ,end
+			</div>
+			<div id="sliderWrap">
+				<div id="slider"></div>
+			</div>
+		</div>
+	</body>
+	<!--wheel.js文件里面有一个方法叫wheel
+	这个方法可以帮我们检测出向上滚动还是向下滚动-->
+	<script type="text/javascript" src="wheel.js">
+	</script>
+	<script type="text/javascript">
+		var wrap = document.querySelector("#wrap");
+		var middle = document.querySelector("#middle");
+		var sliderWrap = document.querySelector("#sliderWrap");
+		var slider = document.querySelector("#slider");
+		wheel(wrap, change);
+		//		y是用来检测当前要滚动多少
+		//		默认是不用滚动的
+		//		所有y的初始值 == 0
+		var y = 0;
+
+		function change(event, down) {
+			if (down) {
+				//				alert("向上");
+				y += 5;
+			} else {
+				//				alert("向下");
+				y -= 5;
+			}
+			move();
+		}
+		//		比例最大移动高度
+		var scale = wrap.clientHeight / middle.offsetHeight;
+		//		内容区域可移动最大宽度
+		var contentMaxHeight = middle.offsetHeight - wrap.clientHeight;
+		//		滑块slider可移动的最大宽度
+		var sliderMaxHeight = sliderWrap.clientHeight - slider.offsetHeight;
+		//		控制内容的移动
+		function move() {
+			//			如果滚动值y太小，要置0；
+			//			若太大，要保证不能超过slider可滚动最大值
+			if (y <= 0) {
+				y = 0;
+			} else if (y >= sliderMaxHeight) {
+				y = sliderMaxHeight;
+			}
+			//			获得当前的y值得移动比例
+			var moveScale = y / sliderMaxHeight;
+			slider.style.top = y + "px";
+			middle.style.top = -contentMaxHeight * moveScale + "px";
+		}
+		//		滑块slider的滑动事件
+		slider.onmousedown = function(event) {
+			var disY = event.clientY - slider.offsetTop;
+			//			移动过程中改变y值
+			document.onmousemove = function(event) {
+					y = event.clientY - disY;
+					move();
+				}
+				//			鼠标松开  让移动时间 == null
+			document.onmouseup = function() {
+				document.onmousemove = null;
+			}
+			return false;
+		}
+		document.onkeydown = function(event) {
+			switch (event.keyCode) {
+				case 38:
+					y -= 5;
+					break;
+				case 40:
+					y += 5;
+					break;
+				default:
+					break;
+			}
+		
+		move();
+		}
+		sliderWrap.onmousedown = function(event) {
+			//			算出y值应该增大或是减少
+			var sliderCenter = slider.offsetHeight;
+			y = event.clientY - wrap.offsetTop - sliderCenter/2;
+			
+			move();
+		}
+	</script>
+
+</html>

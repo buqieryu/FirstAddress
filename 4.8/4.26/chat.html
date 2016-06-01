@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+	</head>
+	<body>
+		<!--输入框-->
+		<input type="text"  id="txt1" />
+		<ol id="ol1"></ol>
+	
+	</body>
+	<script type="text/javascript">
+		var txt1 = document.querySelector("#txt1");
+		var ol1 = document.getElementById("ol1");
+//		检测输入框的按键按下事件
+		txt1.onkeydown = function(event){
+//			检测回车按键
+		if(event.keyCode == 13){
+			
+			if(this.value == ""){
+				alert("没有内容")
+			}
+//			发送信息
+//			开始创建一个新的li
+//			并且插入ol内部
+//			alert("我要插入了");
+//			县创建一个新的li
+			var li = document.createElement("li");
+//			把输入框的内容放到li里面
+			li.innerHTML = this.value;
+			this.value = "";
+//			把li插入ol里面
+//			并且是最上面一个位置
+			ol1.insertBefore(li , ol1.firstElementChild);
+			}
+		}
+	</script>
+</html>

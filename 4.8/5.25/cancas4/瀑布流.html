@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		.box{
+			list-style: none;
+		}
+		.item{
+			width: 200px;
+			float: left;
+		}
+		li{
+			background-color: #0062CC;
+		}
+		
+	</style>
+	<body>
+		<ul class="box"></ul>
+	</body>
+	<script type="text/javascript" src="js/masonrypkgd.js"></script>
+	<script type="text/javascript">
+		var grid = document.querySelector(".box");
+		function creat(a){
+			for (var i = 1;i <= a;i++) {
+				var li = document.createElement("li");
+				li.className = "item";
+//				li.innerHTML = '<img src = "' + i + '.jpg/>"';
+				grid.appendChild(li);
+			}
+			var msnry = new Masonry(grid,{
+			columnWidth:200,
+	  		gutter:5,
+	  		itemSelector:'.item',	
+			});
+		}
+		creat(20);
+		var wheel = "mousewheel";
+		var ele = "body";
+		if(window.navigator.userAgent.indexOf("firefox")! = -1){
+			wheel = "DOMMouseScroll";
+			ele = "documentElement";
+		}
+	</script>
+</html>

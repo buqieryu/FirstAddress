@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+		img{
+			width: 400px;
+			/*透明度*/
+			/*opacity: 0.4;*/
+			/*灰白*/
+			/*-webkit-filter: grayscale(0);*/
+			/*照片泛黄*/
+			/*-webkit-filter: sepia(1);*/
+			/*饱和度《可以大于1》
+			-webkit-filter:saturate(2);*/
+			/*像素旋转
+			-webkit-filter: hue-rotate(180deg);*/
+			/*胶卷颜色*/
+			/*-webkit-filter: invert(0.6);*/
+			
+			/*-webkit-filter: brightness(3);*/
+			/*图片的对比度默认0
+			-webkit-filter: contrast(2);*/
+			/*图片的模糊程度近视眼*/
+			/*-webkit-filter: blur(12px);*/;
+		}
+		#canvas1{
+			box-shadow: 3px 3px 10px black;
+		}
+		</style>
+	</head>
+	<body>
+		<img src="img/3.jpg"/>
+		<canvas id="canvas1" width="500" height="500"></canvas>
+		<input type="range" name="huakuai" id="huakuai" value="0.5" max="1" min="0.1" step="0.1"/>
+	</body>
+	<script type="text/javascript">
+		var canvas = document.getElementById("canvas1");
+		var context = canvas.getContext("2d");
+//		拿到一个图片对象
+//		var myImage = new Image();
+//		myImage.src = "img/3.jpg";
+		var scale = huakuai.value;
+		
+		var huakuai = document.getElementById("huakuai");
+		drawMyImage(scale);
+		function drawMyImage(sle){
+			var myImageWidth = canvas.width * sle;
+			var myImageHeight = canvas.height * sle;
+			var myImage = new Image();
+			myImage.src = "img/3.jpg";
+			var x = canvas.width/2 - myImageWidth/2;
+			var y = canvas.height/2 - myImageHeight/2;
+			myImage.onload = function(){
+				context.drawMyImage(myImage,x,y,myImageWidth,myImageHeight);
+			}
+		} 
+		
+//		把图片绘制到画布context上
+//		"img/3.jpg"->data->myImage
+//		myImage.onload = function(){
+////		drawImage(myImage,0,0,400,400)
+////		第一个对象，坐标，图片大小
+////		截取图片
+////		context.drawImage(myImage,0,0,100,100,100,100,200,200);.
+//		}
+	</script>
+</html>
